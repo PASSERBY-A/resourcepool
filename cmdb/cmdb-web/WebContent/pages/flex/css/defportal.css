@@ -1,0 +1,1034 @@
+@font-face 
+{
+	font-family: Tahoma; 
+	src: url("/assets/Tahoma.ttf");
+	unicode-range:
+		U+0020-U+0040, /* Punctuation, Numbers */
+		U+0041-U+005A, /* Upper-Case A-Z */
+		U+005B-U+0060, /* Punctuation and Symbols */
+		U+0061-U+007A, /* Lower-Case a-z */
+		U+007B-U+007E; /* Punctuation and Symbols */            
+}
+/*@font-face { 
+	src:url("C:/WINDOWS/Fonts/MSYH.ttf"); 
+	font-family: MyExFont;	
+	unicodeRange:
+		U+6765,U+8bbf,U+51fa,U+89e3,U+7801,U+6587,U+4ef6,U+7ea7,U+6821,U+9a8c,U+4f20,U+8f93,U+5b50,U+7cfb,U+7edf,U+9884,U+5904,U+7406,U+4e0b,U+53d1,U+9ad8,U+989d,U+28,U+56fd,
+		U+5185,U+29,U+52,U+41,U+50,U+751f,U+6210,U+9645,U+7ed3,U+7b97,U+8ba1,U+529f,U+6570,U+3a,U+4e0a,U+53e3;
+}*/
+.MyTextStyle 
+{ 
+	font-family: Tahoma; 
+}
+global 
+{
+	/* themeColor	*/
+	themeColor: #666666;
+	
+	fontWeight: normal;
+	fontSize:12;
+	color:#000000;
+	textRollOverColor:#666666;
+	textSelectedColor:#1e1e1e;
+	disabledColor:#1e1e1e;
+}
+
+Application
+{
+	backgroundColor: #000000;
+}
+
+
+.myHRule{
+	strokeColor: #000000;
+	strokeWidth: 2;
+}
+.errorTip
+{    
+	fontSize: 12;
+}
+.redFormItem {
+	labelStyleName: "redFormItemLabel";
+}
+.redFormItemLabel {
+	color: red;
+}
+
+Button {
+	highlightAlphas: 1, 0;	
+}
+
+ComboBox {
+	color:#000000;	
+}
+
+/*
+//------------------------------
+//  DragHighlight
+//------------------------------
+*/
+DragHighlight
+{
+	border-color: #CCCCCC;
+	border-thickness: 3px;
+	border-style: solid;
+	background-color: #333333;
+}
+
+/*
+//------------------------------
+//  DragHighlight
+//------------------------------
+*/
+DataGrid {
+	color:#000000;
+}
+AdvancedDataGrid {
+	color:#000000;
+}
+
+MDICanvas
+{
+	background-color: #666666;
+}
+
+ToolMdiCav {
+	backgroundAlpha: 0;	
+}
+
+TextInput
+{
+	backgroundColor: #ffffff;	
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #000000;
+	color: #000000;
+}  
+
+Tree 
+{
+	color:#000000;
+}
+
+TextArea
+{
+	backgroundColor: #ffffff;
+} 
+
+ToolTip {    
+	backgroundColor: black;    
+	backgroundAlpha: 0.8;
+	cornerRadius: 0;    
+	color: white;    
+	fontSize: 12;
+}
+
+.menuToolTip {
+	backgroundAlpha: 0.75;
+	backgroundColor: #212130;
+	useRollOver: false;
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #FFFFFF;
+	selectionColor: #b9e5fd;
+	dropShadowEnabled: true;
+	cornerRadius: 8;
+	paddingLeft: 3;
+	paddingRight: 3;
+	paddingTop: 0;
+	paddingBottom: 0;
+	openDuration:0;
+}
+
+/*
+//------------------------------
+//  Pod
+//------------------------------
+*/
+Pod
+{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	rounded-bottom-corners: false;
+	border-thickness: 1px;
+	border-style: solid;
+	border-color: #000000;
+
+	header-colors: #666666, #666666; 
+	highlight-alphas: .9, 0;
+	corner-radius: 0px;
+	header-height: 22px;
+	shadow-direction: right;
+	drop-shadow-color: #999999;
+	color:           #ffffff;    
+	backgroundColor: #333333;
+	titleStyleName : podTitle;
+}
+
+.podTitle
+{
+	fontSize: 14;
+	font-weight: bold;
+}
+
+MenuBar
+{
+	backgroundColor:#000000;
+	textSelectedColor:#000000;
+	textRollOverColor:#000000;
+	rollOverColor:#000000;
+	menuStyleName: "dropDown";
+	disabledColor: #AAB3B3;
+}
+.dropDown {
+	backgroundSize: "100%";  
+	backgroundAlpha: 1.0;
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #FFFFFF;
+	cornerRadius:0;
+	color: #000000;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor:#FFFFFF;
+	rollOverColor: #000000;
+	selectionColor: #000000;
+}
+.menuText{
+	backgroundAlpha: 0;
+	fontSize:12;
+	borderStyle:none;
+}
+
+.leftArrowButton
+{
+	up-skin:		Embed("assets/left_arrow_up.gif");
+	over-skin:		Embed("assets/left_arrow_over.gif");
+	down-skin:		Embed("assets/left_arrow_up.gif");
+	disabled-skin:	Embed("assets/left_arrow_disabled.gif");
+}
+.rightArrowButton
+{
+	up-skin:		Embed("assets/right_arrow_up.gif");
+	over-skin:		Embed("assets/right_arrow_over.gif");
+	down-skin:		Embed("assets/right_arrow_up.gif");
+	disabled-skin:	Embed("assets/right_arrow_disabled.gif");
+}
+
+.viewTab 
+{
+    upSkin:                 ClassReference("css.TabSkin");
+    overSkin:               ClassReference("css.TabSkin");    
+    selectedUpSkin:         ClassReference("css.TabSkin");   
+    selectedOverSkin:       ClassReference("css.TabSkin");    
+    color:                  #cecece;
+	fontWeight:             normal;
+    tabBackgroundColors:    #6e6e6e, #009dff;
+    tabBackgroundAlphas:    0.0, 1.0;       
+}
+
+.viewTabs
+{
+    backgroundColor:          #ededed;    
+    tabHeight:                30;
+    horizontalGap:            0;  
+	fontSize:                 12px;
+    selectedTabTextStyleName: selectedTabText;
+}
+
+.selectedTabText
+{
+    fontSize:               12px;
+    fontWeight:             bold; 
+    color:                  #ffffff;
+} 
+
+.viewStyle
+{
+    backgroundColor:    #333333; 
+} 
+
+.radioBtn {
+	fillColors: #FFFFFF, #FFFFFF;
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	disabledColor: #FFFFFF;
+}
+
+.drawerButton {
+	fontFamily: Verdana;
+	fontSize: 12;
+	textAlign: left;
+	fillAlphas: 1.0, 1.0;
+	/*fillColors: #111111, #999999,  #333333, #AAAAAA;*/
+	fillColors: #444444, #AAAAAA, #666666, #CCCCCC;
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+}
+.drawerAccordion {
+	borderColor: #CCCCCC;
+	borderThickness: 2;
+	headerStyleName: drawerAccordionHeader;
+}
+.drawerAccordionHeader {
+	fillAlphas: 1.0, 1.0, 0.82, 0.82;
+	fillColors: #444444, #AAAAAA, #666666, #CCCCCC;
+	/*   fillColors:#2588D1, #015194, #015194, #015194;*/
+	color: #FFFFFF;
+	cornerRadius: 4;
+	paddingLeft: 10;
+	fontFamily: Verdana;
+	fontSize: 12;
+}
+.drawerCloseRight {
+	up-skin:Embed(source="assets/close.png");
+	over-skin:Embed(source="assets/close.png");
+	down-skin:Embed(source="assets/close.png");
+	disabled-skin:Embed(source="assets/close.png");
+}
+.drawerCloseLeft {
+	up-skin:Embed(source="assets/closeleft.png");
+	over-skin:Embed(source="assets/closeleft.png");
+	down-skin:Embed(source="assets/closeleft.png");
+	disabled-skin:Embed(source="assets/closeleft.png");
+}
+
+.gradient   
+{   
+	border-style: solid;   
+	border-thickness: 0;   
+	border-skin: ClassReference("css.GradientBorder");   
+	fill-colors: #000000, #AAAAAA;   
+	drop-shadow-enabled: true;   
+}
+
+
+/*
+//------------------------------
+//  VAccordion
+//------------------------------
+*/
+VAccordion {
+	headerHeight: 80;
+	vertical-gap: 5;
+	background-alpha:0;
+	open-duration:500;
+	border-style:none;
+	padding-bottom:5;
+	header-style-name: gradientHeader;
+}
+
+.gradientHeader {
+	font-family:Arial;
+	cornerRadii: 0, 0, 10, 10;
+	borderColors: #FFFFFF, #FFFFFF;
+	overBorderColors: #FFFFFF, #FFFFFF;
+	selectedBorderColors: #FFFFFF, #FFFFFF;
+	borderThickness: 2;
+	borderAlpha: 1;
+	fillColors: #FFFFFF, #FFFFFF;
+	fillAlphas: 1, 1;
+	fillColorRatios: 0, 255;
+	overFillColors: #FFFFFF, #BAC2CF;
+	overFillAlphas: 1, 1;
+	overFillColorRatios: 0, 169;
+	selectedFillColors: #FFFFFF, #BAC2CF;
+	selectedFillAlphas: 1,1;
+	selectedFillColorRatios: 0, 169;
+}
+
+TabNavigator {
+	tabStyleName: "myTabs";
+	firstTabStyleName: "myTabs";
+	lastTabStyleName: "myTabs";
+	selectedTabTextStyleName: "mySelectedTabs";
+}
+.myTabs {
+	textAlign: left;
+	color: #0b333c;	
+}
+.mySelectedTabs {
+	color: #000000;	
+}
+
+TitleWindow { 
+	borderColor: #000000;
+	borderAlpha: 0.7;
+	modalTransparencyBlur: 0;
+	modalTransparency: 0;
+	titleStyleName: "mypanelTitle";
+	closeButtonSkin:Embed("assets/icon/TS_8.png");
+	closeButtonDisabledSkin:Embed("assets/icon/TS_8.png");
+	closeButtonDownSkin:Embed("assets/icon/TS_8.png");
+	closeButtonOverSkin:Embed("assets/icon/TS_14.png");
+	closeButtonUpSkin:Embed("assets/icon/TS_8.png");
+}
+.mypanelTitle {
+	color: #ffffff;
+	fontSize: 12;
+}
+
+/* Style the Window title message. */
+.windowStyles {
+	color: black;
+	letterSpacing: 2;
+}
+
+/* Style the Window status message. */
+.windowStatus {
+	color: red;
+	fontWeight: bold;
+}
+
+.LabelBlack {
+	color: #000000;
+}
+
+Alert{
+	borderStyle: solid;
+	borderColor: #ffffff;
+	borderThickness: 1;
+	cornerRadius: 5;
+	headerHeight: 26;
+	backgroundAlpha: 0.51;
+	fontSize: 12;
+	backgroundColor: #000000;
+	titleStyleName: "mypanelTitle";
+	messageStyleName: "msyStyleName";
+}
+.mypanelTitle {
+	letterSpacing: 0;
+	color: #ffffff;
+	fontSize: 14;
+	fontWeight: normal;
+}
+.msyStyleName {	
+	color: #000000;	
+}
+
+/*
+//------------------------------
+//  Rules
+//------------------------------
+*/
+HRule
+{
+	strokeColor:#5a5a5a;
+	strokeWidth:1;
+}
+
+/*
+//------------------------------
+//  Slider
+//------------------------------
+*/
+.LVSlider {
+	tickOffset: 0;
+	tickLength: 10;
+	tickColor: #ffffff;
+	showTrackHighlight: true;
+	invertThumbDirection: true;
+	borderColor: #ffffff;
+	themeColor: #ff0000;
+	fillColors: #ffffff, #ffffff, #ffffff, #eeeeee;
+	labelStyleName: "myvSliderLabelStyle";
+}
+.RVSlider {
+	labelOffset: 13;
+	tickOffset: 15;
+	tickLength: 10;
+	tickColor: #ffffff;
+	showTrackHighlight: true;
+	invertThumbDirection: false;
+	borderColor: #ffffff;
+	themeColor: #ff0000;
+	fillColors: #ffffff, #ffffff, #ffffff, #eeeeee;
+	labelStyleName: "myvSliderLabelStyle";
+}
+.myvSliderLabelStyle {
+	color: #ffffff;
+}
+
+LegendItem{	
+	font-size:12px;	
+}
+
+/*
+//------------------------------
+//  ScrollBars
+//------------------------------
+*/
+ScrollBar
+{
+	
+	downArrowDisabledSkin: Embed(source="darkroom.swf", symbol="ScrollArrowDown_disabledSkin");
+	downArrowDownSkin: Embed(source="darkroom.swf", symbol="ScrollArrowDown_downSkin");
+	downArrowOverSkin: Embed(source="darkroom.swf", symbol="ScrollArrowDown_overSkin");
+	downArrowUpSkin: Embed(source="darkroom.swf", symbol="ScrollArrowDown_upSkin");
+	thumbDownSkin: Embed(source="darkroom.swf", symbol="ScrollThumb_downSkin");
+	thumbIcon: Embed(source="darkroom.swf", symbol="ScrollBar_thumbIcon");
+	thumbOverSkin: Embed(source="darkroom.swf", symbol="ScrollThumb_overSkin");
+	thumbUpSkin: Embed(source="darkroom.swf", symbol="ScrollThumb_upSkin");
+	trackSkin: Embed(source="darkroom.swf", symbol="ScrollTrack_Skin");
+	upArrowDisabledSkin: Embed(source="darkroom.swf", symbol="ScrollArrowUp_disabledSkin");
+	upArrowDownSkin: Embed(source="darkroom.swf", symbol="ScrollArrowUp_downSkin");
+	upArrowOverSkin: Embed(source="darkroom.swf", symbol="ScrollArrowUp_overSkin");
+	upArrowUpSkin: Embed(source="darkroom.swf", symbol="ScrollArrowUp_upSkin");
+	
+}
+
+.editBtnStyle {
+	skin:Embed(source="assets/icon/TS_33.png");
+	over-skin:Embed(source="assets/overicon/TS_33.png");
+	down-skin:Embed(source="assets/icon/TS_33.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_33.png");
+}
+
+
+.deployBtnSkin {
+	skin:Embed(source="assets/icon/deploy.png");
+	over-skin:Embed(source="assets/overicon/deploy.png");
+	disabled-skin:Embed(source="assets/disableicon/deploy.png");
+}
+
+.assignViewsBtnSkin {
+	skin:Embed(source="assets/icon/assignViews.png");
+	over-skin:Embed(source="assets/overicon/assignViews.png");
+	disabled-skin:Embed(source="assets/disableicon/assignViews.png");
+}
+
+.assignWorkflowsBtnSkin {
+	skin:Embed(source="assets/icon/assignWorkflows.png");
+	over-skin:Embed(source="assets/overicon/assignWorkflows.png");
+	disabled-skin:Embed(source="assets/disableicon/assignWorkflows.png");
+}
+
+.assignTriggerBtnSkin {
+	skin:Embed(source="assets/icon/trigger.png");
+	over-skin:Embed(source="assets/overicon/trigger.png");
+	disabled-skin:Embed(source="assets/disableicon/trigger.png");
+}
+
+.undeployBtnSkin {
+	skin:Embed(source="assets/icon/undeploy.png");
+	over-skin:Embed(source="assets/overicon/undeploy.png");
+	disabled-skin:Embed(source="assets/disableicon/undeploy.png");
+}
+
+.showBtnStyle {
+	skin:Embed(source="assets/icon/TS_02.png");
+	over-skin:Embed(source="assets/overicon/TS_02.png");
+	down-skin:Embed(source="assets/icon/TS_02.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_02.png");
+}
+.loginBtnIcon {
+	icon:Embed(source="assets/icon/login_confirm.png");
+}
+
+.searchBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="assets/icon/TS_02.png");
+	overIcon:Embed(source="assets/overicon/TS_02.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_02.png");
+}
+.createBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="assets/icon/TS_01.png");
+	overIcon:Embed(source="assets/overicon/TS_01.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_01.png");
+}
+.saveBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="assets/icon/TS_13.png");
+	overIcon:Embed(source="assets/overicon/TS_13.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_13.png");
+}
+.delBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="assets/icon/TS_6.png");
+	overIcon:Embed(source="assets/overicon/TS_6.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_6.png");
+}
+.editBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_28.png");
+	overIcon:Embed(source="assets/overicon/TS_28.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_28.png");
+}
+.okIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_7.png");
+	overIcon:Embed(source="assets/overicon/TS_7.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_7.png");
+}
+.noIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_8.png");
+	overIcon:Embed(source="assets/overicon/TS_8.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_8.png");
+}
+.noIconW {
+	color: #ffffff;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_8.png");
+	overIcon:Embed(source="assets/overicon/TS_8.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_8.png");
+}
+.saveIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_13.png");
+	overIcon:Embed(source="assets/overicon/TS_13.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_13.png");
+}
+.zgdBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_19.png");
+	overIcon:Embed(source="assets/overicon/TS_19.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_19.png");
+}
+.yclBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_29.png");
+	overIcon:Embed(source="assets/overicon/TS_29.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_29.png");
+}
+.sjcxBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_17.png");
+	overIcon:Embed(source="assets/overicon/TS_17.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_17.png");
+}
+.desBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_33.png");
+	overIcon:Embed(source="assets/overicon/TS_33.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_33.png");
+}
+.czrzBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/images/icon/history-log.png");
+	overIcon:Embed(source="assets/images/icon/history-log.png");
+	disabledIcon:Embed(source="assets/images/icon/history-log.png");
+}
+.uploadBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_02.png");
+	overIcon:Embed(source="assets/overicon/TS_02.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_02.png");
+}
+.uploadBtnSkin {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_01.png");
+	overIcon:Embed(source="assets/overicon/TS_01.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_01.png");
+}
+.startIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_29.png");
+	overIcon:Embed(source="assets/overicon/TS_29.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_29.png");
+}
+.stopIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_14.png");
+	overIcon:Embed(source="assets/overicon/TS_14.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_14.png");
+}
+.checkBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_17.png");
+	overIcon:Embed(source="assets/overicon/TS_17.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_17.png");
+}
+.downloadBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/TS_20.png");
+	overIcon:Embed(source="assets/overicon/TS_20.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_20.png");
+}
+.pageFirstBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/page-first.gif");
+	disabledIcon:Embed(source="assets/icon/page-first-disabled.gif");
+}
+.pagePrevBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/page-prev.gif");
+	disabledIcon:Embed(source="assets/icon/page-prev-disabled.gif");
+}
+.pageNextBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/page-next.gif");
+	disabledIcon:Embed(source="assets/icon/page-next-disabled.gif");
+}
+.pageLastBtnIcon {
+	color: #FFFFFF;
+	textRollOverColor: #000000;
+	icon:Embed(source="assets/icon/page-last.gif");
+	disabledIcon:Embed(source="assets/icon/page-last-disabled.gif");
+}
+.addSubBtnIcon{
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="assets/icon/TS_34.png");
+	disabledIcon:Embed(source="assets/disableicon/TS_34.png");
+}
+
+.editBtnSkin {
+	skin:Embed(source="assets/icon/TS_28.png");
+	over-skin:Embed(source="assets/overicon/TS_28.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_28.png");
+}
+.jhBtnSkin {
+	skin:Embed(source="assets/icon/TS_7.png");
+	over-skin:Embed(source="assets/overicon/TS_7.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_28.png");
+}
+.cxBtnSkin {
+	skin:Embed(source="assets/icon/TS_19.png");
+	over-skin:Embed(source="assets/overicon/TS_19.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_19.png");
+}
+.jyBtnSkin {
+	skin:Embed(source="assets/icon/TS_8.png");
+	over-skin:Embed(source="assets/overicon/TS_8.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_8.png");
+}
+.desBtnSkin {
+	skin:Embed(source="assets/icon/TS_33.png");
+	over-skin:Embed(source="assets/overicon/TS_33.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_33.png");
+}
+.delBtnSkin {
+	skin:Embed(source="assets/icon/TS_6.png");
+	over-skin:Embed(source="assets/overicon/TS_6.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_6.png");
+}
+.groupBtnSkin {
+	skin:Embed(source="assets/icon/TS_23.png");
+	over-skin:Embed(source="assets/overicon/TS_23.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_23.png");
+}
+.userBtnSkin {
+	skin:Embed(source="assets/icon/TS_18.png");
+	over-skin:Embed(source="assets/overicon/TS_18.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_18.png");
+}
+.resetBtnSkin {
+	skin:Embed(source="assets/icon/TS_22.png");
+	over-skin:Embed(source="assets/overicon/TS_22.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_22.png");
+}
+.powerBtnSkin {
+	skin:Embed(source="assets/icon/TS_5.png");
+	over-skin:Embed(source="assets/overicon/TS_5.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_5.png");
+}
+.searchBtnSkin {
+	skin:Embed(source="assets/icon/TS_17.png");
+	over-skin:Embed(source="assets/overicon/TS_17.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_17.png");
+}
+.downloadBtnSkin {
+	skin:Embed(source="assets/icon/TS_20.png");
+	over-skin:Embed(source="assets/overicon/TS_20.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_20.png");
+}
+.pdfBtnSkin {
+	skin:Embed(source="assets/icon/pdf.gif");
+	over-skin:Embed(source="assets/overicon/pdf.gif");
+	disabled-skin:Embed(source="assets/disableicon/pdf.gif");
+}
+.xlsBtnSkin {
+	skin:Embed(source="assets/icon/TS_31.png");
+	over-skin:Embed(source="assets/overicon/TS_31.png");
+	disabled-skin:Embed(source="assets/disableicon/TS_31.png");
+}
+.htmlBtnSkin {
+	skin:Embed(source="assets/icon/html.jpg");
+	over-skin:Embed(source="assets/overicon/html.jpg");
+	disabled-skin:Embed(source="assets/disableicon/html.jpg");
+}
+.docBtnSkin {
+	skin:Embed(source="assets/icon/doc.png");
+	over-skin:Embed(source="assets/overicon/doc.png");
+	disabled-skin:Embed(source="assets/disableicon/doc.png");
+}
+.pptBtnSkin {
+	skin:Embed(source="assets/icon/ppt.png");
+	over-skin:Embed(source="assets/overicon/ppt.png");
+	disabled-skin:Embed(source="assets/disableicon/ppt.png");
+}
+.swfBtnSkin {
+	skin:Embed(source="assets/icon/swf.gif");
+	over-skin:Embed(source="assets/overicon/swf.gif");
+	disabled-skin:Embed(source="assets/disableicon/swf.gif");
+}
+
+.GroupComboBox {
+	arrowButtonWidth: 90;	
+	cornerRadius: 0;
+	backgroundAlpha: 1;
+	dropdownStyleName: "myComboBoxDropDowns";
+	skin:Embed(source="assets/icon/chang_desktop.png");
+	overSkin:Embed(source="assets/icon/chang_desktop_over.png");	
+}
+
+.myComboBoxDropDowns {
+	color: #000000;
+	fontSize: 12;
+}
+
+.portalBtn {
+	skin:Embed(source="assets/icon/Portal_bar.png");
+	overSkin:Embed(source="assets/icon/Portal_bar_over.png"); 	
+	downSkin:Embed(source="assets/icon/Portal_bar_down.png");
+}
+
+.addViewBtn {
+	skin:Embed(source="assets/icon/add_view.png");
+	overSkin:Embed(source="assets/icon/add_view_over.png"); 
+}
+
+.logoutBtn {
+	skin:Embed(source="assets/icon/logout.png");
+	overSkin:Embed(source="assets/icon/logout_over.png"); 
+}
+
+.arrowBtn {
+	skin:Embed(source="assets/icon/arrow.png");
+	overSkin:Embed(source="assets/icon/arrow_over.png"); 
+}
+
+.portalbar 
+{   
+	border-style: solid;   
+	border-thickness: 0;   
+	border-skin: ClassReference("css.GradientBorder");   
+	fill-colors: #000000, #EEEEEE;   
+	drop-shadow-enabled: true;   
+}
+
+.mainStyle {
+	backgroundColor: #1e1e1e;
+}
+
+.mainviewStack {
+	border-thickness: 0;   
+	border-skin: ClassReference("css.GradientBorder");   
+	fillColors: #333333, #eeeeee;   
+	fillAlphas:1,1;
+	fillRatios:127,255;
+	drop-shadow-enabled: true; 
+}
+
+.showUserButton {
+	
+	color: #cecece;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff; 
+	icon:Embed(source="assets/icon/user.png");	
+}
+.showDeskButton {
+	
+	color: #cecece;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff; 
+	icon:Embed(source="assets/icon/desktop.png");	
+}
+
+.bgAlpha5 {
+	backgroundAlpha : 0.5;
+}
+
+.dataLoadWait {
+	backgroundColor:#000000; 
+	backgroundAlpha:0.5;
+    color : white;
+}
+
+.loginPanel {
+	titleStyleName: "loginPanelTitle";
+	cornerRadius:9;
+}
+
+.loginPanelTitle {
+	fontSize: 14;
+	color: #ffffff;
+	fontWeight: bold;
+}		
+.tupuBtnSkin {
+	fontWeight:normal;
+	fontSize:14;
+	color:#ffffff;
+	textRollOverColor: #ffffff; 
+	skin:Embed(source="assets/overicon/topu01.png");
+	over-skin:Embed(source="assets/icon/topu01.png");
+}
+
+.cmdbTabNavStyle {
+	 backgroundColor: "#000000";
+     cornerRadius: 0;
+    
+    selectedTabTextStyleName: "cmdbSelectedTab";
+}
+
+.cmdbSelectedTab{
+	color: #ffffff;
+}	
+
+.cmdbPanel {
+	titleStyleName : "cmdbSelectedTab";
+	backgroundColor: "#6b6b6b";
+}
+
+.cmdbHbox {
+	backgroundColor:"#333333";
+}
+ 
+.cmdbVbox{
+	backgroundColor:"#333333";
+}
+.iconBtn2 {
+	color:#000000;
+	disabledColor:#cccccc;
+}
+PopUpButton { 
+	popUpStyleName: myCustomPopUpStyleName; 
+} 
+
+.myCustomPopUpStyleName { 
+	fontWeight: normal; 
+	textAlign: left; 
+	color: #000000;
+} 
+
+SuperPanel
+{
+	resize-grip-skin:          	Embed(source="assets/images/resizeHandler.png"); 
+	
+	actionAlpha:		 		0.75;
+	border-color: 				#ffffff;
+	border-alpha: 				.2;
+	border-thickness-left: 		5;
+	border-thickness-top: 		0;
+	border-thickness-bottom:	9;
+	border-thickness-right: 	5;
+	corner-radius: 				6;
+	highlight-alphas: 			0.1, 0;
+	header-colors: 				#5a5a5a, #5a5a5a;
+	header-height:              18;
+	footer-colors: 				#ffffff, #ffffff;
+	dropShadowEnabled: 			true;
+	shadow-distance:			4;
+	
+	title-style-name:			"superPanelTitle";
+	close-button-style-name:	"closeButton";
+	config-button-style-name:	"configButton";
+	inactive-header-colors: 	#666666, #666666;
+	inactive-footer-colors: 	#ffffff, #ffffff;
+	inactive-shadow-distance:	1;
+	inactive-title-style-name:	"superPanelInactiveTitle";
+}
+
+.closeButton
+{
+	icon: 						Embed(source="assets/images/closeOver.png");
+	up-icon: 					Embed(source="assets/images/closeOver.png");
+	over-icon: 					Embed(source="assets/images/closeOver.png");
+	down-icon: 					Embed(source="assets/images/closeOver.png");
+	disabled-skin: 				Embed(source="assets/images/clear.png");
+	selected-up-skin: 			Embed(source="assets/images/clear.png");
+	selected-over-skin: 		Embed(source="assets/images/clear.png");
+	selected-down-skin: 		Embed(source="assets/images/clear.png");
+	down-skin: 					Embed(source="assets/images/clear.png");
+	over-skin: 					Embed(source="assets/images/clear.png");
+	up-skin: 					Embed(source="assets/images/clear.png");	
+}
+
+.configButton
+{
+	icon: 						Embed(source="assets/images/configOver.png");
+	up-icon: 					Embed(source="assets/images/configOver.png");
+	over-icon: 					Embed(source="assets/images/configOver.png");
+	selected-over-icon: 		Embed(source="assets/images/configOver.png");
+	down-icon: 					Embed(source="assets/images/configOver.png");
+	selected-down-icon: 		Embed(source="assets/images/configOver.png");
+	disabled-skin: 				Embed(source="assets/images/clear.png");
+	selected-up-skin: 			Embed(source="assets/images/clear.png");
+	selected-over-skin: 		Embed(source="assets/images/clear.png");
+	selected-down-skin: 		Embed(source="assets/images/clear.png");
+	down-skin: 					Embed(source="assets/images/clear.png");
+	over-skin: 					Embed(source="assets/images/clear.png");
+	up-skin: 					Embed(source="assets/images/clear.png");	
+}
+
+.superPanelTitle
+{
+	font-weight:				bold;
+	color: 						#ffffff;
+}
+
+.superPanelInactiveTitle
+{
+	font-weight:				bold;
+	color: 						#ffffff;
+}
+
+Accordion {
+	headerHeight: 25;
+	vertical-gap: 1;
+	background-alpha:0;
+	open-duration:500;
+	border-style:none;
+	padding-bottom:5;
+	header-style-name: accordionHeader;
+}
+
+.accordionHeader {
+	font-size:12;
+	font-family:"Microsoft Yahei",Georgia;
+	cornerRadii: 0, 0, 10, 10;
+	borderColors: #FFFFFF, #FFFFFF;
+	overBorderColors: #FFFFFF, #FFFFFF;
+	selectedBorderColors: #FFFFFF, #FFFFFF;
+	borderThickness: 2;
+	borderAlpha: 1;
+	fillColors: #FFFFFF, #FFFFFF;
+	fillAlphas: 1, 1;
+	fillColorRatios: 0, 255;
+	overFillColors: #FFFFFF, #BAC2CF;
+	overFillAlphas: 1, 1;
+	overFillColorRatios: 0, 169;
+	selectedFillColors: #FFFFFF, #BAC2CF;
+	selectedFillAlphas: 1,1;
+	selectedFillColorRatios: 0, 169;
+}
+
+
+
+

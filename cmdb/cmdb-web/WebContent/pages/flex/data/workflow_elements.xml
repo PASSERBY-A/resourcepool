@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+	<element name="startNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="StartEvents" dragAble="true">
+		<style>
+			<icon>[assets/wf/start.png]</icon>
+			<smallIcon>[assets/wf/start1.png]</smallIcon>
+			<defineInEdgeNum></defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>
+			<label>开始</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	
+	<element name="endNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="EndEvents" dragAble="true">
+		<style>
+			<icon>[assets/wf/end.png]</icon>
+			<smallIcon>[assets/wf/end1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum>0</defineOutEdgeNum>
+			<label>结束</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="processNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="UserTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/user.png]</icon>
+			<smallIcon>[assets/wf/user1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum>1</defineOutEdgeNum>	
+			<label>用户任务</label>
+		</style>
+	
+		<processProp>
+			<attribute name="role" label="执行角色" dataType="xs:string"></attribute>
+			<attribute name="user" label="执行人" dataType="xs:integer"></attribute>
+		</processProp>
+	</element>
+	
+	<element name="scriptTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="ScriptTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/script.png]</icon>
+			<smallIcon>[assets/wf/script1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>脚本任务</label>
+		</style>
+	
+		<processProp>
+			<attribute name="scriptFormat" label="脚本类型" dataType="xs:string"></attribute>
+			<attribute name="script" label="脚本" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<element name="javaServiceTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="JavaServiceTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/JAVA.png]</icon>
+			<smallIcon>[assets/wf/JAVA1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>javaServiceTask</label>
+		</style>
+	
+		<processProp>
+			<attribute name="javaclass" label="java类" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<element name="webServiceTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="WebServiceTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/WEB.png]</icon>
+			<smallIcon>[assets/wf/WEB1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>WebService任务</label>
+		</style>
+	
+		<processProp>
+			<attribute name="webservice" label="webservice地址" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<!-- <element name="bussinessRuleTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="bussinessRuleTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/wf_state.png]</icon>
+			<smallIcon>[assets/wf/wf_state.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>bussinessRuleTask</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element> -->
+	
+	<element name="emailTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="EmailTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/Email.png]</icon>
+			<smallIcon>[assets/wf/Email1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>emailTask</label>
+		</style>
+	
+		<processProp>
+			<attribute name="to" label="收件人" dataType="xs:string"></attribute>
+			<attribute name="from" label="发件人" dataType="xs:string"></attribute>
+			<attribute name="subject" label="邮件标题" dataType="xs:string"></attribute>
+			<attribute name="cc" label="超送人" dataType="xs:string"></attribute>
+			<attribute name="html" label="邮件内容" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<!-- <element name="muleTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="muleTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/wf_state.png]</icon>
+			<smallIcon>[assets/wf/wf_state.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>muleTask</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	
+	<element name="manualTask" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="manualTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/wf_state.png]</icon>
+			<smallIcon>[assets/wf/wf_state.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>manualTask</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element> -->
+	
+	<element name="subProcess" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="SubProcess" dragAble="true">
+		<style>
+			<icon>[assets/wf/subProcess.png]</icon>
+			<smallIcon>[assets/wf/subProcess1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>子流程</label>
+		</style>
+	
+		<processProp>
+			<attribute name="subprocessname" label="子任务名称" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<element name="forkNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="ParallelGatewayFork" dragAble="true">
+		<style>
+			<icon>[assets/wf/fork.png]</icon>
+			<smallIcon>[assets/wf/fork1.png]</smallIcon>
+			<defineInEdgeNum></defineInEdgeNum>
+			<defineOutEdgeNum>1</defineOutEdgeNum>	
+			<label>分支</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="joinNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="ParallelGatewayJoin" dragAble="true">
+		<style>
+			<icon>[assets/wf/join.png]</icon>
+			<smallIcon>[assets/wf/join1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>汇聚</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="exclusiveGateway" classname="com.hp.gdcc.workflow.element.ProcessNode" group="流程模板" code="ExclusiveGateway" dragAble="true">
+		<style>
+			<icon>[assets/wf/select.png]</icon>
+			<smallIcon>[assets/wf/select1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>选择</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	
+	<element name="emergencyStartNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyStartEvents" dragAble="true">
+		<style>
+			<icon>[assets/wf/start.png]</icon>
+			<smallIcon>[assets/wf/start1.png]</smallIcon>
+			<defineInEdgeNum></defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>
+			<label>开始</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	
+	<element name="emergencyEndNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyEndEvents" dragAble="true">
+		<style>
+			<icon>[assets/wf/end.png]</icon>
+			<smallIcon>[assets/wf/end1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum>0</defineOutEdgeNum>
+			<label>结束</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="emergencyProcessNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyUserTask" dragAble="true">
+		<style>
+			<icon>[assets/wf/user.png]</icon>
+			<smallIcon>[assets/wf/user1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum>1</defineOutEdgeNum>	
+			<label>用户任务</label>
+		</style>
+	
+		<processProp>
+			<attribute name="timelong" label="执行时长" dataType="xs:integer"></attribute>
+			<attribute name="user1" label="第一执行人" dataType="xs:string"></attribute>
+			<attribute name="user2" label="第二执行人" dataType="xs:string"></attribute>
+		</processProp>
+	</element>
+	
+	<element name="emergencyForkNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyParallelGatewayFork" dragAble="true">
+		<style>
+			<icon>[assets/wf/fork.png]</icon>
+			<smallIcon>[assets/wf/fork1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>分支</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="emergencyJoinNode" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyParallelGatewayJoin" dragAble="true">
+		<style>
+			<icon>[assets/wf/join.png]</icon>
+			<smallIcon>[assets/wf/join1.png]</smallIcon>
+			<defineInEdgeNum></defineInEdgeNum>
+			<defineOutEdgeNum>1</defineOutEdgeNum>	
+			<label>汇聚</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	<element name="emergencyExclusiveGateway" classname="com.hp.gdcc.workflow.element.ProcessNode" group="应急流程模板" code="EmergencyExclusiveGateway" dragAble="true">
+		<style>
+			<icon>[assets/wf/select.png]</icon>
+			<smallIcon>[assets/wf/select1.png]</smallIcon>
+			<defineInEdgeNum>1</defineInEdgeNum>
+			<defineOutEdgeNum></defineOutEdgeNum>	
+			<label>选择</label>
+		</style>
+	
+		<processProp>
+		</processProp>
+	</element>
+	
+	
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线"  dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/line.png]</smallIcon>
+			<label>直线</label>
+			<dash>no</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>none</arrowType>
+		</style>
+		
+	</element>
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线" dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/arrow2line.png]</smallIcon>
+			<label>线型箭头直线</label>
+			<dash>no</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>lines</arrowType>
+		</style>
+	</element>
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线" dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/arrowline.png]</smallIcon>
+			<label>实心箭头直线</label>
+			<dash>no</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>triangle</arrowType>
+		</style>
+	</element>
+	
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线" dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/dashline.png]</smallIcon>
+			<label>虚线</label>
+			<dash>yes</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>none</arrowType>
+		</style>
+		
+	</element>
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线" dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/arrow2dashline.png]</smallIcon>
+			<label>线型箭头虚线</label>
+			<dash>yes</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>lines</arrowType>
+		</style>
+	</element>
+	
+	<element name="line" classname="com.hp.gdcc.workflow.element.LinkNode" group="连线" dragAble="false">
+		<style>
+			<smallIcon>[assets/wf/arrowdashline.png]</smallIcon>
+			<label>实心箭头虚线</label>
+			<dash>yes</dash>
+			<lineStyle>none</lineStyle>
+			<arrowType>triangle</arrowType>
+		</style>
+	</element>
+</elements>

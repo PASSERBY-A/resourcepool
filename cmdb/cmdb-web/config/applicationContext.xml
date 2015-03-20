@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-lazy-init="true">
+ 
+    <context:component-scan base-package="com.hp.avmon" />
+    
+	<!-- service层的属性和配置文件读入 ,多个用逗号隔开 -->
+	<!-- controller层的属性和配置文件读入 ,多个用逗号隔开-->
+	<context:property-placeholder location="classpath:config.properties"/>
+	
+	<!-- 用于持有ApplicationContext,可以使用SpringContextHolder.getBean('xxxx')的静态方法得到spring bean对象 -->
+	<bean class="com.hp.avmon.common.SpringContextHolder" lazy-init="false" />
+	
+	<!-- 系统参数 -->
+	<bean id="systemConfig" class="com.hp.avmon.common.Config">
+		<property name="avmonServerUrl" value="${avmonserver.url}" />
+		<property name="runMode" value="${system.runMode}" />
+		<property name="reportTemplatePath" value="${report.template.path}" />
+		<property name="reportHtmlPath" value="${report.html.path}" />
+		<property name="reportActionUrl" value="${report.action.url}" />
+		<property name="licensePath" value="${system.license.path}" />
+		<property name="downloadBaseUrl" value="${system.download.baseurl}" />
+	</bean>
+	
+	<!-- 
+	
+	<bean id="avmonServer" class="com.hp.avmonserver.api.AvmonServer" >
+		<property name="avmonServerUrl" value="${avmonserver.url}" />
+	</bean>
+	
+	<bean id="kpiDataStore" class="${avmon.kpi.store.class}" >
+	</bean>
+	
+	<bean id="cacheServer" class="com.hp.avmonserver.api.CacheServer" >
+		<property name="configFile" value="memcached.xml" />
+	</bean>
+	-->
+	
+	<!--
+	<bean id="processToolWebService" class="com.hp.avmon.alarm.service.ProcessToolWebService" >
+		<property name="wsUrl" value="${process.tool.webservice.url}" />
+		<property name="wsMethod" value="${process.tool.webservice.method}" />
+	</bean>
+	-->
+		
+	<!-- 该 BeanPostProcessor 将自动起作用，对标注 @Autowired 的 Bean 进行自动注入 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+		<!-- proxool配置 -->
+	<bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource" >
+		<property name="driver" value="${jdbc.connection.driverclass}" />
+		<property name="driverUrl" value="${jdbc.connection.url}" />
+		<property name="user" value="${jdbc.connection.username}" />
+		<property name="password" value="${jdbc.connection.password}" />
+		<!--数据源的别名 -->
+		<property name="alias" value="proxool_alias" />
+		<!-- 空闲连接个数 默认为0 -->
+		<property name="prototypeCount" value="4" />
+		<!--最小连接数(默认5个) -->
+		<property name="minimumConnectionCount" value="0" />
+		<!--最大连接数(默认15个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定 -->
+		<property name="maximumConnectionCount" value="10" />
+		<!-- 如果侦察线程发现闲置连接，则会使用这个SQL语句来对这些连接进行检查 -->
+		<property name="houseKeepingTestSql" value="select CURRENT_DATE" />
+	</bean>
+	
+
+	
+	
+    <!-- 事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <!-- define the SqlSessionFactory -->
+    <!-- 
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/mybatis-config.xml" />
+		<property name="typeAliasesPackage" value="com.hp.avmon.authority.pojo, com.hp.avmon.monitor.pojo, com.hp.avmon.view.pojo, com.hp.avmon.sys.pojo" />
+	</bean>
+	 -->
+	<!-- mybatis接口 
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.hp.avmon.authority.dao, com.hp.avmon.monitor.dao, com.hp.avmon.view.dao, com.hp.avmon.sys.dao" />
+	</bean>
+	-->
+    <!-- 事务通知 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="delete*" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="query*" propagation="REQUIRED" isolation="DEFAULT" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- aop配置 -->
+    <aop:config>
+        <!-- 第一个*匹配方法的返回类型
+        	  第二*..匹配任何包以及其子包
+        	  第三个*匹配以相应表达式结尾的类或接口
+        	  第四个.*(..)匹配相应类中带任何参数的方法 -->
+        <aop:pointcut id="txPointcut" expression="execution(* *..*Service.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+    
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    
+    <!-- 配置一个NamedParameterJdbcTemplate模板 使用构造函数注入器 -->
+    <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">  
+        <constructor-arg ref="dataSource"/>  
+    </bean>
+    
+   
+   	<context:component-scan base-package="com.hp.avmon,com.hp.avmonserver" annotation-config="true">
+	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="com.hp.avmon" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+
+	<!-- 连接事务的注解配置 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<mvc:annotation-driven />
+	<!-- 验证码 -->
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+		<property name="config">
+			<bean class="com.google.code.kaptcha.util.Config">
+				<constructor-arg>
+					<props>
+						<prop key="kaptcha.textproducer.font.color">blue</prop>
+						<prop key="kaptcha.noise.color">blue</prop>
+						<prop key="kaptcha.border">no</prop>
+						<prop key="kaptcha.textproducer.char.space">2</prop>
+						<prop key="kaptcha.textproducer.char.length">6</prop>
+						<prop key="kaptcha.textproducer.font.names">华文彩云,华文行楷,方正舒体,华文隶书,幼圆,华文琥珀</prop>
+					</props>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+
+	<!--事务模板 -->  
+    <bean id="transactionTemplate"  
+        class="org.springframework.transaction.support.TransactionTemplate">  
+        <property name="transactionManager">  
+            <ref local="transactionManager" />  
+       </property>  
+       <!--ISOLATION_DEFAULT 表示由使用的数据库决定  -->  
+       <property name="isolationLevelName" value="ISOLATION_DEFAULT"/>  
+       <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>          
+       <!-- <property name="timeout" value="30"/> -->  
+   </bean> 
+   
+<bean id="cmdbServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>${cmdb.rmi.url}/CmdbService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.CmdbService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="cmdbViewServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>${cmdb.rmi.url}/CmdbViewService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.CmdbViewService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="repairServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>${cmdb.rmi.url}/RepairRecordService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.RepairRecordService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="changeServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>${cmdb.rmi.url}/ChangeRecordService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.ChangeRecordService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="avmonRemoteServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>${avmon.rmi.url}/AvmonServer</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.avmonserver.api.IRemoteService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+</beans>
+

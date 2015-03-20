@@ -1,0 +1,168 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": 0,
+        "padding": null,
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "f46ee517-d370-42c2-a94b-cf4697a668bb",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "layout": "auto",
+                "bodyPadding": 30,
+                "manageHeight": null,
+                "title": "同步内存"
+            },
+            "designerId": "8b7e3fd0-ec4e-4216-b9a5-3f2d048fd85f",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": null,
+                        "height": 50,
+                        "padding": null,
+                        "width": 588,
+                        "text": "如果修改了告警处理的规则，比如：告警过滤规则、合并规则、告警转译规则等，您需要同步内存以使其生效。如果对监控对象进行了调整，比如新增监控对象，修改关键属性，也需要同步。"
+                    },
+                    "designerId": "f9c48655-f937-41fe-9cdd-5fe1e7fc2d3f"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": ""
+                    },
+                    "designerId": "4b14d00a-69ea-40f8-8765-0a47baea4d39"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "",
+                        "boxLabel": "同步告警处理规则到内存",
+                        "checked": true
+                    },
+                    "designerId": "71df7762-da48-4c96-8623-620290007cca"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "",
+                        "boxLabel": "同步监控对象到内存",
+                        "checked": true
+                    },
+                    "designerId": "464f7c0c-09ba-46d8-acb2-3d2d438adb8f"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": ""
+                    },
+                    "designerId": "237741f6-d638-4600-a16e-dff18c514ed6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 39,
+                        "width": 139,
+                        "text": "同步内存"
+                    },
+                    "designerId": "b13ba27a-89e5-4fa0-a20f-ec8e7c650351",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "button.disable();\r",
+                                    "\r",
+                                    "\r",
+                                    "Ext.MessageBox.show({\r",
+                                    "    msg: '正在同步内存，请稍候...',\r",
+                                    "    progressText: 'Processing...',\r",
+                                    "    width:300,\r",
+                                    "    wait:true,\r",
+                                    "    waitConfig: {interval:200},\r",
+                                    "    icon:'icon-loading'\r",
+                                    "});\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "Ext.Ajax.request({\r",
+                                    "    url: '../../../deploy/syncMem',\r",
+                                    "    params: {},\r",
+                                    "    success: function(response, opts) {\r",
+                                    "        button.enable();\r",
+                                    "        Ext.MessageBox.hide();\r",
+                                    "        var obj=Ext.decode(response.responseText);\r",
+                                    "        Ext.Msg.alert('更新内存', obj.msg); \r",
+                                    "\r",
+                                    "    },\r",
+                                    "    failure: function(response, opts) {\r",
+                                    "        Ext.Msg.alert('更新内存', '同步失败，请稍后再试。');\r",
+                                    "        Ext.MessageBox.hide();\r",
+                                    "        button.enable();\r",
+                                    "    }\r",
+                                    "});\r",
+                                    "\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "0ee4ada4-fbfe-481f-b3ae-b1dbd95a03e5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "72a5b7de-3dfc-4766-a9ff-7862c5bf2ba9",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "frame": true,
+                "layout": "absolute",
+                "title": "小工具"
+            },
+            "designerId": "975f6486-d5a0-44bc-97f0-f08c2c824483",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 30,
+                        "layout|y": 20,
+                        "height": 92,
+                        "itemId": "regText",
+                        "width": 780,
+                        "fieldLabel": "正则表达式",
+                        "name": "regText"
+                    },
+                    "designerId": "206fc8e1-a502-41c7-8673-9d8fbbd7eaa4"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 30,
+                        "layout|y": 140,
+                        "height": 92,
+                        "itemId": "targetText",
+                        "width": 780,
+                        "fieldLabel": "目标字符串",
+                        "name": "targetText"
+                    },
+                    "designerId": "07973cc6-f403-4c4c-87ee-3313e69c6f45"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 140,
+                        "layout|y": 270,
+                        "height": 50,
+                        "width": 150,
+                        "text": "验证"
+                    },
+                    "designerId": "958586b4-9bd7-45d9-abca-8ca511a1e12b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var regText=button.up('form').down('#regText').value;\r",
+                                    "var targetText=button.up('form').down('#targetText').value;\r",
+                                    "\r",
+                                    "    Ext.Ajax.request({\r",
+                                    "        url: '../../../system/checkRegText',\r",
+                                    "        params: {regText:regText,targetText:targetText},\r",
+                                    "        success: function(response, opts) {\r",
+                                    "            var obj = Ext.decode(response.responseText);\r",
+                                    "            if(obj.regMatched){\r",
+                                    "            \tExt.getCmp(\"imgResult\").setSrc('images/yes.gif');\r",
+                                    "            }\r",
+                                    "            else{\r",
+                                    "                Ext.getCmp(\"imgResult\").setSrc('images/no.gif');\r",
+                                    "            }\r",
+                                    "        },\r",
+                                    "        failure: function(response, opts) {\r",
+                                    "        }\r",
+                                    "    });\r",
+                                    "\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "cf80c49c-afa0-4fc6-b9c1-c8914604305f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 310,
+                        "layout|y": 270,
+                        "height": 50,
+                        "id": "imgResult",
+                        "width": 70
+                    },
+                    "designerId": "f5bc21c8-3860-42c9-9b12-d1d36aa12348"
+                }
+            ]
+        }
+    ]
+}

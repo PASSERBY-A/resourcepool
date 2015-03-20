@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knowledgeInfos>
+	<knowledgeInfo>
+		<knowledgeId>1</knowledgeId>
+		<typeId>1</typeId>
+		<typeName>核心交易</typeName>
+		<knowledgeTitle>主机CPU过高</knowledgeTitle>
+		<keyWords>CPU 主机</keyWords>
+		<createTime>2011-03-07 20:22:00</createTime>
+		<principal>OVO1</principal>
+		<useTime>64</useTime>
+		<content>通常解决办法是，top检查是否有进程异常占用CPU</content>
+	</knowledgeInfo>
+	<knowledgeInfo>
+		<knowledgeId>2</knowledgeId>
+		<typeId>2</typeId>
+		<typeName>前置机</typeName>
+		<knowledgeTitle>券商连接数过低</knowledgeTitle>
+		<keyWords>连接数 前置机 券商</keyWords>
+		<createTime>2011-03-08 20:22:00</createTime>
+		<principal>OVO2</principal>
+		<useTime>35</useTime>
+		<content>通常解决办法是，开启模拟客户端，看看是否可连接，如不可以，重启服务</content>
+	</knowledgeInfo>
+	<knowledgeInfo>
+		<knowledgeId>3</knowledgeId>
+		<typeId>3</typeId>
+		<typeName>核心网</typeName>
+		<knowledgeTitle>端口流量超标</knowledgeTitle>
+		<keyWords>端口 流量  超标</keyWords>
+		<createTime>2011-03-09 20:22:00</createTime>
+		<principal>NNM1</principal>
+		<useTime>45</useTime>
+		<content>通过抓包找到数据源，进一步分析</content>
+	</knowledgeInfo>
+	<knowledgeInfo>
+		<knowledgeId>4</knowledgeId>
+		<typeId>4</typeId>
+		<typeName>外围网</typeName>
+		<knowledgeTitle>节点 node1 内存使用率过高</knowledgeTitle>
+		<keyWords>内存 网络 使用率</keyWords>
+		<createTime>2011-03-10 20:22:00</createTime>
+		<principal>NNM2</principal>
+		<useTime>72</useTime>
+		<content>启用备份设备，此台设备重启</content>
+	</knowledgeInfo>
+	<knowledgeInfo>
+		<knowledgeId>5</knowledgeId>
+		<typeId>5</typeId>
+		<typeName>外围应用</typeName>
+		<knowledgeTitle>数据库死锁</knowledgeTitle>
+		<keyWords>数据库 死锁</keyWords>
+		<createTime>2011-03-11 20:22:00</createTime>
+		<principal>OVO3</principal>
+		<useTime>364</useTime>
+		<content>请数据库管理员进行分析</content>
+	</knowledgeInfo>
+</knowledgeInfos>		

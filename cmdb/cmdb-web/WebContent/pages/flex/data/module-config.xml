@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.user.components.UserLoginPanel" 
+     modulePath="com/hp/gdcc/tsportal/user/modules/UserClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.alert.components.AlertSearchWin" 
+     modulePath="com/hp/gdcc/tsportal/alert/modules/AlertClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.alert.components.AlertSearch2Win" 
+     modulePath="com/hp/gdcc/tsportal/alert/modules/AlertClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.alertrule.component.AlertRuleManager" 
+     modulePath="com/hp/gdcc/tsportal/alertrule/modules/AlertruleClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.user.components.UserPasswordPanel" 
+     modulePath="com/hp/gdcc/tsportal/user/modules/UserClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.user.components.UserEditPanel" 
+     modulePath="com/hp/gdcc/tsportal/user/modules/UserClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.user.components.UserPowerPanel" 
+     modulePath="com/hp/gdcc/tsportal/user/modules/UserClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.tsportal.user.components.UserLogoutPanel" 
+     modulePath="com/hp/gdcc/tsportal/user/modules/UserClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.ngecc.cmdbImp.components.CmdbImpPanel" 
+     modulePath="com/hp/gdcc/tsportal/cmdbImpExp/cmdbImp/modules/CmdbImpClassModule.swf">
+  </classConfig>
+   <classConfig 
+     classPath="com.hp.gdcc.ngecc.cmdbExp.components.CmdbExpPanel" 
+     modulePath="com/hp/gdcc/tsportal/cmdbImpExp/cmdbExp/modules/CmdbExpClassModule.swf">
+  </classConfig>
+  <classConfig 
+     classPath="com.hp.gdcc.ngecc.components.UpGradePanel" 
+     modulePath="com/hp/gdcc/tsportal/agent/modules/UpGradeClassModule.swf">
+  </classConfig>
+</modules>

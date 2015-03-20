@@ -1,0 +1,59 @@
+body {
+    color: #222222;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 11px;
+}
+div.heading{
+    height:30px;
+    background-color:#47474A;
+    color:white;
+    font-size:20px;
+    padding:5px 30px;
+}
+div.centreDiv{
+    width:720px;
+    margin:auto;
+}
+div.floatLeftDiv{
+    float:left;
+}
+div.borderRight{
+    border-right:solid 1px #d3d3d3;
+}
+div.borderBottom{
+    border-bottom:solid 1px #d3d3d3;
+    margin:3px 0px;
+}
+div.padding{
+    padding:3px;
+}
+
+select {
+    background-image: url("inputBackgroundImage.png");
+    background-position: 1px 1px;
+    background-repeat: no-repeat;
+    border-color: #BED6F8;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    font-family: Arial,Verdana,sans-serif;
+    font-size: 11px;
+    margin:3px;
+}
+label {
+    display:inline-block;
+    width:100px;
+}
+
+//.ui-jqgrid tr.jqgrow td {
+	/* jqGrid cell content wrap  */
+//	white-space: normal !important;
+//	height: auto;
+//}
+
+//th.ui-th-column div {
+	/* jqGrid columns name wrap  */
+//	white-space: normal !important;
+//	height: auto !important;
+//	padding: 0px;
+//}

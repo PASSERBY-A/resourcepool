@@ -1,0 +1,133 @@
+.tabs{} 
+.manage{background-image: url(images/menuPanel/sys.gif) !important;background-repeat:no-repeat!important;} 
+.home{background-image: url(images/menuPanel/sys.gif) !important; line-height:10px;padding-top: 3px;} 
+.icon-menu{background-image: url(images/menuPanel/sys.gif) !important;background-repeat:no-repeat!important;} 
+.icon-save{background-image: url(images/save.gif) !important;background-repeat:no-repeat!important;} 
+.window-server{width:16px;background-image: url('images/menuPanel/sys.gif')} 
+.linux-server{width:16px;background-image:url('images/menuPanel/sys.gif')} 
+.alarm-server{color:red}
+.alarm-server-normal{color:black}
+
+.login-background{background-image:url('images/login_back_std.jpg')!important;} 
+
+
+.icon-middleware{width:16px;background-image:url('images/menus/settings.gif')!important;background-repeat:no-repeat!important;} 
+.icon-hardware{width:16px;background-image:url('images/menus/settings.gif')!important;background-repeat:no-repeat!important;} 
+.icon-business{width:16px;background-image:url('images/menus/settings.gif')!important;background-repeat:no-repeat!important;} 
+.icon-storage{width:16px;background-image:url('images/motype/device.gif')!important;background-repeat:no-repeat!important;} 
+.icon-others{width:16px;background-image:url('images/motype/help.gif')!important;background-repeat:no-repeat!important;} 
+.icon-network{width:16px;background-image:url('images/menus/settings.gif')!important;background-repeat:no-repeat!important;} 
+
+
+.icon-RedFlag{width:16px;background-image:url('images/motype/LINUX.png')!important;background-repeat:no-repeat!important;} 
+.icon-LINUX{width:16px;background-image:url('images/motype/LINUX.png')!important;background-repeat:no-repeat!important;} 
+.icon-Linux{width:16px;background-image:url('images/motype/LINUX.png')!important;background-repeat:no-repeat!important;} 
+.icon-WINDOWS{width:16px;background-image:url('images/motype/WINDOWS.png')!important;background-repeat:no-repeat!important;} 
+.icon-HP-UX{width:16px;background-image:url('images/motype/Icon_HPUX.png')!important;background-repeat:no-repeat!important;} 
+.icon-SOLARIS{width:16px;background-image:url('images/motype/Icon_SOLARIS.png')!important;background-repeat:no-repeat!important;} 
+.icon-SUNOS{width:16px;background-image:url('images/motype/Icon_SOLARIS.png')!important;background-repeat:no-repeat!important;} 
+.icon-AIX{width:16px;background-image:url('images/motype/Icon_AIX.png')!important;background-repeat:no-repeat!important;} 
+.icon-host{width:16px;background-image:url('images/motype/server.gif')!important;background-repeat:no-repeat!important;} 
+.icon-device{width:16px;background-image:url('images/motype/help.gif')!important;background-repeat:no-repeat!important;} 
+.icon-database{width:16px;background-image:url('images/motype/database.gif')!important;background-repeat:no-repeat!important;}
+.icon-UNKNOWN{width:16px;background-image:url('images/motype/database.gif')!important;background-repeat:no-repeat!important;}
+
+.icon-RedFlag-b{width:16px;background-image:url('images/motype/Icon_Linux_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-LINUX-b{width:16px;background-image:url('images/motype/Icon_Linux_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-Linux-b{width:16px;background-image:url('images/motype/Icon_Linux_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-WINDOWS-b{width:16px;background-image:url('images/motype/Icon_Windows_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-HP-UX-b{width:16px;background-image:url('images/motype/Icon_HPUX_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-SOLARIS-b{width:16px;background-image:url('images/motype/Icon_SOLARIS_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-AIX-b{width:16px;background-image:url('images/motype/Icon_AIX_a.png')!important;background-repeat:no-repeat!important;} 
+.icon-host-b{width:16px;background-image:url('images/motype/HOST.png')!important;background-repeat:no-repeat!important;} 
+.icon-device-b{width:16px;background-image:url('images/motype/help.gif')!important;background-repeat:no-repeat!important;} 
+.icon-database-b{width:16px;background-image:url('images/motype/database.gif')!important;background-repeat:no-repeat!important;}
+
+.icon-add{width:16px;background-image:url('images/button/add.gif')!important;background-repeat:no-repeat!important;}
+.icon-refresh{width:16px;background-image:url('images/button/refresh.gif')!important;background-repeat:no-repeat!important;}
+.icon-delete{width:16px;background-image:url('images/button/delete.gif')!important;background-repeat:no-repeat!important;}
+.icon-ok{width:16px;background-image:url('images/button/ok.gif')!important;background-repeat:no-repeat!important;}
+.icon-cancel{width:16px;background-image:url('images/button/cancel.gif')!important;background-repeat:no-repeat!important;}
+.icon-close{width:16px;background-image:url('images/button/close.gif')!important;}
+.icon-search{width:16px;background-image:url('images/button/search.gif')!important;background-repeat:no-repeat!important;}
+.icon-start{width:16px;background-image:url('images/button/start.gif')!important;background-repeat:no-repeat!important;}
+.icon-pause{width:16px;background-image:url('images/button/pause.gif')!important;background-repeat:no-repeat!important;}
+.icon-save{width:16px;background-image:url('images/button/save.gif')!important;background-repeat:no-repeat!important;}
+.icon-edit{width:16px;background-image:url('images/button/edit.gif')!important;background-repeat:no-repeat!important;}
+.icon-bluebook{width:16px;background-image:url('images/button/bluebook.gif')!important;background-repeat:no-repeat!important;}
+.icon-trend{width:16px;background-image:url('images/kpi/trend.gif')!important;background-repeat:no-repeat!important;}
+.icon-download{width:16px;background-image:url('images/button/download.gif')!important;background-repeat:no-repeat!important;}
+.icon-monitor{width:16px;background-image:url('images/button/monitor.gif')!important;background-repeat:no-repeat!important;}
+.icon-menu{width:16px;background-image:url('images/menus/menu.gif')!important;background-repeat:no-repeat!important;}
+.icon-setting{width:16px;background-image:url('images/menus/settings.gif')!important;background-repeat:no-repeat!important;}
+.icon-user{width:16px;background-image:url('images/menus/user.gif')!important;background-repeat:no-repeat!important;}
+.icon-role{width:16px;background-image:url('images/menus/role.gif')!important;background-repeat:no-repeat!important;}
+.icon-member{width:16px;background-image:url('images/menus/memeber.gif')!important;background-repeat:no-repeat!important;}
+.icon-home{width:16px;background-image:url('images/menus/home.gif')!important;background-repeat:no-repeat!important;}
+.icon-group{width:16px;background-image:url('images/menus/group.gif')!important;background-repeat:no-repeat!important;}
+.icon-help{width:16px;background-image:url('images/motype/help.gif')!important;background-repeat:no-repeat!important;} 
+
+.icon-alarm-level0{width:16px;background-image:url('images/alarm/level0.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level1{width:16px;background-image:url('images/alarm/level1.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level2{width:16px;background-image:url('images/alarm/level2.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level3{width:16px;background-image:url('images/alarm/level3.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level4{width:16px;background-image:url('images/alarm/level4.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level5{width:16px;background-image:url('images/alarm/level4.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-level6{width:16px;background-image:url('images/alarm/level4.png')!important;background-repeat:no-repeat!important;}
+.icon-alarm-unknown{width:16px;height:16px;background-image:url('images/alarm/help.gif')!important;background-repeat:no-repeat;}
+
+.icon-plugin{width:16px;background-image:url('images/menus/sys.gif')!important;background-repeat:no-repeat!important;}
+
+
+
+
+
+.icon-form{width:16px;background-image:url('images/menus/form.png')!important;background-repeat:no-repeat!important;}
+.icon-grid{width:16px;background-image:url('images/menus/grid.png')!important;background-repeat:no-repeat!important;}
+.icon-chart{width:16px;background-image:url('images/menus/chart.gif')!important;background-repeat:no-repeat!important;}
+.icon-alarm-node{width:16px;background-image:url('images/menus/datacenter.png')!important;background-repeat:no-repeat!important;}
+
+
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    right:35%;
+    top:10px;
+    width:300px;
+    z-index:20000;
+}
+#msg-div .msg {
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #F6F6F6;
+    border: 2px solid #ccc;
+    margin-top: 2px;
+    padding: 10px 15px;
+    color: #555;
+}
+#msg-div .msg h3 {
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#msg-div .msg p {
+    margin: 0;
+}
+
+.x-btn-default-small .x-btn-inner,.x-btn-default-medium .x-btn-inner,.x-btn-default-large .x-btn-inner,.x-btn-default-toolbar-small .x-btn-inner,.x-btn-default-toolbar-medium .x-btn-inner,.x-btn-default-toolbar-large .x-btn-inner,.x-menu-item-text,.x-html-editor-tb .x-font-select,.x-panel-header-default,.x-panel-header-text-default,.x-panel-header-default-framed,.x-tip-header,.x-tip-body,.x-form-invalid-tip-body,.x-tip-header-text,.x-progress-text,.x-toolbar,.x-toolbar .x-form-item-label,.x-toolbar .x-toolbar-text,.x-window-header-text-default,.x-tab-bar,.x-tab button,.x-grid-rowbody,.x-grid-row .x-grid-cell,.x-grid-group-title,.x-grid-row-editor .x-form-field,.x-grid-row-editor .x-form-display-field,.x-form-invalid-under,.x-fieldset-header,.x-column-header,.x-mask-msg div,.x-btn-group-header-text-default-framed,table.x-datepicker-inner a,.x-monthpicker-item,.x-dd-drag-ghost 
+{ font-size: 12px; }
+.x-panel-header-text { font-size: 12px; }
+.x-panel-header-text-default-framed { font-size: 12px; }
+
+
+.icon-cluster{width:16px;background-image:url('images/vm/icon_Cluster.png')!important;background-repeat:no-repeat!important;}
+.icon-datacenters{width:16px;background-image:url('images/vm/icon_Datacenters.png')!important;background-repeat:no-repeat!important;}
+.icon-datastores{width:16px;background-image:url('images/vm/icon_Datastores.png')!important;background-repeat:no-repeat!important;}
+.icon-esxhosts{width:16px;background-image:url('images/vm/icon_ESX_Hosts.png')!important;background-repeat:no-repeat!important;}
+.icon-resourcepools{width:16px;background-image:url('images/vm/icon_Resource_Pools.png')!important;background-repeat:no-repeat!important;}
+.icon-virtualcenters{width:16px;background-image:url('images/vm/icon_Virtual_Centers.png')!important;background-repeat:no-repeat!important;}
+.icon-virtualmachines{width:16px;background-image:url('images/vm/icon_Virtual_Machines.png')!important;background-repeat:no-repeat!important;}
+.icon-network{width:16px;background-image:url('images/vm/icon_Network.png')!important;background-repeat:no-repeat!important;}
+

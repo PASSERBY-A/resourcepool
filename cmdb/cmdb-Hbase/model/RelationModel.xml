@@ -1,0 +1,127 @@
+<map>
+  <entry>
+    <string>host_vm_relation</string>
+    <RelationNode>
+      <id>7586544573880999</id>
+      <name>host_vm_relation</name>
+      <label>物理机与虚拟机对应关系</label>
+      <icon>icon_hardware</icon>
+      <derivedFrom>linked</derivedFrom>
+      <parentId>88611601395618996</parentId>
+      <path>RelationCi/linked</path>
+      <updateTime>2013-12-30 18:16:44.381</updateTime>
+      <createTime>2013-12-30 18:16:44.381</createTime>
+      <isType>true</isType>
+      <exchangedId></exchangedId>
+      <version>1</version>
+      <domain></domain>
+      <updateMode>0</updateMode>
+      <syncStatus>0</syncStatus>
+      <isRelation>true</isRelation>
+      <sourceCiTypeNames>Host;HostHba;</sourceCiTypeNames>
+      <targetCiTypeNames>HostHba</targetCiTypeNames>
+      <sourceId>0</sourceId>
+      <targetId>0</targetId>
+    </RelationNode>
+  </entry>
+  <entry>
+    <string>RelationCi</string>
+    <RelationNode>
+      <id>88611601395618996</id>
+      <name>RelationCi</name>
+      <label>配置项关系</label>
+      <icon>RelationCi</icon>
+      <derivedFrom></derivedFrom>
+      <parentId>0</parentId>
+      <path>RelationCi</path>
+      <updateTime>2013-12-30 18:16:44.381</updateTime>
+      <createTime>2013-12-30 18:16:44.381</createTime>
+      <isType>true</isType>
+      <exchangedId></exchangedId>
+      <version>1</version>
+      <domain>rootDomain</domain>
+      <updateMode>0</updateMode>
+      <syncStatus>0</syncStatus>
+      <isRelation>true</isRelation>
+      <sourceCiTypeNames>Host;HostHba;</sourceCiTypeNames>
+      <targetCiTypeNames>HostHba</targetCiTypeNames>
+      <sourceId>0</sourceId>
+      <targetId>0</targetId>
+    </RelationNode>
+  </entry>
+  <entry>
+    <string>link2</string>
+    <RelationNode>
+      <id>7589512545771999</id>
+      <name>link2</name>
+      <label>测试关系</label>
+      <icon>icon_hardware</icon>
+      <derivedFrom>RelationCi</derivedFrom>
+      <parentId>0</parentId>
+      <path>RelationCi</path>
+      <updateTime>2013-12-30 18:16:44.381</updateTime>
+      <createTime>2013-12-30 18:16:44.381</createTime>
+      <isType>true</isType>
+      <exchangedId></exchangedId>
+      <version>1</version>
+      <domain>t1</domain>
+      <updateMode>0</updateMode>
+      <syncStatus>0</syncStatus>
+      <isRelation>true</isRelation>
+      <sourceCiTypeNames>Host;HostHba;</sourceCiTypeNames>
+      <targetCiTypeNames>HostHba</targetCiTypeNames>
+      <sourceId>0</sourceId>
+      <targetId>0</targetId>
+    </RelationNode>
+  </entry>
+  <entry>
+    <string>host_vm</string>
+    <RelationNode>
+      <id>7586573661086999</id>
+      <name>host_vm</name>
+      <label>位置关系</label>
+      <icon>icon_hardware</icon>
+      <derivedFrom>linked</derivedFrom>
+      <parentId>88611601395618996</parentId>
+      <path>RelationCi/linked</path>
+      <updateTime>2013-12-30 18:16:44.381</updateTime>
+      <createTime>2013-12-30 18:16:44.381</createTime>
+      <isType>true</isType>
+      <exchangedId></exchangedId>
+      <version>1</version>
+      <domain></domain>
+      <updateMode>0</updateMode>
+      <syncStatus>0</syncStatus>
+      <isRelation>true</isRelation>
+      <sourceCiTypeNames>Host;HostHba;</sourceCiTypeNames>
+      <targetCiTypeNames>HostHba</targetCiTypeNames>
+      <sourceId>0</sourceId>
+      <targetId>0</targetId>
+    </RelationNode>
+  </entry>
+  <entry>
+    <string>linked</string>
+    <RelationNode>
+      <id>88611601395618995</id>
+      <name>linked</name>
+      <label>链接关系</label>
+      <icon>linked</icon>
+      <derivedFrom>RelationCi</derivedFrom>
+      <parentId>88611601395618996</parentId>
+      <path>RelationCi/linked</path>
+      <updateTime>2013-12-30 18:16:44.381</updateTime>
+      <createTime>2013-12-30 18:16:44.381</createTime>
+      <isType>true</isType>
+      <exchangedId></exchangedId>
+      <version>1</version>
+      <domain>rootDomain</domain>
+      <updateMode>0</updateMode>
+      <syncStatus>0</syncStatus>
+      <isRelation>true</isRelation>
+      <sourceCiTypeNames>Host;HostHba;</sourceCiTypeNames>
+      <targetCiTypeNames>HostHba</targetCiTypeNames>
+      <sourceId>0</sourceId>
+      <targetId>0</targetId>
+    </RelationNode>
+  </entry>
+</map>

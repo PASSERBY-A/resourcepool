@@ -1,0 +1,25 @@
+#Storage
+manageIP=管理IP
+status=状态
+updator=最后更新人
+updateTime=最后更新时间
+assetNum=固定资产号
+seqNum=序列号
+type=型号
+online_time=上线日期
+service_due=服务到期日期
+service_vendor=服务提供商
+service_level=服务级别
+equipment_room=所属机房
+equipment_cabinet=机柜位置
+equipment_U=所属U
+admin=管理员
+admin_contact=管理员联系方式
+
+#StorageNetPort
+portName=端口名称
+portWWN=端口WWPN号
+--relation 所属存储
+
+#StorageLun
+--无

@@ -1,0 +1,1743 @@
+@font-face 
+{
+	font-family: Tahoma; 
+	src: url("/assets/Tahoma.ttf");
+	unicode-range:
+		U+0020-U+0040, /* Punctuation, Numbers */
+		U+0041-U+005A, /* Upper-Case A-Z */
+		U+005B-U+0060, /* Punctuation and Symbols */
+		U+0061-U+007A, /* Lower-Case a-z */
+		U+007B-U+007E; /* Punctuation and Symbols */            
+}
+@font-face { 
+	src:url("C:/WINDOWS/Fonts/MSYH.ttf"); 
+	font-family: MyExFont;	
+	unicodeRange:
+		U+0042,U+004f,U+0053,U+0053,U+0043,U+0052,U+004d,U+0042,U+0049,U+56ed,U+533a,U+79c1,U+6709,
+		U+4e91,U+9700,U+6c42,U+76d1,U+63a7,U+5b89,U+5168,U+5e73,U+53f0,U+5de5,U+7a0b,U+6295,U+8d44,
+		U+002f,U+9884,U+7b97,U+56ed,U+533a,U+4fe1,U+606f,U+5316,U+7ba1,U+4e13,U+4e1a,U+57df,U+4e00,
+		U+7ea7,U+652f,U+0028,U+4e1a,U+652f,U+3001,U+7ba1,U+4fe1,U+0029,U+7ef4,U+62a4;
+}
+.MyTextStyle 
+{ 
+	font-family: Tahoma; 
+}
+.BTStyle1{
+	font-family: MyExFont;
+	fontSize:14;
+	color: #ffffff;
+}
+.msyh{
+	fontFamily:"Microsoft YaHei",微软雅黑;
+}
+.msyh11 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:11;
+	color:#273545;
+}
+.msyh12 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:12;
+	color:#273545;
+}
+.msyh14 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:14;
+	color:#273545;
+}
+.msyh16 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:16;
+	color:#273545;
+}
+.msyh18 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:18;
+	color:#273545;
+}
+.msyh24 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:24;
+	color:#273545;
+}
+.msyh12w {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:12;
+	color:#ffffff;
+}
+.msyh14w {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:14;
+	color:#ffffff;
+}
+.msyh16w {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:16;
+	color:#ffffff;
+}
+.msyh18w {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:18;
+	color:#ffffff;
+}
+.msyh24w {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:24;
+	color:#ffffff;
+}
+.msyh11b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:11;
+	color:#88cbe2;
+}
+.msyh12b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:12;
+	color:#88cbe2;
+}
+.msyh14b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:14;
+	color:#88cbe2;
+}
+.msyh16b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:16;
+	color:#88cbe2;
+}
+.msyh18b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:18;
+	color:#88cbe2;
+}
+.msyh20b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:20;
+	color:#88cbe2;
+}
+.msyh22b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:22;
+	color:#88cbe2;
+}
+.msyh24b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:24;
+	color:#88cbe2;
+}
+.msyh34b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:34;
+	color:#88cbe2;
+}
+
+.msyh38b {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:38;
+	color:#88cbe2;
+}
+.msyh14g {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:14;
+	color:#2ecc71;
+}
+.msyh16g {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:16;
+	color:#2ecc71;
+}
+.msyh22g {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:22;
+	color:#2ecc71;
+}
+.msyh24g {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:24;
+	color:#2ecc71;
+}
+.msyh14s {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:14;
+	color:#253545;
+}
+.msyh20s {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:20;
+	color:#253545;
+}
+/*
+//------------------------------
+//  全局  默认蓝色配置
+//------------------------------
+*/
+global
+{
+	/* themeColor	*/
+	themeColor: #009DFF;
+	fontSize:12;
+	color:#000000;
+	font-family:simsun;
+}
+
+Module {
+	backgroundAlpha: 0;	
+}
+Canvas {
+	backgroundAlpha: 0;	
+}
+.bgCanvas {
+	borderColor:#ACC0CE;
+	borderThickness:5; 
+	borderStyle:solid;
+}
+
+ApplicationControlBar {
+	highlightAlphas: 0.16, 0;
+	fillAlphas: 0.66, 0;
+	fillColors: #ffffff, #6699cc;
+	backgroundColor: #1c50ba;
+	cornerRadius: 0;
+	dropShadowEnabled: false;
+}
+
+Panel {
+	borderStyle: solid;
+	borderColor: #dddddd;
+	borderAlpha: 1;
+	borderThickness: 1;
+	borderThicknessLeft: 0;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 0;
+	borderThicknessRight: 0;
+	cornerRadius: 0;
+	backgroundAlpha: 0;
+	highlightAlphas: 1, 0;
+	headerColors: #dce3f2,#ebeff7;
+	dropShadowEnabled: false;
+	titleStyleName: "mypanelTitle1";
+}
+
+.mypanelTitle1 {
+	fontFamily: YaHei;
+	fontSize: 12;
+	fontWeight: bold;
+	color: #0b333c;
+}
+.blueTitlePanel {
+	titleStyleName: "mypanelTitle2";
+}
+.mypanelTitle2 {
+	fontFamily: YaHei;
+	fontWeight: bold;
+	color: #15428b;
+	textAlign: center;
+	fontSize: 12;
+}
+ProgressBar {
+	barColor: #4a6da5;
+	trackColors: #c0cce0, #c0cce0;
+	color: #ffffff;
+	trackHeight: 10;
+	verticalGap: 7;
+	fontSize: 10;
+	fontWeight: normal;
+}
+HBox {
+	horizontalAlign:center;
+	horizontalGap:2;
+}
+.mainBox {
+	paddingBottom:6;
+	paddingLeft:6;
+	paddingRight:6;
+	paddingTop:4;
+	borderColor: #dddddd;
+	borderStyle:solid;
+}
+
+.vBoxGControl {
+	verticalGap:5;
+	backgroundColor:#ffffff;
+}
+
+VRule{
+	strokeColor: #000000;
+}
+.myHRule{
+	strokeColor: #000000;
+	strokeWidth: 2;
+}
+
+.errorTip
+{    
+	fontSize: 12;
+}
+.redFormItem {
+	labelStyleName: "redFormItemLabel";
+}
+.redFormItemLabel {
+	color: red;
+}
+/*
+//------------------------------
+//  按钮
+//------------------------------
+*/
+Button {
+	highlightAlphas: 1, 0;	
+	color:#000000;
+}
+/*
+//------------------------------
+//  下拉框
+//------------------------------
+*/
+ComboBox {
+	fontSize: 11;
+	color: #0b333c;
+	borderColor: #b7babc;
+	iconColor: #111111;
+	selectionColor: #7fcdfe;
+	textSelectedColor: #0b333c;
+	rollOverColor: #aadeff;
+	textRollOverColor: #0b333c;
+	themeColor: #009dff;
+	alternatingItemColors: #ffffff, #ffffff;
+}
+/*
+//------------------------------
+//  DragHighlight
+//------------------------------
+*/
+DragHighlight
+{
+	border-color: #CCCCCC;
+	border-thickness: 3px;
+	border-style: solid;
+	background-color: #333333;
+}
+/*
+//------------------------------
+//  DragHighlight
+//------------------------------
+*/
+DataGrid {
+	color:#000000;
+}
+/*
+//------------------------------
+//  Portal用画布
+//------------------------------
+*/
+MDICanvas
+{
+	background-color: #000000;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	backgroundAlpha: 0;	
+}
+
+/*
+//------------------------------
+//  复合窗口画布
+//------------------------------
+*/
+ToolMdiCav {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	backgroundAlpha: 0;	
+}
+
+/*
+//------------------------------
+//  单行文本框
+//------------------------------
+*/
+TextInput
+{
+	backgroundColor: #ffffff;	
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #000000;
+	color: #000000;
+}  
+/*
+//------------------------------
+//  树
+//------------------------------
+*/
+Tree 
+{
+	color:#000000;
+}
+/*
+//------------------------------
+//  多行文本框
+//------------------------------
+*/
+TextArea
+{
+	backgroundColor: #ffffff;
+	fontSize: 12;
+	color: #000000;
+} 
+
+/*
+//------------------------------
+//  悬浮框
+//------------------------------
+*/
+ToolTip {    
+	backgroundColor: ccdeed;    
+	backgroundAlpha: 0.8;
+	cornerRadius: 0;    
+	color: white;    
+	fontSize: 12;
+}
+
+.menuToolTip {
+	backgroundAlpha: 0.75;
+	backgroundColor: #212130;
+	useRollOver: false;
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #FFFFFF;
+	selectionColor: #b9e5fd;
+	dropShadowEnabled: true;
+	cornerRadius: 8;
+	paddingLeft: 3;
+	paddingRight: 3;
+	paddingTop: 0;
+	paddingBottom: 0;
+	openDuration:0;
+}
+
+/*
+//------------------------------
+//  Pod
+//------------------------------
+*/
+Pod
+{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	rounded-bottom-corners: false;
+	border-thickness: 0px;
+	border-style: none;
+	border-color: #000000;
+	/*显示pod头颜色*/
+	header-colors: #eeeeee, #eeeeee; 
+	highlight-alphas: .9, 0;
+	corner-radius: 0px;
+	header-height: 22px;
+	shadow-direction: right;
+	drop-shadow-color: #999999;
+	color:           #ffffff;    
+	backgroundColor: #ccdeed;
+	backgroundAlpha: 0;
+	titleStyleName : podTitle;
+}
+PodContentBase {
+	backgroundAlpha: 0;
+	verticalGap:0;
+	horizontalGap:            0;  
+}
+.podTitle
+{
+	fontSize: 14;
+	font-weight: bold;
+	color: #797979
+}
+
+/*
+//------------------------------
+//  菜单
+//------------------------------
+*/
+MenuBar
+{
+	backgroundColor:#000000;
+	menuStyleName: "dropDown";
+	disabledColor: #AAB3B3;
+	selectionColor: #7fcdfe;
+	textSelectedColor: #0b333c;
+	rollOverColor: #aadeff;
+	textRollOverColor: #0b333c;
+}
+.dropDown {
+	backgroundSize: "100%";  
+	backgroundAlpha: 1.0;
+	borderStyle: solid;
+	borderThickness: 1;
+	borderColor: #FFFFFF;
+	cornerRadius:0;
+	color: #000000;
+	textSelectedColor:#FFFFFF;
+	selectionColor: #7fcdfe;
+	textSelectedColor: #0b333c;
+	rollOverColor: #aadeff;
+	textRollOverColor: #0b333c;
+}
+.menuText{
+	backgroundAlpha: 0;
+	fontSize:12;
+	borderStyle:none;
+}
+/*
+//------------------------------
+//  箭头
+//------------------------------
+*/
+.leftArrowButton
+{
+	up-skin:		Embed("../assets/left_arrow_up.gif");
+	over-skin:		Embed("../assets/left_arrow_over.gif");
+	down-skin:		Embed("../assets/left_arrow_up.gif");
+	disabled-skin:	Embed("../assets/left_arrow_disabled.gif");
+}
+.rightArrowButton
+{
+	up-skin:		Embed("../assets/right_arrow_up.gif");
+	over-skin:		Embed("../assets/right_arrow_over.gif");
+	down-skin:		Embed("../assets/right_arrow_up.gif");
+	disabled-skin:	Embed("../assets/right_arrow_disabled.gif");
+}
+
+/*
+//------------------------------
+//  TabBar使用
+//------------------------------
+*/
+.viewTab 
+{
+    upSkin:                 ClassReference("TabSkin");
+    overSkin:               ClassReference("TabSkin");    
+    selectedUpSkin:         ClassReference("TabSkin");   
+    selectedOverSkin:       ClassReference("TabSkin");    
+    color:                  #cecece;
+	fontWeight:             normal;
+    tabBackgroundColors:    #6e6e6e, #009dff;
+    tabBackgroundAlphas:    0.0, 1.0;       
+}
+
+.viewTabs
+{
+    backgroundColor:          #ededed;    
+    tabHeight:                30;
+    horizontalGap:            0;  
+	fontSize:                 12px;
+    selectedTabTextStyleName: selectedTabText;
+}
+
+.selectedTabText
+{
+    fontSize:               12px;
+    fontWeight:             bold; 
+    color:                  #ffffff;
+} 
+
+/*
+//------------------------------
+//  Panel使用
+//------------------------------
+*/
+.viewStyle
+{
+    backgroundColor:    #333333; 
+	color:#000000;
+} 
+
+/*
+//------------------------------
+//  单选框
+//------------------------------
+*/
+.radioBtn {
+	fillColors: #FFFFFF, #FFFFFF;
+	color: #000000;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	disabledColor: #FFFFFF;
+}
+
+/*
+//------------------------------
+//  CollapsibleAccordion.as使用
+//------------------------------
+*/
+.drawerButton {
+	fontFamily: Verdana;
+	fontSize: 12;
+	textAlign: left;
+	fillAlphas: 1.0, 1.0;
+	/*fillColors: #111111, #999999,  #333333, #AAAAAA;*/
+	fillColors: #444444, #AAAAAA, #666666, #CCCCCC;
+	color: #000000;
+	textRollOverColor: #FFFFFF;
+}
+.drawerAccordion {
+	borderColor: #CCCCCC;
+	borderThickness: 2;
+	headerStyleName: drawerAccordionHeader;
+}
+.drawerAccordionHeader {
+	fillAlphas: 1.0, 1.0, 0.82, 0.82;
+	fillColors: #444444, #AAAAAA, #666666, #CCCCCC;
+	/*   fillColors:#2588D1, #015194, #015194, #015194;*/
+	color: #000000;
+	cornerRadius: 4;
+	paddingLeft: 10;
+	fontFamily: Verdana;
+	fontSize: 12;
+}
+.drawerCloseRight {
+	up-skin:Embed(source="../assets/close.png");
+	over-skin:Embed(source="../assets/close.png");
+	down-skin:Embed(source="../assets/close.png");
+	disabled-skin:Embed(source="../assets/close.png");
+}
+.drawerCloseLeft {
+	up-skin:Embed(source="../assets/closeleft.png");
+	over-skin:Embed(source="../assets/closeleft.png");
+	down-skin:Embed(source="../assets/closeleft.png");
+	disabled-skin:Embed(source="../assets/closeleft.png");
+}
+
+/*
+//------------------------------
+//  TabSkin使用
+//------------------------------
+*/
+.gradient   
+{   
+	border-style: solid;   
+	border-thickness: 0;   
+	border-skin: ClassReference("GradientBorder");   
+	fill-colors: #000000, #AAAAAA;   
+	drop-shadow-enabled: true;   
+}
+
+/*
+//------------------------------
+//  VAccordion
+//------------------------------
+*/
+VAccordion {
+	headerHeight: 80;
+	vertical-gap: 5;
+	background-alpha:0;
+	open-duration:500;
+	border-style:none;
+	padding-bottom:5;
+	header-style-name: gradientHeader;
+}
+
+.gradientHeader {
+	font-family:Arial;
+	cornerRadii: 0, 0, 10, 10;
+	borderColors: #FFFFFF, #FFFFFF;
+	overBorderColors: #FFFFFF, #FFFFFF;
+	selectedBorderColors: #FFFFFF, #FFFFFF;
+	borderThickness: 2;
+	borderAlpha: 1;
+	fillColors: #FFFFFF, #FFFFFF;
+	fillAlphas: 1, 1;
+	fillColorRatios: 0, 255;
+	overFillColors: #FFFFFF, #BAC2CF;
+	overFillAlphas: 1, 1;
+	overFillColorRatios: 0, 169;
+	selectedFillColors: #FFFFFF, #BAC2CF;
+	selectedFillAlphas: 1,1;
+	selectedFillColorRatios: 0, 169;
+}
+
+/*
+//------------------------------
+//  导航
+//------------------------------
+*/
+TabNavigator {
+	tabStyleName: "myTabs";
+	firstTabStyleName: "myTabs";
+	lastTabStyleName: "myTabs";
+	selectedTabTextStyleName: "mySelectedTabs";
+}
+.myTabs {
+	textAlign: left;
+	color: #0b333c;	
+}
+.mySelectedTabs {
+	color: #000000;	
+}
+
+/*
+//------------------------------
+//  子窗口
+//------------------------------
+*/
+TitleWindow { 
+	borderColor: #9cc9f0;
+	borderAlpha: 1;
+}
+
+/* Style the Window title message. */
+.windowStyles {
+	color: black;
+	letterSpacing: 2;
+}
+
+/* Style the Window status message. */
+.windowStatus {
+	color: red;
+	fontWeight: bold;
+}
+
+/*
+//------------------------------
+//  ManiBox中label使用样式
+//------------------------------
+*/
+.LabelBlack {
+	color: #000000;
+}
+
+/*
+//------------------------------
+//  提示框
+//------------------------------
+*/
+Alert{
+	borderStyle: solid;
+	borderColor: #ffffff;
+	borderThickness: 1;
+	cornerRadius: 5;
+	headerHeight: 26;
+	backgroundAlpha: 0.5;
+	fontSize: 12;
+	color: #000000;	
+	backgroundColor: #ccdeed;
+	titleStyleName: "mypanelTitle";
+	messageStyleName: "msyStyleName";
+}
+.mypanelTitle {
+	letterSpacing: 0;
+	color: #000000;
+	fontSize: 14;
+	fontWeight: normal;
+}
+.msyStyleName {	
+	color: #000000;	
+}
+
+/*
+//------------------------------
+//  Rules
+//------------------------------
+*/
+HRule
+{
+	strokeColor:#5a5a5a;
+	strokeWidth:0;
+}
+
+/*
+//------------------------------
+//  Slider
+//------------------------------
+*/
+.LVSlider {
+	tickOffset: 0;
+	tickLength: 10;
+	tickColor: #ffffff;
+	showTrackHighlight: true;
+	invertThumbDirection: true;
+	borderColor: #ffffff;
+	themeColor: #ff0000;
+	fillColors: #ffffff, #ffffff, #ffffff, #eeeeee;
+	labelStyleName: "myvSliderLabelStyle";
+}
+.RVSlider {
+	labelOffset: 13;
+	tickOffset: 15;
+	tickLength: 10;
+	tickColor: #ffffff;
+	showTrackHighlight: true;
+	invertThumbDirection: false;
+	borderColor: #ffffff;
+	themeColor: #ff0000;
+	fillColors: #ffffff, #ffffff, #ffffff, #eeeeee;
+	labelStyleName: "myvSliderLabelStyle";
+}
+.myvSliderLabelStyle {
+	color: #ffffff;
+}
+
+/*
+//------------------------------
+//  图标标示
+//------------------------------
+*/
+LegendItem{	
+	font-size:11px;	
+}
+
+/*
+//------------------------------
+//  ScrollBars
+//------------------------------
+*/
+ScrollBar
+{
+	downArrowDisabledSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowDown_disabledSkin");
+	downArrowDownSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowDown_downSkin");
+	downArrowOverSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowDown_overSkin");
+	downArrowUpSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowDown_upSkin");
+	thumbDownSkin: Embed(source="scrollbar.swf", symbol="ScrollThumb_downSkin");
+	thumbIcon: Embed(source="scrollbar.swf", symbol="ScrollBar_thumbIcon");
+	thumbOverSkin: Embed(source="scrollbar.swf", symbol="ScrollThumb_overSkin");
+	thumbUpSkin: Embed(source="scrollbar.swf", symbol="ScrollThumb_upSkin");
+	trackSkin: Embed(source="scrollbar.swf", symbol="ScrollTrack_Skin");
+	upArrowDisabledSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowUp_disabledSkin");
+	upArrowDownSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowUp_downSkin");
+	upArrowOverSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowUp_overSkin");
+	upArrowUpSkin: Embed(source="scrollbar.swf", symbol="ScrollArrowUp_upSkin");	
+}
+
+
+/*
+//------------------------------
+//  按钮的skin和icon,及部分图片资源绑定
+//------------------------------
+*/
+.editBtnStyle {
+	skin:Embed(source="../assets/icon/TS_33.png");
+	over-skin:Embed(source="../assets/overicon/TS_33.png");
+	down-skin:Embed(source="../assets/icon/TS_33.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_33.png");
+}
+.showBtnStyle {
+	skin:Embed(source="../assets/icon/TS_02.png");
+	over-skin:Embed(source="../assets/overicon/TS_02.png");
+	down-skin:Embed(source="../assets/icon/TS_02.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_02.png");
+}
+.loginBtnIcon {
+	icon:Embed(source="../assets/icon/login_confirm.png");
+}
+.searchBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="../assets/icon/TS_02.png");
+	overIcon:Embed(source="../assets/overicon/TS_02.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_02.png");
+}
+.createBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="../assets/icon/TS_01.png");
+	overIcon:Embed(source="../assets/overicon/TS_01.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_01.png");
+}
+.saveBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="../assets/icon/TS_13.png");
+	overIcon:Embed(source="../assets/overicon/TS_13.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_13.png");
+}
+.delBtnIcon {
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="../assets/icon/TS_6.png");
+	overIcon:Embed(source="../assets/overicon/TS_6.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_6.png");
+}
+.editBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_28.png");
+	overIcon:Embed(source="../assets/overicon/TS_28.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_28.png");
+}
+.okIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_7.png");
+	overIcon:Embed(source="../assets/overicon/TS_7.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_7.png");
+}
+.noIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_8.png");
+	overIcon:Embed(source="../assets/overicon/TS_8.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_8.png");
+}
+.saveIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_13.png");
+	overIcon:Embed(source="../assets/overicon/TS_13.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_13.png");
+}
+.zgdBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_19.png");
+	overIcon:Embed(source="../assets/overicon/TS_19.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_19.png");
+}
+.yclBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_29.png");
+	overIcon:Embed(source="../assets/overicon/TS_29.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_29.png");
+}
+.sjcxBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_17.png");
+	overIcon:Embed(source="../assets/overicon/TS_17.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_17.png");
+}
+.desBtnIcom {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_33.png");
+	overIcon:Embed(source="../assets/overicon/TS_33.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_33.png");
+}
+.czrzBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/images/icon/history-log.png");
+	overIcon:Embed(source="../assets/images/icon/history-log.png");
+	disabledIcon:Embed(source="../assets/images/icon/history-log.png");
+}
+.uploadBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_02.png");
+	overIcon:Embed(source="../assets/overicon/TS_02.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_02.png");
+}
+.uploadBtnSkin {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_01.png");
+	overIcon:Embed(source="../assets/overicon/TS_01.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_01.png");
+}
+.startIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_29.png");
+	overIcon:Embed(source="../assets/overicon/TS_29.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_29.png");
+}
+.stopIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_14.png");
+	overIcon:Embed(source="../assets/overicon/TS_14.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_14.png");
+}
+.checkBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_17.png");
+	overIcon:Embed(source="../assets/overicon/TS_17.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_17.png");
+}
+.downloadBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_20.png");
+	overIcon:Embed(source="../assets/overicon/TS_20.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_20.png");
+}
+.exportBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/TS_31.png");
+	overIcon:Embed(source="../assets/overicon/TS_31.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_31.png");
+}
+.pageFirstBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/page-first.gif");
+	disabledIcon:Embed(source="../assets/icon/page-first-disabled.gif");
+}
+.pagePrevBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/page-prev.gif");
+	disabledIcon:Embed(source="../assets/icon/page-prev-disabled.gif");
+}
+.pageNextBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/page-next.gif");
+	disabledIcon:Embed(source="../assets/icon/page-next-disabled.gif");
+}
+.pageLastBtnIcon {
+	color: #000000;
+	textRollOverColor: #000000;
+	icon:Embed(source="../assets/icon/page-last.gif");
+	disabledIcon:Embed(source="../assets/icon/page-last-disabled.gif");
+}
+.addSubBtnIcon{
+	color: #000000;
+	textRollOverColor: #ffffff;
+	icon:Embed(source="../assets/icon/TS_34.png");
+	disabledIcon:Embed(source="../assets/disableicon/TS_34.png");
+}
+/* 按钮的skin */
+.editBtnSkin {
+	skin:Embed(source="../assets/icon/TS_28.png");
+	over-skin:Embed(source="../assets/overicon/TS_28.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_28.png");
+}
+.jhBtnSkin {
+	skin:Embed(source="../assets/icon/TS_7.png");
+	over-skin:Embed(source="../assets/overicon/TS_7.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_28.png");
+}
+.okBtnSkin {
+	skin:Embed(source="../assets/icon/TS_7.png");
+	over-skin:Embed(source="../assets/overicon/TS_7.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_7.png");
+}
+.cxBtnSkin {
+	skin:Embed(source="../assets/icon/TS_19.png");
+	over-skin:Embed(source="../assets/overicon/TS_19.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_19.png");
+}
+.jyBtnSkin {
+	skin:Embed(source="../assets/icon/TS_8.png");
+	over-skin:Embed(source="../assets/overicon/TS_8.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_8.png");
+}
+.desBtnSkin {
+	skin:Embed(source="../assets/icon/TS_33.png");
+	over-skin:Embed(source="../assets/overicon/TS_33.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_33.png");
+}
+.delBtnSkin {
+	skin:Embed(source="../assets/icon/TS_6.png");
+	over-skin:Embed(source="../assets/overicon/TS_6.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_6.png");
+}
+.groupBtnSkin {
+	skin:Embed(source="../assets/icon/TS_23.png");
+	over-skin:Embed(source="../assets/overicon/TS_23.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_23.png");
+}
+.userBtnSkin {
+	skin:Embed(source="../assets/icon/TS_18.png");
+	over-skin:Embed(source="../assets/overicon/TS_18.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_18.png");
+}
+.resetBtnSkin {
+	skin:Embed(source="../assets/icon/TS_22.png");
+	over-skin:Embed(source="../assets/overicon/TS_22.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_22.png");
+}
+.powerBtnSkin {
+	skin:Embed(source="../assets/icon/TS_5.png");
+	over-skin:Embed(source="../assets/overicon/TS_5.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_5.png");
+}
+.searchBtnSkin {
+	skin:Embed(source="../assets/icon/TS_17.png");
+	over-skin:Embed(source="../assets/overicon/TS_17.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_17.png");
+}
+.downloadBtnSkin {
+	skin:Embed(source="../assets/icon/TS_20.png");
+	over-skin:Embed(source="../assets/overicon/TS_20.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_20.png");
+}
+.pdfBtnSkin {
+	skin:Embed(source="../assets/icon/pdf.gif");
+	over-skin:Embed(source="../assets/overicon/pdf.gif");
+	disabled-skin:Embed(source="../assets/disableicon/pdf.gif");
+}
+.xlsBtnSkin {
+	skin:Embed(source="../assets/icon/TS_31.png");
+	over-skin:Embed(source="../assets/overicon/TS_31.png");
+	disabled-skin:Embed(source="../assets/disableicon/TS_31.png");
+}
+.htmlBtnSkin {
+	skin:Embed(source="../assets/icon/html.jpg");
+	over-skin:Embed(source="../assets/overicon/html.jpg");
+	disabled-skin:Embed(source="../assets/disableicon/html.jpg");
+}
+.docBtnSkin {
+	skin:Embed(source="../assets/icon/doc.png");
+	over-skin:Embed(source="../assets/overicon/doc.png");
+	disabled-skin:Embed(source="../assets/disableicon/doc.png");
+}
+.pptBtnSkin {
+	skin:Embed(source="../assets/icon/ppt.png");
+	over-skin:Embed(source="../assets/overicon/ppt.png");
+	disabled-skin:Embed(source="../assets/disableicon/ppt.png");
+}
+.swfBtnSkin {
+	skin:Embed(source="../assets/icon/swf.gif");
+	over-skin:Embed(source="../assets/overicon/swf.gif");
+	disabled-skin:Embed(source="../assets/disableicon/swf.gif");
+}
+.itBtnSkin {
+	skin:Embed(source="../assets/gz/it.png");
+	over-skin:Embed(source="../assets/gz/it_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/it_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it_s.png");  
+}
+.xmzySkin {
+	skin:Embed(source="../assets/gz/prj.png");
+	over-skin:Embed(source="../assets/gz/prj_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/prj_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/prj_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/prj_s.png");  
+}
+.rlzySkin {
+	skin:Embed(source="../assets/gz/rlzy.png");
+	over-skin:Embed(source="../assets/gz/rlzy_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/rlzy_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/rlzy_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/rlzy_s.png");  
+}
+.wlzySkin {
+	skin:Embed(source="../assets/gz/wlzy.png");
+	over-skin:Embed(source="../assets/gz/wlzy_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/wlzy_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/wlzy_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/wlzy_s.png");  
+}
+.abilityBtnSkin {
+	skin:Embed(source="../assets/gz/ability.png");
+	over-skin:Embed(source="../assets/gz/ability_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/ability_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/ability_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/ability_s.png");  
+}
+.businessBtnSkin {
+	skin:Embed(source="../assets/gz/business.png");
+	over-skin:Embed(source="../assets/gz/business_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/business_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/business_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/business_s.png");  
+}
+.baseBtnSkin {
+	skin:Embed(source="../assets/gz/base.png");
+	over-skin:Embed(source="../assets/gz/base_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/base_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/base_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/base_s.png");  
+}
+.gzgroupBtnSkin {
+	skin:Embed(source="../assets/gz/group.png");
+	over-skin:Embed(source="../assets/gz/group_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/group_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/group_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/group_s.png");  
+}
+.gzsysBtnSkin {
+	skin:Embed(source="../assets/gz/sys.png");
+	over-skin:Embed(source="../assets/gz/sys_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/sys_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/sys_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/sys_s.png");  
+}
+.gzaddBtnSkin {
+	skin:Embed(source="../assets/gz/add.png");
+	over-skin:Embed(source="../assets/gz/add_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/add_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/add_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/add_s.png");  
+}
+.gzaddBtnSkin {
+	skin:Embed(source="../assets/gz/add.png");
+	over-skin:Embed(source="../assets/gz/add_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/add_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/add_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/add_s.png");  
+}
+.gzbuttonBtnSkin {
+	skin:Embed(source="../assets/gz/button.png");
+}
+.gztopBtnSkin {
+	skin:Embed(source="../assets/gz/top.png");
+}
+.gzgzlglBtnSkin {
+	skin:Embed(source="../assets/gz/btn_gzlgl.png");
+	over-skin:Embed(source="../assets/gz/btn_gzlgl_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/btn_gzlgl_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/btn_gzlgl_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/btn_gzlgl_s.png");  
+}
+.gzryglBtnSkin {
+	skin:Embed(source="../assets/gz/btn_rygl.png");
+	over-skin:Embed(source="../assets/gz/btn_rygl_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/btn_rygl_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/btn_rygl_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/btn_rygl_s.png");  
+}
+.gzxmglBtnSkin {
+	skin:Embed(source="../assets/gz/btn_xmgl.png");
+	over-skin:Embed(source="../assets/gz/btn_xmgl_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/btn_xmgl_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/btn_xmgl_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/btn_xmgl_s.png");  
+}
+.gzxzglBtnSkin {
+	skin:Embed(source="../assets/gz/btn_xzgl.png");
+	over-skin:Embed(source="../assets/gz/btn_xzgl_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/btn_xzgl_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/btn_xzgl_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/btn_xzgl_s.png");  
+} 
+.gzzdgzBtnSkin {
+	skin:Embed(source="../assets/gz/btn_zdgz.png");
+	over-skin:Embed(source="../assets/gz/btn_zdgz_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/btn_zdgz_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/btn_zdgz_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/btn_zdgz_s.png");  
+}
+.gzxxlrBtnSkin { 
+	skin:Embed(source="../assets/gz/xxlr.png");
+	over-skin:Embed(source="../assets/gz/xxlr_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/xxlr_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/xxlr_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/xxlr_s.png");  
+}
+ToggleButtonBar
+{
+	horizontalGap: 1;
+	button-style-name: "gztabSkin";
+	selectedButtonTextStyleName: "mytoggleButtonBarSelectedButtonStyle";
+}
+.smalltoggleButtonBar
+{
+	horizontalGap: 1;
+	button-style-name: "gztab2Skin";
+	selectedButtonTextStyleName: "mytoggleButtonBarSelectedButtonStyle";
+}
+.mytoggleButtonBarSelectedButtonStyle {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	color: #ffffff;
+}
+.gztabSkin {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	color: #8ddff0;
+	skin:Embed(source="../assets/gz/Tab.png");
+	over-skin:Embed(source="../assets/gz/Tab_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/Tab_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/Tab_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/Tab_s.png");  
+}
+.gztab2Skin {
+	color: #8ddff0;
+	skin:Embed(source="../assets/gz/Tab2.png");
+	over-skin:Embed(source="../assets/gz/Tab2_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/Tab2_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/Tab2_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/Tab2_s.png");  
+}
+/*
+//------------------------------
+//  主界面工作组Combox
+//------------------------------
+*/
+.GroupComboBox {
+	arrowButtonWidth: 90;	
+	cornerRadius: 0;
+	backgroundAlpha: 1;
+	dropdownStyleName: "myComboBoxDropDowns";
+	skin:Embed(source="../assets/icon/chang_desktop_hb.png");
+	overSkin:Embed(source="../assets/icon/chang_desktop_over_hb.png");	
+}
+
+.myComboBoxDropDowns {
+	color: #000000;
+	fontSize: 12;
+}
+/*
+//------------------------------
+//  主界面视图菜单按钮
+//------------------------------
+*/
+.portalBtn {
+	skin:Embed(source="../assets/icon/Portal_bar_hb.png");
+	overSkin:Embed(source="../assets/icon/Portal_bar_over_hb.png"); 	
+	downSkin:Embed(source="../assets/icon/Portal_bar_down_hb.png");
+}
+/*
+//------------------------------
+//  主界面视图添加按钮
+//------------------------------
+*/
+.addViewBtn {
+	skin:Embed(source="../assets/icon/add_view_hb.png");
+	overSkin:Embed(source="../assets/icon/add_view_over_hb.png"); 
+}
+/*
+//------------------------------
+//  主界面视图注销按钮
+//------------------------------
+*/
+.logoutBtn {
+	skin:Embed(source="../assets/icon/logout_hb.png");
+	overSkin:Embed(source="../assets/icon/logout_over_hb.png");
+}
+/*
+//------------------------------
+//  主界面视图箭头按钮
+//------------------------------
+*/
+.arrowBtn {
+	skin:Embed(source="../assets/icon/arrow_hb.png");
+	overSkin:Embed(source="../assets/icon/arrow_over_hb.png"); 
+}
+
+/*
+//------------------------------
+//  主界面导航画布背景色
+//------------------------------
+*/
+.portalbar 
+{   
+	border-style: solid;   
+	border-thickness: 0;   
+	backgroundImage: Embed(source="../assets/menu_bg_hb.png"); 
+	border-skin:ClassReference("RepeatBackground");
+}
+
+.mainStyle {
+	backgroundImage: Embed(source="../assets/header_bg_hb.png"); 
+	border-skin:ClassReference("RepeatBackground");
+}
+/*
+//------------------------------
+//  主界面底部画布背景色
+//------------------------------
+*/
+.portalbutbar 
+{   
+	border-style: solid;   
+	border-thickness: 0;   
+	backgroundImage: Embed(source="../assets/footer_bg_hb.png"); 
+	border-skin:ClassReference("RepeatBackground");
+}
+
+/*
+//------------------------------
+//  主界面视ViewStack
+//------------------------------
+*/
+ViewStack {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+.mainviewStack {
+	border-thickness: 0;   
+	border-skin: ClassReference("GradientBorder");   
+	fillColors:#CFDADC,#748C8C;
+	fillAlphas:1,1;
+	fillRatios:127,255;
+	drop-shadow-enabled: true; 
+}
+/*
+//------------------------------
+//  主界面用户/桌面按钮
+//------------------------------
+*/
+.showUserButton {
+	/* 仅供展示用按钮 */
+	color: #cecece;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff; 
+	icon:Embed(source="../assets/icon/user.png");	
+}
+.showDeskButton {
+	/* 仅供展示用按钮 */
+	color: #cecece;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff; 
+	icon:Embed(source="../assets/icon/desktop.png");	
+}
+/*
+//------------------------------
+//  背景色和透明度设置
+//------------------------------
+*/
+.bgAlpha5 {
+	backgroundAlpha : 0.5;
+}
+/*
+//------------------------------
+//  加载等待视图
+//------------------------------
+*/
+.dataLoadWait {
+	backgroundColor:#9cc9ff; 
+	backgroundAlpha:0.5;
+    color : white;
+}
+/*
+//------------------------------
+//  登陆视图
+//------------------------------
+*/
+.loginPanel {
+	titleStyleName: "loginPanelTitle";
+	cornerRadius:9;
+}
+
+.loginPanelTitle {
+	fontSize: 14;
+	color: #000000;
+	fontWeight: bold;
+}		
+.tupuBtnSkin {
+	fontWeight:normal;
+	fontSize:14;
+	color:#ffffff;
+	textRollOverColor: #ffffff; 
+	skin:Embed(source="../assets/overicon/topu01.png");
+	over-skin:Embed(source="../assets/icon/topu01.png");
+}
+.btn0Skin {
+	skin:Embed(source="/assets/gz/bar_0.png");
+	over-skin:Embed(source="/assets/gz/bar_0.png");
+}
+.btn0SelectedSkin {
+	skin:Embed(source="/assets/gz/bar_0s.png");
+	over-skin:Embed(source="/assets/gz/bar_0s.png");
+}
+.btn1Skin {
+	skin:Embed(source="/assets/gz/bar_1.png");
+	over-skin:Embed(source="/assets/gz/bar_1.png");
+}
+.btn1SelectedSkin {
+	skin:Embed(source="/assets/gz/bar_1s.png");
+	over-skin:Embed(source="/assets/gz/bar_1s.png");
+}
+.btn2Skin {
+	skin:Embed(source="/assets/gz/bar_2.png");
+	over-skin:Embed(source="/assets/gz/bar_2.png");
+}
+.btn2SelectedSkin {
+	skin:Embed(source="/assets/gz/bar_2s.png");
+	over-skin:Embed(source="/assets/gz/bar_2s.png");
+}
+.upNavSkin {
+	skin:Embed(source="/assets/gz/up.png");
+}
+.downNavSkin {
+	skin:Embed(source="/assets/gz/down.png");
+}
+.leftNavSkin {
+	skin:Embed(source="/assets/gz/left.png");
+}
+.rightNavSkin {
+	skin:Embed(source="/assets/gz/right.png");
+}
+.forwardNavSkin {
+	skin:Embed(source="/assets/gz/forward.png");
+}
+.backwardNavSkin {
+	skin:Embed(source="/assets/gz/backward.png");
+}
+.rotateNavSkin {
+	skin:Embed(source="/assets/gz/rotate.png");
+}
+.inclineNavSkin {
+	skin:Embed(source="/assets/gz/incline.png");
+}
+
+.backGroupBtnSkin {
+	skin:Embed(source="/assets/gz/group/icon_backC.png");
+}
+.playerPlaySkin {
+	skin:Embed(source="/assets/icon/player_play.png");
+}
+.playerPauseSkin {
+	skin:Embed(source="/assets/icon/player_pause.png");
+}
+.playerDebugSkin {
+	skin:Embed(source="/assets/icon/player_debug.png");
+}
+.lab14 {
+	fontSize:14;
+	color: #ffffff;
+	fontWeight:bold;
+}
+.lab14_yh {
+	fontFamily: YaHei;
+	fontSize: 14;
+	fontWeight: bold;
+}
+.bgfftext00{
+	color: #000000;
+}
+DomainKpiItem {
+	color: #000000;
+}
+.domainItemSkin {
+	border-thickness: 1;   
+	border-skin: ClassReference("GradientBorder");   
+	fillAlphas: 1, 1;
+	fillColors: #ebebeb, #ffffff;
+	fillRatios:127,255;
+	drop-shadow-enabled: false; 
+}
+.domainItemSelSkin {
+	border-thickness: 0;   
+	border-skin: ClassReference("GradientBorder");   
+	fillAlphas: 1, 1;
+	fillColors: #a7d5e4, #ffffff;
+	fillRatios:127,255;
+	drop-shadow-enabled: false; 
+}
+.domainKpiSkin {
+	border-thickness: 1;  
+	borderStyle :solid;
+	borderColor:#dddddd;
+	border-skin: ClassReference("GradientBorder");   
+	fillAlphas: 1, 1;
+	fillColors: #ffffff, #e1e4e8;
+	fillRatios:0,255;
+	drop-shadow-enabled: false; 
+}
+.crmitemstyle {
+	color:#15428b
+}
+.buttonSearchSkin {
+	skin:Embed(source="/assets/gz/button_search.png");
+}
+.lab12 {
+	fontFamily: YaHei;
+	fontSize: 12;
+	color: #0b333c;
+}
+.homeSkin {
+	skin:Embed(source="/assets/home.png");
+}
+
+.mainBackgroundImage{
+	backgroundImage: Embed(source="../assets/gz/BK.png"); 	
+}
+.manIcon{
+	backgroundImage: Embed(source="../assets/gz/manIcon.png"); 	
+}
+.itDataGrid {
+	backgroundAlpha: 0;
+	verticalGridLines: false;
+	useRollOver: false;
+	borderThickness: 0;
+	dropShadowEnabled: false;
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:12;
+	color:#ffffff;
+}
+
+.gzfullBtnSkin {
+	skin:Embed(source="../assets/gz/full.png");
+	over-skin:Embed(source="../assets/gz/full.png");
+	selectedDownSkin: Embed(source="../assets/gz/return.png");  
+	selectedOverSkin: Embed(source="../assets/gz/return.png");  
+	selectedUpSkin: Embed(source="../assets/gz/return.png");  
+}
+.gzbackBtnSkin {
+	skin:Embed(source="../assets/embeds/back.png");
+}
+.gzbackBlackBtnSkin {
+	skin:Embed(source="../assets/gz/it/back.png");
+}
+.gzShowHideBtnSkin {
+	skin:Embed(source="../assets/embeds/hide.png");
+	over-skin:Embed(source="../assets/embeds/hide.png");
+	selectedDownSkin: Embed(source="../assets/embeds/show.png");  
+	selectedOverSkin: Embed(source="../assets/embeds/show.png");  
+	selectedUpSkin: Embed(source="../assets/embeds/show.png");  
+}
+HSlider {
+	labelOffset: 18;
+	thumbOffset: 0;
+	dataTipOffset: 0;
+	tickOffset: 0;
+	tickLength: 0;
+	tickThickness: 0;
+	tickColor: #ffffff;
+	showTrackHighlight: true;
+	invertThumbDirection: true;
+	fillAlphas: 0, 0, 0, 0;
+	labelStyleName: "msyh11b";
+}
+.gzItzyxqBtnSkin {
+	skin:Embed(source="../assets/gz/it/zyxq.png");
+	over-skin:Embed(source="../assets/gz/it/zyxq_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/zyxq_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/zyxq_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/zyxq_s.png");  
+}
+.gzItrlxqBtnSkin {
+	skin:Embed(source="../assets/gz/it/rlxq.png");
+	over-skin:Embed(source="../assets/gz/it/rlxq_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/rlxq_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/rlxq_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/rlxq_s.png");  
+}
+.gzItglnlBtnSkin {
+	skin:Embed(source="../assets/gz/it/glnl.png");
+	over-skin:Embed(source="../assets/gz/it/glnl_s.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/glnl_s.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/glnl_s.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/glnl_s.png");  
+}
+.gzExpandBtnSkin {
+	skin:Embed(source="../assets/gz/it/expand.gif");
+	over-skin:Embed(source="../assets/gz/it/expand.gif");
+	selectedDownSkin: Embed(source="../assets/gz/it/recovery.gif");  
+	selectedOverSkin: Embed(source="../assets/gz/it/recovery.gif");  
+	selectedUpSkin: Embed(source="../assets/gz/it/recovery.gif");  
+}
+.itItem1BtnIcon {
+	skin:Embed(source="../assets/gz/it/btn1.png");
+	over-skin:Embed(source="../assets/gz/it/btn1.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/btn1_sel.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/btn1_sel.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/btn1_sel.png");  
+}
+.itItem2BtnIcon {
+	skin:Embed(source="../assets/gz/it/btn2.png");
+	over-skin:Embed(source="../assets/gz/it/btn2.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/btn2_sel.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/btn2_sel.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/btn2_sel.png");  
+}
+.itItem3BtnIcon {
+	skin:Embed(source="../assets/gz/it/btn3.png");
+	over-skin:Embed(source="../assets/gz/it/btn3.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/btn3_sel.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/btn3_sel.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/btn3_sel.png");  
+}
+.itItem4BtnIcon {
+	skin:Embed(source="../assets/gz/it/btn4.png");
+	over-skin:Embed(source="../assets/gz/it/btn4.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/btn4_sel.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/btn4_sel.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/btn4_sel.png");  
+}
+.itItemCreateBtnIcon {
+	skin:Embed(source="../assets/gz/it/plus.png");
+}
+.itItemdelBtnIcon {
+	skin:Embed(source="../assets/gz/it/subtract.png");
+}
+.itItemeditBtnIcon {
+	skin:Embed(source="../assets/gz/it/itemedit.png");
+}
+.itItemSaveBtnSkin { 
+	skin:Embed(source="../assets/gz/it/save.png");
+}
+NodeTree2 {
+	fontFamily:"Microsoft YaHei",微软雅黑;
+	fontSize:12;
+	color:#253545;
+}
+.playAndStopBtnIcon {
+	skin:Embed(source="../assets/gz/it/player_pause.png");
+	over-skin:Embed(source="../assets/gz/it/player_pause.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/player_play.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/player_play.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/player_play.png");  
+}
+.arrowLeftBtnIcon {
+	skin:Embed(source="../assets/gz/it/arrow-left.png");
+}
+.arrowLeft2BtnIcon {
+	skin:Embed(source="../assets/gz/it/gx/arrow-left.png");
+}
+.arrowRightBtnIcon {
+	skin:Embed(source="../assets/gz/it/arrow-right.png");
+}
+.arrowRight2BtnIcon {
+	skin:Embed(source="../assets/gz/it/gx/arrow-right.png");
+}
+.closeAndOpenBtnIcon {
+	skin:Embed(source="../assets/gz/it/gx/open.png");
+	over-skin:Embed(source="../assets/gz/it/gx/open.png");
+	selectedDownSkin: Embed(source="../assets/gz/it/gx/close.png");  
+	selectedOverSkin: Embed(source="../assets/gz/it/gx/close.png");  
+	selectedUpSkin: Embed(source="../assets/gz/it/gx/close.png");  
+}
+.menu_top_btn 
+{   
+	skin:Embed(source="../assets/gz/menu_top.png");
+	over-skin:Embed(source="../assets/gz/menu_top_roll.png");
+}
+.menu_change_btn 
+{   
+	skin:Embed(source="../assets/gz/tool_restart.png");
+}
+
+.menu_left_btn 
+{   
+	skin:Embed(source="../assets/gz/menu_left.png");
+	over-skin:Embed(source="../assets/gz/menu_left_roll.png");
+}
+/*Start 长纸css */
+.cz_sceneTitleText
+{
+	font-family: "Microsoft YaHei",微软雅黑;
+	fontSize:36;
+}
+.cz_contentTitleText
+{
+	font-family: "Microsoft YaHei",微软雅黑;
+	fontSize:24;
+}
+.cz_contentTitleTextWhenPopup
+{
+	font-family: "Microsoft YaHei",微软雅黑;
+	fontSize:48;
+}
+.cz_24sizefontText
+{
+	font-family: "Microsoft YaHei",微软雅黑;
+	fontSize:24;
+}
+/*End  长纸CSS*/
+
+
+
+.prepage {
+	skin:Embed(source="../assets/gz/prepage.png");
+	over-skin:Embed(source="../assets/gz/prepage.png");
+	selectedDownSkin: Embed(source="../assets/gz/prepage.png");  
+	selectedOverSkin: Embed(source="../assets/gz/prepage.png");  
+	selectedUpSkin: Embed(source="../assets/gz/prepage.png");  
+}
+.nextpage {
+	skin:Embed(source="../assets/gz/nextpage.png");
+	over-skin:Embed(source="../assets/gz/nextpage.png");
+	selectedDownSkin: Embed(source="../assets/gz/nextpage.png");  
+	selectedOverSkin: Embed(source="../assets/gz/nextpage.png");  
+	selectedUpSkin: Embed(source="../assets/gz/nextpage.png");  
+}

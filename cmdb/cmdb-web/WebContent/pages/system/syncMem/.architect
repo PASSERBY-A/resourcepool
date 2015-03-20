@@ -1,0 +1,61 @@
+{
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": true,
+        "f46ee517-d370-42c2-a94b-cf4697a668bb": {
+            "id": "f46ee517-d370-42c2-a94b-cf4697a668bb",
+            "cn": [
+                {
+                    "id": "8b7e3fd0-ec4e-4216-b9a5-3f2d048fd85f",
+                    "cn": [
+                        {
+                            "id": "f9c48655-f937-41fe-9cdd-5fe1e7fc2d3f"
+                        },
+                        {
+                            "id": "4b14d00a-69ea-40f8-8765-0a47baea4d39"
+                        },
+                        {
+                            "id": "71df7762-da48-4c96-8623-620290007cca"
+                        },
+                        {
+                            "id": "464f7c0c-09ba-46d8-acb2-3d2d438adb8f"
+                        },
+                        {
+                            "id": "237741f6-d638-4600-a16e-dff18c514ed6"
+                        },
+                        {
+                            "id": "b13ba27a-89e5-4fa0-a20f-ec8e7c650351",
+                            "cn": [
+                                {
+                                    "id": "0ee4ada4-fbfe-481f-b3ae-b1dbd95a03e5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "a5a29f95-39d5-4fd6-8376-43eaa4c6887d": {
+            "id": "a5a29f95-39d5-4fd6-8376-43eaa4c6887d"
+        }
+    },
+    "tabState": {
+        "openTabs": [
+            "f46ee517-d370-42c2-a94b-cf4697a668bb"
+        ]
+    },
+    "canvasState": {
+        "topInstance": "f46ee517-d370-42c2-a94b-cf4697a668bb"
+    },
+    "inspectorState": {
+        "topInstance": "f46ee517-d370-42c2-a94b-cf4697a668bb",
+        "selectedInstance": "0ee4ada4-fbfe-481f-b3ae-b1dbd95a03e5"
+    },
+    "codeState": {
+        "topInstance": "f46ee517-d370-42c2-a94b-cf4697a668bb"
+    },
+    "editMode": "code"
+}

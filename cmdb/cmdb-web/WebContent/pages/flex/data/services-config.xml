@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services-config>
+     <!-- 16.157.88.196:28080  -->
+     <!--  http://16.158.49.120:8080/ecc-sysconfig/messagebroker/amf -->
+     <endpoint>http://127.0.0.1:8080/cmdb-web/</endpoint>
+    <channels>
+        <channel id="my-amf" type="mx.messaging.channels.AMFChannel">
+            <endpoint uri="{endpoint}messagebroker/amf" class="flex.messaging.endpoints.AMFEndpoint"/>
+        </channel>
+
+        <channel id="my-secure-amf" type="mx.messaging.channels.SecureAMFChannel">
+            <endpoint uri="{endpoint}messagebroker/amfsecure" class="flex.messaging.endpoints.SecureAMFEndpoint"/>
+            <properties>
+                <add-no-cache-headers>false</add-no-cache-headers>
+            </properties>
+        </channel>
+
+        <channel id="my-polling-amf" type="mx.messaging.channels.AMFChannel">
+            <endpoint uri="{endpoint}messagebroker/amfpolling" class="flex.messaging.endpoints.AMFEndpoint"/>
+            <properties>
+                <polling-enabled>true</polling-enabled>
+                <polling-interval-seconds>4</polling-interval-seconds>
+            </properties>
+        </channel>
+        
+        
+		<channel id="my-streaming-amf" type="mx.messaging.channels.StreamingAMFChannel">  
+			<endpoint uri="{endpoint}messagebroker/streamingamf" class="flex.messaging.endpoints.StreamingAMFEndpoint"/>  
+			<properties>
+				<idle-timeout-minutes>0</idle-timeout-minutes>
+				<max-streaming-clients>100</max-streaming-clients>
+				<server-to-client-heartbeat-millis>5000</server-to-client-heartbeat-millis>
+			</properties>
+		</channel> 
+    
+    </channels>
+	
+</services-config>

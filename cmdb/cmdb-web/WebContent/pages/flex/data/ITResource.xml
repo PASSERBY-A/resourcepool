@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+area =机房面积 jgamount=机柜设计总数 jgcount=机柜数 dlamount=电力预计最大千瓦 dlcount=当前千瓦数
+belongDomain=所属业务域；参数：‘PrivateCloud=一级私有云,BusinessSupport=集中化业支,Informatization=融合支撑云’，用|分割不同业务域，如PrivateCloud|BusinessSupport|Informatization
+belongTo=所属系统；参数：‘统一邮件系统、统一门户系统等’
+equipmentCount=设备数量；参数形参为[0:Oracle,1:DB2,2:MySQL,3:数据库其他,4:BES,5:Tomcat,6:东方通,7:中间件其它,8:AIX,9:Linux,10:Windows,11:操作系统其他,12:备份软件,13:小型机,14:X86服务器,15:虚拟化X86服务器,16:服务器其他,17:磁盘阵列,18:磁带库,19:分布式存储
+服务器,20:网络及安全设备]共21个
+说明1：如果该机房属于多个业务域，equipmentCount用|分割不同业务域设备数量，顺序同belongDomain
+说明2：该域没有此类设备数，一律填0
+
+cabinet state属性 包括[""]不可选择alpha=0.8;[0]不可见;[1]可选择;
+-->
+<jffloors name="B23" label="2.3栋" area="" jgamount="" jgcount=""  dlamount="" dlcount="">
+	<room name="R101" label="101机房" area="425" refrigeratorPower="255" jgamount="140" jgcount="107" dlamount="440" dlcount="336" belongDomain="" equipmentCount=""/>
+</jffloors>

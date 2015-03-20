@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - Custom Icon Skin </TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!-- In head section we should include the style sheet for the grid -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/redmond/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/ztree/demo.css" />
+
+    <!-- Of course we should load the jquery library -->
+    <script src="../js/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+
+    <!-- Of course we should load the jquery ui library -->
+    <script src="../js/jquery/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="../js/jquery/ztree/jquery.ztree.core-3.5.min.js"></script>
+	<script type="text/javascript" src="../js/jquery/ztree/jquery.ztree.exedit-3.5.min.js"></script>
+	<link rel="stylesheet" href="../css/ztree/zTreeStyle.css" type="text/css">
+
+	<script type="text/javascript" src="03-metaclass-tree.js"></script>
+	<link rel="stylesheet" href="metaclass-icon.css" type="text/css">
+
+<style type="text/css">
+div.panel,div.flip {
+	margin: 0px;
+	padding: 5px;
+	text-align: center;
+	background: #e5eecc;
+	border: solid 1px #c3c3c3;
+}
+
+div.panel {
+	height: 120px;
+	display: none;
+}
+</style>
+</HEAD>
+
+
+<BODY>
+<h1>Edit Nodes - zTree methods</h1>
+<h6>[ File Path: exedit/edit_fun.html ]</h6>
+	<div class="content_wrap">
+		<div class="zTreeDemoBackground left">
+			<div class="flip">
+				<a id="addLeaf" href="#" title="add leaf node" onclick="return false;"> <img
+					src="../images/edit/comment.add.16.png" alt="add leaf node" /></a>
+				<a id="edit" href="#" title="edit name"
+					onclick="return false;"><img
+					src="../images/edit/comment.edit.16.png" alt="edit name" /></a>
+				<a id="remove" href="#" title="remove node" onclick="return false;"><img
+					src="../images/edit/comment.delete.16.png" alt="remove node" /></a>
+			</div>
+			<ul id="treeDemo" class="ztree"></ul>
+		</div>
+		<div class="right">
+			<ul class="info">
+				<li class="title"><h2>1, Explanation of 'addNodes /
+						editName / removeNode / removeChildNodes' method</h2>
+					<ul class="list">
+						<li>Use 'addNodes / editName / removeNode / removeChildNodes'
+							method can also be achieved copy / move nodes.</li>
+						<li>Method 'cancelEditName' is effective, only when edit the
+							node name. Please use it when necessary, this demo doesn't show
+							how to use the method.</li>
+						<li class="highlight_red">Use setting.data.keep.parent / leaf
+							attribute, you can lock the parent node and leaf node.</li>
+						<li><p>
+								Try to edit node:<br /> &nbsp;&nbsp;&nbsp;&nbsp;<input
+									type="checkbox" id="callbackTrigger" checked /> Whether
+								trigger the callback when execution removeNode() method.<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="addParent" href="#"
+									title="add parent node" onclick="return false;">add parent
+									node</a> ] &nbsp;&nbsp;&nbsp;&nbsp;[ <a id="addLeaf" href="#"
+									title="add leaf node" onclick="return false;">add leaf node</a>
+								] &nbsp;&nbsp;&nbsp;&nbsp;[ <a id="edit" href="#"
+									title="edit name" onclick="return false;">edit name</a> ]<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="remove" href="#"
+									title="remove node" onclick="return false;">remove node</a> ]
+								&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="clearChildren" href="#"
+									title="make child nodes to empty" onclick="return false;">make
+									child nodes to empty</a> ]<br /> remove log:<br />
+							<ul id="log" class="log"></ul>
+							</p></li>
+						<li class="highlight_red">How to use 'zTreeObj.addNodes /
+							cancelEditName / editName / removeNode / removeChildNodes'
+							method, please see the API documentation.</li>
+					</ul></li>
+				<li class="title"><h2>2, Explanation of setting</h2>
+					<ul class="list">
+						<li>Same as 'Basic Edit Nodes'</li>
+						<li class="highlight_red">Lock the parent / leaf node status,
+							need to set setting.data.keep.parent / leaf attribute, see the
+							API documentation for more related contents</li>
+					</ul></li>
+				<li class="title"><h2>3, Explanation of treeNode</h2>
+					<ul class="list">
+						<li>Same as 'Basic Edit Nodes'</li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+</BODY></HTML>

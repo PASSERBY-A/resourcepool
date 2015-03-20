@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN"   "http://www.springframework.org/dtd/spring-beans.dtd"> <beans> 
+
+<bean id="cmdbServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>rmi://127.0.0.11:48088/CmdbService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.CmdbService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="cmdbViewServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>rmi://127.0.0.11:48088/CmdbViewService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.CmdbViewService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="repairServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>rmi://127.0.0.11:48088/RepairRecordService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.RepairRecordService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+<bean id="changeServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"> 
+  <property name="serviceUrl"> 
+    <value>rmi://127.0.0.11:48088/ChangeRecordService</value>
+  </property>
+  <property name="serviceInterface">
+    <value>com.hp.xo.uip.cmdb.service.ChangeRecordService</value>
+  </property>
+  <property name="lookupStubOnStartup" value="false"/>   
+  <property name="refreshStubOnConnectFailure" value="true"/>  
+  <property name="cacheStub" value="false"/>
+</bean>
+
+</beans>

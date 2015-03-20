@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <customEndpoint work="true" policyPort="8843"/>
+    <stomp work="false" useUrlFit="false" amqUrl="172.16.41.122" amqPort="61613" topicPrefix="/topic/stomp_"/>
+	<welcomeLogo>
+		<imgPath>assets/logo.png</imgPath>
+	</welcomeLogo>
+	<!-- 蓝色 河北
+	<logo>
+		<imgPath>assets/icon/header_logo_hb.png</imgPath>
+		<headerMenuPath>assets/icon/header_menubg_hb.png</headerMenuPath>
+	</logo>
+	<loginLogo>
+		<imgPath>assets/icon/login.png</imgPath>
+	</loginLogo> 
+	<cssConfig>
+		<cssPath>css/gzblueportal.swf</cssPath>
+	</cssConfig>  -->
+	<!-- 定制 河北
+	<logo>
+		<imgPath>assets/icon/header_logo_hb1.png</imgPath>
+		<headerMenuPath>assets/icon/header_menubg_hb1.png</headerMenuPath>
+	</logo>
+	<loginLogo>
+		<imgPath>assets/icon/login.png</imgPath>
+	</loginLogo> 
+	<cssConfig>
+		<cssPath>css/hebportal.swf</cssPath>
+	</cssConfig>   -->
+	<!--  黑色默认-->
+	<logo>
+		<imgPath>assets/icon/header_logo.png</imgPath>
+		<headerMenuPath></headerMenuPath>
+	</logo>
+	<loginLogo>
+		<imgPath>assets/icon/loginBK2.png</imgPath>
+	</loginLogo>
+	<cssConfig>
+		<cssPath>css/gzblueportal.swf</cssPath>
+		<subCssPath></subCssPath>
+	</cssConfig> 
+	
+	<!--  黑色光大
+	<logo>
+		<imgPath>assets/icon/header_logo_gd.png</imgPath>
+		<headerMenuPath></headerMenuPath>
+	</logo> 
+	<loginLogo>
+		<imgPath>assets/icon/loginBK.png</imgPath>
+	</loginLogo>-->
+	<resources>
+		<node label ="无" data=""></node>
+		<node label ="地图" data="assets/resources/hp041.jpg"></node>
+		<node label ="图片1" data="assets/resources/G5-serve.png"></node>
+		<node label ="图片2" data="assets/resources/bl460.png"></node>
+		<node label ="图片3" data="assets/resources/ups1.jpg"></node>
+		<node label ="图片4" data="assets/resources/chinaMap.swf"></node>
+		<node label ="六边形" data="assets/resources/6.png"></node>
+	
+	</resources>
+	
+	<!-- 菜单图片信息  -->
+	<menuitems imgPath="assets/icon/" imgType=".png">
+		<menuitem code="F01"/>
+	</menuitems>
+	
+	<!-- 预加载module信息  -->
+	<modules>
+		<modulesType type="plugin">
+			<name>ITSupport3DRoomModule</name>
+			<path>com/hp/gdcc/tsportal/platform/modules/ITSupport3DRoomModule.swf</path>
+			<events>
+				<event></event>
+			</events>
+		</modulesType>
+		<modulesType>
+			<name>TopologyModule</name>
+			<path>com/hp/gdcc/tsportal/platform/modules/TopologyModule.swf</path>
+			<events>
+				<event></event>
+			</events>
+		</modulesType>
+		<modulesType>
+			<name>TopologyEditModule</name>
+			<path>com/hp/gdcc/tsportal/platform/modules/TopologyEditModule.swf</path>
+			<events>
+				<event></event>
+			</events>
+		</modulesType>	
+	</modules>
+	
+	<!-- 插件视图 -->
+	<pluginViews>
+
+		<view>
+			<name>3D机房视图</name>
+			<module>ITSupport3DRoomModule</module>
+		</view>
+		
+	</pluginViews>
+	
+	<!-- 是否显示告警 -->
+	<disPlayConfig>
+		<!-- 拓扑点击时 -->
+		<warning>true</warning>
+		<!--3d机房界面，lv表示告警等级0-4 -->
+		<alert lv="1">true</alert>
+	</disPlayConfig>
+
+	<!-- 最低长度密码，现在最高为16位 -->
+	<passWordMinLen>6</passWordMinLen>
+	
+	<!-- 拓扑视图提示灯显示选择 
+	  0表示用默认，name属性为：nodeSeverity（节点告警状态）	  
+	  1表示用KPI，name属性为：CIkpi名
+	  2表示用属性，name属性为：CI属性名
+	-->
+	<topuState name="nodeSeverity">0</topuState>
+	<topuUrl base="http://127.0.0.1:8080/cmdb-web/pages/ciMgr/{-1}.jsp?ip={0}&port={1}&project={2}&user={3}&pwd={4}&kpicode={5}&ciname={6}">
+		<ip>16.159.216.151</ip>
+		<port>8080</port>
+		<project>avmon-web</project>
+		<user>admin</user>
+		<pwd>admin</pwd>
+		<kpicode>1002001001</kpicode>
+	</topuUrl>
+	<kpiUrl base="http://{0}:{1}/{2}/pages/dashboard/mainEngine/index.jsp?a=1&moId=xovm06-16.159.216.106&mo=xovm06-16.159.216.106&agentId=&theme=-gray&browserLang=zh_CN&usr={3}&pwd={4}&kpiCode={5}&ciName={6}">
+	</kpiUrl>
+	<alertUrl base="http://{0}:{1}/{2}/pages/dashboard/alarmSearch/index.jsp?a=1&moId=&mo=&agentId=&theme=-gray&browserLang=zh_CN&usr={3}&pwd={4}&kpiCode={5}&ciName={6}">
+	</alertUrl>
+	<!-- 是否可以修改工作组 -->
+	<groupNmCanModify>true</groupNmCanModify>
+	<!-- 是否本地存储cmdb time为毫秒表示存储过期时间-->
+	<sharedCmdb shared="false" timer="86400000"/>
+	<servicesConfig>
+	    <!-- 16.157.88.196:28080  -->
+	    <!--  http://16.158.49.120:8080/ecc-sysconfig/messagebroker/amf -->
+	    <!--  <endpoint>http://192.168.130.18:8090/ecc-sysconfig/</endpoint>-->
+	    <!--  <endpoint>http://15.79.14.37:8090/ecc-sysconfig/</endpoint>-->
+	   <!--  <endpoint>http://127.0.0.1:28080/cmdb-web/</endpoint>
+	  <endpoint>http://16.159.216.213:48080/cmdb-web/</endpoint>-->
+	    <endpoint>http://127.0.0.1:8080/cmdb-web/</endpoint>
+	    <channels>
+	
+	        <channel id="my-amf" type="mx.messaging.channels.AMFChannel">
+	            <endpoint uri="{endpoint}messagebroker/amf" class="flex.messaging.endpoints.AMFEndpoint"/>
+	        </channel>
+	
+	        <channel id="my-secure-amf" type="mx.messaging.channels.SecureAMFChannel">
+	            <endpoint uri="{endpoint}messagebroker/amfsecure" class="flex.messaging.endpoints.SecureAMFEndpoint"/>
+	            <properties>
+	                <add-no-cache-headers>false</add-no-cache-headers>
+	            </properties>
+	        </channel>
+	
+	        <channel id="my-polling-amf" type="mx.messaging.channels.AMFChannel">
+	            <endpoint uri="{endpoint}messagebroker/amfpolling" class="flex.messaging.endpoints.AMFEndpoint"/>
+	            <properties>
+	                <polling-enabled>true</polling-enabled>
+	                <polling-interval-seconds>4</polling-interval-seconds>
+	            </properties>
+	        </channel>         
+	        
+			<channel id="my-streaming-amf" type="mx.messaging.channels.StreamingAMFChannel">  
+				<endpoint uri="{endpoint}messagebroker/streamingamf" class="flex.messaging.endpoints.StreamingAMFEndpoint"/>  
+				<properties>
+					<idle-timeout-minutes>0</idle-timeout-minutes>
+					<max-streaming-clients>100</max-streaming-clients>
+					<server-to-client-heartbeat-millis>5000</server-to-client-heartbeat-millis>
+				</properties>
+			</channel>	
+	    </channels>	
+	</servicesConfig>
+</config>

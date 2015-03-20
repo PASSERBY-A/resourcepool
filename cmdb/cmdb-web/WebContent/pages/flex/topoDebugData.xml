@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view version="1.0" nextElementId="15" createTime="1387257252516" modifyTime="1387257252516">
+  <defaultNode/>
+  <defaultEdge/>
+  <element source="v:4" model="edge" id="v:15" target="v:3" style="3" isEdge="true"/>
+  <element source="v:8" model="edge" id="v:14" target="v:7" style="3" isEdge="true"/>
+  <element source="v:6" model="edge" id="v:13" target="v:8" style="3" isEdge="true"/>
+  <element source="v:6" model="edge" id="v:12" target="v:4" style="3" isEdge="true"/>
+  <element source="v:5" model="edge" id="v:11" target="v:4" style="3" isEdge="true"/>
+  <element source="v:2" model="edge" id="v:10" target="v:5" style="3" isEdge="true"/>
+  <element source="v:1" model="edge" id="v:9" target="v:2" style="3" isEdge="true"/>
+  <element label="boss主机" ciid="208925714120002" id="v:1" y="-200" model="Host" isEdge="false"/>
+  <element x="-2" ciid="208925714120003" id="v:2" y="-200" label="boss主机hba卡端口1" model="port" stateIcons="null" isEdge="false"/>
+  <element label="san交换机1" ciid="208925714120005" model="San" id="v:3" isEdge="false"/>
+  <element label="zone集合1" ciid="208925714120006" model="zoneSet" id="v:4" stateIcons="null" isEdge="false"/>
+  <element x="-23.5" ciid="208925714120004" id="v:5" y="3" label="交换机端口1" model="port" stateIcons="null" isEdge="false"/>
+  <element x="19.5" ciid="208925714120007" id="v:6" y="3" label="交换机端口2" model="port" stateIcons="null" isEdge="false"/>
+  <element label="存储A" stateIcons="null" id="v:7" y="200" ciid="208925714120009" model="Storage" isEdge="false"/>
+  <element x="-2" ciid="208925714120008" id="v:8" y="200" label="存储A网口1" model="port" stateIcons="null" isEdge="false"/>
+</view>

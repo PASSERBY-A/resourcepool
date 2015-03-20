@@ -1,0 +1,65 @@
+<ViewDefine>
+  <oid>10000</oid>
+  <name>view_fabric_55</name>
+  <title>fabric_55</title>
+  <content>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;view version=&quot;1.0&quot; nextElementId=&quot;15&quot; createTime=&quot;1387257252516&quot; modifyTime=&quot;1387257252516&quot;&gt;&#xd;
+  &lt;defaultNode/&gt;&#xd;
+  &lt;defaultEdge/&gt;&#xd;
+  &lt;element source=&quot;v:4&quot; model=&quot;edge&quot; id=&quot;v:15&quot; target=&quot;v:3&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:8&quot; model=&quot;edge&quot; id=&quot;v:14&quot; target=&quot;v:7&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:6&quot; model=&quot;edge&quot; id=&quot;v:13&quot; target=&quot;v:8&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:6&quot; model=&quot;edge&quot; id=&quot;v:12&quot; target=&quot;v:4&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:5&quot; model=&quot;edge&quot; id=&quot;v:11&quot; target=&quot;v:4&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:2&quot; model=&quot;edge&quot; id=&quot;v:10&quot; target=&quot;v:5&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element source=&quot;v:1&quot; model=&quot;edge&quot; id=&quot;v:9&quot; target=&quot;v:2&quot; style=&quot;3&quot; isEdge=&quot;true&quot;/&gt;&#xd;
+  &lt;element label=&quot;boss主机&quot; ciid=&quot;208925714120002&quot; id=&quot;v:1&quot; y=&quot;-200&quot; model=&quot;Host&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element x=&quot;-2&quot; ciid=&quot;208925714120003&quot; id=&quot;v:2&quot; y=&quot;-200&quot; label=&quot;boss主机hba卡端口1&quot; model=&quot;port&quot; stateIcons=&quot;null&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element label=&quot;san交换机1&quot; ciid=&quot;208925714120005&quot; model=&quot;San&quot; id=&quot;v:3&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element label=&quot;zone集合1&quot; ciid=&quot;208925714120006&quot; model=&quot;zoneSet&quot; id=&quot;v:4&quot; stateIcons=&quot;null&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element x=&quot;-23.5&quot; ciid=&quot;208925714120004&quot; id=&quot;v:5&quot; y=&quot;3&quot; label=&quot;交换机端口1&quot; model=&quot;port&quot; stateIcons=&quot;null&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element x=&quot;19.5&quot; ciid=&quot;208925714120007&quot; id=&quot;v:6&quot; y=&quot;3&quot; label=&quot;交换机端口2&quot; model=&quot;port&quot; stateIcons=&quot;null&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element label=&quot;存储A&quot; stateIcons=&quot;null&quot; id=&quot;v:7&quot; y=&quot;200&quot; ciid=&quot;208925714120009&quot; model=&quot;Storage&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+  &lt;element x=&quot;-2&quot; ciid=&quot;208925714120008&quot; id=&quot;v:8&quot; y=&quot;200&quot; label=&quot;存储A网口1&quot; model=&quot;port&quot; stateIcons=&quot;null&quot; isEdge=&quot;false&quot;/&gt;&#xd;
+&lt;/view&gt;</content>
+  <comments>comments</comments>
+  <creator>admin</creator>
+  <createTime>2014-01-10 15:52:56.831</createTime>
+  <updator>admin</updator>
+  <updateTime>2014-01-10 15:52:56.831</updateTime>
+  <conditions>
+    <ViewCondition>
+      <oid>7610199869528999</oid>
+      <name>query27</name>
+      <viewOid>10000</viewOid>
+      <startNodeId>7604875152874965</startNodeId>
+      <startNodeType>San</startNodeType>
+      <relationName>linked</relationName>
+      <deepth>2</deepth>
+      <order>10</order>
+      <typeFilter></typeFilter>      
+    </ViewCondition>
+    <ViewCondition>
+      <oid>88610659623168999</oid>
+      <name>query28</name>
+      <viewOid>10000</viewOid>
+      <startNodeId>0</startNodeId>
+      <startNodeType>HostHba</startNodeType>
+      <relationName>linked</relationName>
+      <deepth>1</deepth>
+      <order>20</order>
+      <typeFilter>HostHba;Host</typeFilter>
+    </ViewCondition>
+    <ViewCondition>
+      <oid>88610659623169999</oid>
+      <name>query29</name>
+      <viewOid>10000</viewOid>
+      <startNodeId>0</startNodeId>
+      <startNodeType>StorageNetPort</startNodeType>
+      <relationName>linked</relationName>
+      <deepth>1</deepth>
+      <order>30</order>
+      <typeFilter>StorageNetPort;Storage</typeFilter>
+    </ViewCondition>
+  </conditions>
+</ViewDefine>
