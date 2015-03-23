@@ -1,0 +1,90 @@
+<beans xmlns="http://www.springframework.org/schema/beans"  
+ xmlns:context="http://www.springframework.org/schema/context"  
+ xmlns:p="http://www.springframework.org/schema/p"  
+ xmlns:mvc="http://www.springframework.org/schema/mvc"  
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+ xmlns:aop="http://www.springframework.org/schema/aop"  
+ xmlns:tx="http://www.springframework.org/schema/tx"  
+ xsi:schemaLocation="http://www.springframework.org/schema/beans  
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+      http://www.springframework.org/schema/context  
+      http://www.springframework.org/schema/context/spring-context.xsd  
+      http://www.springframework.org/schema/tx   
+      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+      http://www.springframework.org/schema/aop  
+      http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
+      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd" default-autowire="byName">  
+
+    <context:component-scan base-package="com.hp.xo"/>  
+    <bean id="propertyConfigurer1"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" scope="singleton">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />  
+        <property name="locations">
+            <list>
+                <value>classpath:cmdb.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="dbConfig" class="com.hp.xo.uip.cmdb.probe.db.domain.DBConfig">
+        <property name="driver" value="${avmon.driver}"/>
+        <property name="url" value="${avmon.url}"/>
+        <property name="user" value="${avmon.user}"/>
+        <property name="password" value="${avmon.password}"/>
+    </bean>
+    <bean id="registry" class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">   
+       <property name="port" value="${cmdb.rmi.port}"/>
+    </bean>
+    <bean id = "hbaseDaoTemplate" class = "com.hp.xo.uip.cmdb.dao.template.HBaseDaoTemplate">
+       <property name="host" value="${cmdb.hbase.host}"/>
+       <property name="port" value="${cmdb.hbase.port}"/>
+    </bean>
+    <bean id = "xmlDaoTemplate" class = "com.hp.xo.uip.cmdb.dao.template.XmlDaoTemplate" />
+    
+    <!-- xinjiang
+    <bean id = "avmonKpiToCi" class = "com.hp.xo.uip.cmdb.probe.db.avmon.AvmonKpiToCi" />
+     -->
+    <bean id = "avmonKpiToCi" class = "com.hp.xo.uip.cmdb.probe.db.avmon.AvmonKpiToCiStandard" />
+    <bean id = "cmdbDao" class = "com.hp.xo.uip.cmdb.dao.impl.CmdbDaoImpl" />
+    <bean id = "cmdbViewDao" class = "com.hp.xo.uip.cmdb.dao.impl.CmdbViewDaoImpl" />
+    
+    <bean id = "cmdbService" class = "com.hp.xo.uip.cmdb.service.impl.CmdbServiceImpl" >
+       <property name = "cmdbDao" ref = "cmdbDao" />
+    </bean>
+    <bean id = "cmdbViewService" class = "com.hp.xo.uip.cmdb.service.impl.CmdbViewServiceImpl" />
+    <bean id = "cmdbCacheService" class = "com.hp.xo.uip.cmdb.cache.CmdbCacheServiceImpl" />
+    
+    <bean id = "repairRecordDao" class = "com.hp.xo.uip.cmdb.dao.impl.RepairRecordDaoImpl" />
+    <bean id = "repairRecordService" class = "com.hp.xo.uip.cmdb.service.impl.RepairRecordServiceImpl" />
+    <bean id = "changeRecordDao" class = "com.hp.xo.uip.cmdb.dao.impl.ChangeRecordDaoImpl" />
+    <bean id = "changeRecordService" class = "com.hp.xo.uip.cmdb.service.impl.ChangeRecordServiceImpl" />
+    
+    <bean id = "cmdbRmiService" class = "org.springframework.remoting.rmi.RmiServiceExporter" >   
+        <property name = "serviceName" value = "CmdbService" />
+        <property name = "service" ref = "cmdbService" />
+        <property name = "serviceInterface" value = "com.hp.xo.uip.cmdb.service.CmdbService" />
+        <property name="registry" ref="registry"/>   
+    </bean>
+    <bean id = "cmdbViewRmiService" class = "org.springframework.remoting.rmi.RmiServiceExporter" >   
+        <property name = "serviceName" value = "CmdbViewService" />
+        <property name = "service" ref = "cmdbViewService" />
+        <property name = "serviceInterface" value = "com.hp.xo.uip.cmdb.service.CmdbViewService" />
+        <property name="registry" ref="registry"/>   
+        <!-- <property name="registryPort" value="1099"/> -->    
+        <!--<property name="registryHost"  value="192.168.39.11" />--> 
+    </bean>
+    <bean id = "repairRmiService" class = "org.springframework.remoting.rmi.RmiServiceExporter" >   
+        <property name = "serviceName" value = "RepairRecordService" />
+        <property name = "service" ref = "repairRecordService" />
+        <property name = "serviceInterface" value = "com.hp.xo.uip.cmdb.service.RepairRecordService" />
+        <property name="registry" ref="registry"/>   
+    </bean>
+    <bean id = "changeRmiService" class = "org.springframework.remoting.rmi.RmiServiceExporter" >   
+        <property name = "serviceName" value = "ChangeRecordService" />
+        <property name = "service" ref = "changeRecordService" />
+        <property name = "serviceInterface" value = "com.hp.xo.uip.cmdb.service.ChangeRecordService" />
+        <property name="registry" ref="registry"/>   
+    </bean>
+    
+    <bean id = "syncAvmonService" class = "com.hp.xo.uip.cmdb.probe.db.avmon.task.SyncAvmonService" />
+</beans>  
