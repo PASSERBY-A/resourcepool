@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project avmon-notify with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="package/avmon-notify.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.hp.avmon.notify.Start"/>
+                <attribute name="Class-Path" value="conf/avmon-notify.config . lib/javax.mail_1.4.0.v201005080615.jar lib/c3p0-0.9.1.2.jar lib/commons-codec-1.3.jar lib/commons-httpclient-3.0.1.jar lib/commons-lang-2.6.jar lib/commons-logging-1.1.1.jar lib/ognl-3.0.1.jar lib/org.springframework.asm-3.0.4.RELEASE.jar lib/org.springframework.beans-3.0.4.RELEASE.jar lib/org.springframework.context-3.0.4.RELEASE.jar lib/org.springframework.context.support-3.0.4.RELEASE.jar lib/org.springframework.core-3.0.4.RELEASE.jar lib/org.springframework.expression-3.0.4.RELEASE.jar lib/org.springframework.jdbc-3.0.4.RELEASE.jar lib/org.springframework.transaction-3.0.4.RELEASE.jar lib/commons-dbcp-1.2.1.jar lib/commons-pool-1.3.jar lib/log4j-1.2.16.jar lib/slf4j-api-1.5.8.jar lib/slf4j-log4j12-1.5.8.jar lib/jackson-core-lgpl-1.9.3.jar lib/jackson-mapper-lgpl-1.9.3.jar lib/ojdbc6.jar lib/xbean-spring-3.7.jar lib/h2-1.3.169.jar lib/poi-3.8-20120326.jar lib/poi-excelant-3.8-20120326.jar lib/poi-ooxml-3.8-20120326.jar lib/poi-ooxml-schemas-3.8-20120326.jar lib/poi-scratchpad-3.8-20120326.jar lib/xmlbeans-2.3.0.jar lib/dom4j-1.6.1.jar lib/netTest3.jar lib/postgresql-9.2-1002.jdbc4.jar"/>
+            </manifest>
+            <fileset dir="bin">
+            	<exclude name="avmon-notify.config"/>
+            	<exclude name="log4j.xml"/>
+        	</fileset>
+        </jar>
+        <copy file="conf/avmon-notify.config" todir="package"/>
+        <copy file="conf/log4j.xml" todir="package"/>
+        <delete dir="package/lib"/>
+        <mkdir dir="package/lib"/>
+
+        <copy todir="package/lib">  
+             <fileset dir="lib"/>  
+        </copy> 
+
+        <copy todir="package">  
+             <fileset dir="shell"/>  
+        </copy> 
+
+
+
+    </target>
+</project>
