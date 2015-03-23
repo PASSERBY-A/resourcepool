@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<datasource>  
+    <rmi>
+    	<host>
+    		<field-maping>
+    			<field  name="cscomputername" description="主机名">hostName</field>
+    			<field  name="type" description="型号">type</field>
+    			<field  name="oscaption_version" description="主机操作系统及版本">osCaption</field>
+    			<field  name="status" description="状态">status</field>    			
+    			<field  name="csnumberofprocessors" description="cpu个数">cpuNumber</field>
+    			<field  name="cstotalphysicalmemory" description="物理内存">physicsMemory</field>
+    			<field  name="ostotalvirtualmemorysize" description="系统虚拟内存大小">virtualMemory</field>
+    			<field  name="machine_net_ip" description="IP地址">ipAddr</field>
+    			<field  name="machine_net_addr" description="网络地址">netAddr</field>
+    			<field  name="machine_cpu_status" description="CPU状态">cpuStatus</field>
+    			<field  name="fdisk_total" description="磁盘大小">fDiskTotal</field> 
+    			<field  name="derived_from" description="类型">derivedFrom</field>
+    			<field  name="is_virtual" description="是否虚拟化">isVirtual</field>		
+    		</field-maping>
+    	</host>
+    	<virtual-host>
+    		<field-maping>
+    			<field  name="instancename" description="实例名称">instanceName</field>
+    			<field  name="hostname" description="主机名">hostName</field>
+    			<field  name="name" description="虚拟机名称">name</field>    			
+    			<field  name="cpunumber" description="cpu个数">cpuNumber</field>
+    			<field  name="memory" description="内存">memory</field>
+    			<field  name="hypervisor" description="模板">hyperVisor</field>    			
+    			<field  name="state" description="状态">state</field>
+    			<field  name="zonename" description="zonename">zoneName</field>
+    			<field  name="ip" description="IP">ipAddress</field>    			   			
+    		</field-maping>
+    	</virtual-host>   	
+    </rmi>
+</datasource>  
