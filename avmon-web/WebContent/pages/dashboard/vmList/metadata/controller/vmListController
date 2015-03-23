@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "vmListController"
+    },
+    "designerId": "3c5acf50-e6ad-4f49-a66a-8f9c5f34ec2c",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": null
+            },
+            "designerId": "7b3400c0-1160-421a-b3bd-4d86c9dce032"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "name": "iloHost",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "sdkPath": "",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "3.0.4",
+    "xdsBuild": 1386,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "ext41",
+    "viewOrderMap": {
+        "view": [
+            "46758963-eb57-44df-a5cb-1ebbe0819f6d"
+        ],
+        "store": [
+            "2e30b302-a29b-467c-85ca-280e9344672d",
+            "b9cad8f3-c2d8-414a-8a9d-42a7dc729a13",
+            "30447715-bf16-44b2-b65e-d584b4d8be46",
+            "7e68618a-5459-4e64-ace4-ab27bbd78c82",
+            "dbeb65bd-e042-4932-8d0b-37bfd8501136",
+            "d99bd78c-57e4-4ce8-af21-1a79e7611d48",
+            "0f3e27d5-128e-4c88-969e-e293bffbc056",
+            "4630d5ed-fb5f-47eb-8768-55bafdf08f3e",
+            "42c52da8-a07e-4891-af2b-e036bf9fe16e",
+            "88b6e13f-3286-4b46-a934-47a847382f06",
+            "1d6bbbc8-c1f3-485a-8335-a9383b94286f"
+        ],
+        "controller": [],
+        "model": [
+            "3652191b-6e03-4705-8646-6216669c126a",
+            "98d18aaa-0707-4d4e-9bb5-49809cf4422d",
+            "a5c2450c-8ffa-43f0-845e-67244511bcb1",
+            "74735197-2446-487d-9668-586bfa8ff9ee",
+            "5c9048ce-b0ef-4eee-a08a-3de655523e29",
+            "434bdeed-c95d-4f4c-85f8-a56cb38d1e28",
+            "16c93fb1-adec-4795-858d-664e3142c3a7",
+            "37d0d048-fdbe-4c91-9bc4-5be19fe7e718",
+            "ecfa785b-bfb1-4f80-8163-c67d37c314ae",
+            "8e8ce809-a525-46d8-98d7-499598a0de89",
+            "3aba9e1c-09b8-4a0a-84c1-6e28cbf184b7"
+        ],
+        "resource": [
+            "9db4ce8e-efc5-41a7-9b7f-1454a53c9d3e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

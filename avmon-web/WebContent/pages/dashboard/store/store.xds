@@ -1,0 +1,229 @@
+{
+    "name": "store",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 640,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext40",
+    "topInstanceFileMap": {
+        "c810bff6-92fb-42bc-8771-866759d36194": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "a63afacc-7a54-46a3-b50f-2e56fde9f107": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "5257bef2-c9a5-42e1-9569-0b1c6b2892fa": {
+            "paths": [
+                "metadata/store/cpuStore",
+                "app/store/override/cpuStore.js",
+                "app/store/cpuStore.js"
+            ],
+            "className": "cpuStore"
+        },
+        "37f743f1-7ef2-451d-a22a-56794e30f1c0": {
+            "paths": [
+                "metadata/store/alarmStore",
+                "app/store/override/alarmStore.js",
+                "app/store/alarmStore.js"
+            ],
+            "className": "alarmStore"
+        },
+        "26ae2f13-e7fd-47e7-b05c-d611176285d8": {
+            "paths": [
+                "metadata/store/iopsStore",
+                "app/store/override/iopsStore.js",
+                "app/store/iopsStore.js"
+            ],
+            "className": "iopsStore"
+        },
+        "04ea51df-9d86-4f8c-8c07-3358d68a1977": {
+            "paths": [
+                "metadata/store/delayStore",
+                "app/store/override/delayStore.js",
+                "app/store/delayStore.js"
+            ],
+            "className": "delayStore"
+        },
+        "fd39f97b-4837-48d1-8814-0b2c3eb5c788": {
+            "paths": [
+                "metadata/store/groupStore",
+                "app/store/override/groupStore.js",
+                "app/store/groupStore.js"
+            ],
+            "className": "groupStore"
+        },
+        "ad125660-4b34-46de-933f-3cc5aed99fc9": {
+            "paths": [
+                "metadata/store/diskStore",
+                "app/store/override/diskStore.js",
+                "app/store/diskStore.js"
+            ],
+            "className": "diskStore"
+        },
+        "6baea4fb-ec0b-40a5-b84d-895495580037": {
+            "paths": [
+                "metadata/model/cpuModel",
+                "app/model/override/cpuModel.js",
+                "app/model/cpuModel.js"
+            ],
+            "className": "cpuModel"
+        },
+        "3e4630d3-8fbf-475d-8795-daf8e86dd726": {
+            "paths": [
+                "metadata/model/alarmModel",
+                "app/model/override/alarmModel.js",
+                "app/model/alarmModel.js"
+            ],
+            "className": "alarmModel"
+        },
+        "144799e4-d5f9-4a27-babf-2e0eda574f55": {
+            "paths": [
+                "metadata/model/iopsModel",
+                "app/model/override/iopsModel.js",
+                "app/model/iopsModel.js"
+            ],
+            "className": "iopsModel"
+        },
+        "b0cdbbee-1a67-4618-a54a-9199ef67de97": {
+            "paths": [
+                "metadata/model/delayModel",
+                "app/model/override/delayModel.js",
+                "app/model/delayModel.js"
+            ],
+            "className": "delayModel"
+        },
+        "328b3dcf-2c74-4553-9595-5829346de7d1": {
+            "paths": [
+                "metadata/model/networkModel",
+                "app/model/override/networkModel.js",
+                "app/model/networkModel.js"
+            ],
+            "className": "networkModel"
+        },
+        "f2798939-df41-4822-8d55-f104b2f5bf3c": {
+            "paths": [
+                "metadata/model/groupModel",
+                "app/model/override/groupModel.js",
+                "app/model/groupModel.js"
+            ],
+            "className": "groupModel"
+        },
+        "44f39127-a2d1-4061-bded-23a68af2f251": {
+            "paths": [
+                "metadata/model/diskModel",
+                "app/model/override/diskModel.js",
+                "app/model/diskModel.js"
+            ],
+            "className": "diskModel"
+        },
+        "5cdc41ce-8f27-406c-a889-1f0be3da8a8c": {
+            "paths": [
+                "metadata/store/networkStore",
+                "app/store/override/networkStore.js",
+                "app/store/networkStore.js"
+            ],
+            "className": "networkStore"
+        },
+        "a01710ed-a48c-481d-8ea0-3561b3c2ab51": {
+            "paths": [
+                "metadata/store/groupViewStore",
+                "app/store/override/groupViewStore.js",
+                "app/store/groupViewStore.js"
+            ],
+            "className": "groupViewStore"
+        },
+        "ebd0fbea-5387-411b-93e1-175acf9be1e2": {
+            "paths": [
+                "metadata/store/portViewStore",
+                "app/store/override/portViewStore.js",
+                "app/store/portViewStore.js"
+            ],
+            "className": "portViewStore"
+        },
+        "87b1d16a-f59e-4357-aaf7-2cc01a248a85": {
+            "paths": [
+                "metadata/store/diskViewStore",
+                "app/store/override/diskViewStore.js",
+                "app/store/diskViewStore.js"
+            ],
+            "className": "diskViewStore"
+        },
+        "7e48f883-fb3e-48b8-9fe9-9aae0cdc3a31": {
+            "paths": [
+                "metadata/model/groupViewModel",
+                "app/model/override/groupViewModel.js",
+                "app/model/groupViewModel.js"
+            ],
+            "className": "groupViewModel"
+        },
+        "d42e6fec-e79d-47b7-ba08-3f3e4e266174": {
+            "paths": [
+                "metadata/model/portViewModel",
+                "app/model/override/portViewModel.js",
+                "app/model/portViewModel.js"
+            ],
+            "className": "portViewModel"
+        },
+        "a204828f-6da2-470f-b5ab-141f193ddeb3": {
+            "paths": [
+                "metadata/model/diskViewModel",
+                "app/model/override/diskViewModel.js",
+                "app/model/diskViewModel.js"
+            ],
+            "className": "diskViewModel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c810bff6-92fb-42bc-8771-866759d36194"
+        ],
+        "store": [
+            "5257bef2-c9a5-42e1-9569-0b1c6b2892fa",
+            "37f743f1-7ef2-451d-a22a-56794e30f1c0",
+            "26ae2f13-e7fd-47e7-b05c-d611176285d8",
+            "04ea51df-9d86-4f8c-8c07-3358d68a1977",
+            "fd39f97b-4837-48d1-8814-0b2c3eb5c788",
+            "ad125660-4b34-46de-933f-3cc5aed99fc9",
+            "5cdc41ce-8f27-406c-a889-1f0be3da8a8c",
+            "a01710ed-a48c-481d-8ea0-3561b3c2ab51",
+            "ebd0fbea-5387-411b-93e1-175acf9be1e2",
+            "87b1d16a-f59e-4357-aaf7-2cc01a248a85"
+        ],
+        "controller": [],
+        "model": [
+            "6baea4fb-ec0b-40a5-b84d-895495580037",
+            "3e4630d3-8fbf-475d-8795-daf8e86dd726",
+            "144799e4-d5f9-4a27-babf-2e0eda574f55",
+            "b0cdbbee-1a67-4618-a54a-9199ef67de97",
+            "328b3dcf-2c74-4553-9595-5829346de7d1",
+            "f2798939-df41-4822-8d55-f104b2f5bf3c",
+            "44f39127-a2d1-4061-bded-23a68af2f251",
+            "7e48f883-fb3e-48b8-9fe9-9aae0cdc3a31",
+            "d42e6fec-e79d-47b7-ba08-3f3e4e266174",
+            "a204828f-6da2-470f-b5ab-141f193ddeb3"
+        ],
+        "resource": [
+            "a63afacc-7a54-46a3-b50f-2e56fde9f107"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

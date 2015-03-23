@@ -1,0 +1,367 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyWindow",
+        "height": 312,
+        "id": "reportQueryWin",
+        "width": 761,
+        "title": "选择设备",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen4306",
+    "designerId": "0866509e-3048-43e3-a6a4-6d4fca882949",
+    "cn": [
+        {
+            "type": "gridpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridPanel",
+                "autoShow": false,
+                "disabled": false,
+                "frame": false,
+                "height": 280,
+                "autoScroll": true,
+                "bodyBorder": false,
+                "title": "",
+                "store": "DeviceStore"
+            },
+            "designerId": "f32c37e8-8488-47ab-be43-b7b3728099ec",
+            "cn": [
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn",
+                        "width": 113,
+                        "dataIndex": "device_ip",
+                        "text": "设备IP"
+                    },
+                    "designerId": "b6b123ee-8c9e-4e94-8ef9-3016a3486be2"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn2",
+                        "width": 264,
+                        "dataIndex": "report_date",
+                        "text": "最新报表时间"
+                    },
+                    "designerId": "4e30f582-544b-4dc7-81be-be5118ef276c"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn1",
+                        "width": 120,
+                        "dataIndex": "device_type",
+                        "text": "设备类型"
+                    },
+                    "designerId": "ea33db21-58e8-4997-a75b-5cfa804a1f8a"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn3",
+                        "width": 195,
+                        "dataIndex": "device_desc",
+                        "text": "设备描述"
+                    },
+                    "designerId": "84f17dba-4754-4427-a265-e032c39499b1"
+                },
+                {
+                    "type": "checkboxselectionmodel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckboxSelectionModel"
+                    },
+                    "designerId": "be150da8-7c46-4a77-ab71-f5c69c68dbb8"
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar"
+                    },
+                    "designerId": "0f5ecc4f-59ca-46c3-875b-1f908c0aa76a",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyTextField",
+                                "width": 180,
+                                "fieldLabel": "设备IP",
+                                "labelWidth": 50
+                            },
+                            "designerId": "5f047ff4-d7d8-460a-9dd6-7cbe78768850"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton3",
+                                "icon": "../../resources/images/button/search2.gif",
+                                "text": "查询"
+                            },
+                            "designerId": "994e19cf-6de4-417e-8819-a26988e8c5d7",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick1",
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var toolBar = button.ownerCt;\r",
+                                            "var grid = button.ownerCt.ownerCt;\r",
+                                            "var ip = toolBar.items.items[0].rawValue;\r",
+                                            "\r",
+                                            "var regExp = new RegExp(\".*\" + ip + \".*\");  \r",
+                                            "// 执行检索   \r",
+                                            "grid.store.filterBy(function(record,id){    \r",
+                                            "    // 得到每个record的项目名称值   \r",
+                                            "    var text = record.get(\"device_ip\");    \r",
+                                            "    return regExp.test(text);   \r",
+                                            "});  "
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "2910d8a7-92a8-46da-9015-c04ba018611c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tbseparator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySeparator1"
+                            },
+                            "designerId": "a79fe017-6ea8-4acb-976c-9856f9e7edc3"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyDateField2",
+                                "itemId": "item_date",
+                                "width": 140,
+                                "fieldLabel": "时间",
+                                "labelWidth": 40,
+                                "format": "Y-m-d"
+                            },
+                            "designerId": "5d7ffe32-4022-4581-97df-8e026f37bfeb",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onDatefieldAfterRender",
+                                        "fn": "onDatefieldAfterRender",
+                                        "implHandler": [
+                                            "abstractcomponent.setValue(Ext.util.Format.date(new Date(), 'Y-m-d'));"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "2b7b0c2e-9092-4725-85e3-e78229002204"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tbseparator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySeparator"
+                            },
+                            "designerId": "e8bfc5a1-7835-4311-a727-50393877c2b8"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton2",
+                                "icon": "export.gif",
+                                "text": "生成报表"
+                            },
+                            "designerId": "d7c38265-6e14-48d4-98d6-cdee2e3dfb80",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick",
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var toolBar = button.ownerCt;\r",
+                                            "\r",
+                                            "var startTime = toolBar.items.items[3].rawValue;\r",
+                                            "//var endTime = toolBar.items.items[4].rawValue;//+ ' 23:59:59';\r",
+                                            "\r",
+                                            "var deviceGrid = button.ownerCt.ownerCt;\r",
+                                            "var selection = deviceGrid.getSelectionModel().getSelection();\r",
+                                            "\r",
+                                            "if(selection.length == 0){ \r",
+                                            "    Ext.MessageBox.alert(\"提示\",\"请先选择您要导出报表的设备!\");\r",
+                                            "    return; \r",
+                                            "}else{\r",
+                                            "\r",
+                                            "    var ips = []; \r",
+                                            "    Ext.each(selection,function(item){ \r",
+                                            "        ips.push(item.data.device_ip); \r",
+                                            "    });\r",
+                                            "\r",
+                                            "    var progressBar=Ext.Msg.wait(\"\",\"提示\",{text:\"正在加载……\"});\r",
+                                            "\r",
+                                            "    var parmstr = \"SUBREPORT_DIR|java.lang.String|;reportDate|java.lang.String|\" + startTime \r",
+                                            "    + \";deviceIp|java.lang.String|'\" + ips.join(\",\").replace(new RegExp(\",\",\"gm\"),\"','\") + \"'\";\r",
+                                            "    Ext.arpcheck.parmstr = parmstr;\r",
+                                            "    //alert(parmstr);\r",
+                                            "    //展示报表\r",
+                                            "    $.ajax({\r",
+                                            "        type: \"POST\",\r",
+                                            "        url: \"../source/config/report-html.jsp\",\r",
+                                            "        data: \"reportId=\"+Ext.arpcheck.reportId+\"&type=html&params=\" + parmstr,\r",
+                                            "        contentType: \"application/x-www-form-urlencoded; charset=UTF-8\",\r",
+                                            "        success: function(data){\r",
+                                            "            //alert(data);\r",
+                                            "            if(data == '' || data == null || data == undefined){\r",
+                                            "            }else{\r",
+                                            "                data = data.replace(new RegExp('font-size: 10px', 'g'), 'font-size: 14px');\r",
+                                            "\r",
+                                            "                Ext.getCmp('contentPanel').update(data);\r",
+                                            "                Ext.getCmp('contentPanel').down(\"toolbar\").show();\r",
+                                            "                progressBar.hide();\r",
+                                            "\r",
+                                            "                /**\r",
+                                            "                $.ajax({\r",
+                                            "                    type: \"POST\",\r",
+                                            "                    url: \"../../config/updateDeviceReportTime\",\r",
+                                            "                    data: \"deviceIp=\" + ips.join(\",\").replace(new RegExp(\",\",\"gm\"),\"','\") + \"&reportDate=\" + startTime + \"至\" + endTime,\r",
+                                            "                    contentType: \"application/x-www-form-urlencoded; charset=UTF-8\",\r",
+                                            "                    success: function(data){\r",
+                                            "\r",
+                                            "                    }\r",
+                                            "                });\r",
+                                            "                */\r",
+                                            "\r",
+                                            "            }   \t\t        \t\r",
+                                            "        }\r",
+                                            "    });\r",
+                                            "\r",
+                                            "\r",
+                                            "    button.ownerCt.ownerCt.ownerCt.close();\r",
+                                            "}\r",
+                                            "\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "646f7456-9df9-458b-aceb-b990b23e323f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onGridpanelAfterRender",
+                        "fn": "onGridpanelAfterRender",
+                        "implHandler": [
+                            "abstractcomponent.store.load();"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "designerId": "0c4df665-4c09-400d-b327-9e21c77f520f"
+                }
+            ]
+        }
+    ]
+}

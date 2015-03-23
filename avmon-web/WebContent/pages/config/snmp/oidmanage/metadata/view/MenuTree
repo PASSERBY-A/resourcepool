@@ -1,0 +1,90 @@
+{
+    "type": "Ext.tree.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "renderData": null,
+        "designer|userClassName": "MenuTree",
+        "designer|userAlias": "menuTree",
+        "title": "已部署设备",
+        "store": "Menus",
+        "rootVisible": false
+    },
+    "designerId": "20c8d18e-8856-4253-9223-2f018c4d8d5b",
+    "cn": [
+        {
+            "type": "Ext.tree.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "rootVisible": null
+            },
+            "designerId": "a826e8ad-49a1-47eb-b695-027b42a80393"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "designerId": "f603df0c-b9a1-4ff8-9bba-58af2074d9bb",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "btnRefreshTree",
+                        "iconCls": "icon-refresh",
+                        "text": "刷新"
+                    },
+                    "designerId": "570ed0ec-280d-47fa-90ef-db30ff2e3a61"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "btnAddMO",
+                        "iconCls": "icon-add",
+                        "text": "新增"
+                    },
+                    "designerId": "0c4cc2e6-57ed-42e4-8bf6-e5ef8b2780b2"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "btnRemoveMO",
+                        "iconCls": "icon-delete",
+                        "text": "移除"
+                    },
+                    "designerId": "ecd517c0-e55a-4e31-ac0b-effc37c0fbce"
+                }
+            ]
+        }
+    ]
+}

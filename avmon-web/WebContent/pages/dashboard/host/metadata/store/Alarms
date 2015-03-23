@@ -1,0 +1,39 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Alarm",
+        "storeId": "MyJsonStore3",
+        "designer|userClassName": "Alarms"
+    },
+    "designerId": "79546784-e312-4e16-b558-16aaeb90dd40",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "newAlarm"
+            },
+            "designerId": "839877c7-f44d-4d7e-9ca7-b0a8fd17c68b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "20b283a1-785d-4afa-a5ad-f55466467586"
+                }
+            ]
+        }
+    ]
+}

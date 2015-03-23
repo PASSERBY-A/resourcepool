@@ -1,0 +1,118 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 210,
+        "id": "newAlarmGrid",
+        "width": 260,
+        "designer|userClassName": "NewAlarmGrid",
+        "designer|userAlias": "newAlarmGrid",
+        "title": "最新告警",
+        "store": "Alarms"
+    },
+    "designerId": "992fc7bc-0d33-48d9-822a-e6d1c893e5b4",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "loadMask": [
+                    "false"
+                ]
+            },
+            "designerId": "51000139-a6d5-4a47-b893-0fea2e9090f9"
+        },
+        {
+            "type": "Ext.grid.column.Action",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 25,
+                "dataIndex": "CURRENT_GRADE"
+            },
+            "designerId": "d49f6a32-e462-4be8-aee1-0f8482377396",
+            "cn": [
+                {
+                    "type": "actioncolumnitem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "67619a3c-cdcc-4c4e-8888-55d29b91ee35",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "getClass",
+                                "designer|params": [
+                                    "v",
+                                    "metadata",
+                                    "r",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store"
+                                ],
+                                "implHandler": [
+                                    "var s= \"icon-alarm-level0\";\r",
+                                    "var a=r.get(\"CURRENT_GRADE\");\r",
+                                    "if(a==1) s=\"icon-alarm-level1\";\r",
+                                    "if(a==2) s=\"icon-alarm-level2\";\r",
+                                    "if(a==3) s=\"icon-alarm-level3\";\r",
+                                    "if(a==4) s=\"icon-alarm-level4\";\r",
+                                    "return s;\r",
+                                    ""
+                                ]
+                            },
+                            "designerId": "8342f044-0e49-4a2f-b79f-c5c6626baeb6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 80,
+                "dataIndex": "FIRST_OCCUR_TIME",
+                "text": "时间"
+            },
+            "designerId": "d3021f7f-6dc9-4b89-93af-55f0f3dab4af"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 130,
+                "dataIndex": "TITLE",
+                "text": "内容"
+            },
+            "designerId": "022455cd-ad94-4517-8c64-70aa28d1e2cd"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiskListModel"
+    },
+    "id": "ExtBox1-ext-gen24202",
+    "designerId": "9dd083ef-4a89-4d3a-9db5-598f523b10a0",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "DATA_STORE"
+            },
+            "designerId": "dd227e08-d9b0-4842-b69e-8b10ef32fe8b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field19",
+                "name": "SIZE"
+            },
+            "designerId": "c654e703-b887-4d6d-9db5-749ee1287fa1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field20",
+                "name": "FREE"
+            },
+            "designerId": "32260ede-5c2a-4cc8-a2b3-2ce13ab91c83"
+        }
+    ]
+}

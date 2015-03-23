@@ -1,0 +1,219 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "layout": "fit"
+    },
+    "designerId": "a8c70cd7-d08b-4fd8-a258-1573ce3dc16c",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "autoScroll": true,
+                "layout": "absolute"
+            },
+            "designerId": "4956b712-0d35-41eb-9888-aa0718fbf4bd",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 1110,
+                        "layout|y": 10,
+                        "container|align": "stretch",
+                        "height": 190,
+                        "hidden": true,
+                        "id": "testPanel",
+                        "width": 70,
+                        "layout": "vbox",
+                        "title": "My Panel"
+                    },
+                    "designerId": "1c0343ad-0953-49b1-bc04-bd88705ed13d",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 28,
+                                "width": 64,
+                                "text": "init"
+                            },
+                            "designerId": "bbc0185c-1cb1-4b1d-975a-4f06ce96b515",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick11",
+                                        "implHandler": [
+                                            "var series = [];\r",
+                                            "alert(Ext.avmon.cpuCount);\r",
+                                            "for (var i = 0; i < Ext.avmon.cpuCount; i++) {\r",
+                                            "    series.push({\r",
+                                            "        type : 'line',\r",
+                                            "        highlight: false,\r",
+                                            "        xField : 'time',\r",
+                                            "        yField : 'usage_cpu' + i,\r",
+                                            "        tips: {\r",
+                                            "            trackMouse: true,\r",
+                                            "            width: 65,\r",
+                                            "            height: 40,\r",
+                                            "            renderer: function(storeItem, item) {\r",
+                                            "                var d = new Date();\r",
+                                            "                d.setTime(storeItem.get('time'));\r",
+                                            "                this.setTitle(Ext.Date.format(d, 'd日H时'));\r",
+                                            "                this.update(storeItem.get('usage_cpu' + i) + 'm');\r",
+                                            "            }\r",
+                                            "        },\r",
+                                            "        style: {\r",
+                                            "            fill: '#38B8BF',\r",
+                                            "            stroke: '#38B8BF',\r",
+                                            "            'stroke-width': 3\r",
+                                            "        },\r",
+                                            "        markerConfig: {\r",
+                                            "            type: 'circle',\r",
+                                            "            size: 4,\r",
+                                            "            radius: 4,\r",
+                                            "            'stroke-width': 0,\r",
+                                            "            fill: '#38B8BF',\r",
+                                            "            stroke: '#38B8BF'\r",
+                                            "        }\r",
+                                            "    });\r",
+                                            "}\r",
+                                            "var chart = Ext.getCmp(\"cpuChart\");\r",
+                                            "\r",
+                                            "chart.series = new Ext.util.MixedCollection(false, function(a) { return a.seriesId || (a.seriesId = Ext.id(null, 'ext-chart-series-')); });\r",
+                                            "if (series) {\r",
+                                            "    chart.series.addAll(series);\r",
+                                            "}\r",
+                                            "chart.refresh();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "19873d76-a5ec-46ad-a4c3-8128042690c1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 35,
+                                "id": "btnRefresh",
+                                "width": 58,
+                                "text": "refresh"
+                            },
+                            "designerId": "b90089c1-8e75-4a68-ae41-c1315c038692"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 28,
+                                "id": "btnTest2",
+                                "width": 52,
+                                "text": "remove"
+                            },
+                            "designerId": "2f93594e-f374-4209-b3f6-80b2031c8d56",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "\r",
+                                            "//getData(2);\r",
+                                            "var bcolor = ['black','red','green','blue','yellow','black','red','green','blue','yellow'];\r",
+                                            "\r",
+                                            "var chart=Ext.getCmp(\"cpuChart\");\r",
+                                            "\r",
+                                            "var series=Ext.getCmp(\"cpuChart\").series;\r",
+                                            "/*\r",
+                                            "var se=series.add(   {\r",
+                                            "type: 'line',\r",
+                                            "highlight:false,\r",
+                                            "showInLegend:true,\r",
+                                            "axis: 'left',\r",
+                                            "smooth: false,\r",
+                                            "xField: 'time',\r",
+                                            "yField: 'usage_cpu3',\r",
+                                            "markerConfig: {\r",
+                                            "type: 'circle',\r",
+                                            "size: 1,\r",
+                                            "radius: 1,\r",
+                                            "'stroke-width': 0\r",
+                                            "}\r",
+                                            "}\t\r",
+                                            ");\r",
+                                            "//*/\r",
+                                            "\r",
+                                            "//chart.refresh();\r",
+                                            "\r",
+                                            "series.get(1).showInLegend=false;\r",
+                                            "chart.refresh();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "486a6554-cdc5-4459-a519-75b915b45451"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 28,
+                                "id": "btnTest",
+                                "width": 52,
+                                "text": "test"
+                            },
+                            "designerId": "3bbf8ae5-fbf4-4cfe-84a8-0b20595eff7f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

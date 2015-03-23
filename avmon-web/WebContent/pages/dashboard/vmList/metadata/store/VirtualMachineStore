@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "VirtualMachineModel",
+        "storeId": "VirtualMachineStore",
+        "designer|userClassName": "VirtualMachineStore",
+        "pageSize": 20
+    },
+    "designerId": "1b246190-f16e-4ea7-8905-6d8eab3e07ad",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "getVirtualMachineList"
+            },
+            "designerId": "f13f9f2f-4d52-4f03-b50b-cab0a9fe1a62",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "items"
+                    },
+                    "designerId": "979ecf60-6120-40a8-b958-946ee9b5e6f3"
+                }
+            ]
+        }
+    ]
+}

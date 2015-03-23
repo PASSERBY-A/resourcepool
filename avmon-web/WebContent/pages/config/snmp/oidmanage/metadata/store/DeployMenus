@@ -1,0 +1,45 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "DeployMenu",
+        "storeId": "MyJsonTreeStore",
+        "designer|userClassName": "DeployMenus",
+        "defaultRootId": null
+    },
+    "designerId": "d51ba94c-a3b9-47fd-97ec-adc0b0c88fd1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://localhost:8080/avmon-web/deploy/menu.json"
+            },
+            "designerId": "e3b1a106-253f-4a84-a620-3cc3389b3098",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": null,
+                        "root": "menu"
+                    },
+                    "designerId": "ade46e93-c0e5-4585-9b8a-1e90a5d2ff9b"
+                }
+            ]
+        }
+    ]
+}

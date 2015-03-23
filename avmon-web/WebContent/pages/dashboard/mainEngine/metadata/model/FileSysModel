@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FileSysModel"
+    },
+    "designerId": "f99bc519-2f5d-48fd-b1d8-a54440e5fe0a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FS_NAME"
+            },
+            "designerId": "9df4838e-f240-41d7-a884-c1a2f033c20e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FS_SIZE"
+            },
+            "designerId": "abf52864-9518-4e43-b24f-783cb3b5203c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FS_PATH"
+            },
+            "designerId": "e4cd7886-5d60-46f8-a655-8efd6ed45f93"
+        }
+    ]
+}

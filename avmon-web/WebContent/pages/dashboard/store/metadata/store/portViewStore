@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "portViewStore",
+        "storeId": "portViewStore",
+        "model": "portViewModel"
+    },
+    "id": "ExtBox1-ext-gen5324",
+    "designerId": "ebd0fbea-5387-411b-93e1-175acf9be1e2",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy12",
+                "url": "portView"
+            },
+            "designerId": "afdea2c4-13dd-4547-b111-10d0b0a4d342",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader12",
+                        "root": "record"
+                    },
+                    "designerId": "2b8c33fa-9802-4fcf-9e08-1a481d2814df"
+                }
+            ]
+        }
+    ]
+}

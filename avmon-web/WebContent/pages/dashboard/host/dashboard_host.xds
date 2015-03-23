@@ -1,0 +1,285 @@
+{
+    "name": "dashboard_host",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000501,
+    "framework": "ext40",
+    "topInstanceFileMap": {
+        "18b66798-e4fb-458c-93fd-b9758d7b3b2a": {
+            "paths": [
+                "metadata/store/MyJsonStore",
+                "app/store/override/MyJsonStore.js",
+                "app/store/MyJsonStore.js"
+            ],
+            "className": "MyJsonStore"
+        },
+        "74f97606-2d33-4d2b-b539-febd81a1f5ea": {
+            "paths": [
+                "metadata/store/CpuLines",
+                "app/store/override/CpuLines.js",
+                "app/store/CpuLines.js"
+            ],
+            "className": "CpuLines"
+        },
+        "8940a871-727a-446f-b992-534ebdbbc4f6": {
+            "paths": [
+                "metadata/model/CpuLine",
+                "app/model/override/CpuLine.js",
+                "app/model/CpuLine.js"
+            ],
+            "className": "CpuLine"
+        },
+        "18433302-50dc-4fc7-98eb-9cb4e0c5f599": {
+            "paths": [
+                "metadata/store/CpuList",
+                "app/store/override/CpuList.js",
+                "app/store/CpuList.js"
+            ],
+            "className": "CpuList"
+        },
+        "c21ea060-a9d4-4edf-8619-2f472d4a431d": {
+            "paths": [
+                "metadata/model/Cpu",
+                "app/model/override/Cpu.js",
+                "app/model/Cpu.js"
+            ],
+            "className": "Cpu"
+        },
+        "a8c70cd7-d08b-4fd8-a258-1573ce3dc16c": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "d95a165b-1f64-42dd-bd4f-326b847b70a5": {
+            "paths": [
+                "metadata/view/CpuPanel",
+                "app/view/override/CpuPanel.js",
+                "app/view/CpuPanel.js"
+            ],
+            "className": "CpuPanel"
+        },
+        "90bdbd3d-ce0a-4677-b00e-b2d4d26b2dc1": {
+            "paths": [
+                "metadata/view/BasicInfo",
+                "app/view/override/BasicInfo.js",
+                "app/view/BasicInfo.js"
+            ],
+            "className": "BasicInfo"
+        },
+        "bd57b9d9-2ff3-4589-a2c8-d5794c9fb9fa": {
+            "paths": [
+                "metadata/controller/Main",
+                "app/controller/override/Main.js",
+                "app/controller/Main.js"
+            ],
+            "className": "Main"
+        },
+        "79546784-e312-4e16-b558-16aaeb90dd40": {
+            "paths": [
+                "metadata/store/Alarms",
+                "app/store/override/Alarms.js",
+                "app/store/Alarms.js"
+            ],
+            "className": "Alarms"
+        },
+        "99ba0589-378d-400c-9ffe-88d930f1a3c3": {
+            "paths": [
+                "metadata/model/Alarm",
+                "app/model/override/Alarm.js",
+                "app/model/Alarm.js"
+            ],
+            "className": "Alarm"
+        },
+        "992fc7bc-0d33-48d9-822a-e6d1c893e5b4": {
+            "paths": [
+                "metadata/view/NewAlarmGrid",
+                "app/view/override/NewAlarmGrid.js",
+                "app/view/NewAlarmGrid.js"
+            ],
+            "className": "NewAlarmGrid"
+        },
+        "fb2c3e8c-093d-465b-b8f7-9beef0540b81": {
+            "paths": [
+                "metadata/view/KeyProcessGrid",
+                "app/view/override/KeyProcessGrid.js",
+                "app/view/KeyProcessGrid.js"
+            ],
+            "className": "KeyProcessGrid"
+        },
+        "655b8ae4-bffc-4128-9bb8-e7c4fda869c1": {
+            "paths": [
+                "metadata/store/Processes",
+                "app/store/override/Processes.js",
+                "app/store/Processes.js"
+            ],
+            "className": "Processes"
+        },
+        "6fbaf5bb-0c5b-454f-9189-890c965cdc41": {
+            "paths": [
+                "metadata/model/Process",
+                "app/model/override/Process.js",
+                "app/model/Process.js"
+            ],
+            "className": "Process"
+        },
+        "a87ed41d-6069-474e-9674-652068d38408": {
+            "paths": [
+                "metadata/view/MemPanel",
+                "app/view/override/MemPanel.js",
+                "app/view/MemPanel.js"
+            ],
+            "className": "MemPanel"
+        },
+        "91f34b8a-cd35-404b-b1c1-f24c05f9b78e": {
+            "paths": [
+                "metadata/store/Mems",
+                "app/store/override/Mems.js",
+                "app/store/Mems.js"
+            ],
+            "className": "Mems"
+        },
+        "45c2e0d9-a140-4b6b-a5cb-e3aa4f6c54af": {
+            "paths": [
+                "metadata/model/Mem",
+                "app/model/override/Mem.js",
+                "app/model/Mem.js"
+            ],
+            "className": "Mem"
+        },
+        "fec39384-b3b2-49b9-afca-87b0bdb0f25f": {
+            "paths": [
+                "metadata/store/Disks",
+                "app/store/override/Disks.js",
+                "app/store/Disks.js"
+            ],
+            "className": "Disks"
+        },
+        "a8c8759d-64c4-495f-806e-1dadd89c0524": {
+            "paths": [
+                "metadata/store/Lvs",
+                "app/store/override/Lvs.js",
+                "app/store/Lvs.js"
+            ],
+            "className": "Lvs"
+        },
+        "17d234fd-116f-49c9-9c1d-6b261b0f7cb6": {
+            "paths": [
+                "metadata/model/Disk",
+                "app/model/override/Disk.js",
+                "app/model/Disk.js"
+            ],
+            "className": "Disk"
+        },
+        "97e800e2-cf0b-4cd8-89fe-7cb922c0784b": {
+            "paths": [
+                "metadata/model/Lv",
+                "app/model/override/Lv.js",
+                "app/model/Lv.js"
+            ],
+            "className": "Lv"
+        },
+        "42225b9c-2cae-4272-9352-03ee91b33e17": {
+            "paths": [
+                "metadata/model/Network",
+                "app/model/override/Network.js",
+                "app/model/Network.js"
+            ],
+            "className": "Network"
+        },
+        "295bb922-9568-4d50-968b-afdc56f9259a": {
+            "paths": [
+                "metadata/store/Networks",
+                "app/store/override/Networks.js",
+                "app/store/Networks.js"
+            ],
+            "className": "Networks"
+        },
+        "2e4a31c1-ee8b-463d-9b8d-d88719a004ae": {
+            "paths": [
+                "metadata/view/PowerPanel",
+                "app/view/override/PowerPanel.js",
+                "app/view/PowerPanel.js"
+            ],
+            "className": "PowerPanel"
+        },
+        "33816701-d49f-4316-9398-a112df095665": {
+            "paths": [
+                "metadata/view/MyViewport1",
+                "app/view/override/MyViewport1.js",
+                "app/view/MyViewport1.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport1"
+        },
+        "31a6cdb0-47a9-4c59-8480-6b5419c79fef": {
+            "paths": [
+                "metadata/store/Swaps",
+                "app/store/override/Swaps.js",
+                "app/store/Swaps.js"
+            ],
+            "className": "Swaps"
+        },
+        "f5a11466-9b8c-4c2d-89c7-d9bd59fab7fe": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "a8c70cd7-d08b-4fd8-a258-1573ce3dc16c",
+            "d95a165b-1f64-42dd-bd4f-326b847b70a5",
+            "90bdbd3d-ce0a-4677-b00e-b2d4d26b2dc1",
+            "992fc7bc-0d33-48d9-822a-e6d1c893e5b4",
+            "fb2c3e8c-093d-465b-b8f7-9beef0540b81",
+            "a87ed41d-6069-474e-9674-652068d38408",
+            "2e4a31c1-ee8b-463d-9b8d-d88719a004ae",
+            "33816701-d49f-4316-9398-a112df095665"
+        ],
+        "store": [
+            "18b66798-e4fb-458c-93fd-b9758d7b3b2a",
+            "74f97606-2d33-4d2b-b539-febd81a1f5ea",
+            "18433302-50dc-4fc7-98eb-9cb4e0c5f599",
+            "79546784-e312-4e16-b558-16aaeb90dd40",
+            "655b8ae4-bffc-4128-9bb8-e7c4fda869c1",
+            "91f34b8a-cd35-404b-b1c1-f24c05f9b78e",
+            "31a6cdb0-47a9-4c59-8480-6b5419c79fef",
+            "fec39384-b3b2-49b9-afca-87b0bdb0f25f",
+            "a8c8759d-64c4-495f-806e-1dadd89c0524",
+            "295bb922-9568-4d50-968b-afdc56f9259a"
+        ],
+        "controller": [
+            "bd57b9d9-2ff3-4589-a2c8-d5794c9fb9fa"
+        ],
+        "model": [
+            "8940a871-727a-446f-b992-534ebdbbc4f6",
+            "c21ea060-a9d4-4edf-8619-2f472d4a431d",
+            "99ba0589-378d-400c-9ffe-88d930f1a3c3",
+            "6fbaf5bb-0c5b-454f-9189-890c965cdc41",
+            "45c2e0d9-a140-4b6b-a5cb-e3aa4f6c54af",
+            "17d234fd-116f-49c9-9c1d-6b261b0f7cb6",
+            "97e800e2-cf0b-4cd8-89fe-7cb922c0784b",
+            "42225b9c-2cae-4272-9352-03ee91b33e17"
+        ],
+        "resource": [
+            "f5a11466-9b8c-4c2d-89c7-d9bd59fab7fe"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

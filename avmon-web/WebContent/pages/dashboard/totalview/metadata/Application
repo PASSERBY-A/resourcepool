@@ -1,0 +1,44 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Resource"
+        ],
+        "stores": [
+            "Resources"
+        ],
+        "views": [
+            "MyViewport",
+            "DeviceListWindow"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var p=Ext.getCmp(\"resourceListPanel\");\r",
+                    "\r",
+                    "var grid=Ext.getCmp(\"resourceListGrid\");\r",
+                    "grid.getStore().load({params:{id:Ext.avmon.currentMoId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "d8999b98-a8a3-48a4-b4a8-cac2a4a9869a"
+        }
+    ]
+}

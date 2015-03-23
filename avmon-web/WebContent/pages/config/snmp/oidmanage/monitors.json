@@ -1,0 +1,8 @@
+{
+total:3,
+rows:[
+	{path:'cpu',name:'cpu',caption:'CPU',version:'1.1',status:'running'},
+	{path:'mem',name:'mem',caption:'内存',version:'1.2',status:'running'},
+	{path:'process',name:'process',caption:'进程',version:'1.0',status:'unknown'}
+]
+}

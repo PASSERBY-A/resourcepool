@@ -1,0 +1,1257 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "MyViewport1",
+        "designer|initialView": true,
+        "layout": "hbox"
+    },
+    "designerId": "33816701-d49f-4316-9398-a112df095665",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "layout": "vbox"
+            },
+            "designerId": "77e2707e-a0ef-4a2a-9c44-33ed7b7ba17e",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": 165,
+                        "id": "basicInfo",
+                        "width": 260,
+                        "autoScroll": true,
+                        "bodyPadding": 10,
+                        "title": "常规信息"
+                    },
+                    "designerId": "ec10361b-f0d1-4bcb-abaf-b5c804b748e0",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "操作系统",
+                                "labelWidth": 70,
+                                "name": "OS",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "b65bcc8e-6b2a-41b8-be0e-4338485ae870"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "版本",
+                                "labelWidth": 70,
+                                "name": "OSVERSION",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "a1dbc835-5646-4780-99aa-88e9133b0913"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "业务系统",
+                                "labelWidth": 70,
+                                "name": "BUSINESSSYSTEM",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "687bdb55-8309-45d3-aace-0944052a708e"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "位置",
+                                "labelWidth": 70,
+                                "name": "POSITION",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "6c92c4d4-d0de-4f7d-b8f0-5d149101a678"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "用途",
+                                "labelWidth": 70,
+                                "name": "USAGE",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "687c08d8-ad13-47ef-901b-e3d93a997a90"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "管理员",
+                                "labelWidth": 70,
+                                "name": "OWNER",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "77e4fa21-832e-46bf-9713-8be875ded49c"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "CPU型号",
+                                "labelWidth": 70,
+                                "name": "CPUMODEL",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "a575f3cb-201a-47c7-8a92-c424d70293da"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "运行频率",
+                                "labelWidth": 70,
+                                "name": "RUNRATE",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "5ddc4071-253c-4dd9-a15d-12f29eacf2b6"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "运行时间",
+                                "labelWidth": 70,
+                                "name": "RUNTIME",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "2f6e893e-618f-4ab7-9136-0ae026086774"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "当前用户数",
+                                "labelWidth": 70,
+                                "name": "USERCOUNT",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "11faacc4-ee10-40a9-9872-71143d34e295"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "fieldLabel": "当前告警数",
+                                "labelWidth": 70,
+                                "name": "ALARMCOUNT",
+                                "value": [
+                                    "loading..."
+                                ]
+                            },
+                            "designerId": "4d87c6f6-b404-41ad-9bf7-192214bef176"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": null,
+                        "id": "newAlarmGrid",
+                        "width": null,
+                        "title": "最新告警",
+                        "store": "Alarms"
+                    },
+                    "designerId": "816d65eb-b212-4b79-8257-3cd2a4bc34b6",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "loadMask": [
+                                    "false"
+                                ]
+                            },
+                            "designerId": "0cedf5bc-2257-494e-9ace-08ec99fa26c5"
+                        },
+                        {
+                            "type": "Ext.grid.column.Action",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 25,
+                                "dataIndex": "CURRENT_GRADE"
+                            },
+                            "designerId": "28c91740-7bbe-44b1-909b-766207ccd0d6",
+                            "cn": [
+                                {
+                                    "type": "actioncolumnitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "c39790ec-e7a2-490d-8e12-b12fea187a4f",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "getClass",
+                                                "designer|params": [
+                                                    "v",
+                                                    "metadata",
+                                                    "r",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store"
+                                                ],
+                                                "implHandler": [
+                                                    "var s= \"icon-alarm-level0\";\r",
+                                                    "var a=r.get(\"CURRENT_GRADE\");\r",
+                                                    "if(a==1) s=\"icon-alarm-level1\";\r",
+                                                    "if(a==2) s=\"icon-alarm-level2\";\r",
+                                                    "if(a==3) s=\"icon-alarm-level3\";\r",
+                                                    "if(a==4) s=\"icon-alarm-level4\";\r",
+                                                    "return s;\r",
+                                                    ""
+                                                ]
+                                            },
+                                            "designerId": "57fa356c-994f-4950-b99e-8c5d759557a0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "FIRST_OCCUR_TIME",
+                                "text": "时间"
+                            },
+                            "designerId": "f21c8d47-bec4-4c96-86ed-41d75666dbe3"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 130,
+                                "dataIndex": "TITLE",
+                                "text": "内容",
+                                "flex": 1
+                            },
+                            "designerId": "b08aaa06-ef8a-4029-9573-651e1be29bce"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": null,
+                        "id": "networkGrid",
+                        "width": 540,
+                        "title": "网络接口",
+                        "store": "Networks",
+                        "rootVisible": false
+                    },
+                    "designerId": "2ccf2deb-8257-43fa-846f-cc2a62598dd6",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "loadMask": [
+                                    "false"
+                                ]
+                            },
+                            "designerId": "fc5888f9-d6d1-4c73-b052-ce402fba8d2a"
+                        },
+                        {
+                            "type": "Ext.tree.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "width": 80,
+                                "defaultWidth": 80,
+                                "dataIndex": "NAME",
+                                "text": "网络接口",
+                                "flex": 1
+                            },
+                            "designerId": "f803ced6-1504-4892-bc80-e5f09bd0e822"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 60,
+                                "dataIndex": "value",
+                                "text": "类型"
+                            },
+                            "designerId": "cbc81073-6007-4f98-b470-f21f3f7693b7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 65,
+                                "dataIndex": "value",
+                                "text": "带宽利用率"
+                            },
+                            "designerId": "11d1bf8d-9bd0-4bb8-8a01-9d7109ad3c45"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 60,
+                                "dataIndex": "value",
+                                "text": "发送速率"
+                            },
+                            "designerId": "1ed8d19d-495e-4c2f-8937-d383ef385317"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 60,
+                                "dataIndex": "value",
+                                "text": "接收速率"
+                            },
+                            "designerId": "5dae688a-604e-40e0-a9e8-58195fc158a8"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "LAN_OPKTS",
+                                "text": "发包/秒"
+                            },
+                            "designerId": "07f84014-02fc-4f9e-9599-a098ebcc3b32"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "LAN_IPKTS",
+                                "text": "收包/秒"
+                            },
+                            "designerId": "11b79ac7-b7a3-49e3-9837-49f04bed6289"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "container|align": "stretch",
+                "layout": "vbox"
+            },
+            "designerId": "d652b26c-6b40-4409-8764-a7cafdd92ed0",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": 165,
+                        "id": "cpuPanel",
+                        "width": 540,
+                        "layout": "fit",
+                        "title": "CPU"
+                    },
+                    "designerId": "adc21333-ac08-43f3-9057-d4fd9491d12e",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "frame": false,
+                                "height": null,
+                                "id": "cpuChart",
+                                "width": null,
+                                "insetPadding": 5,
+                                "store": "CpuLines"
+                            },
+                            "designerId": "c17c428e-1c60-4682-9326-e634aa7cf7c9",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": null,
+                                        "fields": [
+                                            "time"
+                                        ],
+                                        "label": [
+                                            "{\r",
+                                            "    rotate:{\r",
+                                            "    degrees:0\r",
+                                            "}\r",
+                                            "}"
+                                        ]
+                                    },
+                                    "designerId": "f0ca2295-7ef7-4dcc-8e57-7ab7d47bb0f1"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "position": "left",
+                                        "title": null,
+                                        "maximum": 100,
+                                        "minimum": 0
+                                    },
+                                    "designerId": "02233eae-e984-4513-8c94-e326a611fe88"
+                                },
+                                {
+                                    "type": "Ext.chart.Legend",
+                                    "reference": {
+                                        "name": "legend",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxStroke": "#FFF",
+                                        "boxStrokeWidth": null,
+                                        "itemSpacing": 0,
+                                        "padding": 2,
+                                        "position": "right",
+                                        "x": null,
+                                        "designer|displayName": null
+                                    },
+                                    "designerId": "b2e3a495-c1e3-4b74-bcbd-fb0f5031ef20"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Line",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "showInLegend": false,
+                                        "xField": "time",
+                                        "yField": [
+                                            "usage"
+                                        ],
+                                        "fill": true
+                                    },
+                                    "designerId": "b55d5794-aec6-419f-b01e-57296ce2b231"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "container|align": "stretch",
+                        "height": null,
+                        "id": "memPanel",
+                        "width": 540,
+                        "layout": "hbox",
+                        "title": "内存"
+                    },
+                    "designerId": "bac2cbe2-2f2a-44ac-887a-39f176e95384",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "height": null,
+                                "id": "memChart1",
+                                "width": null,
+                                "animate": [
+                                    "true"
+                                ],
+                                "insetPadding": 5,
+                                "store": "Mems"
+                            },
+                            "designerId": "ac385452-5a8b-4498-9d26-1aae64eadead",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": null,
+                                        "fields": [
+                                            "time"
+                                        ],
+                                        "label": [
+                                            "{\r",
+                                            "    rotate:{\r",
+                                            "    degrees:0\r",
+                                            "}\r",
+                                            "}"
+                                        ]
+                                    },
+                                    "designerId": "7b919b52-a57a-4085-94c1-dc16a1cc3362"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dashSize": 1,
+                                        "majorTickSteps": null,
+                                        "position": "left",
+                                        "title": null,
+                                        "maximum": 100,
+                                        "minimum": 0
+                                    },
+                                    "designerId": "42c24746-1180-47ea-ba4c-e4572d38d235"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Area",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "highlight": null,
+                                        "title": [
+                                            "['用户内存使用率','系统','可用']"
+                                        ],
+                                        "xField": "time",
+                                        "yField": [
+                                            "mem_user",
+                                            "mem_sys",
+                                            "mem_free"
+                                        ],
+                                        "style": null
+                                    },
+                                    "designerId": "382f7261-7d37-4f06-baf3-c0633722639f"
+                                },
+                                {
+                                    "type": "Ext.chart.Legend",
+                                    "reference": {
+                                        "name": "legend",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxZIndex": null,
+                                        "itemSpacing": 5,
+                                        "position": "top"
+                                    },
+                                    "designerId": "18722de0-faaa-45a0-a7de-3e23e8138bd8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "height": null,
+                                "id": "memChart2",
+                                "width": null,
+                                "animate": [
+                                    "true"
+                                ],
+                                "insetPadding": 5,
+                                "store": "Swaps"
+                            },
+                            "designerId": "8adce35d-ab9a-4100-943e-294152d10376",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": null,
+                                        "fields": [
+                                            "time"
+                                        ],
+                                        "label": [
+                                            "{\r",
+                                            "    rotate:{\r",
+                                            "    degrees:0\r",
+                                            "}\r",
+                                            "}"
+                                        ]
+                                    },
+                                    "designerId": "a932502f-b97b-4de1-ba4a-454299977f11"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dashSize": 1,
+                                        "majorTickSteps": null,
+                                        "position": "left",
+                                        "title": null,
+                                        "maximum": 100,
+                                        "minimum": 0
+                                    },
+                                    "designerId": "a2729209-9964-454c-a29b-d36f1ec4e23b"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Area",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "highlight": null,
+                                        "title": [
+                                            "['SWAP使用率','空闲率']"
+                                        ],
+                                        "xField": "time",
+                                        "yField": [
+                                            "swap_usage",
+                                            "swap_free"
+                                        ]
+                                    },
+                                    "designerId": "e04d7d60-c159-4ce5-be85-a809b8e3d8fe"
+                                },
+                                {
+                                    "type": "Ext.chart.Legend",
+                                    "reference": {
+                                        "name": "legend",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemSpacing": 5,
+                                        "position": "top"
+                                    },
+                                    "designerId": "67cfd5da-12c1-4dad-972c-4e5f7fda8814"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "height": 30,
+                                "hidden": true,
+                                "id": "memInfo",
+                                "width": 540,
+                                "layout": "column",
+                                "bodyPadding": 5,
+                                "title": ""
+                            },
+                            "designerId": "6188af74-5951-49db-a57b-595835fd0ed9",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "fieldLabel": "Page-In",
+                                        "labelWidth": 50,
+                                        "name": "page_in",
+                                        "value": [
+                                            "loading..."
+                                        ]
+                                    },
+                                    "designerId": "06339970-1188-45f3-a532-5ba3a5bce1d0"
+                                },
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "fieldLabel": "Page-Out",
+                                        "labelWidth": 60,
+                                        "name": "page_out",
+                                        "value": [
+                                            "loading..."
+                                        ]
+                                    },
+                                    "designerId": "5cd5abe8-a0fe-4363-8cfb-8e8012f39e75"
+                                },
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "fieldLabel": "Cache读命中率",
+                                        "labelWidth": 85,
+                                        "name": "cache_read",
+                                        "value": [
+                                            "loading..."
+                                        ]
+                                    },
+                                    "designerId": "968184d7-4457-484e-b26a-5b0fca87b46c"
+                                },
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "fieldLabel": "Cache写命中率",
+                                        "labelWidth": 85,
+                                        "name": "cache_write",
+                                        "value": [
+                                            "loading..."
+                                        ]
+                                    },
+                                    "designerId": "0785f420-13b2-405e-8be6-d0cdbd68dbcc"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": null,
+                        "id": "keyProcessGrid",
+                        "width": null,
+                        "title": "TOPN进程",
+                        "store": "Processes"
+                    },
+                    "designerId": "f8b8f76f-9394-49ad-a7a2-11652daf65c5",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "loadMask": [
+                                    "false"
+                                ]
+                            },
+                            "designerId": "cba3505c-4532-4760-9000-0fd61655ba02"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 200,
+                                "dataIndex": "NAME",
+                                "text": "进程",
+                                "flex": 1
+                            },
+                            "designerId": "c355a10d-de72-46fd-964f-2a528751cbaf"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "CPU",
+                                "text": "CPU"
+                            },
+                            "designerId": "5f9a4c91-6031-4054-a1cd-001fbe679fc8"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "MEM",
+                                "text": "MEM"
+                            },
+                            "designerId": "40d4ef89-b2cc-4321-8bf6-64fab212a14a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "STATUS",
+                                "text": "状态"
+                            },
+                            "designerId": "24c8318d-f3c8-4427-a023-b0912526a739"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "layout": "vbox"
+            },
+            "designerId": "c27fd98b-db7b-4ca8-bbfc-f2467300d62d",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null
+                    },
+                    "designerId": "eeb14536-7827-4a9a-a357-6c58e37eb631",
+                    "masterInstanceId": "2e4a31c1-ee8b-463d-9b8d-d88719a004ae"
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": 210,
+                        "id": "diskIoGrid",
+                        "width": null,
+                        "iconCls": null,
+                        "title": "磁盘IO",
+                        "store": "Disks"
+                    },
+                    "designerId": "cbf74847-34ed-4407-9169-e2465c75bb7b",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "loadMask": [
+                                    "false"
+                                ]
+                            },
+                            "designerId": "3863d746-9f9d-4318-a0d1-18711c22831a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "dataIndex": "DEVICE",
+                                "text": "Device",
+                                "flex": 1
+                            },
+                            "designerId": "317b95a1-51d6-431c-9d77-9d15e4b99630"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 45,
+                                "dataIndex": "BUSY",
+                                "text": "Busy"
+                            },
+                            "designerId": "79335e7a-ab05-49e1-a3b7-5a8f3813a764"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 45,
+                                "dataIndex": "AVQUE",
+                                "text": "Avque"
+                            },
+                            "designerId": "7b7f5628-4ae9-4831-9ff6-0eca76b499c7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 45,
+                                "dataIndex": "RWPS",
+                                "text": "r+w/s"
+                            },
+                            "designerId": "ddeb6847-5f51-4c12-b0ea-f11a29906f06"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": null,
+                        "id": "diskVolGrid",
+                        "width": null,
+                        "title": "逻辑卷",
+                        "store": "Lvs"
+                    },
+                    "designerId": "f72e338f-06fa-4e28-823e-133ea89546b7",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": null,
+                                "loadMask": [
+                                    "false"
+                                ]
+                            },
+                            "designerId": "852ef083-3092-4ef7-8b11-c6445771598a"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 35,
+                                "dataIndex": "VG",
+                                "text": "Vg"
+                            },
+                            "designerId": "36e37c40-31ff-4068-8981-7167fdfc52e2"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 100,
+                                "dataIndex": "LV",
+                                "text": "LV (Mount)",
+                                "flex": 1
+                            },
+                            "designerId": "26b73459-face-407b-8f18-20bc1bb25076"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "align": "right",
+                                "dataIndex": "TOTAL",
+                                "text": "Total (KB)"
+                            },
+                            "designerId": "8ea3a86c-75d2-4034-94f0-5949b3b7f3c0"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 80,
+                                "align": "right",
+                                "dataIndex": "USAGE",
+                                "text": "Usage"
+                            },
+                            "designerId": "24539443-175f-412c-b554-e5aeddb8e940"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "width": 40,
+                                "dataIndex": "FREE",
+                                "text": "Free"
+                            },
+                            "designerId": "1275d87b-499c-46cd-ae2a-4d5e3684f7e8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "NetworkReceiveModel",
+        "storeId": "MemReceiveStore",
+        "designer|userClassName": "MemReceiveStore"
+    },
+    "designerId": "e30ecbc4-084b-40d1-b057-547ca95e086e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "13673e5a-1a5c-4e44-a2e0-6cbe261850fd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "a313dd94-7b83-456b-ae14-392df9d72486"
+                }
+            ]
+        }
+    ]
+}

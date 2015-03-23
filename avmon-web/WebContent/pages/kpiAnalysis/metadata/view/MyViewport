@@ -1,0 +1,103 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "e9153ce3-0f62-4739-9b98-70001bd1b65a",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "id": "performanceTree",
+                "itemId": "performanceTree",
+                "width": 250,
+                "collapsible": true,
+                "title": "Menu",
+                "store": "PerformanceMenus",
+                "rootVisible": false
+            },
+            "designerId": "9a0547bc-7e0c-4887-88c1-9159bb60f9e5",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "f576a960-38a7-4ce7-8036-904ac91968c1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPerformanceTreeSelect",
+                        "implHandler": [
+                            "Ext.getCmp('performanceContent').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"'+record.get(\"url\")+'\"></iframe>');"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "73f80bdc-99ba-4c4c-85bc-1900281faedb"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPerformanceTreeAfterLayout",
+                        "implHandler": [
+                            "    var tree=Ext.getCmp(\"performanceTree\");\r",
+                            "    var path=\"/root/\" + tree.getRootNode().firstChild.internalId;\r",
+                            "    tree.expandPath(path, 'id', '/', function(bSuccess, oLastNode){\r",
+                            "        if(bSuccess){\r",
+                            "            tree.getSelectionModel().select(oLastNode,true);\r",
+                            "        }\r",
+                            "        else{\r",
+                            "            //alert('未找到节点'+moId);\r",
+                            "        }\r",
+                            "    });"
+                        ],
+                        "name": "afterlayout",
+                        "scope": "me"
+                    },
+                    "designerId": "d408c01b-448e-4bb2-8214-3710fb4ead46"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "id": "performanceContent",
+                "title": null
+            },
+            "designerId": "3ab1ef1e-8677-41a4-a7f0-7f334bee8122"
+        }
+    ]
+}

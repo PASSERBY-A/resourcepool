@@ -1,0 +1,31 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": null,
+        "storeId": "MyArrayStore",
+        "designer|userClassName": "HostTypeList",
+        "data": [
+            "[['Linux'],['HPUX']]"
+        ]
+    },
+    "designerId": "5408e59d-f8e2-4c33-b670-ef9c496038bf",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "99951a32-e30f-407f-ad71-61811165f146"
+        }
+    ]
+}

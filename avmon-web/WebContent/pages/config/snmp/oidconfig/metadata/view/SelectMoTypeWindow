@@ -1,0 +1,205 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 416,
+        "width": 402,
+        "designer|userClassName": "SelectMoTypeWindow",
+        "designer|userAlias": "selectMoTypeWindow",
+        "layout": "fit",
+        "closeAction": "hide",
+        "title": "添加监控对象"
+    },
+    "designerId": "a0c34c9c-1a62-434a-89d3-b2b44f4dd6ba",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "frame": true,
+                "height": 353,
+                "width": 381,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": ""
+            },
+            "designerId": "3311e6d7-6d04-4d52-8c31-947e4a9c41a9",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "选择对象类型："
+                    },
+                    "designerId": "b1fb800e-eccd-4666-a1ad-c63ed96f55c3"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 80,
+                        "layout|y": 260,
+                        "text": "(对象编号确定后无法修改，且必须唯一。)"
+                    },
+                    "designerId": "5841e2fe-34cc-46e9-8c90-7985f69ac81b"
+                },
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 30,
+                        "height": 200,
+                        "id": "moTypeTree",
+                        "width": 360,
+                        "title": "",
+                        "store": "MoTypeTrees",
+                        "rootVisible": false
+                    },
+                    "designerId": "6b1117a0-3020-4e59-b7ac-a815d7c626fd",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "d28a9ae1-1f4e-4118-b4a8-05084fe91c84"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 240,
+                        "width": null,
+                        "fieldLabel": "对象编号",
+                        "labelWidth": 60,
+                        "name": "moId",
+                        "allowBlank": false
+                    },
+                    "designerId": "69ac541a-2c7d-4748-9be9-7f133fc1450a"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 280,
+                        "width": null,
+                        "fieldLabel": "对象名称",
+                        "labelWidth": 60,
+                        "name": "caption",
+                        "allowBlank": false
+                    },
+                    "designerId": "e6f3ff5a-b4e0-4b36-a9e0-ccabe1f52d1e"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 310,
+                        "hidden": true,
+                        "width": null,
+                        "fieldLabel": "Agent ID",
+                        "labelWidth": 60,
+                        "name": "agentId",
+                        "allowBlank": false,
+                        "emptyText": "(用于接收性能数据,主机对象可留空)"
+                    },
+                    "designerId": "1516a873-1789-4215-a6ee-92dcd7a4332e"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 250,
+                        "layout|y": 340,
+                        "id": "btnSelectMoTypeWindowOk",
+                        "iconCls": "icon-ok",
+                        "text": "确定"
+                    },
+                    "designerId": "4dd6be5a-86ef-41f8-b7c7-9becb5889f9c"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 310,
+                        "layout|y": 340,
+                        "iconCls": "icon-cancel",
+                        "text": "取消"
+                    },
+                    "designerId": "f3048a5b-facc-491c-aafe-bea3e9b8b5fd",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "Ext.selectMoTypeWindow.hide();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "2cd18e9c-193b-4ec2-bcdc-3a320f725ece"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

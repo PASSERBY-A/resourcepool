@@ -1,0 +1,67 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ArpModel"
+    },
+    "id": "ExtBox1-ext-gen6929",
+    "designerId": "6e5224ab-8090-4b8b-b55c-066f0ed9f510",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "device_ip"
+            },
+            "designerId": "b610be92-a079-4729-a0f7-3b3bffbd3de6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "ip"
+            },
+            "designerId": "ab292376-f0ca-40a1-b5ea-106128f1886e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "mac"
+            },
+            "designerId": "6285ffa1-9b68-407f-8498-a3505c4292ef"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field7",
+                "name": "is_threshold"
+            },
+            "designerId": "ac13bf3b-1b85-48d7-89de-71e8902d853b"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "FanJsonStore",
+        "model": "FanModel",
+        "storeId": "MyJsonStore5"
+    },
+    "designerId": "d99bd78c-57e4-4ce8-af21-1a79e7611d48",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mo:Ext.iloHost.mo}"
+                ],
+                "url": "getFanList"
+            },
+            "designerId": "5aabd93e-a203-40b7-8233-9aa855d301cc",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "b17fc83c-4bbd-4275-ade9-856367bc52cc"
+                }
+            ]
+        }
+    ]
+}

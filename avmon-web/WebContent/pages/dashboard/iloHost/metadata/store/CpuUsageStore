@@ -1,0 +1,48 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "CpuUsageStore",
+        "model": "CpuUsageModel",
+        "storeId": "MyJsonStore"
+    },
+    "designerId": "2e30b302-a29b-467c-85ca-280e9344672d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    mo:''\r",
+                    "}"
+                ],
+                "url": "getIloHostCpuUsage"
+            },
+            "designerId": "f588d272-f84e-4af4-83c3-c3fda6f283e1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "d83bfbe3-b1b4-48e1-b4db-dd210555b76f"
+                }
+            ]
+        }
+    ]
+}

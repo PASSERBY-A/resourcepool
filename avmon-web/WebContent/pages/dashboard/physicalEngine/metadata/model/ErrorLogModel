@@ -1,0 +1,13 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ErrorLogModel"
+    },
+    "id": "ExtBox1-ext-gen63375",
+    "designerId": "bc277c1a-2310-4971-a1a3-6aa3d0dc95de"
+}

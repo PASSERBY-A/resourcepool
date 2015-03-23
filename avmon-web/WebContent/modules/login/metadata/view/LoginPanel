@@ -1,0 +1,388 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|pack": "center",
+        "designer|userClassName": "LoginPanel",
+        "designer|initialView": true,
+        "border": 0,
+        "frame": false,
+        "height": 742,
+        "width": 1163,
+        "layout": "vbox",
+        "bodyCls": "login-background",
+        "title": ""
+    },
+    "id": "ExtBox1-ext-gen4034",
+    "designerId": "3c1af677-a906-41cf-919b-6807040b2b19",
+    "cn": [
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "designer|userClassName": "MyContainer"
+            },
+            "designerId": "2a395d6f-7fd8-44be-9a5a-aab1965fbb2f"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "container|align": "stretch",
+                "designer|userClassName": "MyContainer1",
+                "height": 300,
+                "layout": "hbox"
+            },
+            "designerId": "2c7ebe51-169f-4354-a789-b7fa66f670e0",
+            "cn": [
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1.3,
+                        "designer|userClassName": "MyContainer3",
+                        "height": null,
+                        "width": null
+                    },
+                    "designerId": "a1b19d06-8cce-45e7-9708-3c65fcc6a835"
+                },
+                {
+                    "type": "form",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|snapToGrid": 10,
+                        "designer|userClassName": "MyForm",
+                        "border": 0,
+                        "frame": true,
+                        "padding": 0,
+                        "width": 484,
+                        "layout": "absolute",
+                        "frameHeader": false
+                    },
+                    "designerId": "fd61932d-2d82-4600-86b4-81d796c21b13",
+                    "cn": [
+                        {
+                            "type": "image",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": null,
+                                "designer|userClassName": "MyImg",
+                                "height": 114,
+                                "width": 484,
+                                "src": "../resources/images/login_banner.png"
+                            },
+                            "designerId": "97e9660a-21a8-430f-b3dd-55968f205ea5"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 40,
+                                "layout|y": 130,
+                                "designer|userClassName": "MyTextField",
+                                "width": 360,
+                                "name": "userId",
+                                "fieldLabel": "用户ID",
+                                "labelAlign": "right",
+                                "labelPad": 20,
+                                "labelSeparator": " "
+                            },
+                            "designerId": "950fc66f-7836-466f-a427-0c15b8453e85"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 40,
+                                "layout|y": 170,
+                                "designer|userClassName": "MyTextField",
+                                "width": 360,
+                                "inputType": "password",
+                                "name": "password",
+                                "fieldLabel": "密码",
+                                "labelAlign": "right",
+                                "labelPad": 20,
+                                "labelSeparator": " "
+                            },
+                            "designerId": "25c17824-e130-44b2-b4ae-18c5fe9205a7"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 310,
+                                "layout|y": 200,
+                                "designer|userClassName": "MyComboBox",
+                                "width": 90,
+                                "name": "theme",
+                                "fieldLabel": "",
+                                "labelAlign": "right",
+                                "labelPad": 20,
+                                "labelSeparator": " ",
+                                "displayField": "display",
+                                "store": "{\r\n\t\t\t\t\t\tfields : ['value', 'display'],\r\n\t\t\t\t\t\tdata : [{\r\n\t\t\t\t\t\t\t\t\t'value' : '',\r\n\t\t\t\t\t\t\t\t\t'display' : '默认主题'\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t'value' : '-gray',\r\n\t\t\t\t\t\t\t\t\t'display' : '灰色主题'\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t'value' : '-access',\r\n\t\t\t\t\t\t\t\t\t'display' : '黑色主题'\r\n\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t}",
+                                "valueField": "value"
+                            },
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "3a496d33-e435-43a6-a67a-24b36fc88c57"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 160,
+                                "layout|y": 240,
+                                "designer|userClassName": "MyButton",
+                                "height": 30,
+                                "width": 110,
+                                "preventDefault": null,
+                                "text": "登录",
+                                "type": "submit"
+                            },
+                            "designerId": "0d0ebf2f-29fb-41c6-b4c5-49be75d6ca3c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick",
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "\r",
+                                            "button.disable();\r",
+                                            "var userId=button.up(\"form\").getForm().findField('userId').getValue();\r",
+                                            "var password=button.up(\"form\").getForm().findField('password').getValue();\r",
+                                            "var savePass=button.up(\"form\").getForm().findField('ckSavePass').getValue();\r",
+                                            "var theme=button.up(\"form\").getForm().findField('theme').getValue();\r",
+                                            "\r",
+                                            "\r",
+                                            "Ext.Ajax.request({\r",
+                                            "    url: '../login',\r",
+                                            "    params: {userId:userId,password:password},\r",
+                                            "    success: function(response, opts) {\r",
+                                            "        var obj=Ext.decode(response.responseText);\r",
+                                            "        if(obj.errorMsg){\r",
+                                            "            Ext.Msg.alert(\"登录失败\",obj.errorMsg);\r",
+                                            "        }\r",
+                                            "        else{\r",
+                                            "            //Ext.avmon.loginUserId=obj.userId;\r",
+                                            "            //Ext.avmon.loginUserName=obj.userName;\r",
+                                            "            showMainWindow(theme);\r",
+                                            "\r",
+                                            "            /*\r",
+                                            "            if(!Ext.avmon.main.frame){\r",
+                                            "            Ext.avmon.main.frame=Ext.getCmp(\"mainFrame\");\r",
+                                            "            }\r",
+                                            "            if(Ext.avmon.main.frame){\r",
+                                            "            Ext.avmon.main.topView.removeAll();\r",
+                                            "            Ext.avmon.main.topView.add(Ext.avmon.main.frame);\r",
+                                            "            }\r",
+                                            "            //*/\r",
+                                            "        }\r",
+                                            "        if(savePass){\r",
+                                            "            Ext.util.Cookies.set('avmon.pass',password, new Date(new Date().getTime()+(1000*60*60*24*365)));\r",
+                                            "        }\r",
+                                            "        else{\r",
+                                            "            Ext.util.Cookies.set('avmon.pass','', new Date(new Date().getTime()+(1000*60*60*24*365)));\r",
+                                            "        }\r",
+                                            "        Ext.util.Cookies.set('avmon.userid',userId, new Date(new Date().getTime()+(1000*60*60*24*365)));\r",
+                                            "        Ext.util.Cookies.set('avmon.theme',theme, new Date(new Date().getTime()+(1000*60*60*24*365)));\r",
+                                            "        \r",
+                                            "        button.enable();\r",
+                                            "    },\r",
+                                            "    failure: function(response, opts) {\r",
+                                            "        Ext.MessageBox.alert(\"错误\",\"发生错误，请稍候再试！\");\r",
+                                            "        button.enable();\r",
+                                            "    }\r",
+                                            "});\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "4ff07cba-7286-43c2-84aa-3c008a2b7f53"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 290,
+                                "layout|y": 240,
+                                "designer|userClassName": "MyButton",
+                                "height": 30,
+                                "width": 110,
+                                "text": "重置"
+                            },
+                            "designerId": "e944f241-4328-489b-ab07-03d2d561599f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick1",
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "button.up(\"form\").getForm().reset();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "2369f718-f97b-45d2-9894-9d789caab473"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onFormAfterRender",
+                                "fn": "onFormAfterRender",
+                                "implHandler": [
+                                    "this.down(\"form\").getForm().findField('userId').setValue(\"admin\");\r",
+                                    "var lastUserId=Ext.util.Cookies.get('avmon.userid');\r",
+                                    "var lastPassword=Ext.util.Cookies.get('avmon.pass');\r",
+                                    "var theme=Ext.util.Cookies.get('avmon.theme');\r",
+                                    "\r",
+                                    "if(lastUserId!=null){\r",
+                                    "    this.down(\"form\").getForm().findField('userId').setValue(lastUserId);\r",
+                                    "    this.down(\"form\").getForm().findField('password').focus();\r",
+                                    "}\r",
+                                    "else{\r",
+                                    "    this.down(\"form\").getForm().findField('userId').focus();\r",
+                                    "}\r",
+                                    "//alert(lastPassword);\r",
+                                    "if(lastPassword!=null){\r",
+                                    "    this.down(\"form\").getForm().findField('password').setValue(lastPassword);\r",
+                                    "    //alert(this.down(\"form\").getForm().findField('ckSavePass').getValue());\r",
+                                    "    this.down(\"form\").getForm().findField('ckSavePass').setValue(true);\r",
+                                    "}\r",
+                                    "\r",
+                                    "if(theme!=null){\r",
+                                    "    this.down(\"form\").getForm().findField('theme').setValue(theme);\r",
+                                    "}\r",
+                                    "else{\r",
+                                    "    this.down(\"form\").getForm().findField('theme').setValue(\"\");\r",
+                                    "}\r",
+                                    "\r",
+                                    "\r",
+                                    ""
+                                ],
+                                "name": "afterrender",
+                                "scope": "me"
+                            },
+                            "designerId": "9c7b8a24-dec0-4ae6-a2cc-184f2cec1010"
+                        },
+                        {
+                            "type": "checkboxfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 160,
+                                "layout|y": 200,
+                                "designer|userClassName": "MyCheckbox",
+                                "name": "ckSavePass",
+                                "fieldLabel": "",
+                                "boxLabel": "在本地保存密码"
+                            },
+                            "designerId": "a654e6ae-ed90-45e4-8be3-ab7a53067c02"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "designer|userClassName": "MyContainer5"
+                    },
+                    "designerId": "fd13e7e9-a91d-4685-ac31-3db0ae3d8288"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "designer|userClassName": "MyContainer2"
+            },
+            "designerId": "463fc294-c50b-4022-b4a8-6f3a64c23fcf"
+        }
+    ]
+}

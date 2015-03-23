@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Kpi",
+        "storeId": "MyJsonStore1",
+        "designer|userClassName": "Kpis",
+        "groupField": "INSTANCE_ID"
+    },
+    "designerId": "6802fc01-899c-4be5-802e-2a5124e56147",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "kpiList"
+            },
+            "designerId": "0488101c-f386-47a0-993e-22847f757f1f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "rows"
+                    },
+                    "designerId": "13fd2660-3621-44ea-a0b2-f222f4f36327"
+                }
+            ]
+        }
+    ]
+}

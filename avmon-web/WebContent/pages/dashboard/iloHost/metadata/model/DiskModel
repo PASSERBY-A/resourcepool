@@ -1,0 +1,74 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiskModel"
+    },
+    "designerId": "74735197-2446-487d-9668-586bfa8ff9ee",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usage"
+            },
+            "designerId": "00093421-8b3d-4e3c-83ea-f4e786ec0844"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "disk"
+            },
+            "designerId": "b49210fc-5f46-41ac-9eb2-f0846d15b983"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "point"
+            },
+            "designerId": "5b76f7be-60c1-498c-96e0-207b92d8d306"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "alarm"
+            },
+            "designerId": "18c10de2-609a-4267-81d7-29f4106a5ac0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "diskTemp"
+            },
+            "designerId": "8a5cd463-5dfb-4015-a82a-d2e51a1bc9d5"
+        }
+    ]
+}

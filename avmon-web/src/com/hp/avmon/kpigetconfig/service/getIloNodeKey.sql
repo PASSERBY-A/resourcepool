@@ -1,0 +1,1 @@
+select ip as "ip" from td_avmon_amp_ilo_host where mo_id = '%s'

@@ -1,0 +1,179 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiscoveryGrid",
+        "designer|userAlias": "discoveryGrid",
+        "id": "grid",
+        "title": "",
+        "store": "DiscoveryStore"
+    },
+    "id": "ExtBox1-ext-gen9740",
+    "designerId": "f9ffcf9d-71ce-47ca-983b-55286fc01dda",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView"
+            },
+            "designerId": "cd56cf4e-b98e-48d9-bf6e-0b4d3536783c"
+        },
+        {
+            "type": "groupinggridfeature",
+            "reference": {
+                "name": "features",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGroupingFeature",
+                "hideGroupedHeader": true
+            },
+            "designerId": "f4815201-3b34-4355-b7ef-66802d6afffa",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "groupHeaderTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupHeaderTpl",
+                        "designer|displayName": "groupHeaderTpl",
+                        "definitions": [
+                            "{name}"
+                        ]
+                    },
+                    "designerId": "aa7675c8-71ae-4ed8-913f-ccf08a1549e9"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn5",
+                "dataIndex": "moId",
+                "text": "设备ID"
+            },
+            "designerId": "8ceb3a71-0824-49a6-95d0-b647f48bac53"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn5",
+                "width": 234,
+                "dataIndex": "caption",
+                "text": "设备"
+            },
+            "designerId": "0f265b37-13b8-4af8-bcc5-d9ea901ad57f"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn6",
+                "width": 169,
+                "dataIndex": "type",
+                "text": "资源类型"
+            },
+            "designerId": "b1ec02ad-47e5-4100-aa26-ecda58b2cbde"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn7",
+                "width": 139,
+                "dataIndex": "ip",
+                "text": "IP地址"
+            },
+            "designerId": "5d621e6e-c840-40ff-88b9-09b7cc90631f"
+        },
+        {
+            "type": "checkboxselectionmodel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.CheckboxModel",
+            "userConfig": {
+                "designer|userClassName": "MyCheckboxSelectionModel",
+                "mode": "SIMPLE",
+                "checkOnly": false
+            },
+            "designerId": "9c9ed6d4-95eb-4075-be26-8947769d1fb7"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn4",
+                "draggable": null,
+                "align": "center",
+                "dataIndex": "status",
+                "text": "状态"
+            },
+            "designerId": "9087c749-5832-43af-929c-a3f9b8a10459"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn5",
+                "dataIndex": "os",
+                "text": "操作系统"
+            },
+            "designerId": "b6790c2d-8eaa-45e1-bd16-73d21836f910"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn6",
+                "dataIndex": "version",
+                "text": "版本"
+            },
+            "designerId": "fe8dd88d-6905-476a-8c1f-e5bffe75fd66"
+        }
+    ]
+}

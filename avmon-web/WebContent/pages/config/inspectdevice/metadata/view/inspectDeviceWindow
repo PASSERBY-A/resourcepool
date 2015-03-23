@@ -1,0 +1,804 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "inspectDeviceWindow",
+        "designer|userAlias": "inspectDeviceWindow",
+        "height": 466,
+        "id": "inspectDeviceWindow",
+        "width": 551,
+        "closeAction": "hide",
+        "title": "网络巡检设备管理"
+    },
+    "id": "ExtBox1-ext-gen12306",
+    "designerId": "fba4ca53-6bb1-4171-a640-545b9d7f5505",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "designer|userClassName": "MyForm",
+                "height": 432,
+                "id": "inspectDeviceForm",
+                "width": 538,
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "4d93986f-4e63-4209-8432-88754bd2dd7d",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 10,
+                        "designer|snapToGrid": 10,
+                        "designer|userClassName": "MyFieldSet",
+                        "height": 190,
+                        "margin": null,
+                        "padding": 5,
+                        "width": 510,
+                        "layout": "absolute",
+                        "title": null
+                    },
+                    "designerId": "e02dacd7-5173-4b66-92e7-d36d80254e4f",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 0,
+                                "designer|userClassName": "MyTextField",
+                                "id": "INSPECT_TYPE",
+                                "width": 200,
+                                "name": "INSPECT_TYPE",
+                                "fieldLabel": "巡检类型",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "2c57508e-4408-4ccd-8c1c-201a819a27bc"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 270,
+                                "layout|y": 120,
+                                "designer|userClassName": "MyComboBox",
+                                "id": "DEVICE_TYPE",
+                                "width": 200,
+                                "name": "DEVICE_TYPE",
+                                "fieldLabel": "设备类型",
+                                "labelAlign": "right",
+                                "labelWidth": 60,
+                                "emptyText": null,
+                                "displayField": "DEVICE_TYPE_VALUE",
+                                "store": "deviceTypeStore",
+                                "valueField": "DEVICE_TYPE_CODE"
+                            },
+                            "designerId": "8809d079-dba4-48a1-bec3-891c44b11015",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onComboboxSelect",
+                                        "fn": "onComboboxSelect",
+                                        "implHandler": [
+                                            "Ext.inspectDeviceType = combo.getValue('DEVICE_TYPE_CODE');\r",
+                                            ""
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "b1d2a626-fa1e-4e50-9968-db90b4b82c54"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 60,
+                                "designer|userClassName": "MyTextField2",
+                                "id": "DEVICE_VERSION",
+                                "width": 470,
+                                "name": "DEVICE_VERSION",
+                                "fieldLabel": "版本号",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "69f73333-3ebf-4f94-bc9f-b6209482f891"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 270,
+                                "layout|y": 0,
+                                "designer|userClassName": "MyTextField3",
+                                "id": "DEVICE_IP",
+                                "width": 200,
+                                "name": "DEVICE_IP",
+                                "fieldLabel": "设备IP",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "62ac362a-70b7-41a0-9389-c7cf403369d0"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": -2,
+                                "layout|y": 30,
+                                "designer|userClassName": "MyTextField4",
+                                "id": "DEVICE_NM",
+                                "width": 470,
+                                "name": "DEVICE_NM",
+                                "fieldLabel": "设备名称",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "e110cf50-02de-4d22-aa1c-049388b34886"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 90,
+                                "designer|userClassName": "MyTextField6",
+                                "id": "USR",
+                                "width": 200,
+                                "name": "USR",
+                                "fieldLabel": "用户名",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "37f466ec-0330-4fab-9c07-447058a5ae6f"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 270,
+                                "layout|y": 90,
+                                "designer|userClassName": "MyTextField7",
+                                "id": "PWD",
+                                "width": 200,
+                                "inputType": "password",
+                                "name": "PWD",
+                                "fieldLabel": "密码",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "c7288894-ca64-46b6-9224-83b7ca11bf80"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 120,
+                                "designer|userClassName": "MyTextField6",
+                                "id": "QUIT_MODE1",
+                                "width": 200,
+                                "name": "QUIT_MODE1",
+                                "fieldLabel": "退出命令",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "242f3deb-a892-4782-bb89-a867314ec030"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 0,
+                                "layout|y": 150,
+                                "designer|userClassName": "MyTextField11",
+                                "id": "DEPLOY_ENGINE",
+                                "width": 200,
+                                "name": "DEPLOY_ENGINE",
+                                "fieldLabel": "部署主机",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "10083458-c3c8-4f0d-af85-a692b82db864"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 270,
+                                "layout|y": 150,
+                                "designer|userClassName": "MyTextField12",
+                                "id": "BACKUP1",
+                                "width": 200,
+                                "name": "BACKUP1",
+                                "fieldLabel": "备注",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "a7b63c4c-e809-426d-a753-40627cce5e76"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 140,
+                        "layout|y": 400,
+                        "designer|userClassName": "MyButton2",
+                        "width": 80,
+                        "iconCls": "icon-save",
+                        "text": "保存"
+                    },
+                    "designerId": "0134297f-7c26-406e-b73f-02dd68351336",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick",
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var myform = Ext.getCmp('inspectDeviceForm').getForm();\r",
+                                    "\r",
+                                    "if (myform.isValid()) {\r",
+                                    "    var records = [];\r",
+                                    "    var commGridStore = Ext.getCmp('riDeviceCommGrid').getStore();\r",
+                                    "    for(var i = 0; i < commGridStore.data.length; i++){   \r",
+                                    "        var COMM_DEVICE_IP = commGridStore.getAt(i).get('DEVICE_IP');\r",
+                                    "        var COMM_USR = commGridStore.getAt(i).get('USR');\r",
+                                    "        var COMM_PWD = commGridStore.getAt(i).get('PWD');\r",
+                                    "        var COMM_COMM_CODE = commGridStore.getAt(i).get('COMM_CODE');\r",
+                                    "        var COMM_QUIT_MODE1 = commGridStore.getAt(i).get('QUIT_MODE1');\r",
+                                    "        var COMM_QUIT_MODE2 = commGridStore.getAt(i).get('QUIT_MODE2');\r",
+                                    "\r",
+                                    "        var data = {COMM_DEVICE_IP:'', COMM_USR:'', COMM_PWD:'', COMM_COMM_CODE:'', COMM_QUIT_MODE1:'',COMM_QUIT_MODE2:''};\r",
+                                    "        data.COMM_DEVICE_IP = encodeURI(COMM_DEVICE_IP);\r",
+                                    "        data.COMM_USR = encodeURI(COMM_USR);\r",
+                                    "        data.COMM_PWD = encodeURI(COMM_PWD);\r",
+                                    "        data.COMM_COMM_CODE = encodeURI(COMM_COMM_CODE);\r",
+                                    "        data.COMM_QUIT_MODE1 = encodeURI(COMM_QUIT_MODE1);\r",
+                                    "        data.COMM_QUIT_MODE2 = encodeURI(COMM_QUIT_MODE2);\r",
+                                    "\r",
+                                    "        records.push(data);\r",
+                                    "    }\r",
+                                    "\r",
+                                    "    Ext.Ajax.request({  \r",
+                                    "        url:'saveRIDeviceAndComm',  \r",
+                                    "        params:{  \r",
+                                    "            //传递参数  \r",
+                                    "            ID: Ext.selectId,\r",
+                                    "            INSPECT_TYPE: Ext.getCmp('INSPECT_TYPE').getValue(),\r",
+                                    "            DEVICE_TYPE: Ext.inspectDeviceType,\r",
+                                    "            DEVICE_VERSION: Ext.getCmp('DEVICE_VERSION').getValue(),\r",
+                                    "            DEVICE_IP: Ext.getCmp('DEVICE_IP').getValue(),\r",
+                                    "            DEVICE_NM: Ext.getCmp('DEVICE_NM').getValue(),\r",
+                                    "            USR: Ext.getCmp('USR').getValue(),\r",
+                                    "            PWD: Ext.getCmp('PWD').getValue(),\r",
+                                    "            QUIT_MODE1: Ext.getCmp('QUIT_MODE1').getValue(),\r",
+                                    "            DEPLOY_ENGINE: Ext.getCmp('DEPLOY_ENGINE').getValue(),\r",
+                                    "            BACKUP1: Ext.getCmp('BACKUP1').getValue(),\r",
+                                    "            COMMANDS: Ext.JSON.encode(records)\r",
+                                    "        }, \r",
+                                    "        async : false,\r",
+                                    "        success:function(response, options){        \r",
+                                    "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                    "            if(responseArray.success == 'true' || responseArray.success == true) {\r",
+                                    "                Ext.Msg.alert('信息','保存成功！');  \r",
+                                    "                Ext.getCmp('riDeviceGrid').getStore().removeAll();\r",
+                                    "                Ext.getCmp('riDeviceGrid').getStore().load();\r",
+                                    "            }\r",
+                                    "        },\r",
+                                    "        failure:function(){  \r",
+                                    "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                    "        }\r",
+                                    "    });\r",
+                                    "\r",
+                                    "    var win = Ext.inspectDeviceWindow;\r",
+                                    "    if (win) {\r",
+                                    "        win.hide();\r",
+                                    "    }\r",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "30eb30d9-f8e8-46cc-8c90-2287fb98ff4e"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 320,
+                        "layout|y": 400,
+                        "designer|userClassName": "MyButton3",
+                        "width": 80,
+                        "iconCls": "icon-cancel",
+                        "text": "取消"
+                    },
+                    "designerId": "bbf064f1-68cc-4226-a487-3a9976b5c0d2",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick1",
+                                "fn": "onButtonClick1",
+                                "implHandler": [
+                                    "var win = Ext.inspectDeviceWindow;\r",
+                                    "if (win) {\r",
+                                    "    win.hide();\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "ccf86d1a-21c4-48e4-a5b0-c072f8501013"
+                        }
+                    ]
+                },
+                {
+                    "type": "gridpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 210,
+                        "designer|userClassName": "MyGridPanel1",
+                        "height": 180,
+                        "id": "riDeviceCommGrid",
+                        "width": 510,
+                        "title": "",
+                        "store": "riDeviceCommStore"
+                    },
+                    "designerId": "f02f3bac-1537-48b8-8a82-007b8f67242d",
+                    "cn": [
+                        {
+                            "type": "gridview",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyGridView1"
+                            },
+                            "designerId": "42081d0f-3c73-4f18-ab7e-ec1f0d489227",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onGridviewItemDblClick",
+                                        "fn": "onGridviewItemDblClick",
+                                        "implHandler": [
+                                            "Ext.commId = record.data.TEMP_ID;\r",
+                                            "\r",
+                                            "var win = Ext.inspectCommWindow;\r",
+                                            "\r",
+                                            "if(!win){\r",
+                                            "    win = Ext.create('widget.inspectCommWindow');\r",
+                                            "    Ext.inspectCommWindow = win;\r",
+                                            "    win.needReload = true;\r",
+                                            "}\r",
+                                            "\r",
+                                            "Ext.commWindowMode = 1;\r",
+                                            "win.show();\r",
+                                            "\r",
+                                            "var comm = Ext.getCmp('COMM_COMM_CODE');\r",
+                                            "var commStoreProxy = comm.getStore().getProxy();\r",
+                                            "commStoreProxy.extraParams.DEVICE_TYPE_CODE = Ext.inspectDeviceType;\r",
+                                            "comm.getStore().load();\r",
+                                            "// 将历史记录清空\r",
+                                            "Ext.getCmp('COMM_COMM_CODE').setRawValue(record.data.COMM_CODE);\r",
+                                            "//Ext.getCmp('COMM_COMM_CODE').setReadOnly(true);\r",
+                                            "Ext.deviceIp = Ext.getCmp('DEVICE_IP').getValue();\r",
+                                            "Ext.getCmp('COMM_USR').setValue(record.data.USR);\r",
+                                            "Ext.getCmp('COMM_PWD').setValue(record.data.PWD);\r",
+                                            "Ext.getCmp('COMM_QUIT_MODE1').setValue(record.data.QUIT_MODE1);\r",
+                                            "Ext.getCmp('COMM_QUIT_MODE2').setValue(record.data.QUIT_MODE2);\r",
+                                            ""
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "dc91f2f8-e5a3-4085-a854-fd390e681fcb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "pagingtoolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "designer|userClassName": "MyPagingToolbar1",
+                                "width": 360,
+                                "displayInfo": true,
+                                "store": "riDeviceCommStore"
+                            },
+                            "designerId": "efb4d107-5eb0-4883-a4fe-3770de9ee96f"
+                        },
+                        {
+                            "type": "toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "designer|userClassName": "MyToolbar1"
+                            },
+                            "designerId": "70f47194-bd5a-4861-87ea-dffd753d86b6",
+                            "cn": [
+                                {
+                                    "type": "buttongroup",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButtonGroup2",
+                                        "title": null,
+                                        "columns": 2
+                                    },
+                                    "designerId": "fc8c054f-3b9c-42de-ba4c-a4e49cbbc405",
+                                    "cn": [
+                                        {
+                                            "type": "button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyButton4",
+                                                "iconCls": "icon-add",
+                                                "text": "添加"
+                                            },
+                                            "designerId": "84cb7677-2ac2-438f-9ab4-5c7ef1136a20",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "onButtonClick2",
+                                                        "fn": "onButtonClick2",
+                                                        "implHandler": [
+                                                            "// 设备IP\r",
+                                                            "Ext.deviceIp = Ext.getCmp('DEVICE_IP').getValue();\r",
+                                                            "if (Ext.deviceIp == null || Ext.deviceIp == '') {\r",
+                                                            "    Ext.Msg.alert('提示','请录入设备IP!'); \r",
+                                                            "    return;\r",
+                                                            "}\r",
+                                                            "// 设备类型\r",
+                                                            "if (Ext.inspectDeviceType == null || Ext.inspectDeviceType == '') {\r",
+                                                            "    Ext.Msg.alert('提示','请选择设备类型!'); \r",
+                                                            "    return;\r",
+                                                            "}   \r",
+                                                            "\r",
+                                                            "var win = Ext.inspectCommWindow;\r",
+                                                            "\r",
+                                                            "if(!win){\r",
+                                                            "\r",
+                                                            "    win=Ext.create('widget.inspectCommWindow');\r",
+                                                            "    Ext.inspectCommWindow=win;\r",
+                                                            "    win.needReload=true;\r",
+                                                            "    win.show();\r",
+                                                            "\r",
+                                                            "} else {\r",
+                                                            "\r",
+                                                            "    win.show();\r",
+                                                            "    var comm = Ext.getCmp('COMM_COMM_CODE');\r",
+                                                            "    var commStoreProxy = comm.getStore().getProxy();\r",
+                                                            "    commStoreProxy.extraParams.DEVICE_TYPE_CODE = Ext.inspectDeviceType;\r",
+                                                            "    comm.getStore().load();\r",
+                                                            "    // 将历史记录清空\r",
+                                                            "    Ext.getCmp('COMM_COMM_CODE').setRawValue('');\r",
+                                                            "    //Ext.getCmp('COMM_COMM_CODE').setReadOnly(false);\r",
+                                                            "    Ext.getCmp('COMM_USR').setValue('');\r",
+                                                            "    Ext.getCmp('COMM_PWD').setValue('');\r",
+                                                            "    Ext.getCmp('COMM_QUIT_MODE1').setValue('');\r",
+                                                            "    Ext.getCmp('COMM_QUIT_MODE2').setValue('');\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "// 窗口打开模式\r",
+                                                            "Ext.commWindowMode = 0;\r",
+                                                            "Ext.commId = '';"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "ea2447ae-1e13-416d-bc18-6941931ba8ba"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "buttongroup",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButtonGroup3",
+                                        "title": null,
+                                        "columns": 2
+                                    },
+                                    "designerId": "f5571d79-571f-4ef6-a5dd-f305ebade971",
+                                    "cn": [
+                                        {
+                                            "type": "button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyButton5",
+                                                "iconCls": "icon-delete",
+                                                "text": "删除"
+                                            },
+                                            "designerId": "da731403-61b1-471a-b219-08c248d39b7a",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "onButtonClick3",
+                                                        "fn": "onButtonClick3",
+                                                        "implHandler": [
+                                                            "var riDeviceCommGrid = Ext.getCmp('riDeviceCommGrid');\r",
+                                                            "var selrecord = riDeviceCommGrid.getSelectionModel().getSelection();\r",
+                                                            "if(selrecord.length == 0){\r",
+                                                            "    Ext.MessageBox.show({\r",
+                                                            "        title:\"提示\",\r",
+                                                            "        msg:\"请先选择您要操作的行!\"\r",
+                                                            "    })\r",
+                                                            "    return;\r",
+                                                            "} else {\r",
+                                                            "    var ids = \"\";\r",
+                                                            "    for(var i = 0; i < selrecord.length; i++){\r",
+                                                            "        riDeviceCommGrid.getStore().remove(selrecord[i]);\r",
+                                                            "    }\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "b463ba56-d3ea-4341-9a4a-18d5cf969ea4"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn11",
+                                "dataIndex": "DEVICE_IP",
+                                "text": "设备IP"
+                            },
+                            "designerId": "9b5191a4-9360-4e0c-a2bd-f04f09998ba0"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn12",
+                                "dataIndex": "USR",
+                                "text": "用户名"
+                            },
+                            "designerId": "be7ddec7-cf6a-42e5-9b9f-7497fb87b483"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn13",
+                                "hidden": true,
+                                "dataIndex": "PWD",
+                                "text": "密码"
+                            },
+                            "designerId": "9102218b-5309-408d-a0bc-6c109fff71f9"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn14",
+                                "hidden": null,
+                                "dataIndex": "COMM_CODE",
+                                "text": "命令 "
+                            },
+                            "designerId": "364622a4-fd92-43f8-b803-9529b3b44302"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn10",
+                                "dataIndex": "QUIT_MODE1",
+                                "text": "退出命令1"
+                            },
+                            "designerId": "e205d664-ccdb-4810-9b0a-cef4f20e5d66"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn16",
+                                "dataIndex": "QUIT_MODE2",
+                                "text": "退出命令2"
+                            },
+                            "designerId": "091de4ed-004c-42b5-a43e-1858f205ea4c"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn18",
+                                "hidden": true,
+                                "dataIndex": "TEMP_ID",
+                                "text": "ID"
+                            },
+                            "designerId": "30b7c4aa-0061-4169-a358-95ec44c747b6"
+                        },
+                        {
+                            "type": "checkboxselectionmodel",
+                            "reference": {
+                                "name": "selModel",
+                                "type": "object"
+                            },
+                            "codeClass": "Ext.selection.CheckboxModel",
+                            "userConfig": {
+                                "designer|userClassName": "MyCheckboxSelectionModel1"
+                            },
+                            "designerId": "881c69ae-b8d2-4dc2-baf9-c1f67a63d609"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 230,
+        "id": "keyProcessGrid",
+        "width": 260,
+        "designer|userClassName": "KeyProcessGrid",
+        "designer|userAlias": "keyProcessGrid",
+        "title": "关键进程",
+        "store": "Processes"
+    },
+    "designerId": "fb2c3e8c-093d-465b-b8f7-9beef0540b81",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "loadMask": [
+                    "false"
+                ]
+            },
+            "designerId": "91340e1f-bacb-4d54-9a29-a5458fe0025c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "NAME",
+                "text": "进程"
+            },
+            "designerId": "3d1dc41b-d580-4b30-86de-6b944d83c649"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 45,
+                "dataIndex": "CPU",
+                "text": "CPU"
+            },
+            "designerId": "97148a87-5a38-4791-a700-ad6b96c5f841"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 45,
+                "dataIndex": "MEM",
+                "text": "MEM"
+            },
+            "designerId": "506eafa3-aad3-4af7-a041-044370ab38a4"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 40,
+                "dataIndex": "STATUS",
+                "text": "状态"
+            },
+            "designerId": "487f9249-b974-43ad-87e9-1450a19d069e"
+        }
+    ]
+}

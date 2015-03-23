@@ -1,0 +1,99 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "MainEngineModel"
+        ],
+        "stores": [
+            "MainEngineStore"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen2956",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.devicestatus.application = this;\r",
+                    "\r",
+                    "// 初次加载传值\r",
+                    "var deviceList = Ext.getCmp('deviceList');\r",
+                    "var deviceStoreProxy = deviceList.getStore().getProxy();\r",
+                    "deviceStoreProxy.extraParams.mo = Ext.devicestatus.mo;\r",
+                    "deviceStoreProxy.extraParams.biz = Ext.devicestatus.biz;\r",
+                    "deviceStoreProxy.extraParams.condition = '4';\r",
+                    "Ext.devicestatus.condition = '4';\r",
+                    "deviceList.getStore().load();\r",
+                    "\r",
+                    "// 定时刷新页面\r",
+                    "setInterval(this.updateDeviceStatus, 50000);"
+                ]
+            },
+            "designerId": "310d5f2c-1af9-43c3-9501-3d954acf7f45"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "updateDeviceStatus",
+                "fn": "updateDeviceStatus",
+                "implHandler": [
+                    "// 判断当前活动页面是否为设备状态页面\r",
+                    "if(window.parent.isShow(\"performance.deviceStatusPanel\")){\r",
+                    "    var deviceList = Ext.getCmp('deviceList');\r",
+                    "    var deviceStoreProxy = deviceList.getStore().getProxy();\r",
+                    "    deviceStoreProxy.extraParams.mo = Ext.devicestatus.mo;\r",
+                    "    deviceStoreProxy.extraParams.condition = Ext.devicestatus.condition;\r",
+                    "\r",
+                    "    deviceList.getStore().load();\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "9a5d61d3-90a9-401b-bb9e-6767184ec698"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refreshByLoad",
+                "fn": "refreshByLoad",
+                "implHandler": [
+                    "var deviceList = Ext.getCmp('deviceList');\r",
+                    "var deviceStoreProxy = deviceList.getStore().getProxy();\r",
+                    "deviceStoreProxy.extraParams.mo = Ext.devicestatus.mo;\r",
+                    "deviceStoreProxy.extraParams.condition = Ext.devicestatus.condition;\r",
+                    "\r",
+                    "deviceList.getStore().load();"
+                ]
+            },
+            "designerId": "78c81a1a-5df6-4766-b27c-4407a56f8a81"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PowerCommJsonStore",
+        "model": "PowerCommModel",
+        "storeId": "PowerCommJsonStore"
+    },
+    "designerId": "1d6bbbc8-c1f3-485a-8335-a9383b94286f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "getPowerComm"
+            },
+            "designerId": "33a2e776-4a23-49dc-a180-fb0a021af1a7",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "3415b94f-8f5f-4219-9edc-39bfd2e8ead9"
+                }
+            ]
+        }
+    ]
+}

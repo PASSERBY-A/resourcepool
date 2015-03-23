@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CpuCommJsonStore",
+        "model": "CpuCommModel",
+        "storeId": "CpuCommJsonStore"
+    },
+    "designerId": "88b6e13f-3286-4b46-a934-47a847382f06",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "getCpuComm"
+            },
+            "designerId": "bdef772e-79ad-4783-9dfe-f7c0e5eedb8c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "f6e2297a-18be-4972-87a9-08bbfe0cb9ff"
+                }
+            ]
+        }
+    ]
+}

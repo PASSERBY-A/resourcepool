@@ -1,0 +1,11 @@
+[
+{"id":"100","parentId":"0","text":"100","iconCls":"manage",children:[
+{"id":"101","parentId":"100","text":"101","iconCls":"manage","leaf":true},
+{"id":"102","parentId":"100","text":"102","iconCls":"manage","leaf":true}
+
+]},
+{"id":"200","parentId":"0","text":"200","iconCls":"manage",children:[
+{"id":"201","parentId":"200","text":"201","iconCls":"manage","leaf":true},
+{"id":"202","parentId":"200","text":"202","iconCls":"manage","leaf":true}
+]},
+]

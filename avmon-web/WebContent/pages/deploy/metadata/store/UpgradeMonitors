@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Monitor",
+        "storeId": "UpgradeMonitors",
+        "designer|userClassName": "UpgradeMonitors"
+    },
+    "designerId": "43fbf0c9-0cb0-45b7-9de5-1680dbd7ca28",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "monitorList"
+            },
+            "designerId": "39c68c96-9fda-4b33-9fa4-b7f3bf011f56",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "id"
+                    },
+                    "designerId": "e90119c2-5f5d-4bb4-b4cc-89005d4d51e9"
+                }
+            ]
+        }
+    ]
+}

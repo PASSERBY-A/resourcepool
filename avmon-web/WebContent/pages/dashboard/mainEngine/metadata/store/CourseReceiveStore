@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "NetworkReceiveModel",
+        "storeId": "CourseReceiveStore",
+        "designer|userClassName": "CourseReceiveStore"
+    },
+    "designerId": "7bfdab49-aeca-434d-bd1e-7d47bdb3bad0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "23440e21-0942-4cb5-b2aa-3cd2b8815c69",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "0410932e-2d2d-4671-ad08-7e672821fbfe"
+                }
+            ]
+        }
+    ]
+}

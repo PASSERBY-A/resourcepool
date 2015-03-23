@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cpuModel"
+    },
+    "id": "ExtBox1-ext-gen16177",
+    "designerId": "6baea4fb-ec0b-40a5-b84d-895495580037",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field19",
+                "name": "time"
+            },
+            "designerId": "1d87b5c3-6d8e-4c1e-94a5-7d00a54ec197"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field20",
+                "name": "usage1"
+            },
+            "designerId": "b1118dc8-a390-4bb2-a7b5-57d955e8fe8e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field31",
+                "name": "usage2"
+            },
+            "designerId": "6b2c9660-c816-416b-8251-eb5889e4d4e6"
+        }
+    ]
+}

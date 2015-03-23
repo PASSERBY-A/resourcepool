@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*
+Description:     Reset
+Author:          Steven 
+Start Date:      2014-July-21
+Ver: 1.0
+
+[catalogue] 
+
+	1- Forms
+
+
+*/
+
+/* =1- Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/*body*/
+header,footer,section,aside,nav,hgroup,figure,figcaption{display:block;margin:0;padding:0;border:none}
+.Avmon-login {padding-top: 50px;background:url(../images/BG.png) no-repeat 0px -100px;font-family:'Microsoft yahei','微软雅黑',"Lato", Helvetica,Tahoma,Verdana,Arial,sans-serif;
+}
+
+/* main */
+.main{height:550px;background:#fff;position: relative; min-width: 1000px;}
+.main-inner{width:1000px;height:550px;overflow:visible;margin:0 auto;position:relative;clear:both}
+.login{width:330px;height:410px;padding:20px 0px 0px 0px;top:62px;left:50%;margin-left:90px;text-align:left;position: absolute;background: #f6f6f6;border-radius: 4px;color: #7e7975;
+box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 1px 5px rgba(0,0,0,0.2), 0 0 0 8px rgba(0,0,0,0.2);}
+.error {margin:0 0 4px 30px;}
+.error p{ color:#F00;}
+.login_title{
+	color:#273545;
+	font-size:20px;
+	font-weight:400;
+    line-height: 1.467;
+	margin:10px 20px 10px 30px;}
+	
+.login_title_line{
+	height:4px;
+	width:91%;
+	margin:0px 0px 20px 30px;
+	background-color:#0096d6;
+	}
+
+.loginFormAvmonIpt{position:relative;width:240px;height:42px;line-height:42px;margin:0 0 20px 30px;padding-right:5px;clear:both;z-index:2;}
+.loginFormAvmonIpt .ico{position:absolute;left:9px;top:8px;z-index:1;}
+.ico-uid {width: 24px;height: 24px;background:url(../images/user.png) no-repeat transparent; *margin-left:30px;}
+.ico-Pwd {width: 24px;height: 24px;background:url(../images/password.png) no-repeat transparent;*margin-left:30px;}
+.formIpt {width: 280px;width: 240px\9\0;padding: 9px 0 10px;ime-mode: disabled;height: 21px;top: 1px;left: 28px;color: #333;font-size: 14px;border: none;font-family: verdana;line-height: 21px;background: transparent!important;
+}
+.loginFormAvmonIpt input {
+  border: 2px solid #5dade2;
+  color: #34495e;
+  font-family:'Microsoft yahei','微软雅黑',"Lato", Helvetica,Tahoma,Verdana,Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.467;
+  padding: 6px 0px 6px 34px;
+  height: 40px;
+  height: 20px\9\0;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background:transparent!important;
+  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+.loginFormAvmonIpt-over{}
+.loginFormAvmonIpt-focus{box-shadow:0 0 5px rgba(40,195,15,.5);}
+.loginFormAvmonIpt-focus .placeholder{color:#dddddd;}
+.loginFormAvmonBtn{position:relative;width:245px;height:38px;margin:18px 0 0 32px}
+.loginFormAvmonCheck{height:14px;line-height:14px;color:#555;margin-left:25px;clear:both;width:245px;position:relative;z-index:1;}
+.loginFormAvmonCheckInner{line-height:13px;width:150px;position:relative;margin:0 0 20px 30px}
+.loginFormAvmonLicense_BG{height:50px; background-color:#dddddd;line-height:50px; margin:30px 0px 0px 0px;text-align: right;padding: 0px 20px; color:#dddddd;position: relative;}
+.loginFormAvmonLicense_BG a:link{color:#999999}
+.loginFormAvmonLicense_BG a:hover, a:visited{color:#999999}
+.loginFormAvmonLicense_BG .ico{position:absolute;right:120px;top:24px;z-index:1;}
+.ico-arrow {width: 12px;height: 12px;background:url(../images/arrow.png) no-repeat transparent;}
+
+.Login_btn {
+box-shadow: 0 2px #0096d6;
+padding: 15px auto;
+text-transform: uppercase;
+-webkit-transition: opacity 100ms ease-in-out;
+-o-transition: opacity 100ms ease-in-out;
+transition: opacity 100ms ease-in-out;
+background-color: #1bb8fa;
+border: 0;
+border-radius: 4px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+color: #fff;
+display: inline-block;
+font-size: 18px;
+padding: 10px 20px;
+text-align: center;
+width:140px;
+cursor: pointer;
+}
+
+a.Login_btn{color:#ffffff}
+a.Login_btn:hover{box-shadow: 0 2px #1bb8fa;
+padding: 15px auto;
+text-transform: uppercase;
+-webkit-transition: opacity 100ms ease-in-out;
+-o-transition: opacity 100ms ease-in-out;
+transition: opacity 100ms ease-in-out;
+background-color: #0096d6;
+border: 0;
+border-radius: 4px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+color: #fff;
+display: inline-block;
+font-size: 18px;
+padding: 10px 20px;
+text-align: center;
+width:140px;text-decoration:none;}
+.footer-inner {width:1000px;overflow: visible;margin: 0 auto;color: #848585; text-align:right; position: fixed; bottom:25;right:200;}
+.footer-inner p{color:#999999;}

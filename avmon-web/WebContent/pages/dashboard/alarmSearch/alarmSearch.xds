@@ -1,0 +1,76 @@
+{
+    "name": "alarmSearch",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000501,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "9a5066c2-dd28-4e9a-8f8b-0e7e47d00e44": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "b727102c-a103-44a3-9c65-4e9761c68742": {
+            "paths": [
+                "metadata/model/AlarmModel",
+                "app/model/override/AlarmModel.js",
+                "app/model/AlarmModel.js"
+            ],
+            "className": "AlarmModel"
+        },
+        "0fdcbe90-26c5-47a6-a724-f255f5f4795d": {
+            "paths": [
+                "metadata/store/AlarmStore",
+                "app/store/override/AlarmStore.js",
+                "app/store/AlarmStore.js"
+            ],
+            "className": "AlarmStore"
+        },
+        "8ab70e66-7b2d-4fe0-8436-caa9cad52ce1": {
+            "paths": [
+                "metadata/view/searchWindow",
+                "app/view/override/searchWindow.js",
+                "app/view/searchWindow.js"
+            ],
+            "className": "searchWindow"
+        },
+        "de2f872b-64cd-462d-bb42-78b9cf5603b9": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "9a5066c2-dd28-4e9a-8f8b-0e7e47d00e44",
+            "8ab70e66-7b2d-4fe0-8436-caa9cad52ce1"
+        ],
+        "store": [
+            "0fdcbe90-26c5-47a6-a724-f255f5f4795d"
+        ],
+        "controller": [],
+        "model": [
+            "b727102c-a103-44a3-9c65-4e9761c68742"
+        ],
+        "resource": [
+            "de2f872b-64cd-462d-bb42-78b9cf5603b9"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

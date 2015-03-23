@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="publish-to-server" name="Create Runnable Jar for Project avmon-server with libraries in sub-folder">
+	<target name="publish-to-server">
+		
+    	<scp todir="root:!QAZ2wsx@16.157.90.0:/opt/hp/avmon/apache-tomcat-6.0.35/webapps/"  file="d:/release/avmon-web.war" trust="true">
+    	</scp>
+
+	</target>
+</project>

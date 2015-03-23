@@ -1,0 +1,44 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "alarmStore",
+        "storeId": "alarmStore",
+        "model": "alarmModel"
+    },
+    "id": "ExtBox1-ext-gen9255",
+    "designerId": "37f743f1-7ef2-451d-a22a-56794e30f1c0",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1",
+                "url": "newAlarm"
+            },
+            "designerId": "5e5e1ffb-295f-4ea5-89b6-e7043526ce96",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "designerId": "e29a55d3-ea5d-4f4d-bd73-595f0209ffe5"
+                }
+            ]
+        }
+    ]
+}

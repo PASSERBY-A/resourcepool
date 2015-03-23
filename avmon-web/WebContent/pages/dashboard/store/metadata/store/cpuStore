@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "cpuStore",
+        "storeId": "cpuStore",
+        "model": "cpuModel"
+    },
+    "id": "ExtBox1-ext-gen8949",
+    "designerId": "5257bef2-c9a5-42e1-9569-0b1c6b2892fa",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "cpu"
+            },
+            "designerId": "062f99bf-19d6-4e72-a206-c125648c678c",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "root": "history"
+                    },
+                    "designerId": "ff126f74-1a56-4646-b7c2-06fdbd7a41a4"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ConfigPanel",
+        "designer|userAlias": "configPanel"
+    },
+    "designerId": "cbb3e4a2-1ead-4c1e-914f-a47bad68ca97",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnSavePropClick",
+                "implHandler": [
+                    "var p=this.getPropertyGrid();\r",
+                    "\r",
+                    "if(p.activeEditor != null){  \r",
+                    "    p.activeEditor.completeEdit();  \r",
+                    "} \r",
+                    "\r",
+                    "\r",
+                    "var records=p.getStore().getUpdatedRecords();\r",
+                    "\r",
+                    "var s=\"\";\r",
+                    "\r",
+                    "Ext.each(records,function(record){\r",
+                    "    s+=record.get(\"propId\")+\"=\"+record.get(\"value\")+\",\";\r",
+                    "});\r",
+                    "\r",
+                    "var moId=Ext.getCmp('moId').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'saveMoProperty',\r",
+                    "    params: {mo:moId,props:s},\r",
+                    "    success: function(response, opts) {\r",
+                    "        //p.getStore().commitChanges();\r",
+                    "        Ext.example.msg('Done', 'Monitor已保存！');\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        alert('error');\r",
+                    "    }\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnSaveProp"
+            },
+            "designerId": "0b08be75-e6c8-4d96-88ad-011e30c6734f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "propertyGrid",
+                "selector": "propertyGrid"
+            },
+            "designerId": "85ffcb9a-1009-4567-ab31-d5f20f86f910"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnPauseAgentClick",
+                "implHandler": [
+                    "\r",
+                    "var moId=Ext.getCmp('moId').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'pauseAgent',\r",
+                    "    params: {mo:moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        Ext.getCmp(\"agentStatus\").setValue(\"暂停\");\r",
+                    "        Ext.example.msg('Done', 'Agent已暂停！');\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        alert('error');\r",
+                    "    }\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnPauseAgent"
+            },
+            "designerId": "74fbf0a7-c5c0-40b7-835b-31be69194c25"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnStartAgentClick",
+                "implHandler": [
+                    "\r",
+                    "var moId=Ext.getCmp('moId').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'startAgent',\r",
+                    "    params: {mo:moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        Ext.getCmp(\"agentStatus\").setValue(\"恢复运行\");\r",
+                    "        Ext.example.msg('Done', 'Agent已设置恢复运行！');\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        alert('error');\r",
+                    "    }\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnStartAgent"
+            },
+            "designerId": "894778fd-d919-4cdf-ace4-2fbd9467bf04"
+        }
+    ]
+}

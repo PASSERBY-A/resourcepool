@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "SkipFileModel",
+        "storeId": "SkipFileStore",
+        "designer|userClassName": "SkipFileStore"
+    },
+    "designerId": "1e6c248b-d614-405c-83cb-63dc828615bf",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "b3598deb-fb64-4692-b915-f5c9675b2740",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "80cece23-7c68-4ca7-971c-d4f5aef3c6dc"
+                }
+            ]
+        }
+    ]
+}

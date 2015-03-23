@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "PhysicalMachineModel",
+            "VirtualMachineModel",
+            "StorageModel"
+        ],
+        "stores": [
+            "PhysicalMachineStore",
+            "VirtualMachineStore",
+            "StorageStore"
+        ],
+        "views": [
+            "VirtualListViewport"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "vmListController"
+        ],
+        "name": "vmList"
+    },
+    "designerId": "application"
+}

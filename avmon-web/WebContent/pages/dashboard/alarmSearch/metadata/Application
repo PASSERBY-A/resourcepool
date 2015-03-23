@@ -1,0 +1,83 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "AlarmStore"
+        ],
+        "views": [
+            "MyViewport",
+            "searchWindow"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.alarmSearch.application = this;\r",
+                    "\r",
+                    "var moId=Ext.alarmSearch.moId;\r",
+                    "if (moId != null && moId != '') {\r",
+                    "\r",
+                    "    Ext.getCmp('alarmNodeId').setText(\"告警列表\");\r",
+                    "    this.loadAlarm();\r",
+                    "    // 定制定时刷新\r",
+                    "    setInterval(this.refresh_10s, 600000);\r",
+                    "}"
+                ]
+            },
+            "designerId": "cf523b50-a9cf-4052-9311-f9733ddbbecd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh_10s",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "2de67785-3455-4e40-a06c-d2f88ee57d3e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadAlarm",
+                "implHandler": [
+                    "var activeGrid = Ext.getCmp('alarmGrid');\r",
+                    "var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "activeStoreProxy.extraParams.treeId = Ext.alarmSearch.moId;\r",
+                    "activeStoreProxy.extraParams.isNewalarm = Ext.alarmSearch.isNewalarm_b;\r",
+                    "activeStoreProxy.extraParams.isMyalarm = Ext.alarmSearch.isMyalarm_b;\r",
+                    "activeStoreProxy.extraParams.lastUpdateTime = '';\r",
+                    "activeGrid.getStore().load();\r",
+                    ""
+                ]
+            },
+            "designerId": "bf722371-974c-4e2a-a312-1cbadbd39a46"
+        }
+    ]
+}

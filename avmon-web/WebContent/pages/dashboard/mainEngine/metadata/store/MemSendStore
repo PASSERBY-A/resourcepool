@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "NetworkSendModel",
+        "storeId": "MemSendStore",
+        "designer|userClassName": "MemSendStore"
+    },
+    "designerId": "36dd3101-4fcd-4530-9343-3ffdc8395a82",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "31adad68-e1de-4ce5-9785-b4d771f2f66a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "8e27030f-7222-45bb-9f30-b813649fc6db"
+                }
+            ]
+        }
+    ]
+}

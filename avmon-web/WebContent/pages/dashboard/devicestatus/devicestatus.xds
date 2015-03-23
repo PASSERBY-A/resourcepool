@@ -1,0 +1,68 @@
+{
+    "name": "devicestatus",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "sdkPath": ""
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 640,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext40",
+    "topInstanceFileMap": {
+        "6f5a1b87-073d-4e26-8749-d64c4aae8ad6": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "ea4c1078-c7f8-4111-89b3-1c27c29b81ee": {
+            "paths": [
+                "metadata/store/MainEngineStore",
+                "app/store/override/MainEngineStore.js",
+                "app/store/MainEngineStore.js"
+            ],
+            "className": "MainEngineStore"
+        },
+        "e4fdf875-b7a1-401c-8b13-fe4b3f1acda7": {
+            "paths": [
+                "metadata/model/MainEngineModel",
+                "app/model/override/MainEngineModel.js",
+                "app/model/MainEngineModel.js"
+            ],
+            "className": "MainEngineModel"
+        },
+        "aa7e815f-34c0-4621-bb1e-240dd115a9ed": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "aa7e815f-34c0-4621-bb1e-240dd115a9ed"
+        ],
+        "store": [
+            "ea4c1078-c7f8-4111-89b3-1c27c29b81ee"
+        ],
+        "controller": [],
+        "model": [
+            "e4fdf875-b7a1-401c-8b13-fe4b3f1acda7"
+        ],
+        "resource": [
+            "6f5a1b87-073d-4e26-8749-d64c4aae8ad6"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

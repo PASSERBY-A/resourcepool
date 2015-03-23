@@ -1,0 +1,150 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "39e1967c-4eba-439f-bf56-545a094ff787",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "listener": null,
+                "layout|region": "west",
+                "layout|split": true,
+                "autoRender": true,
+                "autoShow": true,
+                "id": "performance-menuTree",
+                "itemId": "performance-menuTree",
+                "width": 190,
+                "collapsible": true,
+                "title": "Menu",
+                "store": "TreeNodes",
+                "animate": false,
+                "root": null
+            },
+            "configAlternates": {
+                "listener": "object"
+            },
+            "designerId": "e675afd0-9c99-4eac-8ad2-782676a86278",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "listener",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "listeners": null
+                    },
+                    "configAlternates": {
+                        "listeners": "object"
+                    },
+                    "designerId": "19b04ccf-7318-48c1-8479-814cbd35eef6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listeners",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "frame": true,
+                "id": "performance-tabPanel",
+                "layout": "card",
+                "title": null
+            },
+            "designerId": "5af83d73-4518-4237-ad6b-50bb8b97afd9",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "designerId": "9608f465-5249-446a-9dd7-5aef536f446f",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 10
+                            },
+                            "designerId": "89faad12-2b8b-4dd5-a958-9ecb89c140b5"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "itemId": "labelTitle",
+                                "style": "font-weight:bold;",
+                                "text": "   "
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "e0ded252-8b03-429e-ad82-8c24fba65797"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 30
+                            },
+                            "designerId": "1251268f-15ca-4b6c-b91b-63ccea39d286"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": "propId",
+        "designer|userClassName": "MonitorProperty",
+        "designer|userAlias": "monitorProperty"
+    },
+    "designerId": "76286247-05c6-49fd-99ef-10f7fab8787e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "monitorInstanceId"
+            },
+            "designerId": "ed7e73f4-34fc-4c68-a0f1-68b6d71921c3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "propId"
+            },
+            "designerId": "55abcd5e-a1f1-4270-854e-bee721d72a2d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "propName"
+            },
+            "designerId": "e8a95ef0-bcef-4431-8aaa-5dc714c6df52"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "designerId": "153904f9-f915-4ca9-93fa-71b575f7bbd3"
+        }
+    ]
+}

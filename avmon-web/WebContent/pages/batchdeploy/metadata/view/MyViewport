@@ -1,0 +1,292 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "id": "main",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen9959",
+    "designerId": "aef43f82-34ce-4c4d-9d8b-8a377bc4f311",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "designer|userClassName": "MyPanel",
+                "id": "panel1",
+                "layout": "absolute",
+                "title": "批量部署 - 发现已安装Agent的设备"
+            },
+            "designerId": "904f8ba7-ebe1-4369-b6e0-b4cfa7c6d1ef",
+            "cn": [
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 40,
+                        "layout|y": 30,
+                        "designer|userClassName": "MyLabel",
+                        "height": 30,
+                        "width": 390,
+                        "text": "第一步：请输入ＩＰ段，并点击开始扫描"
+                    },
+                    "designerId": "36866b6f-ab37-467d-97d9-819a14240376"
+                },
+                {
+                    "type": "progressbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 50,
+                        "layout|y": 200,
+                        "designer|userClassName": "MyProgressBar",
+                        "hidden": true,
+                        "id": "progressBar",
+                        "width": 440
+                    },
+                    "designerId": "c32c0c88-01d8-47da-826c-2a09fe697fbb"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 50,
+                        "layout|y": 100,
+                        "designer|userClassName": "MyTextField",
+                        "id": "startIp",
+                        "fieldLabel": "开始IP",
+                        "labelWidth": 50,
+                        "emptyText": "192.168.1.1"
+                    },
+                    "designerId": "20f07cb9-1f21-4068-b72f-83739d903687"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 280,
+                        "layout|y": 100,
+                        "designer|userClassName": "MyTextField",
+                        "id": "endIp",
+                        "fieldLabel": "结束IP",
+                        "labelWidth": 50,
+                        "emptyText": "192.168.1.255"
+                    },
+                    "designerId": "bef67a74-e703-4bdb-82da-b888534429ab"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 50,
+                        "layout|y": 150,
+                        "designer|userClassName": "MyButton",
+                        "height": 30,
+                        "id": "btnScanAgent",
+                        "width": 110,
+                        "iconCls": "icon-search",
+                        "text": "开始扫描"
+                    },
+                    "designerId": "d919cb8f-a61d-40d7-ab41-3a00f3f50586"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel1",
+                "id": "panel2",
+                "layout": "border",
+                "title": "扫描结果"
+            },
+            "designerId": "a2bdad56-953f-42cc-b386-0e7790c4655b",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar"
+                    },
+                    "designerId": "99fe27bf-f0e8-4635-9503-d02e168b85df",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton1",
+                                "height": 22,
+                                "id": "btnDeploy",
+                                "width": null,
+                                "iconCls": "icon-add",
+                                "text": "开始部署"
+                            },
+                            "designerId": "25e4cd59-5eb1-4980-b2de-29d4a736bb14"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 2,
+                        "layout|region": "center"
+                    },
+                    "designerId": "1b93bab8-4e83-4c51-ba1f-667da8c1914b",
+                    "masterInstanceId": "ExtBox1-ext-gen9740"
+                },
+                {
+                    "type": "gridpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "layout|region": "south",
+                        "designer|userClassName": "MyGridPanel1",
+                        "height": 150,
+                        "id": "deployResultGrid",
+                        "title": "Detail",
+                        "store": "DeployResults"
+                    },
+                    "designerId": "7b516544-0101-437f-8782-8d109daea662",
+                    "cn": [
+                        {
+                            "type": "gridview",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyGridView1"
+                            },
+                            "designerId": "ed517c0c-deaf-4cb7-80f3-b4960d3ca94b"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn8",
+                                "dataIndex": "moId",
+                                "text": "设备ID"
+                            },
+                            "designerId": "683ccee2-d16c-47e0-b718-25ff612904f8"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn9",
+                                "dataIndex": "monitorInstanceId",
+                                "text": "Monitor实例"
+                            },
+                            "designerId": "91cf0cb9-b360-459a-960c-9646cac01735"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn10",
+                                "dataIndex": "monitor",
+                                "text": "Monitor"
+                            },
+                            "designerId": "fa5ccc8e-2b21-4973-a699-0af689e494d8"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn11",
+                                "width": 376,
+                                "dataIndex": "msg",
+                                "text": "消息"
+                            },
+                            "designerId": "969711aa-a5ed-4a87-b21e-c40ab10e072e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel2",
+                "id": "panel3",
+                "title": "My Panel"
+            },
+            "designerId": "b3a6de16-49c5-4150-afc7-288b5ac10f7e"
+        }
+    ]
+}

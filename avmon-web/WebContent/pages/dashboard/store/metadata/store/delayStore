@@ -1,0 +1,44 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "delayStore",
+        "storeId": "delayStore",
+        "model": "delayModel"
+    },
+    "id": "ExtBox1-ext-gen13429",
+    "designerId": "04ea51df-9d86-4f8c-8c07-3358d68a1977",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy3",
+                "url": "delay"
+            },
+            "designerId": "6ffc90de-8b51-453f-b00e-f1d0343bdf3e",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3"
+                    },
+                    "designerId": "d3caa62a-04d5-435d-bc62-374623f280f0"
+                }
+            ]
+        }
+    ]
+}

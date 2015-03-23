@@ -1,0 +1,25 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ArpModel",
+            "DeviceModel"
+        ],
+        "stores": [
+            "ArpStore",
+            "DeviceStore"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1756",
+    "designerId": "application"
+}

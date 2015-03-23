@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "MemModel",
+        "storeId": "MemStore",
+        "designer|userClassName": "MemStore"
+    },
+    "designerId": "fe4c8023-ffa1-45c9-9636-8d5128f035b5",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "21b244d1-7472-4018-b3db-af5e2189addf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "5babeb7b-df81-4a4a-ad1a-fa8e93eaf526"
+                }
+            ]
+        }
+    ]
+}

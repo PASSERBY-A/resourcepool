@@ -1,0 +1,295 @@
+@charset "utf-8";
+/*
+Description:     Main
+Author:          Steven 
+Start Date:      2014-July-21
+Ver: 1.0
+
+[catalogue] 
+
+
+*/
+
+
+/*===== Content container =====*/
+
+#container {
+padding: 0px 0px 62px 0px;
+margin: 4px 0px 0px 0px;
+/*padding-bottom: 32767px;*/
+margin-bottom: -32727px;
+height: 100%;
+min-height: 100%;
+}
+
+#sidebarAuto {
+width: 174px;
+margin-right: 0px;
+float: left;
+background-color: #fbfbfb;
+border-right: 1px solid #dddddd;
+position: relative;
+height: 100%;
+min-height: 100%;
+overflow: hidden;
+box-shadow: 0 3px 2px 0px rgba(0,0,0,0.15);
+}
+
+/*===== Content Tab of left  =====*/
+.Tab_categoryAuto ul{
+min-height:532px;
+background-color:#f9f9f9;}
+.Tab_categoryAuto ul li{
+margin-bottom:1px;
+border-bottom:1px solid #ccc;
+width:174px;
+height:56px;
+line-height:56px;
+text-align:left;
+background-color:#f4f4f4;
+color:#666666;
+font-size:16px;
+overflow: hidden;
+cursor: pointer;
+list-style: none;
+}
+
+.Tab_categoryAuto ul li a{
+padding:0px 15px;
+display:block;
+line-height:inherit;
+color: #666666 !important;
+text-decoration: none;
+outline: 0;
+}
+
+.Tab_categoryAuto ul li a:hover{
+display:block;
+line-height:inherit;
+color: #ffffff !important;
+text-decoration: none;
+outline: 0;
+background-color: #1bb8fa;
+}
+
+.Tab_categoryAuto ul li.Tab_categoryAuto_active{
+margin-bottom:1px;
+width:174px;
+height:56px;
+line-height:56px;
+text-align:left;
+background-color:#1bb8fa;
+color:#FFFFFF;
+font-size:16px;
+overflow: hidden;
+cursor: pointer;
+}
+
+.Tab_categoryAuto ul li.Tab_categoryAuto_active a{
+padding:0px 15px;
+display:block;
+line-height:inherit;
+color: #FFFFFF !important;
+text-decoration: none;
+outline: 0;
+}
+
+.Tab_categoryAuto ul li.Tab_categoryAuto_active a:hover{
+display:block;
+line-height:inherit;
+color: #ffffff !important;
+text-decoration: none;
+outline: 0;
+background-color: #1bb8fa;
+}
+
+.Tab_categoryAuto ul.Tab_categoryAuto_sub {min-height:112px;background-color:#FFFFFF;}
+.Tab_categoryAuto ul.Tab_categoryAuto_sub li{
+margin-bottom:1px;
+width:174px;
+height:56px;
+line-height:56px;
+text-align:left;
+background-color:#FFFFFF;
+color:#666666;
+font-size:14px;
+overflow: hidden;
+cursor: pointer;
+	}
+	
+.Tab_categoryAuto ul.Tab_categoryAuto_sub li a{
+padding:0px 25px;
+display:block;
+line-height:inherit;
+color: #666666 !important;
+text-decoration: none;
+outline: 0;
+	}
+
+.Tab_categoryAuto ul.Tab_categoryAuto_sub li a:hover{
+display:block;
+line-height:inherit;
+color: #ffffff !important;
+text-decoration: none;
+outline: 0;
+background-color: #1bb8fa;
+}
+
+ul.Tab_categoryAuto_sub li.Tab_categoryAuto_active{
+margin-bottom:1px;
+width:174px;
+height:56px;
+line-height:56px;
+text-align:left;
+background-color:#1bb8fa;
+color:#FFFFFF;
+font-size:16px;
+overflow: hidden;
+cursor: pointer;
+}
+
+ul.Tab_categoryAuto_sub li.Tab_categoryAuto_active a{
+padding:0px 15px;
+display:block;
+line-height:inherit;
+color: #FFFFFF !important;
+text-decoration: none;
+outline: 0;
+}
+
+ul.Tab_categoryAuto_sub li.Tab_categoryAuto_active a:hover{
+display:block;
+line-height:inherit;
+color: #ffffff !important;
+text-decoration: none;
+outline: 0;
+background-color: #1bb8fa;
+}
+
+
+.content {
+margin-bottom: -30px;
+overflow: hidden;
+}
+
+.AutoSearchMainNav {
+	background-color: #fff;
+	border-bottom: 1px solid #e3ebed;
+}
+.AutoSearchMainNav a {
+	padding: 8px 20px 8px 10px;
+	display: inline-block;
+	background-image: url('../images/breadcrumb.png');
+	background-position: center right;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	color: #666666;
+}
+.AutoSearchMainNav a:hover {
+	color: #333333;
+}
+.AutoSearchMainNav a:last-child {
+	background-image:none;
+}
+.AutoSearchMainNav a.current {
+	font-weight: bold;
+	color: #444444;
+}
+.AutoSearchMainNav a i {
+	margin-right: 5px;
+	opacity: .6;
+}
+.AutoSearchMainNav a:hover i {
+	margin-right: 5px;
+	opacity: .8;
+}
+
+.NavResource{height:30px;padding:10px 0px 10px 10px;background-color:#f4f4f4;overflow: hidden;}
+
+.widget-box {
+ background: none repeat scroll 0 0 #FFFFFF; 
+ border-left: 1px solid #CDCDCD; 
+ border-top: 1px solid #CDCDCD; 
+ border-right: 1px solid #CDCDCD;
+ border-bottom: 1px solid #CDCDCD;
+ clear: both; 
+ margin: 10px 10px 0px 10px; 
+ position: relative; 
+}
+
+.widget-title {
+background: #E8F8FE !important;
+border-bottom: 1px solid #0083BF !important;
+height: 26px !important;
+}
+
+.widget-title span.icon {
+padding: 9px 10px 7px 11px;
+float: left;
+border-right: 1px solid #dadada;
+}
+
+.widget-title h5 {
+color: #666;
+float: left;
+font-size: 12px;
+font-weight: bold;
+padding: 8px;
+line-height: 12px;
+margin: 0;
+}
+
+.from-group{
+margin-left: 30px;
+border-top: 1px solid #ffffff;
+border-bottom: 1px solid #dfdfdf;
+margin-bottom: 0;
+}
+	
+.from-label{
+clear: both;
+display:block;
+padding-top: 10px;
+text-align: right;
+}
+	
+.from-label label{
+padding:0px;
+font-size: 14px;
+font-weight: normal;	
+text-align: left;
+}
+
+	
+.from-label-sub{
+clear: both;
+display:block;
+margin-left:30px;
+padding-top: 10px;
+text-align: right;
+}
+	
+.from-label-sub label{
+padding:0px 20px;
+font-size: 14px;
+font-weight: normal;	
+text-align: left;
+}
+
+.table-common {}
+.table-common td { padding: 6px; text-align:center; border: 1px solid #c7c7c7; }
+.table-common th { padding: 6px; text-align:center; background-color:#e8f8fe; border: 1px solid #c7c7c7;}
+.table-common td A { COLOR: #000;TEXT-DECORATION: none;}
+.table-common td A:hover {COLOR: #000;TEXT-DECORATION: none}
+
+.table-common02 {table-layout: fixed;} 
+.table-common02 td { padding: 6px 0px; border: 1px solid #c7c7c7;word-break: break-all; word-wrap:break-word; }
+.table-common02 th { padding: 6px 0px; text-align:center; border: 0px solid #c7c7c7;word-break: break-all; word-wrap:break-word;}
+.table-common02 td A { COLOR: #000;TEXT-DECORATION: none;}
+.table-common02 td A:hover {COLOR: #000;TEXT-DECORATION: none}
+
+.table-common03 {}
+.table-common03 td { padding: 2px 6px; text-align:left; border: 1px solid #999; }
+.table-common03 th { padding: 2px 6px; text-align:center; border: 0px solid #999;}
+.table-common03 td A { COLOR: #000;TEXT-DECORATION: none;}
+.table-common03 td A:hover {COLOR: #000;TEXT-DECORATION: none}

@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "alarmModel"
+    },
+    "id": "ExtBox1-ext-gen16283",
+    "designerId": "3e4630d3-8fbf-475d-8795-daf8e86dd726",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "CURRENT_GRADE"
+            },
+            "designerId": "f83d8958-7ea8-4be1-a4f9-8ebb6dad03eb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "FIRST_OCCUR_TIME"
+            },
+            "designerId": "b35d94e9-caf0-4b79-812e-6d7721690c1a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "TITLE"
+            },
+            "designerId": "c159fae2-ad08-4f16-b605-6ff8afcaefc1"
+        }
+    ]
+}

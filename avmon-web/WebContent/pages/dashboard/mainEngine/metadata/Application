@@ -1,0 +1,719 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ErrorLogModel",
+            "CourseModel",
+            "MemModel",
+            "CpuModel",
+            "SkipFileModel",
+            "DiskModel",
+            "FileSysModel",
+            "AlarmModel",
+            "NetworkSendModel",
+            "NetworkReceiveModel",
+            "BasicInfoModel",
+            "Network"
+        ],
+        "stores": [
+            "ErrorLogStore",
+            "CourseStore",
+            "MemStore",
+            "CpuStore",
+            "SkipFileStore",
+            "DiskStore",
+            "FileSysStore",
+            "AlarmStore",
+            "NetworkSendStore",
+            "NetworkReceiveStore",
+            "CourseSendStore",
+            "CourseReceiveStore",
+            "MemSendStore",
+            "MemReceiveStore",
+            "BasicInfoStore",
+            "NetworkStore"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.mainEngine.application = this;\r",
+                    "\r",
+                    "var moId=Ext.mainEngine.moId;\r",
+                    "if (moId != null && moId != '') {\r",
+                    "\r",
+                    "    this.loadAll();\r",
+                    "    \r",
+                    "    // 定制定时刷新\r",
+                    "    setInterval(this.refresh_10s, 60000);\r",
+                    "}"
+                ]
+            },
+            "designerId": "cf523b50-a9cf-4052-9311-f9733ddbbecd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadErrorLog",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "2b2864f0-edb7-4d60-bc2e-6458140a2ee2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadCourse",
+                "implHandler": [
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "\r",
+                    "    // 使用率\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'courseUse',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"courseChart\").store.loadData(obj, false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "    // 统计信息\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'courseBasic',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"courseForm\").getForm().setValues(obj);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });       \r",
+                    "\r",
+                    "}"
+                ]
+            },
+            "designerId": "a6f9637e-4dfb-4924-8689-1045b21d6318"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadMem",
+                "implHandler": [
+                    "\r",
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "    // 使用率\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'memUse',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"memChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "    // 统计信息\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'memBasic',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"memForm\").getForm().setValues(obj);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    }); \r",
+                    "}"
+                ]
+            },
+            "designerId": "3b86a24d-d6a8-45f3-a51d-51b957604a20"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadCpu",
+                "implHandler": [
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'cpuUse',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"cpuChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "a51b830e-9f5f-49cc-b804-9f857a35ae46"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadSkipFile",
+                "implHandler": [
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'skipFileUse',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"skipFileChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "    // 统计信息\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'skipFileBasic',\r",
+                    "        params: {mo:Ext.mainEngine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"swapForm\").getForm().setValues(obj);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    }); \r",
+                    "}"
+                ]
+            },
+            "designerId": "9388a10f-4326-4fb4-8eeb-bc66a74d4a45"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadDisk",
+                "implHandler": [
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "\r",
+                    "    var activeGrid = Ext.getCmp('diskGrid');\r",
+                    "    var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "    activeStoreProxy.extraParams.moId = Ext.mainEngine.moId;\r",
+                    "    activeGrid.getStore().load();\r",
+                    "\r",
+                    "}"
+                ]
+            },
+            "designerId": "42d33d2c-3fdd-423b-9fd2-a761c7d7483f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadFileSys",
+                "implHandler": [
+                    "if (Ext.mainEngine.moId != null && Ext.mainEngine.moId != '') {\r",
+                    "\r",
+                    "    var activeGrid = Ext.getCmp('fileSystemGrid');\r",
+                    "    var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "    activeStoreProxy.extraParams.mo = Ext.mainEngine.moId;\r",
+                    "    activeGrid.getStore().load();\r",
+                    "}"
+                ]
+            },
+            "designerId": "de52a68e-f3c6-4e2b-b402-d2e7bc0bcff2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadAlarm",
+                "implHandler": [
+                    "/**\r",
+                    "var activeGrid = Ext.getCmp('alarmGrid');\r",
+                    "var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "activeStoreProxy.extraParams.treeId = Ext.mainEngine.moId;\r",
+                    "activeStoreProxy.extraParams.isNewalarm = Ext.mainEngine.isNewalarm_b;\r",
+                    "activeStoreProxy.extraParams.isMyalarm = Ext.mainEngine.isMyalarm_b;\r",
+                    "activeStoreProxy.extraParams.lastUpdateTime = '';\r",
+                    "activeGrid.getStore().load();\r",
+                    "*/"
+                ]
+            },
+            "designerId": "02770088-98e5-424d-bf1e-2d1705616c3d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh_10s",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "2de67785-3455-4e40-a06c-d2f88ee57d3e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadBasicInfo",
+                "implHandler": [
+                    "var moId = Ext.mainEngine.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "\r",
+                    "    var activeGrid = Ext.getCmp('basicInfoGrid');\r",
+                    "    var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "    activeStoreProxy.extraParams.treeId = Ext.mainEngine.moId;\r",
+                    "    activeGrid.getStore().load();\r",
+                    "\r",
+                    "    \r",
+                    "    Ext.getCmp(\"hostImage\").setSrc('images/SYS_All.png');\r",
+                    "    \r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "    \turl: 'basicInfo',\r",
+                    "    params: {mo:moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"hostImage\").setSrc('images/'+obj.hostImage);\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "    }\r",
+                    "    });\r",
+                    "\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "601c0c74-3ec1-4ab4-9cae-0f7cf57bb02c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadNetwork",
+                "implHandler": [
+                    "var moId = Ext.mainEngine.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "\r",
+                    "    var activeGrid = Ext.getCmp('networkGrid');\r",
+                    "    var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "    activeStoreProxy.extraParams.treeId = Ext.mainEngine.moId;\r",
+                    "    activeGrid.getStore().load();\r",
+                    "\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "717d2464-773d-462c-ba08-6b9fe42d37bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadNetworkSend",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'networkSend',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"networkLineSend\").store.loadData(obj.history,false);\r",
+                    "        //console.dir(obj);\r",
+                    "        //Ext.getCmp(\"TestLine\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"networkSendForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "e17ad903-5608-492a-b380-ac614b5cf804"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadNetworkReceive",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'networkReceive',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"networkLineReceive\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"networkReceiveForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a228055d-9a8c-4b14-8dd0-01e8384ad60d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadSkipfilePagein",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'skipfilePagein',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"skipfilePageinChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"skipfileInPic\").setSrc('images/arrow_G_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"skipfileInPic\").setSrc('images/arrow_G_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"skipfileInPic\").setSrc('images/arrow_G_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"skipFileInForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "5e1eea1a-ca05-4ca9-ba6b-a41e6041d644"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadSkipfilePageout",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'skipfilePageout',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"skipfilePageoutChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"skipfileOutPic\").setSrc('images/arrow_R_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"skipfileOutPic\").setSrc('images/arrow_R_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"skipfileOutPic\").setSrc('images/arrow_R_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"skipFileOutForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "2724d868-beca-4312-9139-4ea0a234b914"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadDiskWrite",
+                "implHandler": [
+                    "return;\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'diskWrite',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"diskWriteChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"diskWriteForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a6036617-2779-44e0-b34a-de07cb7bb81f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadDiskRead",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'diskRead',\r",
+                    "    params: {mo:Ext.mainEngine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"diskReadChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"diskReadForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "5dbf5e63-21e4-4866-a0ea-6b40158d25de"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadModel",
+                "implHandler": [
+                    "Ext.getCmp('alarmPanel').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../alarmSearch/index.jsp?mo=' + Ext.mainEngine.moId + '\"></iframe>');"
+                ]
+            },
+            "designerId": "1e09820f-0568-452e-99a8-e678ceaeba74"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadAll",
+                "implHandler": [
+                    "this.loadBasicInfo();\r",
+                    "this.loadNetwork();\r",
+                    "//this.loadErrorLog();\r",
+                    "this.loadCourse();\r",
+                    "this.loadMem();\r",
+                    "this.loadCpu();\r",
+                    "this.loadSkipFile();\r",
+                    "this.loadDisk();\r",
+                    "this.loadFileSys();\r",
+                    "this.loadNetworkSend();\r",
+                    "this.loadNetworkReceive();\r",
+                    "this.loadSkipfilePagein();\r",
+                    "this.loadSkipfilePageout();\r",
+                    "this.loadDiskWrite();\r",
+                    "this.loadDiskRead();\r",
+                    "//this.loadAlarm();\r",
+                    "this.loadModel();"
+                ]
+            },
+            "designerId": "9e295384-4d0d-4bee-80f7-8c95b2212e93"
+        }
+    ]
+}

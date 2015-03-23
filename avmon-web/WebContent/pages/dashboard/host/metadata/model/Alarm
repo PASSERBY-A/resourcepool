@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Alarm"
+    },
+    "designerId": "99ba0589-378d-400c-9ffe-88d930f1a3c3",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CURRENT_GRADE"
+            },
+            "designerId": "d88bf32b-f954-4ebd-8f89-98a755f8fbf3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FIRST_OCCUR_TIME"
+            },
+            "designerId": "531236c9-6a14-4cec-8c88-d92b2b2c44dd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TITLE"
+            },
+            "designerId": "c1549014-575a-40d3-a3d8-565f79599af3"
+        }
+    ]
+}

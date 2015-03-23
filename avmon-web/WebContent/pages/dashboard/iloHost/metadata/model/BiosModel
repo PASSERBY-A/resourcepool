@@ -1,0 +1,74 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BiosModel"
+    },
+    "designerId": "ecfa785b-bfb1-4f80-8163-c67d37c314ae",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "biosSeries"
+            },
+            "designerId": "378af002-0e72-4137-834c-c6a3df2b2e29"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lastUpdateTime"
+            },
+            "designerId": "90cd549c-c325-4eca-a295-e8c3d21e6595"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "bios"
+            },
+            "designerId": "d4890beb-4ce3-41b5-963d-a5a9a80352f1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key"
+            },
+            "designerId": "a1800512-6162-4ab1-b8d2-0ce26574c741"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "designerId": "77ad5c02-fa7c-4f3f-9cfd-2decec61c5e2"
+        }
+    ]
+}

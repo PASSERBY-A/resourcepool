@@ -1,0 +1,39 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Lv",
+        "storeId": "MyJsonStore7",
+        "designer|userClassName": "Lvs"
+    },
+    "designerId": "a8c8759d-64c4-495f-806e-1dadd89c0524",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "lvs"
+            },
+            "designerId": "d8038fed-39b9-45a1-92ff-053d0886f27d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "92bd725b-f43d-4dd5-aefc-63e05939ca2b"
+                }
+            ]
+        }
+    ]
+}

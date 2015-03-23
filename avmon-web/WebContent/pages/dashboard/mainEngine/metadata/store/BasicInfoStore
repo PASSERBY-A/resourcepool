@@ -1,0 +1,48 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "BasicInfoModel",
+        "storeId": "BasicInfoStore",
+        "designer|userClassName": "BasicInfoStore"
+    },
+    "designerId": "249277cc-64f0-42a2-9da6-61edd38ba98c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    treeId: ''\r",
+                    "}"
+                ],
+                "url": "getBasicInfoData"
+            },
+            "designerId": "8a154787-aa43-4624-84c7-dec5f31068f6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "basicData",
+                        "totalProperty": "basicTotal"
+                    },
+                    "designerId": "2e74ffe1-8190-4a78-9afa-bdccd4c7f0f5"
+                }
+            ]
+        }
+    ]
+}

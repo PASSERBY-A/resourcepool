@@ -1,0 +1,284 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen2859",
+    "designerId": "d2564398-5b4e-4b47-91d6-9987d7dc88bf",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel",
+                "height": null,
+                "itemId": "queryPanel",
+                "layout": "fit",
+                "suspendLayout": false,
+                "bodyBorder": false,
+                "title": ""
+            },
+            "designerId": "ab6fea47-91c1-4731-8f9f-fcd02720fc52",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar",
+                        "id": "queryBar",
+                        "itemId": "queryBar",
+                        "autoScroll": false
+                    },
+                    "designerId": "d0e4364b-525f-4e10-a5ba-e9fe6bce5e75"
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel1",
+                        "autoScroll": true,
+                        "layout": "fit",
+                        "bodyBorder": false,
+                        "title": ""
+                    },
+                    "designerId": "824880ca-8a7a-4640-8ed1-8fc6ffe435f9",
+                    "cn": [
+                        {
+                            "type": "toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "designer|userClassName": "MyToolbar1",
+                                "hidden": true
+                            },
+                            "designerId": "c44f2a51-38aa-4f2f-9288-104329bd4ac9",
+                            "cn": [
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton",
+                                        "icon": "../source/image/exportPdf.png",
+                                        "text": "导出pdf"
+                                    },
+                                    "designerId": "074b2366-ee92-4dcd-8c9f-1e2b76f796c5",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick",
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "if(Ext.ireportCommon.reportId != '' && Ext.ireportCommon.reportId != null){\r",
+                                                    "    var toolBar = button.up(\"toolbar\").up(\"panel\").up(\"panel\").down(\"toolbar\");\r",
+                                                    "    //验证过滤参数(不能为空)\r",
+                                                    "    var flag = false;\r",
+                                                    "    var params = [];\r",
+                                                    "    Ext.Array.forEach(toolBar.items.items, function(item, index, allItems) { \r",
+                                                    "        //alert(item.rawValue);\r",
+                                                    "        if(item.name==\"parameter\"){\r",
+                                                    "            if((item.rawValue=='' || item.rawValue==null)&&item.id!=\"SUBREPORT_DIR|java.lang.String\"){\r",
+                                                    "                flag = true;\t\t\t    \t\t\r",
+                                                    "            }\t    \t\t\t\r",
+                                                    "            params.push(item.id+\"|\"+item.rawValue);\r",
+                                                    "        }\r",
+                                                    "    }); \r",
+                                                    "    if(flag){\r",
+                                                    "        alert(\"参数值不能为空!\");\r",
+                                                    "    }else{\r",
+                                                    "        //导出\r",
+                                                    "        var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.ireportCommon.reportId\r",
+                                                    "            +\"&type=pdf&params=\"+encodeURI(params.join(\";\"));\r",
+                                                    "        window.location=url;  \t    \t\t\t\r",
+                                                    "    } \r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "021624dc-2e63-42f6-94b2-88b8732a3c4d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "tbseparator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MySeparator"
+                                    },
+                                    "designerId": "8a1800f4-1b0f-4654-8e6d-89beb394b110"
+                                },
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton1",
+                                        "icon": "../source/image/word.gif",
+                                        "text": "导出word"
+                                    },
+                                    "designerId": "d30affba-658e-4a51-b738-6526cfd714c6",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick1",
+                                                "fn": "onButtonClick1",
+                                                "implHandler": [
+                                                    "if(Ext.ireportCommon.reportId != '' && Ext.ireportCommon.reportId != null){\r",
+                                                    "    var toolBar = button.up(\"toolbar\").up(\"panel\").up(\"panel\").down(\"toolbar\");\r",
+                                                    "    //验证过滤参数(不能为空)\r",
+                                                    "    var flag = false;\r",
+                                                    "    var params = [];\r",
+                                                    "    Ext.Array.forEach(toolBar.items.items, function(item, index, allItems) { \r",
+                                                    "        //alert(item.rawValue);\r",
+                                                    "        if(item.name==\"parameter\"){\r",
+                                                    "            if((item.rawValue=='' || item.rawValue==null)&&item.id!=\"SUBREPORT_DIR|java.lang.String\"){\r",
+                                                    "                flag = true;\t\t\t    \t\t\r",
+                                                    "            }\t    \t\t\t\r",
+                                                    "            params.push(item.id+\"|\"+item.rawValue);\r",
+                                                    "        }\r",
+                                                    "    }); \r",
+                                                    "    if(flag){\r",
+                                                    "        alert(\"参数值不能为空!\");\r",
+                                                    "    }else{\r",
+                                                    "        //导出\r",
+                                                    "        var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.ireportCommon.reportId\r",
+                                                    "            +\"&type=word&params=\"+encodeURI(params.join(\";\"));\r",
+                                                    "        window.location=url;  \t    \t\t\t\r",
+                                                    "    } \r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "965c09d5-cd1d-43e6-af95-c0b9d3d94fac"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "tbseparator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MySeparator1"
+                                    },
+                                    "designerId": "78fb4909-4000-44f1-be89-01ad330e5c2b"
+                                },
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton2",
+                                        "icon": "../source/image/excel.gif",
+                                        "text": "导出excel"
+                                    },
+                                    "designerId": "b8d18c10-d085-4a7e-bc3f-dce889a463a4",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick2",
+                                                "fn": "onButtonClick2",
+                                                "implHandler": [
+                                                    "if(Ext.ireportCommon.reportId != '' && Ext.ireportCommon.reportId != null){\r",
+                                                    "    var toolBar = button.up(\"toolbar\").up(\"panel\").up(\"panel\").down(\"toolbar\");\r",
+                                                    "    //验证过滤参数(不能为空)\r",
+                                                    "    var flag = false;\r",
+                                                    "    var params = [];\r",
+                                                    "    Ext.Array.forEach(toolBar.items.items, function(item, index, allItems) { \r",
+                                                    "        //alert(item.rawValue);\r",
+                                                    "        if(item.name==\"parameter\"){\r",
+                                                    "            if((item.rawValue=='' || item.rawValue==null)&&item.id!=\"SUBREPORT_DIR|java.lang.String\"){\r",
+                                                    "                flag = true;\t\t\t    \t\t\r",
+                                                    "            }\t    \t\t\t\r",
+                                                    "            params.push(item.id+\"|\"+item.rawValue);\r",
+                                                    "        }\r",
+                                                    "    }); \r",
+                                                    "    if(flag){\r",
+                                                    "        alert(\"参数值不能为空!\");\r",
+                                                    "    }else{\r",
+                                                    "        //导出\r",
+                                                    "        var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.ireportCommon.reportId\r",
+                                                    "            +\"&type=excel&params=\"+encodeURI(params.join(\";\"));\r",
+                                                    "        window.location=url;  \t    \t\t\t\r",
+                                                    "    } \r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "6cba328d-b76a-44b3-aa4a-3f45dc485f4e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

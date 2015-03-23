@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NetworkViewModel"
+    },
+    "id": "ExtBox1-ext-gen38486",
+    "designerId": "98f3561b-1716-4bff-b85c-0a3bd8494470",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "NETWORK_KBPS"
+            },
+            "designerId": "7cf98061-9358-4544-ab0f-9f2ab90b48b8"
+        }
+    ]
+}

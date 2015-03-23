@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CaseModel"
+    },
+    "designerId": "37d0d048-fdbe-4c91-9bc4-5be19fe7e718",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "caseTemp"
+            },
+            "designerId": "c7a2533a-ce46-4c2e-8c4b-844c7318e43d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "alarm"
+            },
+            "designerId": "97f80e8d-f3c4-467c-bef9-c49628502674"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "point"
+            },
+            "designerId": "936a9ff9-18bb-4aaf-893a-eed7665f7834"
+        }
+    ]
+}

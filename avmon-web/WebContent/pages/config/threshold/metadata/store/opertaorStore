@@ -1,0 +1,69 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "opertaorStore",
+        "storeId": "opertaorStore",
+        "data": "[\r\n    { \"OPERATOR_ID\": \"=\", \"OPERATOR_NAME\": \"等于\" }, \r\n    { \"OPERATOR_ID\": \">\", \"OPERATOR_NAME\": \"大于\" },\r\n    { \"OPERATOR_ID\": \"<\", \"OPERATOR_NAME\": \"小于\" }\r\n]"
+    },
+    "id": "ExtBox1-ext-gen70586",
+    "designerId": "f2daf747-0ae1-4622-b732-4aba5afece9f",
+    "cn": [
+        {
+            "type": "memoryproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMemoryProxy"
+            },
+            "designerId": "11c8be32-d6f0-436b-9820-018b1523b4bd",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "designerId": "70bd7e6d-a3a9-4bdb-8e56-686ae6de43f8"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "OPERATOR_ID"
+            },
+            "designerId": "4157ea52-0aaa-4604-8729-1a35718263d1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "OPERATOR_NAME"
+            },
+            "designerId": "7d3ea6f4-1f18-4f05-b77f-50a9c2b47cc4"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Process"
+    },
+    "designerId": "6fbaf5bb-0c5b-454f-9189-890c965cdc41",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NAME"
+            },
+            "designerId": "c2d28150-73a2-4a32-bcf2-dbf36af5a2d2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CPU"
+            },
+            "designerId": "beabc683-24fc-4e7a-a80d-420faed097c9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MEM"
+            },
+            "designerId": "fd7790c6-ed6c-4236-a2ac-5d621d5b42a3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STATUS"
+            },
+            "designerId": "a19d2dc4-4721-43b4-ba96-45396d18bfad"
+        }
+    ]
+}

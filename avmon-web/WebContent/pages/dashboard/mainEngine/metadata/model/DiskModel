@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiskModel"
+    },
+    "designerId": "e2060ee3-72a9-46b2-8b4b-c10f4450b6af",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DISK_NAME"
+            },
+            "designerId": "0332b010-4d8e-4310-a756-f65061bb85da"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BUSY_RATE"
+            },
+            "designerId": "17e987af-fe4f-46b5-bac6-770176df266f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RW_RATE"
+            },
+            "designerId": "9a1fb9fa-ad33-4131-aed7-121813443ab8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TRAN_BYTES"
+            },
+            "designerId": "9798686c-98bc-4d87-98a0-7191d234cf52"
+        }
+    ]
+}

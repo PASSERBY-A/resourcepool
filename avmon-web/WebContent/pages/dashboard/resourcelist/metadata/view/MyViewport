@@ -1,0 +1,133 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "6c038545-65b5-4e73-856c-417d0b9fcc55",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "resourceListPanel",
+                "width": 150,
+                "layout": "fit",
+                "title": ""
+            },
+            "designerId": "0a2ef373-d1d9-490d-951a-82d772fee472",
+            "cn": [
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "reloadView",
+                        "designer|params": [
+                            "moId"
+                        ],
+                        "implHandler": [
+                            ""
+                        ]
+                    },
+                    "designerId": "98b5a971-74e1-4856-9263-d216f756a35c"
+                },
+                {
+                    "type": "Ext.view.View",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": null,
+                        "id": "resourceListGrid",
+                        "autoScroll": true,
+                        "emptyText": "无子类信息.",
+                        "itemSelector": "div.thumb-wrap",
+                        "overItemCls": "x-view-over",
+                        "store": "Resources",
+                        "trackOver": true
+                    },
+                    "designerId": "ecc2a873-13b3-4473-8fec-7bce49878170",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<tpl for=\".\">\r",
+                                    "    <div class=\"thumb-wrap\" >\r",
+                                    "        <tpl if=\"nodeType=='type'\">\r",
+                                    "            <div class=\"resourceStatusBox_{moType}_GROUP\" >\r",
+                                    "                \r",
+                                    "                <div class=\"{iconCls} boxMessage1\" >{text}:&nbsp;{itemCount}&nbsp;项</div>\r",
+                                    "                <div class=\"icon-alarm-level{maxAlarmLevel} boxMessage2\">告警:&nbsp;{alarmCount}&nbsp;条</div>\r",
+                                    "            </div>\r",
+                                    "        </tpl>\r",
+                                    "\r",
+                                    "        <tpl if=\"nodeType!='type'\">\r",
+                                    "            <div class=\"resourceStatusBox_{moType}\" >\r",
+                                    "                \r",
+                                    "                <div class=\"{iconCls} boxMessage1\" >{text}</div>\r",
+                                    "                <div class=\"icon-alarm-level{maxAlarmLevel} boxMessage2\">告警:&nbsp;{alarmCount}&nbsp;条</div>\r",
+                                    "            </div>\r",
+                                    "        </tpl>\r",
+                                    "        \r",
+                                    "    </div>\r",
+                                    "   \r",
+                                    "</tpl>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "00a69eb5-e34d-4f1f-8091-1039e8456843"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onResourceListGridItemDblClick",
+                                "implHandler": [
+                                    "\r",
+                                    "\r",
+                                    "if(window.parent.selectPerformanceTreeNode){\r",
+                                    "    window.parent.selectPerformanceTreeNode(record.get(\"id\"));\r",
+                                    "}\r",
+                                    "\r",
+                                    "if(window.parent.window.parent.selectPerformanceTreeNode){\r",
+                                    "    window.parent.window.parent.selectPerformanceTreeNode(record.get(\"id\"));\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "itemdblclick",
+                                "scope": "me"
+                            },
+                            "designerId": "12b50d77-cc24-4dea-a91e-b9b725ea4e33"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

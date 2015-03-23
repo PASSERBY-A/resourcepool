@@ -1,0 +1,208 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "configPanel",
+        "designer|userClassName": "ConfigPanel",
+        "designer|userAlias": "configPanel",
+        "layout": "fit",
+        "title": "Config"
+    },
+    "designerId": "09f15d3a-9d96-49b2-babf-dc42248195bd",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|snapToGrid": 10,
+                "frame": true,
+                "height": 50,
+                "hidden": true,
+                "layout": "absolute",
+                "title": ""
+            },
+            "designerId": "6c7492cc-1a91-4574-9097-1dcbee1b9d6b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 10,
+                        "id": "agentStatus",
+                        "width": 160,
+                        "fieldLabel": "Agent状态",
+                        "labelAlign": "right",
+                        "labelWidth": 80,
+                        "value": [
+                            "未知"
+                        ]
+                    },
+                    "designerId": "f6fd9608-e47c-4e99-aa05-9f7f061feef4"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 320,
+                        "layout|y": 10,
+                        "id": "agentLastUpdateTime",
+                        "width": 300,
+                        "fieldLabel": "Agent最后更新时间",
+                        "labelAlign": "right",
+                        "labelWidth": 150,
+                        "value": [
+                            "未知"
+                        ]
+                    },
+                    "designerId": "c05cbe5d-3952-488a-9ea3-3cb6f282b7c8"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 180,
+                        "layout|y": 10,
+                        "id": "btnPauseAgent",
+                        "width": 50,
+                        "iconCls": "icon-pause",
+                        "text": "挂起"
+                    },
+                    "designerId": "69b1799d-e5a8-4619-a1a0-cf0ccc4e09c5"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 240,
+                        "layout|y": 10,
+                        "id": "btnStartAgent",
+                        "width": 50,
+                        "iconCls": "icon-start",
+                        "text": "恢复"
+                    },
+                    "designerId": "ac24cb4c-68af-4304-ab7a-6942de4c3ff4"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "moId",
+                        "width": 0,
+                        "fieldLabel": "Label"
+                    },
+                    "designerId": "a6dd85e5-9ef3-4ed3-9c04-67284c2476d7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "headerPosition": "left",
+                "activeTab": 0,
+                "tabPosition": null
+            },
+            "designerId": "04a1f9db-13fc-4fa1-89fc-2fdd26213b1c",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "title": "CI属性"
+                    },
+                    "designerId": "8cad7c9f-e67d-400f-be6f-450878d55175",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "67c8342c-4d0c-4b5b-a87b-9dbcc53e05cf"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top"
+                            },
+                            "designerId": "9d614dbd-d6fd-480b-af5d-3bd7249b95b5",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "id": "btnSaveProp",
+                                        "width": null,
+                                        "iconCls": "icon-save",
+                                        "text": "保存"
+                                    },
+                                    "designerId": "1541d1c3-6560-4c95-b588-a615ef79ee17"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "0638c554-1374-44ab-8f7b-e75c2efb3ab1",
+                            "masterInstanceId": "f5547b2b-72e2-4fb9-9497-d04c3ea4918f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

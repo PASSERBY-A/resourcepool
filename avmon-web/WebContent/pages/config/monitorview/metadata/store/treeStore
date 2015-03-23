@@ -1,0 +1,48 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "model": "treeModel",
+        "storeId": "treeStore",
+        "designer|userClassName": "treeStore",
+        "nodeParam": "id",
+        "root": [
+            "{\r",
+            "    expanded: true,\r",
+            "    text: 'AVMON',\r",
+            "    id: 'root'\r",
+            "}"
+        ]
+    },
+    "designerId": "20210b95-21e6-4c12-ac88-30eaf4d00ddd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "menuTree"
+            },
+            "designerId": "38b823f7-cf6c-4cca-b2b2-74081d140e37",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "30beb8c3-4357-4aef-a8e0-cb6027d9133d"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DeployResult"
+    },
+    "id": "ExtBox1-ext-gen15776",
+    "designerId": "89beb67e-3a8a-41d5-b108-21e99c29e46b",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field8",
+                "name": "moId"
+            },
+            "designerId": "a087cb27-bfc5-4c67-8939-2dfc9e29b96d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field9",
+                "name": "monitorInstanceId"
+            },
+            "designerId": "3b2b4792-27b6-4908-9508-7898b9b35ea9"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field10",
+                "name": "monitor"
+            },
+            "designerId": "c0bb754b-cde4-4712-bcc5-4317907da12e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field11",
+                "name": "msg"
+            },
+            "designerId": "0831b7ee-a816-4155-85bb-a73ebf383a18"
+        }
+    ]
+}

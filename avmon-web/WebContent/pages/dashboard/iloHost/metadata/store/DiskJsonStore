@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "DiskJsonStore",
+        "model": "DiskModel",
+        "storeId": "MyJsonStore3"
+    },
+    "designerId": "7e68618a-5459-4e64-ace4-ab27bbd78c82",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mo:Ext.iloHost.mo}"
+                ],
+                "url": "getDiskList"
+            },
+            "designerId": "d014867b-4973-4a7d-975c-32c2196f8e97",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "ee8231f7-f840-43b5-bbc8-35978e8ed7fb"
+                }
+            ]
+        }
+    ]
+}

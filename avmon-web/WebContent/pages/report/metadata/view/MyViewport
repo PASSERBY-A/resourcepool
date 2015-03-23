@@ -1,0 +1,104 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "59f0a677-493a-4f7b-b6b6-631468e75e2e",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "layout|split": true,
+                "id": "reportMenuTree",
+                "itemId": "reportMenuTree",
+                "width": 250,
+                "collapsible": true,
+                "title": "Menu",
+                "store": "ReportMenus",
+                "rootVisible": false
+            },
+            "designerId": "0ba709cf-4d55-44d1-8887-05ccf1016921",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "f5aaf51a-b2b6-4a3e-8590-69338fc5fb0d"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onReportMenuTreeSelect",
+                        "implHandler": [
+                            "Ext.getCmp('reportContent').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"'+record.get(\"url\")+'\"></iframe>');"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "f3710653-9bb3-43e2-908c-a4748d689d97"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onReportMenuTreeAfterLayout",
+                        "implHandler": [
+                            "\tvar tree=Ext.getCmp(\"reportMenuTree\");\r",
+                            "    var path=\"/root/\" + tree.getRootNode().firstChild.internalId;\r",
+                            "    tree.expandPath(path, 'id', '/', function(bSuccess, oLastNode){\r",
+                            "        if(bSuccess){\r",
+                            "            tree.getSelectionModel().select(oLastNode,true);\r",
+                            "        }\r",
+                            "        else{\r",
+                            "            //alert('未找到节点'+moId);\r",
+                            "        }\r",
+                            "    });"
+                        ],
+                        "name": "afterlayout",
+                        "scope": "me"
+                    },
+                    "designerId": "50ed24e5-901f-4b1f-91f1-9988a09bf052"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "id": "reportContent",
+                "title": null
+            },
+            "designerId": "de185c64-4985-4032-aefe-5df8eadded73"
+        }
+    ]
+}

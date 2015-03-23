@@ -1,0 +1,549 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ErrorLogModel",
+            "MemModel",
+            "CpuModel",
+            "DiskModel",
+            "NetworkSendModel",
+            "NetworkReceiveModel",
+            "NetworkViewModel",
+            "DiskViewModel",
+            "NetworkListModel",
+            "DiskListModel"
+        ],
+        "stores": [
+            "ErrorLogStore",
+            "MemStore",
+            "CpuStore",
+            "DiskStore",
+            "NetworkSendStore",
+            "NetworkReceiveStore",
+            "MemReceiveStore",
+            "NetworkViewStore",
+            "MemSendStore",
+            "DiskViewStore",
+            "NetworkListStore",
+            "DiskListStore"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1799",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.virtualMachine.application = this;\r",
+                    "\r",
+                    "var moId=Ext.virtualMachine.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "\r",
+                    "    //this.loadBasicInfo();\r",
+                    "    //this.loadNetwork();\r",
+                    "    this.loadMem();\r",
+                    "    this.loadCpu();\r",
+                    "    //this.loadDisk();\r",
+                    "    this.loadAlarm();\r",
+                    "    this.loadNetworkList();\r",
+                    "    this.loadDiskList();\r",
+                    "    this.loadNetworkSend();\r",
+                    "    this.loadNetworkReceive();\r",
+                    "    this.loadDiskWrite();\r",
+                    "    this.loadDiskRead();\r",
+                    "\r",
+                    "    // 定制定时刷新\r",
+                    "    setInterval(this.refresh_10s, 600000);\r",
+                    "}"
+                ]
+            },
+            "designerId": "cf523b50-a9cf-4052-9311-f9733ddbbecd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadErrorLog",
+                "fn": "loadErrorLog",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "2b2864f0-edb7-4d60-bc2e-6458140a2ee2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadCourse",
+                "fn": "loadCourse",
+                "implHandler": [
+                    "if (Ext.virtualMachine.moId != null && Ext.virtualMachine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'courseUse',\r",
+                    "        params: {mo:Ext.virtualMachine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"courseChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "}"
+                ]
+            },
+            "designerId": "a6f9637e-4dfb-4924-8689-1045b21d6318"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadMem",
+                "fn": "loadMem",
+                "implHandler": [
+                    "\r",
+                    "if (Ext.virtualMachine.moId != null && Ext.virtualMachine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'memUse',\r",
+                    "        params: {mo:Ext.virtualMachine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"memChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "}"
+                ]
+            },
+            "designerId": "3b86a24d-d6a8-45f3-a51d-51b957604a20"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadCpu",
+                "fn": "loadCpu",
+                "implHandler": [
+                    "if (Ext.virtualMachine.moId != null && Ext.virtualMachine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'cpuUse',\r",
+                    "        params: {mo:Ext.virtualMachine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"cpuChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "a51b830e-9f5f-49cc-b804-9f857a35ae46"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDisk",
+                "fn": "loadDisk",
+                "implHandler": [
+                    "if (Ext.virtualMachine.moId != null && Ext.virtualMachine.moId != '') {\r",
+                    "\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'diskUse',\r",
+                    "        params: {mo:Ext.virtualMachine.moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"diskChart\").store.loadData(obj,false);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "            if(console && console.log){\r",
+                    "                console.log(\"load dashboard-mem error!\");\r",
+                    "            }\r",
+                    "        }\r",
+                    "    });\r",
+                    "}"
+                ]
+            },
+            "designerId": "42d33d2c-3fdd-423b-9fd2-a761c7d7483f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadAlarm",
+                "fn": "loadAlarm",
+                "implHandler": [
+                    "/**\r",
+                    "var activeGrid = Ext.getCmp('alarmGrid');\r",
+                    "var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "activeStoreProxy.extraParams.treeId = Ext.virtualMachine.moId;\r",
+                    "activeStoreProxy.extraParams.isNewalarm = Ext.virtualMachine.isNewalarm_b;\r",
+                    "activeStoreProxy.extraParams.isMyalarm = Ext.virtualMachine.isMyalarm_b;\r",
+                    "activeStoreProxy.extraParams.lastUpdateTime = '';\r",
+                    "activeGrid.getStore().load();\r",
+                    "Ext.getCmp('alarmPanel').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../alarmSearch/index.jsp\"></iframe>');\r",
+                    "*/\r",
+                    "Ext.getCmp('alarmPanel').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../alarmSearch/index.jsp?mo=' + Ext.virtualMachine.moId + '\"></iframe>');"
+                ]
+            },
+            "designerId": "02770088-98e5-424d-bf1e-2d1705616c3d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refresh_10s",
+                "fn": "refresh_10s",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "2de67785-3455-4e40-a06c-d2f88ee57d3e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadBasicInfo",
+                "fn": "loadBasicInfo",
+                "implHandler": [
+                    "var moId = Ext.virtualMachine.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'basicInfo',\r",
+                    "        params: {mo:moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"basicInfo\").getForm().setValues(obj);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "601c0c74-3ec1-4ab4-9cae-0f7cf57bb02c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNetwork",
+                "fn": "loadNetwork",
+                "implHandler": [
+                    "var moId = Ext.virtualMachine.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "    Ext.Ajax.request({\r",
+                    "        url: 'networkInfo',\r",
+                    "        params: {mo:moId},\r",
+                    "        success: function(response, opts) {\r",
+                    "            var obj = Ext.decode(response.responseText);\r",
+                    "            Ext.getCmp(\"networkInfo\").getForm().setValues(obj);\r",
+                    "        },\r",
+                    "        failure: function(response, opts) {\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "717d2464-773d-462c-ba08-6b9fe42d37bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNetworkSend",
+                "fn": "loadNetworkSend",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'networkSend',\r",
+                    "    params: {mo:Ext.virtualMachine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"networkLineSend\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"networkSendPic\").setSrc('images/arrow_G_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"networkSendForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "e17ad903-5608-492a-b380-ac614b5cf804"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNetworkReceive",
+                "fn": "loadNetworkReceive",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'networkReceive',\r",
+                    "    params: {mo:Ext.virtualMachine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"networkLineReceive\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"netwrokReceivePic\").setSrc('images/arrow_R_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            Ext.getCmp(\"networkReceiveForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a228055d-9a8c-4b14-8dd0-01e8384ad60d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDiskWrite",
+                "fn": "loadDiskWrite",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'diskWrite',\r",
+                    "    params: {mo:Ext.virtualMachine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"diskWriteChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"diskWritePic\").setSrc('images/arrow_G_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            //Ext.getCmp(\"diskWriteForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a6036617-2779-44e0-b34a-de07cb7bb81f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDiskRead",
+                "fn": "loadDiskRead",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'diskRead',\r",
+                    "    params: {mo:Ext.virtualMachine.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"diskReadChart\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "        var speed = obj.speed;\r",
+                    "        var content = obj.content;\r",
+                    "\r",
+                    "        if (speed) {\r",
+                    "            if (speed < 50) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_01.gif');\r",
+                    "            } else if (speed < 100) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_02.gif');\r",
+                    "            } else if (100 < speed) {\r",
+                    "                Ext.getCmp(\"diskReadPic\").setSrc('images/arrow_R_03.gif');\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        if (content) {\r",
+                    "            //Ext.getCmp(\"diskReadForm\").getForm().setValues(content);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "5dbf5e63-21e4-4866-a0ea-6b40158d25de"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNetworkList",
+                "fn": "loadNetworkList",
+                "implHandler": [
+                    "var activeGrid = Ext.getCmp('networkListGrid');\r",
+                    "var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "//activeStoreProxy.extraParams.treeId = Ext.virtualMachine.moId;\r",
+                    "\r",
+                    "activeGrid.getStore().load();\r",
+                    ""
+                ]
+            },
+            "designerId": "378240b4-39c4-4c40-ab8a-cc0fd23bb9f6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDiskList",
+                "fn": "loadDiskList",
+                "implHandler": [
+                    "var activeGrid = Ext.getCmp('DiskListGrid');\r",
+                    "var activeStoreProxy = activeGrid.getStore().getProxy();\r",
+                    "//activeStoreProxy.extraParams.treeId = Ext.virtualMachine.moId;\r",
+                    "\r",
+                    "activeGrid.getStore().load();\r",
+                    ""
+                ]
+            },
+            "designerId": "5708664b-b780-4452-84ed-3f3770f4c3fe"
+        }
+    ]
+}

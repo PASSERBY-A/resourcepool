@@ -1,0 +1,122 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CpuUsageModel"
+    },
+    "designerId": "98d18aaa-0707-4d4e-9bb5-49809cf4422d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usage"
+            },
+            "designerId": "60fe2f66-bc8a-43b4-92d9-a50920874a81"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cpu"
+            },
+            "designerId": "a84df5fe-0ad2-4dc2-bb49-de0567c6cca2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "point"
+            },
+            "designerId": "9700ad6c-e6a5-496a-bbc2-66d8304e0f03"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "alarm"
+            },
+            "designerId": "215c15df-bbb0-457a-8783-fbfe4436de6c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mmxx"
+            },
+            "designerId": "54f12db0-8430-4654-ba06-c8f132b1365c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "flag"
+            },
+            "designerId": "c6fbf5d2-7eb8-47da-9131-1ca4ca6593c9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "list"
+            },
+            "designerId": "377dc5e0-ddee-4245-b1aa-4331a09e4c0d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "comm"
+            },
+            "designerId": "11fc4839-62ff-4783-97ac-46a8fae43d11"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cpuTemp"
+            },
+            "designerId": "3831742b-06c9-4d1e-9ccd-12a74c2ed633"
+        }
+    ]
+}

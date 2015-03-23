@@ -1,0 +1,153 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 225,
+        "width": 354,
+        "designer|userClassName": "AddMoWindow",
+        "designer|userAlias": "addMoWindow",
+        "layout": "fit",
+        "closeAction": "hide",
+        "title": "添加监控主机"
+    },
+    "designerId": "c98c0402-cdfd-463e-ae5c-40edf6d2576c",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": ""
+            },
+            "designerId": "36c05117-9dd3-434e-aaf6-35ea5cdf0790",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "fieldLabel": "监控对象编号",
+                        "name": "id"
+                    },
+                    "designerId": "58a5b138-27a5-4c49-9d72-de5fdbc69460"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "fieldLabel": "主机名称",
+                        "name": "text"
+                    },
+                    "designerId": "dbb31eae-d60f-4a44-aab6-15ee4f0871dc"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "fieldLabel": "对象类型",
+                        "name": "type"
+                    },
+                    "designerId": "e8dc4b2c-94fb-4d84-aa5e-9ba2d3a77352"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "fieldLabel": "IP地址",
+                        "name": "ip"
+                    },
+                    "designerId": "986ec586-3eab-4615-ad16-aedee09443eb"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "fieldLabel": "操作系统",
+                        "name": "os",
+                        "displayField": "name",
+                        "queryMode": "local",
+                        "store": "HostTypeList",
+                        "valueField": "name"
+                    },
+                    "designerId": "17f312d1-832d-4f4b-8537-767313af7041"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom"
+            },
+            "designerId": "21cb8939-0a9e-453a-a9df-40333ed3e369",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "btnAddHostOk",
+                        "iconCls": "icon-ok",
+                        "text": "确定"
+                    },
+                    "designerId": "77b3475a-e5cf-4cdd-9fee-6fd937b9ade3"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "id": "btnAddHostCancel",
+                        "iconCls": "icon-cancel",
+                        "text": "取消"
+                    },
+                    "designerId": "450c965a-629d-4773-aa36-133565a138ff"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+.button1-back{cursor:pointer;cursor:hand;text-align:center;font-family:雅黑,黑体;font-size:16px;font-weight:bold;padding:6px;color:#14337b;width:110px;background-image:url('images/button1-back.png')!important;} 
+.button1-over{cursor:pointer;cursor:hand;text-align:center;font-weight:bold;padding:6px;width:110px;background-image:url('images/button1-over.png')!important;} 
+.button1-pressed{cursor:pointer;cursor:hand;text-align:center;font-weight:bold;padding:6px;color:#14337b;width:110px;background-image:url('images/button1-pressed.png')!important;} 
+.button2-back{cursor:pointer;cursor:hand;text-align:center;font-family:雅黑,黑体;font-size:14px;font-weight:bold;padding:7px;color:#C3C3C3;width:110px;background-image:url('images/button2-back.png')!important;} 
+.button2-over{cursor:pointer;cursor:hand;text-align:center;font-weight:bold;padding:7px;width:110px;background-image:url('images/button2-over.png')!important;} 
+.button2-pressed{cursor:pointer;cursor:hand;text-align:center;font-weight:bold;padding:7px;color:white;width:110px;background-image:url('images/button2-pressed.png')!important;} 
+
+#loginInfoPanel a:link {color: #ccc;text-decoration:none;}
+#loginInfoPanel a:visited {color: #ccc;}
+#loginInfoPanel a:hover {color: white;text-decoration:none;}
+#loginInfoPanel a:active {color: white;text-decoration:none;}
+#loginInfoPanel{color:#ccc}
+	    

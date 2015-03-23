@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "FileSysModel",
+        "storeId": "FileSysStore",
+        "designer|userClassName": "FileSysStore"
+    },
+    "designerId": "2f73a3c7-b0e8-4248-9857-1044232f2a76",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "fileSysUse"
+            },
+            "designerId": "f2ccac6c-1d01-4a3b-be84-aaa729db2687",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "root"
+                    },
+                    "designerId": "b9c71e61-5587-4e7c-a10c-781bed4606d6"
+                }
+            ]
+        }
+    ]
+}

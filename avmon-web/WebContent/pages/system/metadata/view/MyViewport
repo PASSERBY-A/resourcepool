@@ -1,0 +1,105 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "c09b3f94-b656-46ff-9490-fedb708682ed",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "layout|split": true,
+                "id": "systemMenuTree",
+                "itemId": "systemMenuTree",
+                "width": 250,
+                "collapsible": true,
+                "title": "Menu",
+                "store": "SystemMenus",
+                "rootVisible": false
+            },
+            "designerId": "9b2ee8c4-7e92-47d0-92aa-e385237a1bed",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "a5fca2c7-fa4f-47d7-895e-646de323124c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSystemMenuTreeSelect",
+                        "implHandler": [
+                            "Ext.getCmp('systemContent').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"'+record.get(\"url\")+'\"></iframe>');"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "64be3694-ac25-4aac-a738-12ff9f25bd36"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSystemMenuTreeAfterLayout",
+                        "implHandler": [
+                            "var tree=Ext.getCmp(\"systemMenuTree\");\r",
+                            "var path=\"/root/\" + tree.getRootNode().firstChild.internalId;\r",
+                            "tree.expandPath(path, 'id', '/', function(bSuccess, oLastNode){\r",
+                            "    if(bSuccess){\r",
+                            "        tree.getSelectionModel().select(oLastNode,true);\r",
+                            "    }\r",
+                            "    else{\r",
+                            "        //alert('未找到节点'+moId);\r",
+                            "    }\r",
+                            "});\r",
+                            ""
+                        ],
+                        "name": "afterlayout",
+                        "scope": "me"
+                    },
+                    "designerId": "3115c49c-239a-43ec-8494-af91946ca7e0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "id": "systemContent",
+                "title": "  "
+            },
+            "designerId": "bbd7875b-aedf-4e7c-90f9-ad546c5535e1"
+        }
+    ]
+}

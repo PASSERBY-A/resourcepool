@@ -1,0 +1,391 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen2069",
+    "designerId": "21e07e1d-adbe-48c5-a9cc-792c0dda854a",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel",
+                "layout": "fit",
+                "title": null
+            },
+            "designerId": "90617fb0-61fa-405e-a426-b85df4be175a",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar1"
+                    },
+                    "designerId": "32b6636a-5eae-43bf-bc2d-7b125532a03a",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton1",
+                                "icon": "config.gif",
+                                "text": "条件设置"
+                            },
+                            "designerId": "71742e04-5631-439c-9e80-a63457864428",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick1",
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "Ext.create('MyApp.view.MyWindow').show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "7d0d1706-ad9e-4d2f-92f2-106a83691142"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "form",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|snapToGrid": 10,
+                        "designer|userClassName": "MyForm",
+                        "hidden": true,
+                        "id": "searchForm",
+                        "itemId": "searchForm",
+                        "layout": "absolute",
+                        "bodyPadding": 10,
+                        "title": null
+                    },
+                    "designerId": "f8566719-8b32-4123-bf22-abcfc3534d6c",
+                    "cn": [
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 10,
+                                "layout|y": 10,
+                                "designer|userClassName": "MyDateField",
+                                "name": "s_start_date",
+                                "fieldLabel": "开始日期",
+                                "labelWidth": 70,
+                                "allowBlank": false,
+                                "format": "Y-m-d"
+                            },
+                            "designerId": "fd795970-0886-41a0-ba8d-aa9f75aa7e70"
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 240,
+                                "layout|y": 10,
+                                "designer|userClassName": "MyDateField1",
+                                "name": "s_end_date",
+                                "fieldLabel": "截止日期",
+                                "labelWidth": 70,
+                                "allowBlank": false,
+                                "format": "Y-m-d"
+                            },
+                            "designerId": "52113856-dea8-454b-a579-28cd1e6824f3"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 480,
+                                "layout|y": 10,
+                                "designer|userClassName": "MyButton",
+                                "width": 60,
+                                "text": "生成报表"
+                            },
+                            "designerId": "8d398a35-0376-4b1e-8e10-6278cc63b3b0",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick",
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var myform = Ext.getCmp('searchForm').getForm();\r",
+                                            "\r",
+                                            "var startDate, endDate;\t\t\t\r",
+                                            "if (myform.isValid()) {\r",
+                                            "    Ext.iterate(myform.getValues(), function(key, value) {\r",
+                                            "        if (key == 's_start_date') {\r",
+                                            "            if (value != null && value != '') {\r",
+                                            "                //s_start_date = Ext.util.Format.date(new Date(), 'Y/m/d h:m:s');\r",
+                                            "                startDate = value;// + ' 00:00:00';\r",
+                                            "            }\r",
+                                            "        } else if (key == 's_end_date') {\r",
+                                            "            if (value != null && value != '') {\r",
+                                            "                endDate = value;// + ' 23:59:59';\r",
+                                            "            }\r",
+                                            "        }\r",
+                                            "    }, this);\r",
+                                            "\r",
+                                            "    //alert('<%=reportId%>');\r",
+                                            "    //alert(startDate);\r",
+                                            "    //alert(endDate);\r",
+                                            "\r",
+                                            "    Ext.getCmp('contentPanel').update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../../ireport/getNetworkPollingData.jsp?reportId='+ Ext.netcheck.reportId + '&mo='+'1'+'&startDate=' + startDate + '&endDate=' + endDate + '\"></iframe>');\r",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "f0d75524-6dcf-4346-a048-bd5ea0de79f0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel1",
+                        "id": "contentPanel",
+                        "itemId": "contentPanel",
+                        "autoScroll": true,
+                        "layout": "fit",
+                        "title": null
+                    },
+                    "designerId": "a51d0b4a-6d07-4888-ab89-65928a6d4559",
+                    "cn": [
+                        {
+                            "type": "toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "designer|userClassName": "MyToolbar2",
+                                "hidden": true
+                            },
+                            "designerId": "f9a7ba05-b6d0-4511-bdb8-ba1bee860b99",
+                            "cn": [
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton4",
+                                        "icon": "../source/image/exportPdf.png",
+                                        "text": "导出pdf"
+                                    },
+                                    "designerId": "3f908fc3-13f2-4662-9730-69475f02f4f3",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick2",
+                                                "fn": "onButtonClick2",
+                                                "implHandler": [
+                                                    "var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.netcheck.reportId+\r",
+                                                    "    \"&type=pdf&params=\"+encodeURI(Ext.netcheck.parmstr);\r",
+                                                    "window.location=url;"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "9bb280d6-9738-41e9-b4d5-350f35c721a7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "tbseparator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MySeparator2"
+                                    },
+                                    "designerId": "8eff810a-c6fa-4b74-be8d-ed89294849b3"
+                                },
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton5",
+                                        "icon": "../source/image/word.gif",
+                                        "text": "导出word"
+                                    },
+                                    "designerId": "bcb53458-cfff-4bfb-8c2e-1401d2fe2009",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick3",
+                                                "fn": "onButtonClick3",
+                                                "implHandler": [
+                                                    "var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.netcheck.reportId+\r",
+                                                    "    \"&type=word&params=\"+encodeURI(Ext.netcheck.parmstr);\r",
+                                                    "window.location=url;"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "36a8882a-7219-43ef-8bef-fd62a2ede9f1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "tbseparator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MySeparator3"
+                                    },
+                                    "designerId": "57b5be82-0833-4493-88eb-e124426e26b4"
+                                },
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyButton6",
+                                        "icon": "../source/image/excel.gif",
+                                        "text": "导出excel"
+                                    },
+                                    "designerId": "1a93fb2a-c89e-489b-992b-05f756783ce7",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onButtonClick4",
+                                                "fn": "onButtonClick4",
+                                                "implHandler": [
+                                                    "var url  = \"../source/config/report-html.jsp?reportId=\"+Ext.netcheck.reportId+\r",
+                                                    "    \"&type=excel&params=\"+encodeURI(Ext.netcheck.parmstr);\r",
+                                                    "window.location=url;"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "3dcedf46-d93c-44f8-9045-1c8fd169cd1e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onPanelAfterRender",
+                        "fn": "onPanelAfterRender",
+                        "implHandler": [
+                            "Ext.create('MyApp.view.MyWindow').show();"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "designerId": "11f95b80-4de7-4f7d-9d57-a5eb34efb926"
+                }
+            ]
+        }
+    ]
+}

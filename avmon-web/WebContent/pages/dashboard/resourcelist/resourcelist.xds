@@ -1,0 +1,139 @@
+{
+    "name": "performancetree",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext40",
+    "topInstanceFileMap": {
+        "6c038545-65b5-4e73-856c-417d0b9fcc55": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "285720ec-8f90-4f90-8be4-6d94e87a1e93": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0a7b39b4-f2fd-41fe-9d9d-455c8857364c": {
+            "paths": [
+                "metadata/store/TreeNodes",
+                "app/store/override/TreeNodes.js",
+                "app/store/TreeNodes.js"
+            ],
+            "className": "TreeNodes"
+        },
+        "62c7c5e5-b6cc-4c80-b9b8-79a461449017": {
+            "paths": [
+                "metadata/model/TreeNode",
+                "app/model/override/TreeNode.js",
+                "app/model/TreeNode.js"
+            ],
+            "className": "TreeNode"
+        },
+        "523f3d14-3bd0-4567-bf63-8b542d9d150f": {
+            "paths": [
+                "metadata/controller/MenuTree",
+                "app/controller/override/MenuTree.js",
+                "app/controller/MenuTree.js"
+            ],
+            "className": "MenuTree"
+        },
+        "cb88d551-b288-4dc3-8c86-cb4c816f2fce": {
+            "paths": [
+                "metadata/model/Host",
+                "app/model/override/Host.js",
+                "app/model/Host.js"
+            ],
+            "className": "Host"
+        },
+        "d81b7064-6e50-4c3c-a836-8140b439c3a0": {
+            "paths": [
+                "metadata/store/Hosts",
+                "app/store/override/Hosts.js",
+                "app/store/Hosts.js"
+            ],
+            "className": "Hosts"
+        },
+        "598f4cff-7d20-4600-b2f2-7aedda59da28": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "d4a1cfe1-a8d7-4f43-b9cc-f8845285c1f4": {
+            "paths": [
+                "metadata/store/KpiValues",
+                "app/store/override/KpiValues.js",
+                "app/store/KpiValues.js"
+            ],
+            "className": "KpiValues"
+        },
+        "28e2dd67-cd89-4d3b-b292-e213479b822d": {
+            "paths": [
+                "metadata/model/KpiValue",
+                "app/model/override/KpiValue.js",
+                "app/model/KpiValue.js"
+            ],
+            "className": "KpiValue"
+        },
+        "ce46d68b-57e5-4e4a-8833-89754a96ad38": {
+            "paths": [
+                "metadata/store/KpiDetailValues",
+                "app/store/override/KpiDetailValues.js",
+                "app/store/KpiDetailValues.js"
+            ],
+            "className": "KpiDetailValues"
+        },
+        "90b34065-6c86-4b75-8f74-b0d31eb5611b": {
+            "paths": [
+                "metadata/store/Resources",
+                "app/store/override/Resources.js",
+                "app/store/Resources.js"
+            ],
+            "className": "Resources"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "6c038545-65b5-4e73-856c-417d0b9fcc55"
+        ],
+        "store": [
+            "0a7b39b4-f2fd-41fe-9d9d-455c8857364c",
+            "d81b7064-6e50-4c3c-a836-8140b439c3a0",
+            "90b34065-6c86-4b75-8f74-b0d31eb5611b",
+            "d4a1cfe1-a8d7-4f43-b9cc-f8845285c1f4",
+            "ce46d68b-57e5-4e4a-8833-89754a96ad38"
+        ],
+        "controller": [
+            "523f3d14-3bd0-4567-bf63-8b542d9d150f"
+        ],
+        "model": [
+            "62c7c5e5-b6cc-4c80-b9b8-79a461449017",
+            "cb88d551-b288-4dc3-8c86-cb4c816f2fce",
+            "28e2dd67-cd89-4d3b-b292-e213479b822d"
+        ],
+        "resource": [
+            "285720ec-8f90-4f90-8be4-6d94e87a1e93",
+            "598f4cff-7d20-4600-b2f2-7aedda59da28"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

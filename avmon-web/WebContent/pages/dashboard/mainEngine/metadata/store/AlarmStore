@@ -1,0 +1,65 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "AlarmModel",
+        "storeId": "AlarmStore",
+        "designer|userClassName": "AlarmStore"
+    },
+    "designerId": "685c75cf-3fe5-4018-9a60-93573f963594",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    treeId: '',\r",
+                    "    level: '',\r",
+                    "    isNewalarm: 0,\r",
+                    "    isMyalarm: 0,\r",
+                    "    lastUpdateTime:'',\r",
+                    "    lastTime:'',\r",
+                    "    s_moCaption:'',\r",
+                    "    s_content_t:'',\r",
+                    "    s_attr_ipaddr:'',\r",
+                    "    s_aknowledge_by:'',\r",
+                    "    s_attr_businessSystem:'',\r",
+                    "    s_attr_position:'',\r",
+                    "    s_start_date:'',\r",
+                    "    s_end_date:'',\r",
+                    "    s_start_hours:'',\r",
+                    "    s_start_minutes:'',\r",
+                    "    s_end_hours:'',\r",
+                    "    s_end_minutes:''\r",
+                    "}"
+                ],
+                "url": "getAlarmData"
+            },
+            "designerId": "046b07d8-ad4e-4a21-acd6-e87dd5b16084",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "alarmData",
+                        "totalProperty": "alarmTotal"
+                    },
+                    "designerId": "f0067a77-87b1-4a75-9199-45fe12993139"
+                }
+            ]
+        }
+    ]
+}

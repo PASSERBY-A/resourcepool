@@ -1,0 +1,29 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "riDeviceModel",
+            "riDeviceCommModel"
+        ],
+        "stores": [
+            "deviceTypeStore",
+            "inpectTypeStore",
+            "riDeviceStore",
+            "riDeviceCommStore"
+        ],
+        "views": [
+            "MyViewport",
+            "inspectDeviceWindow",
+            "inspectCommWindow"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1777",
+    "designerId": "application"
+}

@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "diskViewModel"
+    },
+    "id": "ExtBox1-ext-gen3178",
+    "designerId": "a204828f-6da2-470f-b5ab-141f193ddeb3",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field60",
+                "name": "PATH"
+            },
+            "designerId": "61c9521d-327e-4e16-b55d-172cfa65e7ae"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field61",
+                "name": "XP_DEV_IOPS"
+            },
+            "designerId": "2c7eaba2-cf0b-4a74-8eaa-3791eb7f0ca4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field62",
+                "name": "XP_DEV_MS"
+            },
+            "designerId": "0d8a6805-c706-45bf-97a8-63419b3a2ca9"
+        }
+    ]
+}

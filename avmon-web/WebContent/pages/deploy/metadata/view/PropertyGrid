@@ -1,0 +1,111 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PropertyGrid",
+        "designer|userAlias": "propertyGrid",
+        "title": "",
+        "store": "Properties"
+    },
+    "designerId": "f5547b2b-72e2-4fb9-9497-d04c3ea4918f",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "c6b4f083-348e-4b76-b74c-1e0f16654bde"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "typeName",
+                "text": "TypeName"
+            },
+            "designerId": "b53f4f87-b49b-402a-91a5-1f9b4b3d7acf"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 200,
+                "dataIndex": "propName",
+                "text": "属性"
+            },
+            "designerId": "a6db1da7-6ed7-4d35-856c-a11997010262"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 300,
+                "dataIndex": "value",
+                "text": "值"
+            },
+            "designerId": "2663eae1-1f67-4d29-a6ab-80e38a99e4aa",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "9c35b480-adec-4617-a972-d8a91b2ff484"
+                }
+            ]
+        },
+        {
+            "type": "Ext.selection.CellModel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.CellModel",
+            "designerId": "738e1a13-2aaa-4853-af8a-56ced6febd41"
+        },
+        {
+            "type": "Ext.grid.feature.Grouping",
+            "reference": {
+                "name": "features",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hideGroupedHeader": true
+            },
+            "designerId": "7ffe5ab3-b7f2-483e-8885-dc5ad9ec0b1d"
+        },
+        {
+            "type": "Ext.grid.plugin.CellEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": "Ext.grid.plugin.CellEditing",
+            "userConfig": {
+                "clicksToEdit": 1
+            },
+            "designerId": "f40498e3-82a4-4669-8aaa-2f9df2996b11"
+        }
+    ]
+}

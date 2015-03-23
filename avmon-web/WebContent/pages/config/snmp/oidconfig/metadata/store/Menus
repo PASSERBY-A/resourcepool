@@ -1,0 +1,48 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "TreeNode",
+        "storeId": "MyJsonTreeStore1",
+        "designer|userClassName": "Menus",
+        "nodeParam": "id",
+        "root": [
+            "{\r",
+            "    \texpanded: true,\r",
+            "    \ttext: 'HP',\r",
+            "    \tid: 'root'\r",
+            "    }"
+        ]
+    },
+    "designerId": "ab88c067-5343-4fd5-9ba8-fa26b2b7f521",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "menuTree"
+            },
+            "designerId": "5fe23940-8e33-4fa6-a3fc-8284b4d51e76",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "5381d269-a573-4667-9838-a1a611fbc1a8"
+                }
+            ]
+        }
+    ]
+}

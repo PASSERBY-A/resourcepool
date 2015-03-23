@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiskModel"
+    },
+    "id": "ExtBox1-ext-gen63904",
+    "designerId": "e2060ee3-72a9-46b2-8b4b-c10f4450b6af",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "DISK_USE"
+            },
+            "designerId": "df1511a5-53ab-4f60-8146-59fc5a17b0e9"
+        }
+    ]
+}

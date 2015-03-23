@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "AgentDownload",
+        "storeId": "MyJsonStore5",
+        "designer|userClassName": "AgentDownloads"
+    },
+    "designerId": "2d564e46-1863-4960-8d54-6cbf8b0bf637",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "agentDownload"
+            },
+            "designerId": "5efe4728-1e51-47e5-8e44-481699dc20f4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "rows"
+                    },
+                    "designerId": "465dc460-1c1e-4e9d-b229-57cbd002342b"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Network",
+        "storeId": "MyJsonTreeStore",
+        "designer|userClassName": "Networks"
+    },
+    "designerId": "295bb922-9568-4d50-968b-afdc56f9259a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "networks"
+            },
+            "designerId": "2c283c8e-83f1-4a8d-aa9e-14a8884ccdcb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "ab1bc888-67f6-406e-8be4-6c552c5e5c7d"
+                }
+            ]
+        }
+    ]
+}

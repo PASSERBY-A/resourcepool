@@ -1,0 +1,630 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "VirtualListViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "27161abd-a7e0-4384-9d97-942c27f7a090",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "vmListTabs",
+                "activeTab": 0
+            },
+            "designerId": "9e14ce1d-716e-4ca5-adfb-c36c7ae93b34",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "physicalMachinePanel",
+                        "layout": "fit",
+                        "title": "物理机"
+                    },
+                    "designerId": "5100ff0c-1bad-49fe-917d-f83125f61532",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "13f2cf53-2721-40fa-a11d-479a0a9f16e7"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": null,
+                                "store": "PhysicalMachineStore"
+                            },
+                            "designerId": "e00fee90-45d1-409a-8b29-0dcaea5bf522",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "82eefa09-246a-44e5-8abb-1127a579ce44"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "name",
+                                        "text": "物理机名称"
+                                    },
+                                    "designerId": "021a343a-de86-4275-9411-02941f023e4c"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "connStatus",
+                                        "text": "状况"
+                                    },
+                                    "designerId": "be22d74d-2edc-4375-9289-c4a0c9fadfce"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "status",
+                                        "text": "状态"
+                                    },
+                                    "designerId": "ddeb684c-3742-4b80-ad3e-299926cabd4a"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "cpu",
+                                        "text": "CPU使用率(%)"
+                                    },
+                                    "designerId": "09e36f47-fce6-43a8-aa35-8c9c1c0a7450"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "memPer",
+                                        "text": "内存使用率(%)"
+                                    },
+                                    "designerId": "936e29ad-2897-4c2c-bb7a-f4870dd674a5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "mem",
+                                        "text": "内存大小(MB)"
+                                    },
+                                    "designerId": "4b64c2a3-dea2-4006-b571-3cee12f60da5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Paging",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "width": 360,
+                                "displayInfo": true,
+                                "store": "PhysicalMachineStore"
+                            },
+                            "designerId": "2cc31ec7-f118-45e5-bba5-c23d2e626348"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "virtualMachinePanel",
+                        "itemId": "virtualMachinePanel",
+                        "layout": "fit",
+                        "title": "虚拟机"
+                    },
+                    "designerId": "0ee2c3c1-899c-4ef3-a473-d5fb4c20c2c7",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "d89663f3-929d-42bc-8f23-5b8c8f8e7b85",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTabClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('vmGrid').store.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "03a0cd90-1141-4a00-a2a3-7432544616b2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoRender": true,
+                                "id": "vmGrid",
+                                "itemId": "vmGrid",
+                                "title": null,
+                                "store": "VirtualMachineStore"
+                            },
+                            "designerId": "fe5c18d5-e1af-42a5-9232-56f856bbf15d",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "c22b3a9c-075b-42ac-b35f-f5c97befadc0"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "name",
+                                        "text": "虚拟机名称"
+                                    },
+                                    "designerId": "7e594fcb-7459-42eb-abb8-58d59a8ba3bd"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "status",
+                                        "text": "状态"
+                                    },
+                                    "designerId": "6fe7907e-dff9-4eaa-8803-0c8772a100f6"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "host",
+                                        "text": "主机"
+                                    },
+                                    "designerId": "e1c7e730-8a4e-4c9e-80dc-afc1b5b31294"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "usedSpace",
+                                        "text": "已用空间"
+                                    },
+                                    "designerId": "6cf63eb9-b071-4fea-ba96-781596c9cff5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "hostFre",
+                                        "text": "主机CPU频率(Hz)"
+                                    },
+                                    "designerId": "a19662fb-ac86-491b-a5df-e238fec78409"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "hostMem",
+                                        "text": "主机内存(MB)"
+                                    },
+                                    "designerId": "de4ed470-30ca-4045-8604-a88208a51903"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "clientMemUsage",
+                                        "text": "内存使用率-%"
+                                    },
+                                    "designerId": "8ef66b4b-16d4-46bc-82c5-928fda68d8c0"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "clientSystem",
+                                        "text": "客户机操作系统"
+                                    },
+                                    "designerId": "590af858-c9d0-4ab6-bcb5-5c2a26f955db"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "mem",
+                                        "text": "内存大小"
+                                    },
+                                    "designerId": "c5d50699-ba0b-4292-b26d-35614e25a08a"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "uuid",
+                                        "text": "UUID"
+                                    },
+                                    "designerId": "22b51927-6ddc-4195-8b77-a5bc7353146e"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "alarmEnable",
+                                        "text": "告警操作"
+                                    },
+                                    "designerId": "4382d236-151b-4660-97be-a1edf8b72a0f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "remark",
+                                        "text": "备注"
+                                    },
+                                    "designerId": "714c490e-4555-4319-a6b0-eae4b240d153"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Paging",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "width": 360,
+                                "displayInfo": true,
+                                "store": "VirtualMachineStore"
+                            },
+                            "designerId": "e6780095-545c-455c-8aad-4e2acebe03bf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "storagePanel",
+                        "layout": "fit",
+                        "title": "数据存储"
+                    },
+                    "designerId": "9c8c037e-38c8-4031-a536-588302f0daa0",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "e5f6f2f8-7233-4fe1-a42c-9cd6a83f30de",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTabClick1",
+                                        "implHandler": [
+                                            "Ext.getCmp('storageGrid').store.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "eadef7ab-4b6f-448f-9351-85922cf81497"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "storageGrid",
+                                "itemId": "storageGrid",
+                                "title": null,
+                                "store": "StorageStore"
+                            },
+                            "designerId": "44c4b3ad-9d04-421d-9448-3225c3435f88",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "490a2205-ca9b-4bbc-8f35-3f1807faaaf5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "name",
+                                        "text": "标识"
+                                    },
+                                    "designerId": "a954491a-22a3-4b2a-bdde-07a865106c5f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "status",
+                                        "text": "状态"
+                                    },
+                                    "designerId": "43a41f52-4962-441f-b291-52c36191897e"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "device",
+                                        "text": "设备"
+                                    },
+                                    "designerId": "101f1a45-7621-435f-bf36-539791180417"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "diskType",
+                                        "text": "驱动器类型"
+                                    },
+                                    "designerId": "f1187961-faa4-40bc-b1a6-13f739ea2699"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "size",
+                                        "text": "容量"
+                                    },
+                                    "designerId": "ac348a1d-8da2-49c3-852c-f58caddcc115"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "freeSpace",
+                                        "text": "可用空间"
+                                    },
+                                    "designerId": "09783940-29f8-4f6f-a550-d2746c5659b6"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "type",
+                                        "text": "类型"
+                                    },
+                                    "designerId": "5b724d72-ac9a-4051-b0a9-4d2aeef41845"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "lastUpdateTime",
+                                        "text": "上次更新时间"
+                                    },
+                                    "designerId": "c7b0c4d5-f665-473c-b1e4-3141af7d09c6"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "alarmEnable",
+                                        "text": "告警操作"
+                                    },
+                                    "designerId": "4b7fd81b-d344-4dc4-a099-d9589b5162a8"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "ioControl",
+                                        "text": "Storage I/O Control"
+                                    },
+                                    "designerId": "36efa522-be3a-4b07-a287-8cf3b15d091e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Paging",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "width": 360,
+                                "displayInfo": true
+                            },
+                            "designerId": "ccd1052b-7d40-4d47-9038-c93b56264f9b"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

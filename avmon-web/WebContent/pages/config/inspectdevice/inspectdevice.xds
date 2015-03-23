@@ -1,0 +1,122 @@
+{
+    "name": "inspectdevice",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 678,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "8a933cb3-63e7-44f0-addb-bda5651c815a": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "a78bd906-195c-40d1-a9f5-b70921d4a2f4": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "fba4ca53-6bb1-4171-a640-545b9d7f5505": {
+            "paths": [
+                "metadata/view/inspectDeviceWindow",
+                "app/view/override/inspectDeviceWindow.js",
+                "app/view/inspectDeviceWindow.js"
+            ],
+            "className": "inspectDeviceWindow"
+        },
+        "bc2e5435-6730-4e8a-bb97-c32d352f03ef": {
+            "paths": [
+                "metadata/store/deviceTypeStore",
+                "app/store/override/deviceTypeStore.js",
+                "app/store/deviceTypeStore.js"
+            ],
+            "className": "deviceTypeStore"
+        },
+        "de987172-5199-4ac8-b8e8-6df0f94946ce": {
+            "paths": [
+                "metadata/store/inpectTypeStore",
+                "app/store/override/inpectTypeStore.js",
+                "app/store/inpectTypeStore.js"
+            ],
+            "className": "inpectTypeStore"
+        },
+        "10e2fca9-e14b-4873-a9ea-e7db507fc2e7": {
+            "paths": [
+                "metadata/view/inspectCommWindow",
+                "app/view/override/inspectCommWindow.js",
+                "app/view/inspectCommWindow.js"
+            ],
+            "className": "inspectCommWindow"
+        },
+        "5de28abd-9187-4b99-8c39-e1cc5738db90": {
+            "paths": [
+                "metadata/store/riDeviceStore",
+                "app/store/override/riDeviceStore.js",
+                "app/store/riDeviceStore.js"
+            ],
+            "className": "riDeviceStore"
+        },
+        "8d01333c-230d-4389-89d9-d844415d55ed": {
+            "paths": [
+                "metadata/store/riDeviceCommStore",
+                "app/store/override/riDeviceCommStore.js",
+                "app/store/riDeviceCommStore.js"
+            ],
+            "className": "riDeviceCommStore"
+        },
+        "6d843dc6-b25c-486e-aa71-9a3e33cf15e4": {
+            "paths": [
+                "metadata/model/riDeviceModel",
+                "app/model/override/riDeviceModel.js",
+                "app/model/riDeviceModel.js"
+            ],
+            "className": "riDeviceModel"
+        },
+        "0f808d48-2630-4d36-9ace-6f9916ec879a": {
+            "paths": [
+                "metadata/model/riDeviceCommModel",
+                "app/model/override/riDeviceCommModel.js",
+                "app/model/riDeviceCommModel.js"
+            ],
+            "className": "riDeviceCommModel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "8a933cb3-63e7-44f0-addb-bda5651c815a",
+            "fba4ca53-6bb1-4171-a640-545b9d7f5505",
+            "10e2fca9-e14b-4873-a9ea-e7db507fc2e7"
+        ],
+        "store": [
+            "bc2e5435-6730-4e8a-bb97-c32d352f03ef",
+            "de987172-5199-4ac8-b8e8-6df0f94946ce",
+            "5de28abd-9187-4b99-8c39-e1cc5738db90",
+            "8d01333c-230d-4389-89d9-d844415d55ed"
+        ],
+        "controller": [],
+        "model": [
+            "6d843dc6-b25c-486e-aa71-9a3e33cf15e4",
+            "0f808d48-2630-4d36-9ace-6f9916ec879a"
+        ],
+        "resource": [
+            "a78bd906-195c-40d1-a9f5-b70921d4a2f4"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

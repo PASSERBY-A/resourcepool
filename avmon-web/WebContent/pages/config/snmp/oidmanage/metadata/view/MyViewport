@@ -1,0 +1,796 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "main",
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "ad03ff60-2803-4fa6-aee6-1506d7982835",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "layout|split": true,
+                "frame": true,
+                "width": 240,
+                "layout": "border",
+                "collapsible": true,
+                "title": "Menu"
+            },
+            "designerId": "24cc5da0-efa3-4bec-8afa-8be1ba12c09c",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|region": "north",
+                        "designer|snapToGrid": 10,
+                        "height": 134,
+                        "layout": "absolute",
+                        "title": "Agent管理"
+                    },
+                    "designerId": "26eb880f-5eb6-4190-8123-fe78ed0818f7",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 10,
+                                "layout|y": 10,
+                                "height": 20,
+                                "width": 150,
+                                "text": "Agent管理"
+                            },
+                            "designerId": "7c1f7b80-9f83-4ec9-9091-f7654c09d5cf",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "if(!Ext.getCmp('panel1').loadFlag){\r",
+                                            "    Ext.getCmp('panel1').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../pages/config/agentManage/index.jsp\"></iframe>');\r",
+                                            "    Ext.getCmp('panel1').loadFlag=true;\r",
+                                            "}\r",
+                                            "\r",
+                                            "Ext.getCmp('contentPanel').getLayout().setActiveItem(0);\r",
+                                            "\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "03e7a949-1672-480a-b4a2-b6c78bee0578"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 10,
+                                "layout|y": 40,
+                                "height": 20,
+                                "width": 150,
+                                "text": "Agent下载"
+                            },
+                            "designerId": "8f40f2f7-9460-4de6-a8a2-cd595ae73322",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "Ext.getCmp('contentPanel').getLayout().setActiveItem(2);\r",
+                                            "\r",
+                                            "Ext.getCmp('agentDownloadGrid').getStore().load();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "fb01db05-e480-4c1c-bf07-0964d4644b09"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 10,
+                                "layout|y": 70,
+                                "height": 20,
+                                "width": 150,
+                                "text": "Agent更新"
+                            },
+                            "designerId": "ca0c853b-e6cb-4922-92b0-9f82c79bd905",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick2",
+                                        "implHandler": [
+                                            "Ext.getCmp('contentPanel').getLayout().setActiveItem(3);\r",
+                                            "\r",
+                                            "Ext.getCmp('upgradeMonitorGrid').getStore().load();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "8ad92c3e-9df3-4da9-b8ad-5e9ba56fde9d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "menuTree",
+                        "layout|region": "center"
+                    },
+                    "designerId": "960cbf46-840b-4bf6-b6da-3936d79c53b7",
+                    "masterInstanceId": "20c8d18e-8856-4253-9223-2f018c4d8d5b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "id": "contentPanel",
+                "layout": "card"
+            },
+            "designerId": "77926825-2b12-404c-bf0a-c07c8db22a7b",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "panel1",
+                        "title": ""
+                    },
+                    "designerId": "2b6f5352-6cd5-4c27-8435-29833dda6e02",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPanel1AfterLayout",
+                                "implHandler": [
+                                    "if(!Ext.getCmp('panel1').loadFlag){\r",
+                                    "    Ext.getCmp('panel1').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"../pages/config/agentManage/index.jsp\"></iframe>');\r",
+                                    "    Ext.getCmp('panel1').loadFlag=true;\r",
+                                    "}\r",
+                                    "\r",
+                                    "Ext.getCmp('contentPanel').getLayout().setActiveItem(0);\r",
+                                    ""
+                                ],
+                                "name": "afterlayout",
+                                "scope": "me"
+                            },
+                            "designerId": "718503a2-4884-4b55-bc24-2442870de8c8"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "eb007614-86bc-4b93-a938-c808958712fb",
+                    "masterInstanceId": "09f15d3a-9d96-49b2-babf-dc42248195bd"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "agentDownloadPanel",
+                        "layout": "fit",
+                        "title": "Agent Download"
+                    },
+                    "designerId": "09f15d3a-9d96-49b2-babf-dc42248195bd",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "agentDownloadGrid",
+                                "title": "",
+                                "store": "AgentDownloads"
+                            },
+                            "designerId": "b60780a2-046f-41ff-867f-4f61a719dde1",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "a5386d7f-3e8c-4093-bef5-a862f16a30ad"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Action",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 30,
+                                        "dataIndex": "icon"
+                                    },
+                                    "designerId": "026c7cb7-8f36-484f-be74-7cabc791a636",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "getClass",
+                                                "designer|params": [
+                                                    "v",
+                                                    "metadata",
+                                                    "r",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store"
+                                                ],
+                                                "implHandler": [
+                                                    "return r.get(\"icon\");"
+                                                ]
+                                            },
+                                            "designerId": "b19a56bc-9c86-41ed-a762-448d78b2a747"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "os",
+                                        "text": "Os"
+                                    },
+                                    "designerId": "cd85f7c2-61a9-4bec-91d9-5f7fc33a4e9b"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 400,
+                                        "dataIndex": "description",
+                                        "text": "Description"
+                                    },
+                                    "designerId": "a1ab5056-eb8b-4a18-bf1a-8f2426d148e7"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 50,
+                                        "dataIndex": "url"
+                                    },
+                                    "designerId": "6e8fc30f-42e9-49ea-8faa-0d825c57a59a",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "renderer",
+                                                "designer|params": [
+                                                    "value",
+                                                    "metaData",
+                                                    "record",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store",
+                                                    "view"
+                                                ],
+                                                "implHandler": [
+                                                    "return \"<a href='\"+record.get(\"url\")+\"'>下载</a>\";\r",
+                                                    ""
+                                                ]
+                                            },
+                                            "designerId": "75e032e9-b628-48db-9262-e88ebcaae1f6"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "agentUpgradePanel",
+                        "layout": "fit",
+                        "title": "Agent Upgrade"
+                    },
+                    "designerId": "dd9b4878-c179-49b7-a487-d3ecc3cacbfe",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "left",
+                                "id": "upgradeMonitorGrid",
+                                "width": 300,
+                                "title": "",
+                                "store": "MonitorTypes"
+                            },
+                            "designerId": "9f2c5a17-987a-4920-ae2f-8ccca979697a",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "92d52361-ea33-4b65-9467-c57a614daa34"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "name",
+                                        "text": "Name"
+                                    },
+                                    "designerId": "41641a42-8c8d-4fea-97d0-8d8722919f81"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 120,
+                                        "dataIndex": "caption",
+                                        "text": "Caption"
+                                    },
+                                    "designerId": "4de832e5-5b35-4842-a1e3-e4f6f2fb8425"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "type",
+                                        "text": "Type"
+                                    },
+                                    "designerId": "d5504895-b25c-4982-961f-7375175305f0"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 50,
+                                        "dataIndex": "version",
+                                        "text": "Version"
+                                    },
+                                    "designerId": "b0f506aa-f08a-4d91-9f1e-c3dfb798241e"
+                                },
+                                {
+                                    "type": "Ext.grid.feature.Grouping",
+                                    "reference": {
+                                        "name": "features",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hideGroupedHeader": true
+                                    },
+                                    "designerId": "49595832-4d56-440b-bf59-35e94f84e9ba"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onUpgradeMonitorGridSelect",
+                                        "implHandler": [
+                                            "var grid=Ext.getCmp(\"upgradeMonitorInstanceGrid\");\r",
+                                            "grid.getStore().load({\r",
+                                            "    params:{\r",
+                                            "        monitorId:record.get(\"name\")\r",
+                                            "    }\r",
+                                            "});\r",
+                                            ""
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "31c6347d-9676-4f00-8b52-b901c893f5a0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "upgradeMonitorInstanceGrid",
+                                "title": "",
+                                "store": "UpgradeMonitors"
+                            },
+                            "designerId": "11c216f7-3193-42b9-80bb-1bf122f17af3",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "13c3533d-87c7-41cd-9432-b4e5cbb72865"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "width": 150,
+                                        "dataIndex": "agentId",
+                                        "text": "监控Agent"
+                                    },
+                                    "designerId": "1347b042-7de6-4947-8ecd-5292e1d6f16b"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 150,
+                                        "dataIndex": "hostName",
+                                        "text": "主机名"
+                                    },
+                                    "designerId": "95c6831e-2409-4d34-87d8-5056d420e184"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "ip",
+                                        "text": "IP"
+                                    },
+                                    "designerId": "75893c15-6411-488f-bea8-94cfeba7509d"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "os",
+                                        "text": "OS"
+                                    },
+                                    "designerId": "e22ac58a-c932-4cb0-80c2-c5047d47b5b2"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 200,
+                                        "dataIndex": "osVersion",
+                                        "text": "OS Version"
+                                    },
+                                    "designerId": "8a4cb96f-0c81-4baa-b0ac-4b0a4da5e90c"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "path",
+                                        "text": "Amp实例"
+                                    },
+                                    "designerId": "de85d1b4-7d10-4b8d-82f2-d44b234ea634"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "caption",
+                                        "text": "标题"
+                                    },
+                                    "designerId": "36144760-49d1-4d16-9cca-73fd7bdd0a92"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 60,
+                                        "dataIndex": "version",
+                                        "text": "当前版本"
+                                    },
+                                    "designerId": "84d87cb3-5300-4fd9-afe9-75b76256d930"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "width": 80,
+                                        "dataIndex": "deploy",
+                                        "text": "部署状态"
+                                    },
+                                    "designerId": "5e215d53-6fca-4a1c-9adf-03b2f6018193"
+                                },
+                                {
+                                    "type": "Ext.selection.CheckboxModel",
+                                    "reference": {
+                                        "name": "selModel",
+                                        "type": "object"
+                                    },
+                                    "codeClass": "Ext.selection.CheckboxModel",
+                                    "designerId": "7a750d23-bb90-49a6-82fc-41d74303a0d1"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "frame": false
+                                    },
+                                    "designerId": "6d067521-ba67-4f5f-b40d-badbe5fe0abc",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null,
+                                                "id": "batBatchDeployMonitor",
+                                                "allowDepress": false,
+                                                "iconCls": "icon-monitor",
+                                                "text": "更新选中的Agent"
+                                            },
+                                            "designerId": "9784210a-708b-4933-8633-33fd656b484c",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onBatBatchDeployMonitorClick",
+                                                        "implHandler": [
+                                                            "var g=Ext.getCmp(\"upgradeMonitorInstanceGrid\");\r",
+                                                            "var store=g.getStore();\r",
+                                                            "var sm = g.getSelectionModel();\r",
+                                                            "var records=sm.getSelection();\r",
+                                                            "var items=\"\";\r",
+                                                            "var monitorId=\"\";\r",
+                                                            "Ext.each(records,function(record){\r",
+                                                            "    var instanceId=record.get(\"path\");\r",
+                                                            "    var moId=record.get(\"agentId\");\r",
+                                                            "    monitorId=record.get(\"name\");\r",
+                                                            "    items+=moId+\"|\"+instanceId+\",\";\r",
+                                                            "    //record.set(\"status\",\"ok\");\r",
+                                                            "});\r",
+                                                            "\r",
+                                                            "Ext.Msg.wait(\"正在部署，请稍后...\");\r",
+                                                            "Ext.Ajax.request({\r",
+                                                            "    url: 'batchDeployMonitor',\r",
+                                                            "    params: {items:items},\r",
+                                                            "    success: function(response, opts) {\r",
+                                                            "        g.getStore().load({params:{monitorId:monitorId}});\r",
+                                                            "        Ext.Msg.close();\r",
+                                                            "        var obj = Ext.decode(response.responseText);\r",
+                                                            "        if(obj.msg!=\"\"){\r",
+                                                            "            Ext.Msg.alert('error',obj.msg);\r",
+                                                            "        }\r",
+                                                            "        //me.getMonitorGrid().getStore().load({params:{mo:moId}});\r",
+                                                            "    },\r",
+                                                            "    failure: function(response, opts) {\r",
+                                                            "        Ext.Msg.close();\r",
+                                                            "        Ext.Msg.alert('下发结果','server-side failure with status code ' + response.status);\r",
+                                                            "    }\r",
+                                                            "});\r",
+                                                            "\r",
+                                                            "/*\r",
+                                                            "setTimeout(function(){\r",
+                                                            "g.getStore().load({params:{monitorId:monitorId}});\r",
+                                                            "Ext.Msg.close();\r",
+                                                            "}, 5000);\r",
+                                                            "*/\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "f1ebebd0-00d5-4c64-ad48-653994776af8"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onUpgradeMonitorInstanceGridScrollerShow",
+                                        "implHandler": [
+                                            "if (scroller && scroller.scrollEl) {\r",
+                                            "    scroller.clearManagedListeners(); \r",
+                                            "    scroller.mon(scroller.scrollEl, 'scroll', scroller.onElScroll, scroller); \r",
+                                            "}"
+                                        ],
+                                        "name": "scrollershow",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "f1160c30-03ef-4b7b-8cf9-c1cdc1035b73"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

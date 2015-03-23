@@ -1,0 +1,107 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 242,
+        "id": "cpuPanel",
+        "width": 540,
+        "designer|userClassName": "CpuPanel",
+        "designer|userAlias": "cpuPanel",
+        "layout": "absolute",
+        "title": "CPU"
+    },
+    "designerId": "d95a165b-1f64-42dd-bd4f-326b847b70a5",
+    "cn": [
+        {
+            "type": "Ext.chart.Chart",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 0,
+                "layout|y": -1,
+                "frame": false,
+                "height": 180,
+                "id": "cpuChart",
+                "width": 540,
+                "insetPadding": 5,
+                "store": "CpuLines"
+            },
+            "designerId": "9553d6f3-e684-4b66-a45a-1fb69aaf5a59",
+            "cn": [
+                {
+                    "type": "Ext.chart.axis.Category",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": null,
+                        "fields": [
+                            "time"
+                        ]
+                    },
+                    "designerId": "85ded365-61d8-4fa9-9553-fc158d2354de"
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "position": "left",
+                        "title": null,
+                        "maximum": 100,
+                        "minimum": 0
+                    },
+                    "designerId": "e7626d4d-50b0-40a3-ac7f-fa439e9acbe9"
+                },
+                {
+                    "type": "Ext.chart.Legend",
+                    "reference": {
+                        "name": "legend",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxStroke": "#FFF",
+                        "boxStrokeWidth": null,
+                        "itemSpacing": 0,
+                        "padding": 2,
+                        "position": "right",
+                        "x": null,
+                        "designer|displayName": null
+                    },
+                    "designerId": "9ac68f35-48d9-4ece-a48e-a4d0b76f4f62"
+                },
+                {
+                    "type": "Ext.chart.series.Line",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "showInLegend": false,
+                        "xField": "time",
+                        "yField": [
+                            "usage"
+                        ],
+                        "fill": true
+                    },
+                    "designerId": "3590b2ea-7565-4e2a-9159-ba7f12ee9e29"
+                }
+            ]
+        }
+    ]
+}

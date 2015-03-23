@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "riDeviceStore",
+        "autoLoad": true,
+        "storeId": "riDeviceStore",
+        "model": "riDeviceModel"
+    },
+    "id": "ExtBox1-ext-gen5370",
+    "designerId": "5de28abd-9187-4b99-8c39-e1cc5738db90",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy2",
+                "url": "getRouteInspectDeviceData"
+            },
+            "designerId": "8676f0de-0944-43ed-946d-fe585da1ee5d",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2",
+                        "root": "RIDeviceData",
+                        "totalProperty": "RIDeviceTotal"
+                    },
+                    "designerId": "91326cd7-3849-4d64-84b9-6db09c1e4f36"
+                }
+            ]
+        }
+    ]
+}

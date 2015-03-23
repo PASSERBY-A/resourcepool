@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "CourseModel",
+        "storeId": "CourseStore",
+        "designer|userClassName": "CourseStore"
+    },
+    "designerId": "ac99a5f3-a650-4cd5-96a2-350f31042be6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "4472ea05-099e-4cca-9910-321501d316a4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "9b005bee-bfe1-48fe-a738-89f896c344ba"
+                }
+            ]
+        }
+    ]
+}

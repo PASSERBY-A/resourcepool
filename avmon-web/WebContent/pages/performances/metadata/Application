@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "performance.model.TreeNode"
+        ],
+        "stores": [
+            "TreeNodes"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "MenuTree"
+        ],
+        "name": "performance"
+    },
+    "designerId": "application"
+}

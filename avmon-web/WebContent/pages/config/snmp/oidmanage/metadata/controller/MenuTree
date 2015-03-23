@@ -1,0 +1,597 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MenuTree",
+        "designer|userAlias": "menuTree"
+    },
+    "designerId": "ec9a23df-1e43-464c-b241-c7c334bddc8e",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelItemClick",
+                "implHandler": [
+                    "Ext.getCmp('contentPanel').getLayout().setActiveItem(1);\r",
+                    "\r",
+                    "var p=this.getPropertyGrid();\r",
+                    "\r",
+                    "if(record.get(\"leaf\")){\r",
+                    "    p.getStore().load({params:{mo:record.get(\"id\")}});\r",
+                    "    Ext.getCmp('moId').setValue(record.get(\"id\"));\r",
+                    "\r",
+                    "    //monitor gird\r",
+                    "    //this.getMonitorGrid().getStore().load({params:{mo:record.get(\"id\")}});\r",
+                    "\r",
+                    "\r",
+                    "    Ext.getCmp(\"configPanel\").setTitle(\"Config-\"+record.get(\"text\")+\"(\"+record.get(\"id\")+\")\");\r",
+                    "\r",
+                    "    //get status\r",
+                    "\r",
+                    "    Ext.getCmp(\"agentStatus\").setValue(record.get(\"agentStatus\"));\r",
+                    "    Ext.getCmp(\"agentLastUpdateTime\").setValue(record.get(\"agentLastUpdateTime\"));\r",
+                    "\r",
+                    "    //this.getKpiGrid().getStore().load({params:{mo:record.get(\"id\")}});\r",
+                    "\r",
+                    "}"
+                ],
+                "name": "itemclick",
+                "scope": "me",
+                "designer|targetType": "Ext.tree.Panel",
+                "designer|controlQuery": "menuTree"
+            },
+            "designerId": "b725d7b2-7681-4aae-b611-fc0e12af93eb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "propertyGrid",
+                "selector": "propertyGrid"
+            },
+            "designerId": "71df904c-c2e8-4d1a-b974-ba5358292072"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelItemContextMenu",
+                "implHandler": [
+                    "\r",
+                    "var me=this;\r",
+                    "\r",
+                    "var menuTree=this.getMenuTree();\r",
+                    "\r",
+                    "var currentNode=menuTree.getStore().getNodeById(record.get(\"id\"));\r",
+                    "\r",
+                    "e.preventDefault(); \r",
+                    "e.stopEvent(); \r",
+                    "\r",
+                    "if(record.get(\"id\")==\"02host\"){\r",
+                    "\r",
+                    "    var menu = new Ext.menu.Menu({ \r",
+                    "        //控制右键菜单位置 \r",
+                    "        float:true, \r",
+                    "        items:[{ \r",
+                    "            text:\"刷新菜单\", \r",
+                    "            iconCls:'icon-refresh', \r",
+                    "            handler:function(){ \r",
+                    "                //当点击时隐藏右键菜单 \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.refresh();\r",
+                    "            } \r",
+                    "        },{ \r",
+                    "            text:\"添加主机\", \r",
+                    "            iconCls:'icon-add', \r",
+                    "            handler:function(){ \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.insertTreeNode(currentNode,'HOST','');\r",
+                    "            } \r",
+                    "        }\r",
+                    "        ] \r",
+                    "    }).showAt(e.getXY());//让右键菜单跟随鼠标位置\r",
+                    "\r",
+                    "}\r",
+                    "else if(record.get(\"id\")==\"03db\"){\r",
+                    "\r",
+                    "}\r",
+                    "else if(record.get(\"pid\")==\"02host\"){\r",
+                    "    var menu = new Ext.menu.Menu({ \r",
+                    "        //控制右键菜单位置 \r",
+                    "        float:true, \r",
+                    "        items:[{ \r",
+                    "            text:\"刷新菜单\", \r",
+                    "            iconCls:'icon-refresh', \r",
+                    "            handler:function(){ \r",
+                    "                //当点击时隐藏右键菜单 \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.refresh();\r",
+                    "            } \r",
+                    "        },{ \r",
+                    "            text:\"添加\"+record.get(\"id\")+\"主机\", \r",
+                    "            iconCls:'icon-add', \r",
+                    "            handler:function(){ \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.insertTreeNode(currentNode,'HOST',record.get(\"id\"));\r",
+                    "            } \r",
+                    "        }\r",
+                    "        ] \r",
+                    "    }).showAt(e.getXY());//让右键菜单跟随鼠标位置\r",
+                    "}\r",
+                    "else{\r",
+                    "\r",
+                    "    var menu = new Ext.menu.Menu({ \r",
+                    "        //控制右键菜单位置 \r",
+                    "        float:true, \r",
+                    "        items:[{ \r",
+                    "            text:\"刷新菜单\", \r",
+                    "            iconCls:'icon-refresh', \r",
+                    "            handler:function(){ \r",
+                    "                //当点击时隐藏右键菜单 \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.refresh();\r",
+                    "            } \r",
+                    "        },{ \r",
+                    "            text:\"删除\", \r",
+                    "            iconCls:'icon-delete', \r",
+                    "            handler:function(){ \r",
+                    "                this.up(\"menu\").hide(); \r",
+                    "                me.deleteTreeNode(currentNode,record.get(\"id\"));\r",
+                    "            } \r",
+                    "        } \r",
+                    "        ] \r",
+                    "    }).showAt(e.getXY());//让右键菜单跟随鼠标位置\r",
+                    "\r",
+                    "}"
+                ],
+                "name": "itemcontextmenu",
+                "scope": "me",
+                "designer|targetType": "Ext.tree.Panel",
+                "designer|controlQuery": "menuTree"
+            },
+            "designerId": "9c27597d-2a1d-4019-99a9-378d3b07aaed"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "menuTree",
+                "selector": "menuTree"
+            },
+            "designerId": "63b54b0e-41a9-4bed-88d3-16d259d4bead"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "insertTreeNode",
+                "designer|params": [
+                    "treeNode",
+                    "type",
+                    "os"
+                ],
+                "implHandler": [
+                    "var iconCls='icon-host';\r",
+                    "if(os){\r",
+                    "    iconCls='icon-'+os;\r",
+                    "}\r",
+                    "var node = Ext.create('app.model.TreeNode', {\r",
+                    "    id:(new Date()).valueOf(),\r",
+                    "    text:'新主机',\r",
+                    "    os:os,\r",
+                    "    type:type,\r",
+                    "    leaf:true,\r",
+                    "    iconCls:iconCls\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "var win = Ext.addMoWindow || (Ext.addMoWindow = Ext.create('widget.addMoWindow'));\r",
+                    "\r",
+                    "win.treeNode=treeNode;\r",
+                    "\r",
+                    "win.down(\"form\").getForm().loadRecord(node);\r",
+                    "\r",
+                    "\r",
+                    "win.show();\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "eb00a036-8934-4f38-95d3-a75d1ae3ed4f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "deleteTreeNode",
+                "designer|params": [
+                    "treeNode",
+                    "nodeId"
+                ],
+                "implHandler": [
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "Ext.MessageBox.confirm('Confirm', '请确认是否删除?', function(btn){\r",
+                    "\r",
+                    "    if(btn==\"yes\"){\r",
+                    "        Ext.Ajax.request({\r",
+                    "            url: 'deleteMo',\r",
+                    "            params: {mo:nodeId},\r",
+                    "            success: function(response, opts) {\r",
+                    "                treeNode.remove();\r",
+                    "                Ext.example.msg('Done', '监控对象已删除！');\r",
+                    "            },\r",
+                    "            failure: function(response, opts) {\r",
+                    "                alert('error');\r",
+                    "            }\r",
+                    "        });\r",
+                    "    }\r",
+                    "\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "designerId": "bc1fe224-3d6f-4ffa-806b-568c17ac1537"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh",
+                "implHandler": [
+                    "var tree=this.getMenuTree();\r",
+                    "\r",
+                    "if(!tree.getStore().isLoading()){\r",
+                    "    if(tree.getStore().getRootNode()){\r",
+                    "        tree.getStore().getRootNode().removeAll();\r",
+                    "    }\r",
+                    "    tree.getStore().load({params:{id:\"root\"}});\r",
+                    "}\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "674612d2-d699-4da8-a823-8ac531e086b9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnTestClick",
+                "implHandler": [
+                    "this.refresh();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnTest"
+            },
+            "designerId": "f0763e6f-047f-4f52-ba70-dfc8d2b36bda"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "monitorGrid",
+                "selector": "monitorGrid"
+            },
+            "designerId": "0942b79b-ee02-49fc-89a7-d5794a150b16"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnAddHostOkClick",
+                "implHandler": [
+                    "var form=Ext.addMoWindow.down(\"form\");\r",
+                    "var win=Ext.addMoWindow;\r",
+                    "var record=form.getRecord();\r",
+                    "\r",
+                    "/*\r",
+                    "if(!record.get(\"id\") || record.get(\"id\")===\"\"){\r",
+                    "alert(\"必须输入对象编号!\");\r",
+                    "return;\r",
+                    "}\r",
+                    "\r",
+                    "if(!record.get(\"text\") || record.get(\"text\")===\"\"){\r",
+                    "alert(\"必须输入对象名称!\");\r",
+                    "return;\r",
+                    "}\r",
+                    "//*/\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//ajax request\r",
+                    "\r",
+                    "\r",
+                    "form.getForm().submit({  \r",
+                    "    waitTitle : '提示',\r",
+                    "    waitMsg : '正在提交数据请稍后...',\r",
+                    "    url : 'addMo',  \r",
+                    "    method : 'post',  \r",
+                    "    params : {optr:'create'},\r",
+                    "    success : function(form, action) {\r",
+                    "        //*\r",
+                    "        var values=form.getValues(false);\r",
+                    "        var node = Ext.create('app.model.TreeNode', {\r",
+                    "            id:values.id,\r",
+                    "            text:values.text,\r",
+                    "            os:values.os,\r",
+                    "            type:values.type,\r",
+                    "            leaf:true,\r",
+                    "            iconCls:'icon-'+values.os\r",
+                    "        });\r",
+                    "        win.treeNode.insertChild(0,node);\r",
+                    "\r",
+                    "        Ext.example.msg('Done', '监控对象已创建！');\r",
+                    "        win.hide();\r",
+                    "        //*/\r",
+                    "    },  \r",
+                    "    failure : function(form,action) {  \r",
+                    "        var flag=action.result.msg; //返回值中定义msg，{msg:返回内容}  \r",
+                    "        Ext.Msg.alert('操作', flag);  \r",
+                    "        win.hide();\r",
+                    "    }  \r",
+                    "});  \r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnAddHostOk"
+            },
+            "designerId": "187cae8e-eb0f-428d-9e61-a82ff0968c68"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnAddHostCancelClick",
+                "implHandler": [
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnAddHostCancel"
+            },
+            "designerId": "e108b4c6-7620-4408-8ae2-2039baac8244"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "kpiGrid",
+                "selector": "kpiGrid"
+            },
+            "designerId": "b312a0e6-8477-47c1-8e9a-b837d14a5e87"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnRefreshTreeClick",
+                "implHandler": [
+                    "var tree=Ext.getCmp(\"menuTree\");\r",
+                    "\r",
+                    "if(!tree.getStore().isLoading()){\r",
+                    "    if(tree.getStore().getRootNode()){\r",
+                    "        tree.getStore().getRootNode().removeAll();\r",
+                    "    }\r",
+                    "    tree.getStore().load({params:{id:\"root\"}});\r",
+                    "}\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnRefreshTree"
+            },
+            "designerId": "e1ce14cd-b01b-436a-b559-405827b84a3d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnAddMOClick",
+                "implHandler": [
+                    "var win = Ext.selectMoTypeWindow;\r",
+                    "\r",
+                    "if(!win){\r",
+                    "    win=Ext.create('widget.selectMoTypeWindow');\r",
+                    "    Ext.selectMoTypeWindow=win;\r",
+                    "    win.needReload=true;\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "win.show();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnAddMO"
+            },
+            "designerId": "4ae98576-fe93-4f06-90dd-a73d50c0f4f5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnRemoveMOClick",
+                "implHandler": [
+                    "var me=this;\r",
+                    "\r",
+                    "var menuTree=this.getMenuTree();\r",
+                    "\r",
+                    "var aa=menuTree.getSelectionModel().getSelection();\r",
+                    "if(aa && aa.length>0){\r",
+                    "    var record=aa[0];\r",
+                    "    var currentNode=menuTree.getStore().getNodeById(record.get(\"id\"));\r",
+                    "    this.deleteTreeNode(currentNode,record.get(\"id\"));\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnRemoveMO"
+            },
+            "designerId": "92dd52b9-4249-48d0-8d20-ef5d396260ed"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnSelectMoTypeWindowOkClick",
+                "implHandler": [
+                    "\r",
+                    "var moId=button.up(\"window\").down(\"form\").getForm().findField('moId').getValue();\r",
+                    "var caption=button.up(\"window\").down(\"form\").getForm().findField('caption').getValue();\r",
+                    "var agentId=button.up(\"window\").down(\"form\").getForm().findField('agentId').getValue();\r",
+                    "\r",
+                    "if(moId==\"\"){\r",
+                    "    Ext.MessageBox.alert(\"警告\",\"对象编号不能为空!\");\r",
+                    "    return;\r",
+                    "\r",
+                    "}\r",
+                    "if(caption==\"\"){\r",
+                    "    Ext.MessageBox.alert(\"警告\",\"对象名称不能为空!\");\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "var record=null;\r",
+                    "\r",
+                    "Ext.each(Ext.getCmp(\"moTypeTree\").getSelectionModel().getSelection(),function(item){\r",
+                    "    record=item;\r",
+                    "});\r",
+                    "\r",
+                    "if(record==null){\r",
+                    "    Ext.MessageBox.alert(\"警告\",\"请选择对象类型！\");\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "var typeId=record.get(\"id\");\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'createMo',\r",
+                    "    params: {mo:moId,caption:caption,moType:typeId,agentId:agentId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj=Ext.decode(response.responseText);\r",
+                    "        if(obj.errorMsg){\r",
+                    "            alert(obj.errorMsg);\r",
+                    "        }\r",
+                    "        else{\r",
+                    "            button.up(\"window\").hide();\r",
+                    "            \r",
+                    "        }\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        Ext.MessageBox.alert(\"错误\",\"发生错误，请稍候再试！\");\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnSelectMoTypeWindowOk"
+            },
+            "designerId": "9b4727a6-c22f-4d62-a43f-4e2662c38002"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "43b65e6b-3b31-47e5-8d19-3d90b8829487"
+        }
+    ]
+}

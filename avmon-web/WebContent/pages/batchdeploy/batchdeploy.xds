@@ -1,0 +1,112 @@
+{
+    "name": "batchdeploy",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "577576ff-b8e9-4402-baf1-8724353cd03f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "aef43f82-34ce-4c4d-9d8b-8a377bc4f311": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "b03551f1-83f4-46da-8fcc-6a7d2f0b0d17": {
+            "paths": [
+                "metadata/model/Discovery",
+                "app/model/override/Discovery.js",
+                "app/model/Discovery.js"
+            ],
+            "className": "Discovery"
+        },
+        "a8d3dbc5-6c3e-4e26-a15f-de9ec352c394": {
+            "paths": [
+                "metadata/store/DiscoveryStore",
+                "app/store/override/DiscoveryStore.js",
+                "app/store/DiscoveryStore.js"
+            ],
+            "className": "DiscoveryStore"
+        },
+        "27e771ed-0d99-4fc6-8545-d161d78f37d5": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "f9ffcf9d-71ce-47ca-983b-55286fc01dda": {
+            "paths": [
+                "metadata/view/DiscoveryGrid",
+                "app/view/override/DiscoveryGrid.js",
+                "app/view/DiscoveryGrid.js"
+            ],
+            "className": "DiscoveryGrid"
+        },
+        "59afdd8c-eef2-4a38-b9ca-3d4ce947b60d": {
+            "paths": [
+                "metadata/controller/Main",
+                "app/controller/override/Main.js",
+                "app/controller/Main.js"
+            ],
+            "className": "Main"
+        },
+        "db8a518c-d07f-4577-a908-7cae8eec0dab": {
+            "paths": [
+                "metadata/store/DeployResults",
+                "app/store/override/DeployResults.js",
+                "app/store/DeployResults.js"
+            ],
+            "className": "DeployResults"
+        },
+        "89beb67e-3a8a-41d5-b108-21e99c29e46b": {
+            "paths": [
+                "metadata/model/DeployResult",
+                "app/model/override/DeployResult.js",
+                "app/model/DeployResult.js"
+            ],
+            "className": "DeployResult"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "aef43f82-34ce-4c4d-9d8b-8a377bc4f311",
+            "f9ffcf9d-71ce-47ca-983b-55286fc01dda"
+        ],
+        "store": [
+            "a8d3dbc5-6c3e-4e26-a15f-de9ec352c394",
+            "db8a518c-d07f-4577-a908-7cae8eec0dab"
+        ],
+        "controller": [
+            "59afdd8c-eef2-4a38-b9ca-3d4ce947b60d"
+        ],
+        "model": [
+            "b03551f1-83f4-46da-8fcc-6a7d2f0b0d17",
+            "89beb67e-3a8a-41d5-b108-21e99c29e46b"
+        ],
+        "resource": [
+            "577576ff-b8e9-4402-baf1-8724353cd03f",
+            "27e771ed-0d99-4fc6-8545-d161d78f37d5"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

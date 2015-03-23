@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "StorageModel",
+        "storeId": "StorageStore",
+        "designer|userClassName": "StorageStore"
+    },
+    "designerId": "8ea91586-3607-4336-9136-bd4105cc66a9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "getStorageList"
+            },
+            "designerId": "8a6959ed-10ef-4a3e-8a99-ba12cf668c09",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "items"
+                    },
+                    "designerId": "5775298d-2110-41fb-ac63-f19437e3c2e6"
+                }
+            ]
+        }
+    ]
+}

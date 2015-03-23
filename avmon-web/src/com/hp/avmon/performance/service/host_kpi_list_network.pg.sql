@@ -1,0 +1,4 @@
+select a.str_value as "NAME",b.str_value as "IO",c.str_value as "STATUS" from (select a.mo_id,a.instance,a.kpi_code,b.* from tf_avmon_kpi_value_list a,tf_avmon_kpi_value_current b where a.value_key=b.value_key)  a 
+left join (select mo_id,str_value,instance from (select a.mo_id,a.instance,a.kpi_code,b.* from tf_avmon_kpi_value_list a,tf_avmon_kpi_value_current b where a.value_key=b.value_key) k where mo_id='{MO_ID}' and kpi_code='1001003003') b on a.mo_id=b.mo_id and a.instance=b.instance
+left join (select mo_id,str_value,instance from (select a.mo_id,a.instance,a.kpi_code,b.* from tf_avmon_kpi_value_list a,tf_avmon_kpi_value_current b where a.value_key=b.value_key) k where mo_id='{MO_ID}' and kpi_code='1001003002') c on a.mo_id=c.mo_id and a.instance=c.instance
+where a.mo_id='{MO_ID}' and a.kpi_code='1001003001'

@@ -1,0 +1,218 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 290,
+        "id": "basicInfo",
+        "width": 260,
+        "designer|userClassName": "BasicInfo",
+        "designer|userAlias": "basicInfo",
+        "bodyPadding": 10,
+        "title": "常规信息"
+    },
+    "designerId": "90bdbd3d-ce0a-4677-b00e-b2d4d26b2dc1",
+    "cn": [
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "操作系统",
+                "labelWidth": 70,
+                "name": "OS",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "03e92599-09a7-4ba3-8d90-9f94ffe1a9fe"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "版本",
+                "labelWidth": 70,
+                "name": "OSVERSION",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "541c93b9-6a0c-42d6-9ad9-2edcfdc41f98"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "业务系统",
+                "labelWidth": 70,
+                "name": "BUSINESSSYSTEM",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "aca97830-e740-43dd-abf8-207d4a73835a"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "位置",
+                "labelWidth": 70,
+                "name": "POSITION",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "de180282-e239-442d-a374-35a5fd93693b"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "用途",
+                "labelWidth": 70,
+                "name": "USAGE",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "4041b04b-7247-4045-9b17-558d7b50007b"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "管理员",
+                "labelWidth": 70,
+                "name": "OWNER",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "68e1f4f4-ae07-4c64-b12d-869f9bdf96a4"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "CPU型号",
+                "labelWidth": 70,
+                "name": "CPUMODEL",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "ee1e7e98-ffa4-4127-89e5-0c3cfd2c06e2"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "运行频率",
+                "labelWidth": 70,
+                "name": "RUNRATE",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "30e377c0-3c3f-41cf-b627-e631d1c60531"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "运行时间",
+                "labelWidth": 70,
+                "name": "RUNTIME",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "10e6fe94-7a48-4505-b216-faf3be04bf15"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "当前用户数",
+                "labelWidth": 70,
+                "name": "USERCOUNT",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "faf538da-1452-43dc-95c1-b5cd1915083b"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|anchor": "100%",
+                "fieldLabel": "当前告警数",
+                "labelWidth": 70,
+                "name": "ALARMCOUNT",
+                "value": [
+                    "loading..."
+                ]
+            },
+            "designerId": "14a5feb6-aeb3-48e3-a991-b0720c2548ec"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 482,
+        "width": 744,
+        "designer|userClassName": "DeviceListWindow",
+        "designer|userAlias": "deviceListWindow",
+        "layout": "fit",
+        "closeAction": "hide",
+        "title": "设备列表"
+    },
+    "designerId": "e09026b5-a6bc-4cce-9ea3-5576c48364e2",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "container|align": "stretch",
+                "border": 0,
+                "frame": true,
+                "height": 30,
+                "padding": 3,
+                "layout": "hbox",
+                "title": ""
+            },
+            "designerId": "b09d4838-9ee2-4d00-8e05-102dd8fa50e4",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "height": 0,
+                        "width": 500,
+                        "text": "          "
+                    },
+                    "designerId": "84a307d4-949b-44ed-bc62-b7ee81e4a357"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 20,
+                        "width": 81,
+                        "text": "关闭"
+                    },
+                    "designerId": "b413e27b-2b5c-4df2-9fa9-3d0dae123ed7",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "button.up(\"window\").hide();\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "ae11ddbc-28c2-46ef-8a15-5b4712803d68"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 0,
+                "frame": true,
+                "itemId": "deviceListPanel",
+                "title": ""
+            },
+            "designerId": "b6b68ef4-1935-497a-b79c-f983264dc5b3"
+        }
+    ]
+}

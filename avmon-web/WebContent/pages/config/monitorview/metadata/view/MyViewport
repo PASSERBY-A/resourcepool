@@ -1,0 +1,1367 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "hbox"
+    },
+    "designerId": "a40f058e-4c26-4ef8-b3a2-ef8862c52236",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "width": 250,
+                "layout": "border",
+                "title": "Menu"
+            },
+            "designerId": "e233c0a4-c0d0-41b5-90d6-4303a34609b8",
+            "cn": [
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "id": "menuTree",
+                        "title": null,
+                        "store": "treeStore",
+                        "rootVisible": false
+                    },
+                    "designerId": "165f4f37-ab28-4e84-a912-69f5a4724f24",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "01e588b7-3820-4d9d-b287-fa381e9f3d68",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTreeviewItemClick",
+                                        "implHandler": [
+                                            "// 存放选择节点id\r",
+                                            "Ext.selectViewId=record.data.id;\r",
+                                            "\r",
+                                            "if (record.data.isDir == '0' || record.data.isDir == 0) {\r",
+                                            "    // 选择视图的场合\r",
+                                            "    var viewId = record.data.id;\r",
+                                            "\r",
+                                            "    Ext.Ajax.request({  \r",
+                                            "        url:'editMonitorView',  \r",
+                                            "        params:{  \r",
+                                            "            //传递参数  \r",
+                                            "            viewId:viewId\r",
+                                            "        },  \r",
+                                            "        async : false,\r",
+                                            "        success:function(response, eOpts){  \r",
+                                            "            //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                            "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                            "            \r",
+                                            "            //清空页面数据\r",
+                                            "            Ext.getCmp('FILTERS_RULE').setValue('');\r",
+                                            "            Ext.getCmp('VIEW_ID').setValue('');\r",
+                                            "            Ext.getCmp('VIEW_NAME').setValue('');\r",
+                                            "\r",
+                                            "            if (responseArray.VIEW_ID != null) {\r",
+                                            "                Ext.getCmp('VIEW_ID').setValue(responseArray.VIEW_ID.toString());\r",
+                                            "            }\r",
+                                            "            if (responseArray.VIEW_NAME != null) {\r",
+                                            "                Ext.getCmp('VIEW_NAME').setValue(responseArray.VIEW_NAME.toString());\r",
+                                            "            }\r",
+                                            "            if (responseArray.FILTERS_RULE != null) {\r",
+                                            "                Ext.getCmp('FILTERS_RULE').setValue(responseArray.FILTERS_RULE.toString());\r",
+                                            "            }\r",
+                                            "\r",
+                                            "            // 先清除原数据\r",
+                                            "            Ext.getCmp('filterGrid').getStore().removeAll();\r",
+                                            "\r",
+                                            "            if (responseArray.FILTERS != null) {                \r",
+                                            "                var filters = Ext.JSON.decode(responseArray.FILTERS);\r",
+                                            "\r",
+                                            "                var len = 0;\r",
+                                            "                for (var temp in filters) {\r",
+                                            "                    //console.dir(filters[temp]);\r",
+                                            "                    var FILTER_NO = filters[temp].FILTER_NO;\r",
+                                            "                    var FILTER_FIELD = filters[temp].FILTER_FIELD;\r",
+                                            "                    var FILTER_OPERATOR = filters[temp].FILTER_OPERATOR;\r",
+                                            "                    var FILTER_VALUE = filters[temp].FILTER_VALUE;\r",
+                                            "\r",
+                                            "                    //var len = Ext.getCmp('filterGrid').getStore().length;\r",
+                                            "                    //Ext.getCmp('filterGrid').getStore().insert(len, filters[temp]);\r",
+                                            "                    var data = {FILTER_NO: FILTER_NO, FILTER_FIELD: FILTER_FIELD, FILTER_OPERATOR: FILTER_OPERATOR, FILTER_VALUE: FILTER_VALUE};\r",
+                                            "                    Ext.getCmp('filterGrid').getStore().insert(len, data);\r",
+                                            "                    len = len + 1;\r",
+                                            "                }\r",
+                                            "            }\r",
+                                            "            Ext.getCmp('saveFilter').setDisabled(false);\r",
+                                            "            Ext.getCmp('addFilter').setDisabled(false);\r",
+                                            "            Ext.getCmp('delFilter').setDisabled(false);\r",
+                                            "            Ext.getCmp('FILTERS_RULE').setReadOnly(false);\r",
+                                            "        },\r",
+                                            "        failure:function(){  \r",
+                                            "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                            "        }\r",
+                                            "    });\r",
+                                            "} else {\r",
+                                            "    // 选择目录的场合\r",
+                                            "    var viewId = record.data.id;\r",
+                                            "\r",
+                                            "    Ext.Ajax.request({  \r",
+                                            "        url:'editMonitorView',  \r",
+                                            "        params:{  \r",
+                                            "            //传递参数  \r",
+                                            "            viewId:viewId\r",
+                                            "        },  \r",
+                                            "        async : false,\r",
+                                            "        success:function(response, eOpts){\r",
+                                            "\r",
+                                            "            //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                            "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                            "\r",
+                                            "            if (responseArray.VIEW_ID != null) {\r",
+                                            "                Ext.getCmp('VIEW_ID').setValue(responseArray.VIEW_ID.toString());\r",
+                                            "            }\r",
+                                            "            if (responseArray.VIEW_NAME != null) {\r",
+                                            "                Ext.getCmp('VIEW_NAME').setValue(responseArray.VIEW_NAME.toString());\r",
+                                            "            }\r",
+                                            "            Ext.getCmp('FILTERS_RULE').setValue('');\r",
+                                            "\r",
+                                            "            // 先清除原数据\r",
+                                            "            Ext.getCmp('filterGrid').getStore().removeAll();\r",
+                                            "            //Ext.getCmp('saveFilter').setDisabled(true);\r",
+                                            "            Ext.getCmp('addFilter').setDisabled(true);\r",
+                                            "            Ext.getCmp('delFilter').setDisabled(true);\r",
+                                            "            Ext.getCmp('FILTERS_RULE').setReadOnly(true);\r",
+                                            "        },\r",
+                                            "        failure:function(){  \r",
+                                            "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                            "        }\r",
+                                            "    });\r",
+                                            "}"
+                                        ],
+                                        "name": "itemclick",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "f0bd1674-f827-4655-8b70-657098b5abc0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "dock": "top"
+                    },
+                    "designerId": "1612a8d8-5803-426a-a123-84332b4e88f5",
+                    "cn": [
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "b832a677-575a-4fb0-86db-7429d9b09802",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "icon": "image/refresh.gif",
+                                        "text": "刷新"
+                                    },
+                                    "designerId": "16267951-91de-453f-8228-727e5f867740",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick3",
+                                                "implHandler": [
+                                                    "var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "\r",
+                                                    "if(!tree.getStore().isLoading()){\r",
+                                                    "    if(tree.getStore().getRootNode()){\r",
+                                                    "        tree.getStore().getRootNode().removeAll();\r",
+                                                    "    }\r",
+                                                    "    tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "    Ext.selectViewId = \"root\";\r",
+                                                    "    \r",
+                                                    "    Ext.getCmp('VIEW_ID').setValue(\"root\");\r",
+                                                    "\r",
+                                                    "    Ext.getCmp('VIEW_NAME').setValue(\"root\");\r",
+                                                    "    \r",
+                                                    "    Ext.getCmp('FILTERS_RULE').setValue(\"\");\r",
+                                                    "    \r",
+                                                    "\r",
+                                                    "    // 先清除原数据\r",
+                                                    "    Ext.getCmp('filterGrid').getStore().removeAll();\r",
+                                                    "    \r",
+                                                    "    Ext.getCmp('saveFilter').setDisabled(true);\r",
+                                                    "    Ext.getCmp('addFilter').setDisabled(true);\r",
+                                                    "    Ext.getCmp('delFilter').setDisabled(true);\r",
+                                                    "    Ext.getCmp('FILTERS_RULE').setReadOnly(true);\r",
+                                                    "    \r",
+                                                    "}\r",
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "ac39dddc-cfa0-41d8-a530-67c176d57a5d"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "b4f88f0a-3d4c-4d59-a15a-f3ff889ba9a4",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "icon": "image/add.gif",
+                                        "text": "目录"
+                                    },
+                                    "designerId": "78a750d2-698a-4629-8515-06fd95f7c371",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "// 是否选择树节点\r",
+                                                    "if (Ext.selectViewId!='root') {\r",
+                                                    "    // 弹出输入框\r",
+                                                    "    Ext.MessageBox.prompt('新增', '请输入目录名称:', function(btn, text) {\r",
+                                                    "        if (text != null && text != '') {\r",
+                                                    "\r",
+                                                    "            Ext.Ajax.request({  \r",
+                                                    "                url:'addFolderTreeView',  \r",
+                                                    "                params:{  \r",
+                                                    "                    //传递参数  \r",
+                                                    "                    caption:text,\r",
+                                                    "                    parentId:Ext.selectViewId\r",
+                                                    "                },  \r",
+                                                    "                async : false,\r",
+                                                    "                success:function(response, eOpts){  \r",
+                                                    "                    //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                                    "                    var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                                    "                    var viewId = responseArray.VIEW_ID.toString();\r",
+                                                    "                    if (viewId != null && viewId != '') {\r",
+                                                    "                        // 刷新树结构\r",
+                                                    "                        var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "                        if(!tree.getStore().isLoading()){\r",
+                                                    "                            if(tree.getStore().getRootNode()){\r",
+                                                    "                                tree.getStore().getRootNode().removeAll();\r",
+                                                    "                            }\r",
+                                                    "                            tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "                        }\r",
+                                                    "                    }\r",
+                                                    "                },\r",
+                                                    "                failure:function(){  \r",
+                                                    "                    //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                                    "                }\r",
+                                                    "            });\r",
+                                                    "        }\r",
+                                                    "    });\r",
+                                                    "} else {\r",
+                                                    "    //只有是在根节点的情况下需要选择是公共视图、组视图还是私有视图\r",
+                                                    "    var loginUser = Ext.loginUserId;\r",
+                                                    "    \r",
+                                                    "    var viewType;\r",
+                                                    "    if(loginUser==\"admin\"){//只有admin可以定义公共视图\r",
+                                                    "        viewType = Ext.create('Ext.form.field.ComboBox', {\r",
+                                                    "            labelStyle : 'text-align:left;width:80;',\r",
+                                                    "            width : 340,\r",
+                                                    "            fieldLabel : '视图类型',\r",
+                                                    "            name : 'viewType',\r",
+                                                    "            //id:'viewType',\r",
+                                                    "            xtype : 'combobox',\r",
+                                                    "            store : Ext.create('Ext.data.Store', {\r",
+                                                    "                        fields : ['value', 'display'],\r",
+                                                    "                        data : [{\r",
+                                                    "                                    'value' : 'public',\r",
+                                                    "                                    'display' : '公共视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'group',\r",
+                                                    "                                    'display' : '组视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'private',\r",
+                                                    "                                    'display' : '私有视图'\r",
+                                                    "                                }]\r",
+                                                    "                    }),\r",
+                                                    "            queryMode : 'local',\r",
+                                                    "            editable : false,\r",
+                                                    "            valueField : 'value',\r",
+                                                    "            displayField : 'display',\r",
+                                                    "            allowBlank: false  \r",
+                                                    "        });\r",
+                                                    "    }else{\r",
+                                                    "        viewType = Ext.create('Ext.form.field.ComboBox', {\r",
+                                                    "            labelStyle : 'text-align:left;width:80;',\r",
+                                                    "            width : 340,\r",
+                                                    "            fieldLabel : '视图类型',\r",
+                                                    "            name : 'viewType',\r",
+                                                    "            //id:'viewType',\r",
+                                                    "            xtype : 'combobox',\r",
+                                                    "            store : Ext.create('Ext.data.Store', {\r",
+                                                    "                        fields : ['value', 'display'],\r",
+                                                    "                        data : [{\r",
+                                                    "                                    'value' : 'group',\r",
+                                                    "                                    'display' : '组视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'private',\r",
+                                                    "                                    'display' : '私有视图'\r",
+                                                    "                                }]\r",
+                                                    "                    }),\r",
+                                                    "            queryMode : 'local',\r",
+                                                    "            editable : false,\r",
+                                                    "            valueField : 'value',\r",
+                                                    "            displayField : 'display',\r",
+                                                    "            allowBlank: false \r",
+                                                    "        });\r",
+                                                    "    }\r",
+                                                    "    \r",
+                                                    "    var editForm = Ext.create('Ext.form.Panel', {\r",
+                                                    "        bodyPadding: 5,\r",
+                                                    "        border: false,\r",
+                                                    "        frame: true,\r",
+                                                    "        buttonAlign: 'center',\r",
+                                                    "        xtype: 'filedset',\r",
+                                                    "        url: 'addFolderTreeView?parentId=root',\r",
+                                                    "\r",
+                                                    "        defaultType: 'textfield',\r",
+                                                    "        items: [\r",
+                                                    "            {\r",
+                                                    "                labelStyle : 'text-align:left;width:80;',\r",
+                                                    "                width:340,\r",
+                                                    "                fieldLabel: '目录名称',\r",
+                                                    "                name: 'caption',\r",
+                                                    "                allowBlank: false\r",
+                                                    "            },viewType\r",
+                                                    "        ],\r",
+                                                    "        buttons: [{\r",
+                                                    "            text: '保存',\r",
+                                                    "            formBind: true, //only enabled once the form is valid\r",
+                                                    "            disabled: true,\r",
+                                                    "            iconCls:'icon-save',\r",
+                                                    "            handler: function() {\r",
+                                                    "                var submitForm = this.up('form').getForm();\r",
+                                                    "                if (submitForm.isValid()) {\r",
+                                                    "                    submitForm.submit({\r",
+                                                    "                        method: 'POST',\r",
+                                                    "                        waitMsg:'正在保存，请稍等...',\r",
+                                                    "                        success: function(form, action) {\r",
+                                                    "                           //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                                    "                            //var responseArray = Ext.JSON.decode(action.response.responseText);\r",
+                                                    "                            //alert(action.result.VIEW_ID);\r",
+                                                    "                            var viewId = action.result.VIEW_ID;//responseArray.VIEW_ID.toString();\r",
+                                                    "                            if (viewId != null && viewId != '') {\r",
+                                                    "                                // 刷新树结构\r",
+                                                    "                                var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "                                if(!tree.getStore().isLoading()){\r",
+                                                    "                                    if(tree.getStore().getRootNode()){\r",
+                                                    "                                        tree.getStore().getRootNode().removeAll();\r",
+                                                    "                                    }\r",
+                                                    "                                    tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "                                }\r",
+                                                    "                            }\r",
+                                                    "                           eidtWin.close();\r",
+                                                    "                        }\r",
+                                                    "                    });\r",
+                                                    "                }\r",
+                                                    "            }\r",
+                                                    "        },{\r",
+                                                    "            text: '关闭',\r",
+                                                    "            iconCls:'icon-close',\r",
+                                                    "            handler: function() {\r",
+                                                    "                this.up('form').getForm().reset();\r",
+                                                    "                eidtWin.hide();\r",
+                                                    "            }\r",
+                                                    "        }]\r",
+                                                    "    });\r",
+                                                    "    var eidtWin = Ext.create('Ext.window.Window',{\r",
+                                                    "        title: '添加',\r",
+                                                    "        height: 160,\r",
+                                                    "        width:400,\r",
+                                                    "        hidden: true,\r",
+                                                    "        iconCls:'icon-form',\r",
+                                                    "        layout: 'fit',\r",
+                                                    "        plain: true,\r",
+                                                    "        modal:true,\r",
+                                                    "        closable: true,\r",
+                                                    "        closeAction: 'destroy',\r",
+                                                    "        items: [editForm]\r",
+                                                    "    });\r",
+                                                    "    eidtWin.show();\r",
+                                                    "    //Ext.Msg.alert('提示','请选择节点!');  \r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "8dd3465b-50c0-4354-a554-120d21345244"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "78950531-10d1-4d6d-b85b-4c299ec08308",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "icon": "image/add2.gif",
+                                        "text": "视图"
+                                    },
+                                    "designerId": "35aa41e6-2a2c-4a9e-a517-3767c46bed89",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick1",
+                                                "implHandler": [
+                                                    "// 是否选择树节点\r",
+                                                    "if (Ext.selectViewId!='root') {\r",
+                                                    "    // 弹出输入框\r",
+                                                    "    Ext.MessageBox.prompt('新增', '请输入视图名称:', function(btn, text) {\r",
+                                                    "        if (text != null && text != '') {\r",
+                                                    "\r",
+                                                    "            Ext.Ajax.request({  \r",
+                                                    "                url:'addTreeView',  \r",
+                                                    "                params:{  \r",
+                                                    "                    //传递参数  \r",
+                                                    "                    caption:text,\r",
+                                                    "                    parentId:Ext.selectViewId\r",
+                                                    "                },  \r",
+                                                    "                async : false,\r",
+                                                    "                success:function(response, eOpts){  \r",
+                                                    "                    //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                                    "                    var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                                    "                    var viewId = responseArray.VIEW_ID.toString();\r",
+                                                    "                    if (viewId != null && viewId != '') {\r",
+                                                    "                        // 刷新树结构\r",
+                                                    "                        var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "                        if(!tree.getStore().isLoading()){\r",
+                                                    "                            if(tree.getStore().getRootNode()){\r",
+                                                    "                                tree.getStore().getRootNode().removeAll();\r",
+                                                    "                            }\r",
+                                                    "                            tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "                        }\r",
+                                                    "                        // 选中树节点\r",
+                                                    "\r",
+                                                    "                        // 将页面值显示\r",
+                                                    "                    }\r",
+                                                    "                },\r",
+                                                    "                failure:function(){  \r",
+                                                    "                    //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                                    "                }\r",
+                                                    "            });\r",
+                                                    "        }\r",
+                                                    "    });\r",
+                                                    "} else {\r",
+                                                    "    //Ext.Msg.alert('提示','请选择节点!');  \r",
+                                                    "    //只有是在根节点的情况下需要选择是公共视图、组视图还是私有视图\r",
+                                                    "    var loginUser = Ext.loginUserId;\r",
+                                                    "    \r",
+                                                    "    var viewType;\r",
+                                                    "    if(loginUser==\"admin\"){//只有admin可以定义公共视图\r",
+                                                    "        viewType = Ext.create('Ext.form.field.ComboBox', {\r",
+                                                    "            labelStyle : 'text-align:left;width:80;',\r",
+                                                    "            width : 340,\r",
+                                                    "            fieldLabel : '视图类型',\r",
+                                                    "            name : 'viewType',\r",
+                                                    "            //id:'viewType',\r",
+                                                    "            xtype : 'combobox',\r",
+                                                    "            store : Ext.create('Ext.data.Store', {\r",
+                                                    "                        fields : ['value', 'display'],\r",
+                                                    "                        data : [{\r",
+                                                    "                                    'value' : 'public',\r",
+                                                    "                                    'display' : '公共视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'group',\r",
+                                                    "                                    'display' : '组视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'private',\r",
+                                                    "                                    'display' : '私有视图'\r",
+                                                    "                                }]\r",
+                                                    "                    }),\r",
+                                                    "            queryMode : 'local',\r",
+                                                    "            editable : false,\r",
+                                                    "            valueField : 'value',\r",
+                                                    "            displayField : 'display',\r",
+                                                    "            allowBlank: false  \r",
+                                                    "        });\r",
+                                                    "    }else{\r",
+                                                    "        viewType = Ext.create('Ext.form.field.ComboBox', {\r",
+                                                    "            labelStyle : 'text-align:left;width:80;',\r",
+                                                    "            width : 340,\r",
+                                                    "            fieldLabel : '视图类型',\r",
+                                                    "            name : 'viewType',\r",
+                                                    "            //id:'viewType',\r",
+                                                    "            xtype : 'combobox',\r",
+                                                    "            store : Ext.create('Ext.data.Store', {\r",
+                                                    "                        fields : ['value', 'display'],\r",
+                                                    "                        data : [{\r",
+                                                    "                                    'value' : 'group',\r",
+                                                    "                                    'display' : '组视图'\r",
+                                                    "                                }, {\r",
+                                                    "                                    'value' : 'private',\r",
+                                                    "                                    'display' : '私有视图'\r",
+                                                    "                                }]\r",
+                                                    "                    }),\r",
+                                                    "            queryMode : 'local',\r",
+                                                    "            editable : false,\r",
+                                                    "            valueField : 'value',\r",
+                                                    "            displayField : 'display',\r",
+                                                    "            allowBlank: false \r",
+                                                    "        });\r",
+                                                    "    }\r",
+                                                    "    \r",
+                                                    "    var editForm = Ext.create('Ext.form.Panel', {\r",
+                                                    "        bodyPadding: 5,\r",
+                                                    "        border: false,\r",
+                                                    "        frame: true,\r",
+                                                    "        buttonAlign: 'center',\r",
+                                                    "        xtype: 'filedset',\r",
+                                                    "        url: 'addTreeView?parentId=root',\r",
+                                                    "\r",
+                                                    "        defaultType: 'textfield',\r",
+                                                    "        items: [\r",
+                                                    "            {\r",
+                                                    "                labelStyle : 'text-align:left;width:80;',\r",
+                                                    "                width:340,\r",
+                                                    "                fieldLabel: '视图名称',\r",
+                                                    "                name: 'caption',\r",
+                                                    "                allowBlank: false\r",
+                                                    "            },viewType\r",
+                                                    "        ],\r",
+                                                    "        buttons: [{\r",
+                                                    "            text: '保存',\r",
+                                                    "            formBind: true, //only enabled once the form is valid\r",
+                                                    "            disabled: true,\r",
+                                                    "            iconCls:'icon-save',\r",
+                                                    "            handler: function() {\r",
+                                                    "                var submitForm = this.up('form').getForm();\r",
+                                                    "                if (submitForm.isValid()) {\r",
+                                                    "                    submitForm.submit({\r",
+                                                    "                        method: 'POST',\r",
+                                                    "                        waitMsg:'正在保存，请稍等...',\r",
+                                                    "                        success: function(form, action) {\r",
+                                                    "                           //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                                    "                            var viewId = action.result.VIEW_ID;\r",
+                                                    "                            if (viewId != null && viewId != '') {\r",
+                                                    "                                // 刷新树结构\r",
+                                                    "                                var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "                                if(!tree.getStore().isLoading()){\r",
+                                                    "                                    if(tree.getStore().getRootNode()){\r",
+                                                    "                                        tree.getStore().getRootNode().removeAll();\r",
+                                                    "                                    }\r",
+                                                    "                                    tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "                                }\r",
+                                                    "                            }\r",
+                                                    "                           eidtWin.hide();\r",
+                                                    "                        }\r",
+                                                    "                    });\r",
+                                                    "                }\r",
+                                                    "            }\r",
+                                                    "        },{\r",
+                                                    "            text: '关闭',\r",
+                                                    "            iconCls:'icon-close',\r",
+                                                    "            handler: function() {\r",
+                                                    "                this.up('form').getForm().reset();\r",
+                                                    "                eidtWin.hide();\r",
+                                                    "            }\r",
+                                                    "        }]\r",
+                                                    "    });\r",
+                                                    "    var eidtWin = Ext.create('Ext.window.Window',{\r",
+                                                    "        title: '添加',\r",
+                                                    "        height: 160,\r",
+                                                    "        width:400,\r",
+                                                    "        hidden: true,\r",
+                                                    "        iconCls:'icon-form',\r",
+                                                    "        layout: 'fit',\r",
+                                                    "        plain: true,\r",
+                                                    "        modal:true,\r",
+                                                    "        closable: true,\r",
+                                                    "        closeAction: 'destroy',\r",
+                                                    "        items: [editForm]\r",
+                                                    "    });\r",
+                                                    "    eidtWin.show();\r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "037c417e-48d2-45e1-b167-53706eefc507"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "4baff527-df80-466c-9a57-e0cde73849c5",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "icon": "image/delete.gif",
+                                        "text": "移除"
+                                    },
+                                    "designerId": "fd94946e-5113-4b20-8600-b27c1770e0bf",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick2",
+                                                "implHandler": [
+                                                    "// 是否选择树节点\r",
+                                                    "if (Ext.selectViewId) {\r",
+                                                    "    Ext.Ajax.request({  \r",
+                                                    "        url:'delTreeViewById',  \r",
+                                                    "        params:{  \r",
+                                                    "            //传递参数  \r",
+                                                    "            viewId:Ext.selectViewId\r",
+                                                    "        },  \r",
+                                                    "        async : false,\r",
+                                                    "        success:function(response, eOpts){  \r",
+                                                    "            //Ext.Msg.alert('提示信息','修改成功！');  \r",
+                                                    "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                                    "            var result = responseArray.result.toString();\r",
+                                                    "            if (result == 'success') {\r",
+                                                    "                // 刷新树结构\r",
+                                                    "                var tree=Ext.getCmp(\"menuTree\");\r",
+                                                    "                if(!tree.getStore().isLoading()){\r",
+                                                    "                    if(tree.getStore().getRootNode()){\r",
+                                                    "                        tree.getStore().getRootNode().removeAll();\r",
+                                                    "                    }\r",
+                                                    "                    tree.getStore().load({params:{id:\"root\"}});\r",
+                                                    "                }\r",
+                                                    "            }\r",
+                                                    "            \r",
+                                                    "            Ext.selectViewId = \"root\";\r",
+                                                    "    \r",
+                                                    "            Ext.getCmp('VIEW_ID').setValue(\"root\");\r",
+                                                    "        \r",
+                                                    "            Ext.getCmp('VIEW_NAME').setValue(\"root\");\r",
+                                                    "            \r",
+                                                    "            Ext.getCmp('FILTERS_RULE').setValue(\"\");\r",
+                                                    "            \r",
+                                                    "        \r",
+                                                    "            // 先清除原数据\r",
+                                                    "            Ext.getCmp('filterGrid').getStore().removeAll();\r",
+                                                    "            \r",
+                                                    "            Ext.getCmp('saveFilter').setDisabled(true);\r",
+                                                    "            Ext.getCmp('addFilter').setDisabled(true);\r",
+                                                    "            Ext.getCmp('delFilter').setDisabled(true);\r",
+                                                    "            Ext.getCmp('FILTERS_RULE').setReadOnly(true);\r",
+                                                    "        },\r",
+                                                    "        failure:function(){  \r",
+                                                    "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                                    "        }\r",
+                                                    "    });\r",
+                                                    "} else {\r",
+                                                    "    Ext.Msg.alert('提示','请选择节点!');  \r",
+                                                    "}\r",
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "a990efae-943d-4d82-ae6b-0136b6ccdd21"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPanelAfterRender",
+                        "implHandler": [
+                            "Ext.selectViewId=\"root\";"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "designerId": "cf259112-b635-4bee-88ba-54aa6be5cfa7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "layout": "vbox",
+                "title": "监控视图管理"
+            },
+            "designerId": "c9c4461e-a0b3-456c-9a6a-a6c234fa6f42",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "container|align": "stretch",
+                        "id": "editViewForm",
+                        "layout": "vbox",
+                        "bodyPadding": 10,
+                        "title": null
+                    },
+                    "designerId": "63fc535b-c9ef-4abc-95b7-75ddbd692c02",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "dock": "top"
+                            },
+                            "designerId": "8317cbb7-26fd-4c28-aad2-da90ef89bf19",
+                            "cn": [
+                                {
+                                    "type": "Ext.container.ButtonGroup",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "title": null,
+                                        "columns": 2
+                                    },
+                                    "designerId": "b3f9e038-32f8-4236-8b30-18ef111f7e72",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "saveFilter",
+                                                "icon": "image/save.gif",
+                                                "text": "保存"
+                                            },
+                                            "designerId": "df64d9ce-c795-46e6-b4be-f29e72e3630d",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick6",
+                                                        "implHandler": [
+                                                            "var myform = Ext.getCmp('editViewForm').getForm();\r",
+                                                            "\r",
+                                                            "if (myform.isValid()) {\r",
+                                                            "    var records = [];\r",
+                                                            "    for(var i = 0; i < Ext.getCmp('filterGrid').getStore().data.length; i++){   \r",
+                                                            "        var FILTER_NO = Ext.getCmp('filterGrid').getStore().getAt(i).get('FILTER_NO');\r",
+                                                            "        var FILTER_FIELD = Ext.getCmp('filterGrid').getStore().getAt(i).get('FILTER_FIELD');\r",
+                                                            "        var FILTER_OPERATOR = Ext.getCmp('filterGrid').getStore().getAt(i).get('FILTER_OPERATOR');\r",
+                                                            "        var FILTER_VALUE = Ext.getCmp('filterGrid').getStore().getAt(i).get('FILTER_VALUE');;\r",
+                                                            "\r",
+                                                            "        var data = {FILTER_NO:'', FILTER_FIELD:'', FILTER_OPERATOR:'', FILTER_VALUE:''};\r",
+                                                            "        data.FILTER_NO = encodeURI(FILTER_NO);\r",
+                                                            "        data.FILTER_FIELD = encodeURI(FILTER_FIELD);\r",
+                                                            "        data.FILTER_OPERATOR = encodeURI(FILTER_OPERATOR);\r",
+                                                            "        data.FILTER_VALUE = encodeURI(FILTER_VALUE);\r",
+                                                            "\r",
+                                                            "        records.push(data);\r",
+                                                            "    }\r",
+                                                            "    //encodeURI(encodeURI(Ext.JSON.encode(records))),\r",
+                                                            "    //    console.dir(records);\r",
+                                                            "\r",
+                                                            "    Ext.Ajax.request({  \r",
+                                                            "        url:'saveMonitorView',  \r",
+                                                            "        params:{  \r",
+                                                            "            //传递参数  \r",
+                                                            "            viewId: Ext.getCmp('VIEW_ID').getValue(),\r",
+                                                            "            viewNm: Ext.getCmp('VIEW_NAME').getValue(),\r",
+                                                            "            filters: Ext.JSON.encode(records),\r",
+                                                            "            filterRule: Ext.getCmp('FILTERS_RULE').getValue()\r",
+                                                            "        }, \r",
+                                                            "        async : false,\r",
+                                                            "        success:function(response, eOpts){        \r",
+                                                            "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                                            "\r",
+                                                            "            // 刷新树节点列表\r",
+                                                            "            var tree=Ext.getCmp(\"menuTree\");\r",
+                                                            "            if(!tree.getStore().isLoading()){\r",
+                                                            "                if(tree.getStore().getRootNode()){\r",
+                                                            "                    tree.getStore().getRootNode().removeAll();\r",
+                                                            "                }\r",
+                                                            "                tree.getStore().load({params:{id:\"root\"}});\r",
+                                                            "            }\r",
+                                                            "\r",
+                                                            "            // 重新选择保存前选择节点\r",
+                                                            "            if(responseArray.result == 'success') {\r",
+                                                            "                var tree = Ext.getCmp(\"menuTree\");\r",
+                                                            "                var path = responseArray.message;\r",
+                                                            "\r",
+                                                            "                tree.expandPath(path, 'id', '/', function(bSuccess, oLastNode){\r",
+                                                            "                    if(!bSuccess) \r",
+                                                            "                    return;\r",
+                                                            "\r",
+                                                            "                    //focus 节点，并选中节点！\r",
+                                                            "                    Ext.getCmp(\"menuTree\").getSelectionModel().select(oLastNode, true);\r",
+                                                            "                });\r",
+                                                            "\r",
+                                                            "                Ext.Msg.alert('信息','保存成功！');  \r",
+                                                            "            }\r",
+                                                            "        },\r",
+                                                            "        failure:function(){  \r",
+                                                            "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                                            "        }\r",
+                                                            "    });\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "ff918c09-54d8-46b7-8a95-9b014a89f9d3"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": "基本信息"
+                            },
+                            "designerId": "ffcbb2bb-488b-4aff-8f09-ae4c2867ed2c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|anchor": "100%",
+                                        "id": "VIEW_ID",
+                                        "fieldLabel": "视图ID",
+                                        "labelWidth": 60,
+                                        "readOnly": true,
+                                        "allowBlank": false
+                                    },
+                                    "designerId": "2fde7614-857f-462b-bef7-f577b07b402d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|anchor": "100%",
+                                        "id": "VIEW_NAME",
+                                        "fieldLabel": "视图名称",
+                                        "labelWidth": 60,
+                                        "allowBlank": false
+                                    },
+                                    "designerId": "186941ca-8b9e-4e7d-9b63-209318331093"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "container|align": "stretch",
+                                "layout": "vbox",
+                                "title": "过滤条件"
+                            },
+                            "designerId": "d98439c0-c2f0-4999-b694-a2b317df92c6",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "id": "filterGrid",
+                                        "autoScroll": true,
+                                        "title": null,
+                                        "store": "filterStore"
+                                    },
+                                    "designerId": "7de847f8-7dc0-4c46-9492-ca7ab95b6527",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.toolbar.Toolbar",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "top"
+                                            },
+                                            "designerId": "e79059b9-5c89-4976-a0ad-ffeb2beac07b",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.container.ButtonGroup",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": null,
+                                                        "title": null,
+                                                        "columns": 2
+                                                    },
+                                                    "designerId": "2a36bc78-c6cc-4cbb-8546-cac055f3925c",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.button.Button",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "addFilter",
+                                                                "icon": "image/add.gif",
+                                                                "text": "新增"
+                                                            },
+                                                            "designerId": "5ba6abc3-a1a4-4cfa-bad3-8693dd18b0ff",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "basiceventbinding",
+                                                                    "reference": {
+                                                                        "name": "listeners",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "fn": "onButtonClick4",
+                                                                        "implHandler": [
+                                                                            "var win = Ext.filterWindow;\r",
+                                                                            "\r",
+                                                                            "var gridCnt = Ext.getCmp('filterGrid').getStore().data.length;\r",
+                                                                            "if(!win){\r",
+                                                                            "    win=Ext.create('widget.filterWindow');\r",
+                                                                            "    Ext.filterWindow=win;\r",
+                                                                            "    win.needReload=true;\r",
+                                                                            "    win.show();\r",
+                                                                            "\r",
+                                                                            "    Ext.getCmp('FILTER_NO').setValue(gridCnt + 1);\r",
+                                                                            "} else {\r",
+                                                                            "    win.show();\r",
+                                                                            "    // 将历史记录清空\r",
+                                                                            "    Ext.getCmp('FILTER_NO').setValue(gridCnt + 1);\r",
+                                                                            "    Ext.getCmp('FILTER_FIELD').setValue('');\r",
+                                                                            "    Ext.getCmp('FILTER_OPERATOR').setValue('');\r",
+                                                                            "    Ext.getCmp('FILTER_VALUE').setValue('');\r",
+                                                                            "}\r",
+                                                                            "\r",
+                                                                            "Ext.filterWindowMode=0;\r",
+                                                                            ""
+                                                                        ],
+                                                                        "name": "click",
+                                                                        "scope": "me"
+                                                                    },
+                                                                    "designerId": "0b97bf70-56f1-4038-abdc-b962dcc28d5e"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.container.ButtonGroup",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": null,
+                                                        "title": null,
+                                                        "columns": 2
+                                                    },
+                                                    "designerId": "be095404-b331-4c93-96e5-7923a4d76e27",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.button.Button",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "id": "delFilter",
+                                                                "icon": "image/delete.gif",
+                                                                "text": "删除"
+                                                            },
+                                                            "designerId": "2e364622-b788-4282-a400-be57a4b3b2b2",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "basiceventbinding",
+                                                                    "reference": {
+                                                                        "name": "listeners",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "fn": "onButtonClick5",
+                                                                        "implHandler": [
+                                                                            "var filterGrid = Ext.getCmp('filterGrid');\r",
+                                                                            "var selrecord = filterGrid.getSelectionModel().getSelection();\r",
+                                                                            "if(selrecord.length == 0){\r",
+                                                                            "    Ext.MessageBox.show({\r",
+                                                                            "        title:\"提示\",\r",
+                                                                            "        msg:\"请先选择您要操作的行!\"\r",
+                                                                            "        //icon: Ext.MessageBox.INFO\r",
+                                                                            "    })\r",
+                                                                            "    return;\r",
+                                                                            "}else{\r",
+                                                                            "    //console.dir(selrecord);\r",
+                                                                            "    for(var i = 0; i < selrecord.length; i++){\r",
+                                                                            "        var id = selrecord[i].get(\"FILTER_NO\")\r",
+                                                                            "        var row = Ext.getCmp('filterGrid').getStore().getById(id);\r",
+                                                                            "        if (row) {\r",
+                                                                            "            Ext.getCmp('filterGrid').getStore().remove(row);\r",
+                                                                            "        }\r",
+                                                                            "    }\r",
+                                                                            "}"
+                                                                        ],
+                                                                        "name": "click",
+                                                                        "scope": "me"
+                                                                    },
+                                                                    "designerId": "b53b4e9e-3d82-4865-a6ce-c2534fcede1c"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "designerId": "c735a8b2-1177-4795-a08e-2f0feb299c59",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onGridviewItemDblClick",
+                                                        "implHandler": [
+                                                            "var win = Ext.filterWindow;\r",
+                                                            "\r",
+                                                            "if(!win){\r",
+                                                            "    win=Ext.create('widget.filterWindow');\r",
+                                                            "    Ext.filterWindow=win;\r",
+                                                            "    win.needReload=true;\r",
+                                                            "\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "Ext.filterWindowMode=1;\r",
+                                                            "win.show();\r",
+                                                            "\r",
+                                                            "var filterGrid = Ext.getCmp('filterGrid');\r",
+                                                            "\r",
+                                                            "Ext.getCmp('FILTER_NO').setValue(record.data.FILTER_NO);\r",
+                                                            "Ext.getCmp('FILTER_FIELD').setValue(record.data.FILTER_FIELD);\r",
+                                                            "Ext.getCmp('FILTER_OPERATOR').setValue(record.data.FILTER_OPERATOR);\r",
+                                                            "Ext.getCmp('FILTER_VALUE').setValue(record.data.FILTER_VALUE);"
+                                                        ],
+                                                        "name": "itemdblclick",
+                                                        "scope": "me"
+                                                    },
+                                                    "designerId": "11959194-c11b-426d-94d3-698deb0f276e"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "width": 50,
+                                                "dataIndex": "FILTER_NO",
+                                                "text": "条件"
+                                            },
+                                            "designerId": "d04562ff-f444-4bb7-aa36-2a581bc473ca"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "width": 200,
+                                                "dataIndex": "FILTER_FIELD",
+                                                "text": "字段"
+                                            },
+                                            "designerId": "203730d5-e075-4fe6-92c5-f99fdc56e400"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "width": 80,
+                                                "dataIndex": "FILTER_OPERATOR",
+                                                "text": "运算符"
+                                            },
+                                            "designerId": "c5987717-404e-4391-bc80-f517df817a83"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "width": 200,
+                                                "defaultWidth": 200,
+                                                "dataIndex": "FILTER_VALUE",
+                                                "text": "值"
+                                            },
+                                            "designerId": "c2b04aa0-19c2-41ef-9a4f-eb8395d5a709"
+                                        },
+                                        {
+                                            "type": "Ext.selection.CheckboxModel",
+                                            "reference": {
+                                                "name": "selModel",
+                                                "type": "object"
+                                            },
+                                            "codeClass": "Ext.selection.CheckboxModel",
+                                            "designerId": "ec8f8ffc-d39d-40a7-9bd8-c5d61e6ff1e7"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "title": "其他"
+                            },
+                            "designerId": "7392caa1-f095-4806-acaf-36b2e4c819dd",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|anchor": "100%",
+                                        "id": "FILTERS_RULE",
+                                        "fieldLabel": "组合规则",
+                                        "labelWidth": 60,
+                                        "allowBlank": null
+                                    },
+                                    "designerId": "2e44c721-be3f-40ae-943c-9c053b78b068"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPanelAfterRender1",
+                        "implHandler": [
+                            "Ext.getCmp('saveFilter').setDisabled(true);\r",
+                            "Ext.getCmp('addFilter').setDisabled(true);\r",
+                            "Ext.getCmp('delFilter').setDisabled(true);\r",
+                            "Ext.getCmp('FILTERS_RULE').setReadOnly(true);"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "designerId": "d92462d5-1d10-449a-85ac-cd0bf8d71e5f"
+                }
+            ]
+        }
+    ]
+}

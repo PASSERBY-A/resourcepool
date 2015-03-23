@@ -1,0 +1,69 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "deviceTypeStore",
+        "storeId": "deviceTypeStore"
+    },
+    "id": "ExtBox1-ext-gen40095",
+    "designerId": "bc2e5435-6730-4e8a-bb97-c32d352f03ef",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "getDeviceTypeData"
+            },
+            "designerId": "a08a84b9-3e9a-43c9-a60b-59c7b7774775",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader"
+                    },
+                    "designerId": "3831fc4c-969a-498c-82ac-e3f4da65a8e0"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "DEVICE_TYPE_CODE"
+            },
+            "designerId": "42eef833-5b76-421b-a62f-2d2cf3953efe"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "DEVICE_TYPE_VALUE"
+            },
+            "designerId": "9d19d4aa-c418-4345-a147-aa2aa0ed4da3"
+        }
+    ]
+}

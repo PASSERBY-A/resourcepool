@@ -1,0 +1,67 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DeviceModel"
+    },
+    "id": "ExtBox1-ext-gen16627",
+    "designerId": "49a01886-08a5-4709-9195-1100fc3a85a5",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "device_ip"
+            },
+            "designerId": "792c133d-5b40-43f7-8e4b-a0f1246b3322"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "device_type"
+            },
+            "designerId": "1214841b-8ffb-4812-81fa-be36eba1d8fc"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "device_desc"
+            },
+            "designerId": "e4d54b37-0f1d-45ac-8044-76174eedf998"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "device_name"
+            },
+            "designerId": "e3cefbd5-67eb-48ce-b178-66b5d7444286"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MemModel"
+    },
+    "designerId": "62db8672-0290-4fd0-bf8e-bf789a5b0fbc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MEM_USR"
+            },
+            "designerId": "eb2fe21f-4060-430a-8522-64db1046daa4"
+        }
+    ]
+}

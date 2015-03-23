@@ -1,0 +1,186 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MenuTree"
+    },
+    "designerId": "4fa11d1f-da7e-437c-b682-6baacc770b09",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.control({\r",
+                    "    \"#performance-menuTree\": {\r",
+                    "        afterrender: this.onMenuTreeAfterRender,\r",
+                    "        select: this.onMenuTreeSelect\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "051f42e4-29da-43ce-a48d-e5ee9a0fc44c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMenuTreeAfterRender",
+                "designer|params": [
+                    "abstractcomponent",
+                    "options"
+                ],
+                "implHandler": [
+                    "\r",
+                    "var tree=Ext.getCmp(\"performance-menuTree\");\r",
+                    "\r",
+                    "var parentNode=tree.getRootNode();\r",
+                    "\r",
+                    "parentNode.expand(false,function(){\r",
+                    "    tree.getSelectionModel().select(tree.getStore().getNodeById('root'),true);\r",
+                    "});\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "8f063ca9-40af-4f6b-928e-a4e8c07e8ae4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMenuTreeSelect",
+                "designer|params": [
+                    "selModel",
+                    "record",
+                    "index",
+                    "options"
+                ],
+                "implHandler": [
+                    "var tabs=Ext.getCmp('performance-tabPanel');\r",
+                    "var toolbar=tabs.down(\"toolbar\");\r",
+                    "var viewItems=record.get(\"views\");\r",
+                    "var firstView=record.get(\"defaultView\");\r",
+                    "if(viewItems==null) return;//目前虚机中有没有dashboard页面的节点，点击这样的节点时做了返回操作。\r",
+                    "toolbar.down(\"#labelTitle\").setText(record.get(\"text\"));\r",
+                    "\r",
+                    "var showingItem=null;\r",
+                    "\r",
+                    "//如果当前tab页适用于该节点，则继续显示该tab页\r",
+                    "if(tabs._activePageId){\r",
+                    "    var itemId=tabs._activePageId;\r",
+                    "    if(viewItems.indexOf(itemId)>=0){\r",
+                    "        showingItem=getPerformancePlugin(itemId);\r",
+                    "    }\r",
+                    "}\r",
+                    "//如果当前tab页不适用于该节点，则获取默认视图\r",
+                    "if(showingItem==null){\r",
+                    "    showingItem=getPerformancePlugin(firstView);\r",
+                    "}\r",
+                    "\r",
+                    "Ext.each(performancePlugins,function(item){\r",
+                    "    //如果不存在则创建\r",
+                    "    if(!item.button){\r",
+                    "        item.button=Ext.create(\"Ext.Button\", {\r",
+                    "            text: item.title,\r",
+                    "            allowDepress: false, \r",
+                    "            toggleGroup: 'modules',\r",
+                    "            enableToggle: true,\r",
+                    "            iconCls:item.iconCls,\r",
+                    "            hidden:true,\r",
+                    "            _pageConfig:item,\r",
+                    "            listeners: {\r",
+                    "                click: {\r",
+                    "                    fn: menuButtonHandler\r",
+                    "                }\r",
+                    "            }\r",
+                    "        });\r",
+                    "        item.currentMoId=\"-1\";\r",
+                    "        item.visible=false;\r",
+                    "        toolbar.add(item.button);\r",
+                    "    }\r",
+                    "    //判断是否应该显示，并在tabs上显示或隐藏tab页\r",
+                    "    var shouldShow=false;\r",
+                    "    if(viewItems.indexOf(item.id)>=0){\r",
+                    "        shouldShow=true;\r",
+                    "        item.button.show();\r",
+                    "    }\r",
+                    "    else{\r",
+                    "        item.button.hide();\r",
+                    "    }\r",
+                    "\r",
+                    "    //加载\r",
+                    "    if(shouldShow){\r",
+                    "        if(showingItem==null){\r",
+                    "            showingItem=item;\r",
+                    "        }\r",
+                    "        item.newMoId=record.get(\"id\");\r",
+                    "        //add by ted. filter caused by vmvare\r",
+                    "        if(item.newMoId.indexOf('@') > -1)\r",
+                    "        {\r",
+                    "            var segs = item.newMoId.split('@');\r",
+                    "            //console.log(\"segs : \"+segs);\r",
+                    "            item.newMoId = segs.pop();\r",
+                    "        }\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "//设置active tab\r",
+                    "//    \tif(showingItem && showingItem.panel!=tabs.getActiveTab()){\r",
+                    "//    \t\ttabs.setActiveTab(showingItem.panel);\r",
+                    "//    \t}\r",
+                    "if(showingItem){\r",
+                    "    tabs._activePageId=showingItem.id;\r",
+                    "    showingItem.button.toggle(true,false);\r",
+                    "    menuButtonHandler(showingItem.button,null,null);\r",
+                    "}\r",
+                    "//showPerformancePlugin(showingItem.id);\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "37223742-ff34-444e-979b-3d16f3da09c7"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "if(!Ext.avmon){\r",
+                    "    Ext.avmon={};\r",
+                    "}\r",
+                    "\r",
+                    "Ext.avmon.application=this;\r",
+                    "\r",
+                    "this.init();"
+                ]
+            },
+            "designerId": "ac194175-4c36-48f0-87b0-1400e201b65a"
+        }
+    ]
+}

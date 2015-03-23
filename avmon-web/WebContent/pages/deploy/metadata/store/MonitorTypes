@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "MonitorType",
+        "storeId": "MyJsonStore4",
+        "designer|userClassName": "MonitorTypes",
+        "groupField": "type"
+    },
+    "designerId": "74903e68-4b50-4fe0-93e0-86cca198c6f7",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "monitorTypeList"
+            },
+            "designerId": "03a8af87-f3a8-49aa-8216-fd961ccd91af",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "rows"
+                    },
+                    "designerId": "53919e45-6dbe-4288-88a8-1dceb66e3d53"
+                }
+            ]
+        }
+    ]
+}

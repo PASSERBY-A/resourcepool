@@ -1,0 +1,13 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "delayModel"
+    },
+    "id": "ExtBox1-ext-gen16501",
+    "designerId": "b0cdbbee-1a67-4618-a54a-9199ef67de97"
+}

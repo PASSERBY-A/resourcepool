@@ -1,0 +1,158 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainEngineModel"
+    },
+    "id": "ExtBox1-ext-gen4875",
+    "designerId": "e4fdf875-b7a1-401c-8b13-fe4b3f1acda7",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "MO_ID"
+            },
+            "designerId": "dfc37826-8115-46b0-bc4d-6611bbdba9b7"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "MO_NAME"
+            },
+            "designerId": "6c804cb0-8845-4e95-a49a-45ea7442ad70"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "CPU"
+            },
+            "designerId": "ab2d3bad-2a0b-4b20-b570-dbb32386d564"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "MEM"
+            },
+            "designerId": "6fa5ba67-2265-41b3-bb45-ff9d987d6cba"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "DISK"
+            },
+            "designerId": "1d2c1acc-8e53-4902-a8dc-1c451aeacf16"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "SYSLOG"
+            },
+            "designerId": "7ceb26ad-a2c1-4619-90d2-8fc5ad9d85b7"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "STATUS"
+            },
+            "designerId": "eac45730-e9a2-4669-a587-535827aab2ba"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field7",
+                "name": "CURRENT_GRADE"
+            },
+            "designerId": "d0dd91ca-9d3e-4b86-af9a-79557c58f5de"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field8",
+                "name": "CPU_LEVEL"
+            },
+            "designerId": "d298c846-9227-4b2b-a08d-4a6009b0ebad"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field9",
+                "name": "MEM_LEVEL"
+            },
+            "designerId": "5e829edb-2950-4fb6-a0c8-3d5e1d98d6a4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field10",
+                "name": "DISK_LEVEL"
+            },
+            "designerId": "1c83fc69-9868-4837-8d34-8ac4ef611578"
+        }
+    ]
+}

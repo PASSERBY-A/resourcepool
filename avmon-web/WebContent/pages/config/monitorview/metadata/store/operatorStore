@@ -1,0 +1,70 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "storeId": "operatorStore",
+        "designer|userClassName": "operatorStore",
+        "data": [
+            "[\r",
+            "    { \"FILTER_OPERATOR\": \"=\", \"FILTER_OPERATOR_NAME\": \"等于\" }, \r",
+            "    { \"FILTER_OPERATOR\": \"!=\", \"FILTER_OPERATOR_NAME\": \"不等于\" },\r",
+            "    { \"FILTER_OPERATOR\": \"like\", \"FILTER_OPERATOR_NAME\": \"匹配\" },\r",
+            "    { \"FILTER_OPERATOR\": \"not like\", \"FILTER_OPERATOR_NAME\": \"不匹配\" },\r",
+            "    { \"FILTER_OPERATOR\": \"in\", \"FILTER_OPERATOR_NAME\": \"包含\" },\r",
+            "    { \"FILTER_OPERATOR\": \"not in\", \"FILTER_OPERATOR_NAME\": \"不包含\" }\r",
+            "]"
+        ]
+    },
+    "designerId": "9d403e28-2b69-417b-bb1e-e63a2ae1634c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "6db6307b-833d-4d82-871a-c6f991573d0d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "ae12078a-499b-431d-8b80-7585582b8315"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FILTER_OPERATOR"
+            },
+            "designerId": "369d0df3-6d92-4ada-968e-f806737b837d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FILTER_OPERATOR_NAME"
+            },
+            "designerId": "64d201e6-aec4-4b6b-b915-4899e12f2a38"
+        }
+    ]
+}

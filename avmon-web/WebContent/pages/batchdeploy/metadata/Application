@@ -1,0 +1,29 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Discovery",
+            "DeployResult"
+        ],
+        "stores": [
+            "DiscoveryStore",
+            "DeployResults"
+        ],
+        "views": [
+            "MyViewport",
+            "DiscoveryGrid"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp",
+        "controllers": [
+            "Main"
+        ]
+    },
+    "id": "ExtBox1-ext-gen9694",
+    "designerId": "application"
+}

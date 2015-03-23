@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Cpu",
+        "storeId": "MyJsonStore2",
+        "designer|userClassName": "CpuList"
+    },
+    "designerId": "18433302-50dc-4fc7-98eb-9cb4e0c5f599",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "cpu"
+            },
+            "designerId": "e1e17ef6-504b-46f6-8769-bc4dbc572290",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "rows"
+                    },
+                    "designerId": "16df8e05-0ecc-4004-aa4c-f68b59876b46"
+                }
+            ]
+        }
+    ]
+}

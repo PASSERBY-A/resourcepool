@@ -1,0 +1,60 @@
+{
+    "name": "report",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "59f0a677-493a-4f7b-b6b6-631468e75e2e": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "a0bff276-1f15-4988-8d47-b08e8571d3cc": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "d2e26bb5-9123-4537-a0f0-963d9aecea59": {
+            "paths": [
+                "metadata/store/ReportMenus",
+                "app/store/override/ReportMenus.js",
+                "app/store/ReportMenus.js"
+            ],
+            "className": "ReportMenus"
+        },
+        "e1c2a588-6840-42b0-8271-5e074abbbe06": {
+            "paths": [
+                "metadata/model/Menu",
+                "app/model/override/Menu.js",
+                "app/model/Menu.js"
+            ],
+            "className": "Menu"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "59f0a677-493a-4f7b-b6b6-631468e75e2e"
+        ],
+        "store": [
+            "d2e26bb5-9123-4537-a0f0-963d9aecea59"
+        ],
+        "controller": [],
+        "model": [
+            "e1c2a588-6840-42b0-8271-5e074abbbe06"
+        ],
+        "resource": [
+            "a0bff276-1f15-4988-8d47-b08e8571d3cc"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

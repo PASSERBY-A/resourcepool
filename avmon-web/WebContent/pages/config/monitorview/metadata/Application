@@ -1,0 +1,28 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "treeModel",
+            "filterModel",
+            "fieldModel"
+        ],
+        "stores": [
+            "treeStore",
+            "filterStore",
+            "operatorStore",
+            "fieldStore"
+        ],
+        "views": [
+            "MyViewport",
+            "filterWindow"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application"
+}

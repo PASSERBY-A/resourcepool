@@ -1,0 +1,330 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "cpuModel",
+            "alarmModel",
+            "iopsModel",
+            "delayModel",
+            "networkModel",
+            "groupModel",
+            "diskModel",
+            "groupViewModel",
+            "portViewModel",
+            "diskViewModel"
+        ],
+        "stores": [
+            "cpuStore",
+            "alarmStore",
+            "iopsStore",
+            "delayStore",
+            "groupStore",
+            "diskStore",
+            "networkStore",
+            "groupViewStore",
+            "portViewStore",
+            "diskViewStore"
+        ],
+        "views": [
+            "MyPanel"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1763",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.store.application = this;\r",
+                    "\r",
+                    "var moId=Ext.store.moId;\r",
+                    "\r",
+                    "if (moId != null && moId != '') {\r",
+                    "    this.init();\r",
+                    "    this.loadCpu();\r",
+                    "    this.loadBasicInfo();\r",
+                    "    this.loadNewAlarm();\r",
+                    "    this.loadNetWork();\r",
+                    "    this.loadGroupInfo();\r",
+                    "    this.loadDiskInfo();\r",
+                    "    this.loadIops();\r",
+                    "    //this.loadDelay();\r",
+                    "\r",
+                    "    Ext.store.currentTab = 1;\r",
+                    "    // 定制定时刷新\r",
+                    "    setInterval(this.refresh_5s, 300000);\r",
+                    "}"
+                ]
+            },
+            "designerId": "379ccf88-4654-47af-9c96-9d4bf287e4fd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadBasicInfo",
+                "fn": "loadBasicInfo",
+                "implHandler": [
+                    "var moId = Ext.store.moId;\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'basicInfo',\r",
+                    "    params: {mo:moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"basicInfo\").getForm().setValues(obj);\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "dae0e46e-cef7-4ca8-aa66-f7aac3cc2dfe"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNewAlarm",
+                "fn": "loadNewAlarm",
+                "implHandler": [
+                    "Ext.getCmp(\"newAlarmGrid\").getStore().load({params:{mo:Ext.store.moId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "5894b539-c276-4a92-ab5a-1631236e0e3c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadNetWork",
+                "fn": "loadNetWork",
+                "implHandler": [
+                    "Ext.getCmp(\"networkGrid\").getStore().load({params:{mo:Ext.store.moId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "d391d4e3-55a3-4ac5-841b-2aa005fb6d8b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadGroupInfo",
+                "fn": "loadGroupInfo",
+                "implHandler": [
+                    "Ext.getCmp(\"groupInfoGrid\").getStore().load({params:{mo:Ext.store.moId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "e92f096c-ed9c-4988-81b2-5730e63dee74"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDiskInfo",
+                "fn": "loadDiskInfo",
+                "implHandler": [
+                    "Ext.getCmp(\"diskInfoGrid\").getStore().load({params:{mo:Ext.store.moId}});"
+                ]
+            },
+            "designerId": "48489b57-103e-4ff5-8232-f019ffbba072"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadIops",
+                "fn": "loadIops",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'iops',\r",
+                    "    params: {mo:Ext.store.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        //Ext.getCmp(\"memInfo\").getForm().setValues(obj);\r",
+                    "        //Ext.getCmp(\"iopsChart\").store.loadData(obj.history,false);\r",
+                    "        Ext.getCmp(\"iops_chart1\").store.loadData(obj, false);\r",
+                    "        Ext.getCmp(\"iops_chart2\").store.loadData(obj, false);\r",
+                    "        Ext.getCmp(\"iops_chart3\").store.loadData(obj, false);\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "c0551b40-f069-41cf-a585-fff69499b31d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadCpu",
+                "fn": "loadCpu",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'cpu',\r",
+                    "    params: {mo:Ext.store.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"cpuChart\").store.loadData(obj.history,false);\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "681fde5d-646e-462f-ac6d-4a5aa8520959"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refresh_5s",
+                "fn": "refresh_5s",
+                "implHandler": [
+                    "// 判断当前活动页面是否为存储页面\r",
+                    "if(window.parent.isShow(\"performance.storageDashboard\")){\r",
+                    "\r",
+                    "    if (Ext.store.currentTab == 1) {\r",
+                    "        // 当前tab=【仪表板】\r",
+                    "        Ext.store.application.loadBasicInfo();\r",
+                    "        Ext.store.application.loadCpu();\r",
+                    "        Ext.store.application.loadNewAlarm();\r",
+                    "        Ext.store.application.loadIops();\r",
+                    "        //Ext.store.application.loadDelay();\r",
+                    "        Ext.store.application.loadNetWork();\r",
+                    "        Ext.store.application.loadGroupInfo();\r",
+                    "        Ext.store.application.loadDiskInfo();\r",
+                    "    } else if (Ext.store.currentTab == 2) {\r",
+                    "        // 当前tab=【组信息】\r",
+                    "        var groupView = Ext.getCmp('groupView');\r",
+                    "        var groupViewStoreProxy = groupView.getStore().getProxy();\r",
+                    "        groupViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "        groupView.getStore().load();\r",
+                    "    } else if (Ext.store.currentTab == 3) {\r",
+                    "        // 当前tab=【前段口】\r",
+                    "        var portView = Ext.getCmp('portView');\r",
+                    "        var portViewStoreProxy = portView.getStore().getProxy();\r",
+                    "        portViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "        portView.getStore().load();\r",
+                    "    } else if (Ext.store.currentTab == 4) {\r",
+                    "        // 当前tab=【盘信息】\r",
+                    "        var diskView = Ext.getCmp('diskView');\r",
+                    "        var diskViewStoreProxy = diskView.getStore().getProxy();\r",
+                    "        diskViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "        diskView.getStore().load();\r",
+                    "    }\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "7a518ca2-ab4b-43d8-aaa6-5551ca755383"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refreshByLoad",
+                "fn": "refreshByLoad",
+                "implHandler": [
+                    "if (Ext.store.currentTab == 1) {\r",
+                    "    // 当前tab=【仪表板】\r",
+                    "    Ext.store.application.loadBasicInfo();\r",
+                    "    Ext.store.application.loadCpu();\r",
+                    "    Ext.store.application.loadNewAlarm();\r",
+                    "    Ext.store.application.loadIops();\r",
+                    "    //Ext.store.application.loadDelay();\r",
+                    "    Ext.store.application.loadNetWork();\r",
+                    "    Ext.store.application.loadGroupInfo();\r",
+                    "    Ext.store.application.loadDiskInfo();\r",
+                    "} else if (Ext.store.currentTab == 2) {\r",
+                    "    // 当前tab=【组信息】\r",
+                    "    var groupView = Ext.getCmp('groupView');\r",
+                    "    var groupViewStoreProxy = groupView.getStore().getProxy();\r",
+                    "    groupViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "    groupView.getStore().load();\r",
+                    "} else if (Ext.store.currentTab == 3) {\r",
+                    "    // 当前tab=【前段口】\r",
+                    "    var portView = Ext.getCmp('portView');\r",
+                    "    var portViewStoreProxy = portView.getStore().getProxy();\r",
+                    "    portViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "    portView.getStore().load();\r",
+                    "} else if (Ext.store.currentTab == 4) {\r",
+                    "    // 当前tab=【盘信息】\r",
+                    "    var diskView = Ext.getCmp('diskView');\r",
+                    "    var diskViewStoreProxy = diskView.getStore().getProxy();\r",
+                    "    diskViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                    "\r",
+                    "    diskView.getStore().load();\r",
+                    "}"
+                ]
+            },
+            "designerId": "465f4f61-7bbf-4a26-9650-1ec52f6d5fae"
+        }
+    ]
+}

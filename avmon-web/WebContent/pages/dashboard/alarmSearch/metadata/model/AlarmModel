@@ -1,0 +1,98 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AlarmModel"
+    },
+    "designerId": "b727102c-a103-44a3-9c65-4e9761c68742",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "designerId": "f60ecb9b-6013-4eab-8875-5e54a10db6b3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LEVEL"
+            },
+            "designerId": "83d781b1-6e23-4c33-8f4c-177fb6f2d55e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STATUS"
+            },
+            "designerId": "f1ae6a42-de3b-4079-ad94-515c178367ce"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MO_CAPTION"
+            },
+            "designerId": "f80a4a95-7891-417f-9a32-f811e9b503cc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CONTENT"
+            },
+            "designerId": "0590d685-c872-4eb6-85fa-dd6002e29502"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OCCUR_TIMES"
+            },
+            "designerId": "469f87df-d239-44f2-ba38-d0f90a36ac90"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AMOUNT"
+            },
+            "designerId": "86b74c1e-e9ee-4ad8-9a48-f5c96ad4c3bf"
+        }
+    ]
+}

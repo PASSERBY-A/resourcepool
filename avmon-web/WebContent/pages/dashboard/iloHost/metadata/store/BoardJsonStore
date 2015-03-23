@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "BoardJsonStore",
+        "model": "BoardModel",
+        "storeId": "MyJsonStore6"
+    },
+    "designerId": "0f3e27d5-128e-4c88-969e-e293bffbc056",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mo:Ext.iloHost.mo}"
+                ],
+                "url": "getBoardList"
+            },
+            "designerId": "26e8c1a7-86c5-4a5a-a84e-58a4497d2b31",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "96a5554f-a5cc-4db6-835a-1f5194593b7c"
+                }
+            ]
+        }
+    ]
+}

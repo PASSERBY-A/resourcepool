@@ -1,0 +1,26 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SkipFileModel"
+    },
+    "designerId": "2b97ffb7-abc2-451f-968c-c0c33b9fe68f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "SKIP_FILE_USE"
+            },
+            "designerId": "2da8aa1a-c9d8-45a6-8da6-5cef152405f0"
+        }
+    ]
+}

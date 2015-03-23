@@ -1,0 +1,152 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "6c038545-65b5-4e73-856c-417d0b9fcc55",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "resourceListPanel",
+                "width": 150,
+                "layout": "fit",
+                "title": ""
+            },
+            "designerId": "0a2ef373-d1d9-490d-951a-82d772fee472",
+            "cn": [
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "reloadView",
+                        "designer|params": [
+                            "moId"
+                        ],
+                        "implHandler": [
+                            ""
+                        ]
+                    },
+                    "designerId": "98b5a971-74e1-4856-9263-d216f756a35c"
+                },
+                {
+                    "type": "Ext.view.View",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": null,
+                        "id": "resourceListGrid",
+                        "autoScroll": true,
+                        "emptyText": "无子类信息.",
+                        "itemSelector": "div.thumb-wrap",
+                        "overItemCls": "x-view-over",
+                        "store": "Resources",
+                        "trackOver": true
+                    },
+                    "designerId": "ecc2a873-13b3-4473-8fec-7bce49878170",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<tpl for=\".\">\r",
+                                    "    <div class=\"thumb-wrap\" >\r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox1\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                    <div class=\"kpiLine \"><span>告警设备: <font color=red style=\"font-weight:bold;\">{HOSTKPI1}</font> 台</span></div>\r",
+                                    "\r",
+                                    "                    <div class=\"kpiLine \"><span>健康度: <font color=red style=\"font-weight:bold;\">{HOSTKPI2}</font> 分</span></div>\r",
+                                    "\r",
+                                    "                    <div class=\"kpiLine \"><span>可用性: <font color=red style=\"font-weight:bold;\">{HOSTKPI3}</font> 分</span></div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\"><a href=\"javascript:showDeviceList('host','{BIZ}');\">主机：{HOSTITEMCOUNT} 台</a></div>\r",
+                                    "            </div> \r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox2\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\">数据库：0个</div>\r",
+                                    "            </div>\r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox3\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\">网络：0台</div>\r",
+                                    "            </div>\r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox4\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                    <div class=\"kpiLine \"><span>告警设备: <font color=red style=\"font-weight:bold;\">{STOREKPI1}</font> 台</span></div>\r",
+                                    "\r",
+                                    "                    <div class=\"kpiLine \"><span>健康度: <font color=red style=\"font-weight:bold;\">{STOREKPI2}</font> 分</span></div>\r",
+                                    "\r",
+                                    "                    <div class=\"kpiLine \"><span>可用性: <font color=red style=\"font-weight:bold;\">{STOREKPI3}</font> 分</span></div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\"><a href=\"javascript:showDeviceList('storage','{BIZ}');\">存储：{STOREITEMCOUNT} 台</a></div>\r",
+                                    "            </div>\r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox5\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\">中间件：0个</div>\r",
+                                    "            </div>\r",
+                                    "\r",
+                                    "            <div class=\"resourceStatusBox resourceStatusBox6\" >\r",
+                                    "                <div class=\"kpiBox\" >\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                <div class=\"kpiLine \">-</div>\r",
+                                    "                </div>\r",
+                                    "                <div class=\"resourceTitle\">业务：0</div>\r",
+                                    "            </div>\r",
+                                    "\r",
+                                    "        <div class=\"businessTitle\" >\r",
+                                    "            {BIZ}\r",
+                                    "        </div>\r",
+                                    "    </div>\r",
+                                    "</tpl>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "00a69eb5-e34d-4f1f-8091-1039e8456843"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

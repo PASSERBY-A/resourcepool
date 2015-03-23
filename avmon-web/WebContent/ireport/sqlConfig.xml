@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 配置说明guide:
+<1>一个<item>代表一个sql脚本文件
+	1. <start-time> 启动时间:
+	        <start-time>yyyy-mm-dd hh:MM:ss</start-time>
+	                    2013-11-08 12:00:00        :表示在2013-11-08 12:00:00启动
+	                    *                          :表示服务器启动时启动
+	                                                     空                                                                   :表示不启动
+	
+	2. <period> 执行周期：
+		    <period>分,时,日,月,周</period> 
+				    0 30 60,*,*,*,*                 :表示每30分钟执行一次
+				    0,13 18,*,*,*                   :表示每天分别在13点0分和18点0分执行一次
+				    0,2,12,*,*                      :表示每月12号2点执行一次
+				    0,2,*,*,7  或 0,2,,,7             :表示每周周日2点执行一次
+				    *,*,*,*,*                       :表示依据start-time启动时执行一次  
+				    ,,,, 或 空                                                             :表示不执行
+	                      注：以空格隔开的数字代表在相应的时刻运行     
+	                                分： 以空格隔开的数字间差不小于5
+	                                 时是24小时制: 00:00:00 ~ 24:00:00
+			           日范围：1~31
+			           月范围：1~12
+			           周：1~7, 1表示周一, 7表示周日
+	            *表示全部运行,空表示不运行	
+	
+	3. <sql-file> 执行文件，默认放在sql文件夹，如sql/sample.sql
+	4. <driver>   sql运行的数据库database driver
+	5. <url>      sql运行的数据库database url
+	6. <user>     sql运行的数据库database user name
+	7. <password> sql运行的数据库database password
+	8. 系统会5分钟扫描一次这个文件
+-->   
+
+<sql> 
+   
+<!-- Sample Begin -->
+   <item>
+       <start-time></start-time>
+       <period>50,14,*,*,*</period>
+       <sql-file>sql/sample.sql</sql-file>
+       <template>rptTemplate/sample1.jasper</template> 
+       <driver>oracle.jdbc.driver.OracleDriver</driver>  
+       <url>jdbc:oracle:thin:@loclhost:1521:orcl2</url>
+       <user>avmon</user>     
+       <password>avmon</password> 
+   </item>   
+<!-- Sample End -->   
+   
+   
+</sql>

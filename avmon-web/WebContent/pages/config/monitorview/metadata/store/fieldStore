@@ -1,0 +1,40 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "fieldModel",
+        "storeId": "fieldStore",
+        "designer|userClassName": "fieldStore"
+    },
+    "designerId": "65709a40-8234-4c04-bf0f-c105b04d4faf",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "filterField"
+            },
+            "designerId": "40db73c3-a9ae-4082-b6b6-5fd3cc2d27ff",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "387a8a4a-166e-4950-93a4-a722cf5e670c"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "syncMem",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "f46ee517-d370-42c2-a94b-cf4697a668bb": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "a5a29f95-39d5-4fd6-8376-43eaa4c6887d": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "f46ee517-d370-42c2-a94b-cf4697a668bb"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "a5a29f95-39d5-4fd6-8376-43eaa4c6887d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "name": "vmList",
+    "settings": {
+        "urlPrefix": "http://localhost:8080/avmon-web/pages/dashboard/virtualMachine/getPhysicalMachineList?_dc=1393218760810&page=1&start=0&limit=25",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "27161abd-a7e0-4384-9d97-942c27f7a090": {
+            "paths": [
+                "metadata/view/VirtualListViewport",
+                "app/view/override/VirtualListViewport.js",
+                "app/view/VirtualListViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "VirtualListViewport"
+        },
+        "3849b939-57d3-41af-9363-4b9f05660ab2": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "acf7a0e1-68ab-4fb3-ab80-755d90fed575": {
+            "paths": [
+                "metadata/model/PhysicalMachineModel",
+                "app/model/override/PhysicalMachineModel.js",
+                "app/model/PhysicalMachineModel.js"
+            ],
+            "className": "PhysicalMachineModel"
+        },
+        "3a1ac46b-2192-4801-8b5c-ec8f8989df18": {
+            "paths": [
+                "metadata/store/PhysicalMachineStore",
+                "app/store/override/PhysicalMachineStore.js",
+                "app/store/PhysicalMachineStore.js"
+            ],
+            "className": "PhysicalMachineStore"
+        },
+        "1b246190-f16e-4ea7-8905-6d8eab3e07ad": {
+            "paths": [
+                "metadata/store/VirtualMachineStore",
+                "app/store/override/VirtualMachineStore.js",
+                "app/store/VirtualMachineStore.js"
+            ],
+            "className": "VirtualMachineStore"
+        },
+        "2e8432fe-7e52-4c6d-b71d-cf4043336a3e": {
+            "paths": [
+                "metadata/model/VirtualMachineModel",
+                "app/model/override/VirtualMachineModel.js",
+                "app/model/VirtualMachineModel.js"
+            ],
+            "className": "VirtualMachineModel"
+        },
+        "8ea91586-3607-4336-9136-bd4105cc66a9": {
+            "paths": [
+                "metadata/store/StorageStore",
+                "app/store/override/StorageStore.js",
+                "app/store/StorageStore.js"
+            ],
+            "className": "StorageStore"
+        },
+        "a8948529-f5dc-4b56-ba3a-e26b3b3f5b92": {
+            "paths": [
+                "metadata/model/StorageModel",
+                "app/model/override/StorageModel.js",
+                "app/model/StorageModel.js"
+            ],
+            "className": "StorageModel"
+        },
+        "3c5acf50-e6ad-4f49-a66a-8f9c5f34ec2c": {
+            "paths": [
+                "metadata/controller/vmListController",
+                "app/controller/override/vmListController.js",
+                "app/controller/vmListController.js"
+            ],
+            "className": "vmListController"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "27161abd-a7e0-4384-9d97-942c27f7a090"
+        ],
+        "store": [
+            "3a1ac46b-2192-4801-8b5c-ec8f8989df18",
+            "1b246190-f16e-4ea7-8905-6d8eab3e07ad",
+            "8ea91586-3607-4336-9136-bd4105cc66a9"
+        ],
+        "controller": [
+            "3c5acf50-e6ad-4f49-a66a-8f9c5f34ec2c"
+        ],
+        "model": [
+            "acf7a0e1-68ab-4fb3-ab80-755d90fed575",
+            "2e8432fe-7e52-4c6d-b71d-cf4043336a3e",
+            "a8948529-f5dc-4b56-ba3a-e26b3b3f5b92"
+        ],
+        "resource": [
+            "3849b939-57d3-41af-9363-4b9f05660ab2"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

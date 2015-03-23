@@ -1,0 +1,13 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "../../resources/extjs411g/"
+    },
+    "id": "ExtBox1-ext-gen16911",
+    "designerId": "808289da-a758-4d8c-8ab4-edc4f227e22d"
+}

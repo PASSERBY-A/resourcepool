@@ -1,0 +1,193 @@
+<html>
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>404</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- CSS -->
+   <link rel="stylesheet" type="text/css"  href="css/reset.css">
+   <link rel="stylesheet" type="text/css"  href="css/global.css">
+   <link rel="stylesheet" type="text/css" href="css/Main.css">
+   <link rel="shortcut icon" href="images/favicon.ico">
+   <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- jqwidgets -->
+    <link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdata.js"></script> 
+    <script type="text/javascript" src="js/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.sort.js"></script> 
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.pager.js"></script> 
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.selection.js"></script> 
+    <script type="text/javascript" src="js/jqwidgets/jqxgrid.edit.js"></script> 
+    <script type="text/javascript" src="js/demos.js"></script>
+      
+
+</head>
+
+<body>
+
+   <div id="wrap">
+   
+      <!-- Header
+      ================================================== -->
+      <div id="top" class="top">
+         <div class="fixed">
+           <a href="Login.html"><div class="LOGO"></div></a>
+           <a href="index_V2.html"><div class="Avmon_back"></div></a>
+            <div class="MainTitle f28px LineH12">Error404</div>
+            <div class="Profile" id="ShowUserBoxclick" style="cursor:pointer">
+            <div class="ProfileIcon"></div>
+            <div class="ProfileName ">My Account</div>
+            <div class="ProfileArrow"></div>
+            <div class="blank0"></div>
+         </div>
+      </div>
+
+      <!-- showUserBox
+      ================================================== -->
+     <div id="ShowUserBoxMain" style="display:none">
+        <div class="ShowUserBoxArrow"></div>
+        <div class="ShowUserBox">
+          <ul>
+            <li><a href="#"><span class="AccountSettingIcon"></span><span>个人设置</span></a></li>
+            <li><a href="Login.html"><span class="SignOutIcon"></span><span>退出</span></a></li>
+            <div class="blank0"></div>
+          </ul>
+        </div>
+      </div>
+
+      </div>
+  
+      <!-- Content container
+      ================================================== --> 
+      <div id="container">
+
+
+     
+     <div class="AvmonMain">
+              <div class="error_ex">
+              <h1>404</h1>
+              <h3>Opps, You're lost.</h3>
+              <p class="LineH150">We can not find the page you're looking for.</p>
+              <a class="btn" href="index_v2.html">Back to Home</a> </div>
+            </div>
+
+   
+   </div>
+   <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   
+   
+   <script type="text/javascript">
+   function show(oEvent){
+     var UserBox=document.getElementById("ShowUserBoxMain");
+     //alert(obj.style.display);
+     if(UserBox.style.display=="block"){
+     	  document.getElementById("ShowUserBoxMain").style.display = "none";
+     	}else{
+     		document.getElementById("ShowUserBoxMain").style.display = "block";
+     		}
+     
+     e = window.event || oEvent;
+     if (e.stopPropagation)
+     {
+         e.stopPropagation();
+     }else{
+         e.cancelBubble = true;
+     }
+   }
+   function hide(){
+
+     document.getElementById("ShowUserBoxMain").style.display = "none";
+   }
+   
+   
+   
+   window.onload = function(){
+   	
+	  document.getElementById("ShowUserBoxMain").style.display = "none";
+      document.body.onclick = hide;
+	  document.getElementById("ShowUserBoxclick").onclick = show;
+	  
+   };
+  </script> 
+ 
+ <script type="text/javascript">
+        var basicDemo = (function () {
+            //Adding event listeners
+            function _addEventListeners() {
+                $('#resizeCheckBox').on('change', function (event) {
+                    if (event.args.checked) {
+                        $('#window').jqxWindow('resizable', true);
+                    } else {
+                        $('#window').jqxWindow('resizable', false);
+                    }
+                });
+                $('#dragCheckBox').on('change', function (event) {
+                    if (event.args.checked) {
+                        $('#window').jqxWindow('draggable', true);
+                    } else {
+                        $('#window').jqxWindow('draggable', false);
+                    }
+                });
+                $('#showWindowButton').click(function () {
+                    $('#window').jqxWindow('open');
+                });
+                $('#hideWindowButton').click(function () {
+                    $('#window').jqxWindow('close');
+                });
+            };
+
+            //Creating all page elements which are jqxWidgets
+            function _createElements() {
+                $('#showWindowButton').jqxButton({ width: '70px' });
+                $('#hideWindowButton').jqxButton({ width: '65px' });
+                $('#resizeCheckBox').jqxCheckBox({ width: '185px', checked: true });
+                $('#dragCheckBox').jqxCheckBox({ width: '185px', checked: true });
+            };
+
+            //Creating the demo window
+            function _createWindow() {
+                $('#window').jqxWindow({
+                    showCollapseButton: true, maxHeight: 400, maxWidth: 700, minHeight: 200, minWidth: 200, height: 300, width: 500,
+                    initContent: function () {
+                        $('#tab').jqxTabs({ height: '100%', width:  '100%' });
+                        $('#window').jqxWindow('focus');
+                    }
+                });
+            };
+
+            return {
+                config: {
+                    dragArea: null
+                },
+                init: function () {
+                    //Creating all jqxWindgets except the window
+                    _createElements();
+                    //Attaching event listeners
+                    _addEventListeners();
+                    //Adding jqxWindow
+                    _createWindow();
+                }
+            };
+        } ());
+
+        $(document).ready(function () {  
+            //Initializing the demo
+            basicDemo.init();
+        });
+    </script> 
+    
+</body>
+</html>

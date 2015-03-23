@@ -1,0 +1,84 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 165,
+        "id": "powerPanel",
+        "width": null,
+        "designer|userClassName": "PowerPanel",
+        "designer|userAlias": "powerPanel",
+        "layout": "absolute",
+        "title": "电源风扇"
+    },
+    "designerId": "2e4a31c1-ee8b-463d-9b8d-d88719a004ae",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 30,
+                "layout|y": 5,
+                "height": 60,
+                "width": 60,
+                "src": "./imgs/pw_good.png"
+            },
+            "designerId": "52a80769-53f3-4d2a-9d7c-b66dc5c4c285"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 30,
+                "layout|y": 70,
+                "height": 60,
+                "width": 60,
+                "src": "./imgs/fan_good.png"
+            },
+            "designerId": "44010f99-94de-44ec-aa2e-90c869d25e0f"
+        },
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 110,
+                "layout|y": 20,
+                "height": 40,
+                "width": 120,
+                "text": "电源状态：正常"
+            },
+            "designerId": "e3da77f3-6991-4d66-9315-7eb8927d3a9c"
+        },
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 110,
+                "layout|y": 80,
+                "height": 30,
+                "text": "风扇状态：正常"
+            },
+            "designerId": "6ba6c36d-9273-4ef1-92e0-5a6faa1170c0"
+        }
+    ]
+}

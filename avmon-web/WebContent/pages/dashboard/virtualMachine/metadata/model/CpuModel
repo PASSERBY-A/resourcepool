@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CpuModel"
+    },
+    "id": "ExtBox1-ext-gen63695",
+    "designerId": "f4f1e963-57d9-43fd-9369-62c525d31308",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "CPU_USR"
+            },
+            "designerId": "95459240-879f-4c5c-a763-3b3974a8f51e"
+        }
+    ]
+}

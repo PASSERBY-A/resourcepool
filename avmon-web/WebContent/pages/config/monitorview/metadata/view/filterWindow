@@ -1,0 +1,225 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 250,
+        "id": "filterWindow",
+        "width": 400,
+        "designer|userClassName": "filterWindow",
+        "designer|userAlias": "filterWindow",
+        "title": "过滤条件"
+    },
+    "designerId": "d4ef6265-3440-4f87-b7de-7f6c8b373b91",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "height": 218,
+                "id": "editFilterForm",
+                "layout": "absolute",
+                "bodyPadding": null,
+                "title": null
+            },
+            "designerId": "6b775a50-3dc3-4389-b2d1-1afc1b2f211b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 10,
+                        "id": "FILTER_NO",
+                        "width": 200,
+                        "fieldLabel": "条件",
+                        "labelWidth": 60,
+                        "readOnly": true,
+                        "allowBlank": false,
+                        "minValue": 1
+                    },
+                    "designerId": "0786f27c-7901-4870-a0c4-cbb59bff39a8"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 40,
+                        "id": "FILTER_FIELD",
+                        "width": 366,
+                        "fieldLabel": "字段",
+                        "labelWidth": 60,
+                        "allowBlank": false,
+                        "displayField": "METADATA_NM",
+                        "store": "fieldStore",
+                        "valueField": "METADATA_ID"
+                    },
+                    "designerId": "38f5a5a9-34f1-418a-968c-858c9301788c"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 70,
+                        "id": "FILTER_OPERATOR",
+                        "fieldLabel": "运算符",
+                        "labelWidth": 60,
+                        "allowBlank": false,
+                        "displayField": "FILTER_OPERATOR_NAME",
+                        "store": "operatorStore",
+                        "valueField": "FILTER_OPERATOR"
+                    },
+                    "designerId": "175ac0c1-9bb8-40ce-8cbd-79f1c757b194"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "layout|x": 10,
+                        "layout|y": 100,
+                        "id": "FILTER_VALUE",
+                        "width": null,
+                        "fieldLabel": "值",
+                        "labelWidth": 60,
+                        "allowBlank": false
+                    },
+                    "designerId": "d62e463f-a9aa-41b0-8cfe-7f868c403e3f"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 90,
+                        "layout|y": 185,
+                        "width": 80,
+                        "iconCls": "icon-save",
+                        "text": "确定"
+                    },
+                    "designerId": "63f699b4-7fca-49d0-a858-1975090cea56",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var myform = Ext.getCmp('editFilterForm').getForm();\r",
+                                    "if (myform.isValid()) {\r",
+                                    "\r",
+                                    "    var FILTER_NO = Ext.getCmp('FILTER_NO').getValue();\r",
+                                    "    var FILTER_FIELD = Ext.getCmp('FILTER_FIELD').getValue();\r",
+                                    "    var FILTER_OPERATOR = Ext.getCmp('FILTER_OPERATOR').getValue();\r",
+                                    "    var FILTER_VALUE = Ext.getCmp('FILTER_VALUE').getValue();\r",
+                                    "\r",
+                                    "    if (Ext.filterWindowMode == 0) {\r",
+                                    "        // 加载日志grid\r",
+                                    "        //Ext.getCmp('filterGrid').getStore().removeAll();\r",
+                                    "        var len = Ext.getCmp('filterGrid').getStore().length;\r",
+                                    "        var data = {FILTER_NO: FILTER_NO, FILTER_FIELD: FILTER_FIELD, FILTER_OPERATOR: FILTER_OPERATOR, FILTER_VALUE: FILTER_VALUE};\r",
+                                    "        if (len) {\r",
+                                    "            Ext.getCmp('filterGrid').getStore().insert(len, data);\r",
+                                    "        } else {\r",
+                                    "            Ext.getCmp('filterGrid').getStore().insert(0, data);\r",
+                                    "        }\r",
+                                    "\r",
+                                    "        // 隐藏弹出窗口\r",
+                                    "        var win = Ext.filterWindow;\r",
+                                    "        win.hide();\r",
+                                    "    } else {\r",
+                                    "        var row = Ext.getCmp('filterGrid').getStore().getById(FILTER_NO.toString());\r",
+                                    "\r",
+                                    "        if (row) {\r",
+                                    "            row.set(\"FILTER_FIELD\", FILTER_FIELD);\r",
+                                    "            row.set(\"FILTER_OPERATOR\", FILTER_OPERATOR);\r",
+                                    "            row.set(\"FILTER_VALUE\", FILTER_VALUE);\r",
+                                    "        }\r",
+                                    "\r",
+                                    "        // 隐藏弹出窗口\r",
+                                    "        var win = Ext.filterWindow;\r",
+                                    "        win.hide();\r",
+                                    "    }\r",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "cc0e960b-9685-4b10-a06b-6e4508a2dfcb"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 210,
+                        "layout|y": 185,
+                        "width": 80,
+                        "text": "取消"
+                    },
+                    "designerId": "382e5db8-9291-4e4d-9308-88812e7d731d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick1",
+                                "implHandler": [
+                                    "var win = Ext.filterWindow;\r",
+                                    "win.hide();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "d5faf4fb-8285-429b-a893-5ed2a61f9b37"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

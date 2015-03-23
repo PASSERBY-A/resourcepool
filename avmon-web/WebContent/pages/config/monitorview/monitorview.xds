@@ -1,0 +1,121 @@
+{
+    "name": "monitorview",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "a40f058e-4c26-4ef8-b3a2-ef8862c52236": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "571ecbc1-825f-41f1-8d69-d78b445ba02d": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "59f1afaa-643b-40f9-88cf-bcec9e17461e": {
+            "paths": [
+                "metadata/model/treeModel",
+                "app/model/override/treeModel.js",
+                "app/model/treeModel.js"
+            ],
+            "className": "treeModel"
+        },
+        "f6d12028-be9c-4583-b655-fbab7399ada5": {
+            "paths": [
+                "metadata/model/filterModel",
+                "app/model/override/filterModel.js",
+                "app/model/filterModel.js"
+            ],
+            "className": "filterModel"
+        },
+        "20210b95-21e6-4c12-ac88-30eaf4d00ddd": {
+            "paths": [
+                "metadata/store/treeStore",
+                "app/store/override/treeStore.js",
+                "app/store/treeStore.js"
+            ],
+            "className": "treeStore"
+        },
+        "3219eb37-a5d6-41f8-9fc0-31ad5bd610ed": {
+            "paths": [
+                "metadata/store/filterStore",
+                "app/store/override/filterStore.js",
+                "app/store/filterStore.js"
+            ],
+            "className": "filterStore"
+        },
+        "d4ef6265-3440-4f87-b7de-7f6c8b373b91": {
+            "paths": [
+                "metadata/view/filterWindow",
+                "app/view/override/filterWindow.js",
+                "app/view/filterWindow.js"
+            ],
+            "className": "filterWindow"
+        },
+        "9d403e28-2b69-417b-bb1e-e63a2ae1634c": {
+            "paths": [
+                "metadata/store/operatorStore",
+                "app/store/override/operatorStore.js",
+                "app/store/operatorStore.js"
+            ],
+            "className": "operatorStore"
+        },
+        "65709a40-8234-4c04-bf0f-c105b04d4faf": {
+            "paths": [
+                "metadata/store/fieldStore",
+                "app/store/override/fieldStore.js",
+                "app/store/fieldStore.js"
+            ],
+            "className": "fieldStore"
+        },
+        "5db8a767-5b49-489b-9a1d-561449fc5a17": {
+            "paths": [
+                "metadata/model/fieldModel",
+                "app/model/override/fieldModel.js",
+                "app/model/fieldModel.js"
+            ],
+            "className": "fieldModel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "a40f058e-4c26-4ef8-b3a2-ef8862c52236",
+            "d4ef6265-3440-4f87-b7de-7f6c8b373b91"
+        ],
+        "store": [
+            "20210b95-21e6-4c12-ac88-30eaf4d00ddd",
+            "3219eb37-a5d6-41f8-9fc0-31ad5bd610ed",
+            "9d403e28-2b69-417b-bb1e-e63a2ae1634c",
+            "65709a40-8234-4c04-bf0f-c105b04d4faf"
+        ],
+        "controller": [],
+        "model": [
+            "59f1afaa-643b-40f9-88cf-bcec9e17461e",
+            "f6d12028-be9c-4583-b655-fbab7399ada5",
+            "5db8a767-5b49-489b-9a1d-561449fc5a17"
+        ],
+        "resource": [
+            "571ecbc1-825f-41f1-8d69-d78b445ba02d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

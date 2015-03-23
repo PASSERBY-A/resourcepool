@@ -1,0 +1,74 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "inpectTypeStore",
+        "storeId": "inpectCommStore"
+    },
+    "id": "ExtBox1-ext-gen40397",
+    "designerId": "de987172-5199-4ac8-b8e8-6df0f94946ce",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1",
+                "extraParams": [
+                    "{\r",
+                    "    DEVICE_TYPE_CODE:Ext.inspectDeviceType\r",
+                    "}"
+                ],
+                "url": "getInspectCommandData"
+            },
+            "designerId": "85fbecf6-3874-4d22-96cd-b410eadaab59",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "designerId": "84e45f24-26a6-4fd4-b6ee-fc5ddfeea2c2"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "COMM_CODE"
+            },
+            "designerId": "886acfab-a200-4542-bf4e-0ca09bd0bb8a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "COMM_VALUE"
+            },
+            "designerId": "53482cfa-54bf-4bca-9930-3dc460087354"
+        }
+    ]
+}

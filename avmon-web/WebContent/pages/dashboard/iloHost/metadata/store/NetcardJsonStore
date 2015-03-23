@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "NetcardJsonStore",
+        "model": "NetcardModel",
+        "storeId": "MyJsonStore4"
+    },
+    "designerId": "dbeb65bd-e042-4932-8d0b-37bfd8501136",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mo:Ext.iloHost.mo}"
+                ],
+                "url": "getNetcardList"
+            },
+            "designerId": "73f433ac-e46d-4816-be21-31c9f8d6210d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "5da61cba-1c2b-4052-bb23-5e5350f5c000"
+                }
+            ]
+        }
+    ]
+}

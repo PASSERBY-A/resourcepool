@@ -1,0 +1,334 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "CpuLine",
+            "Cpu",
+            "Alarm",
+            "Process",
+            "Mem",
+            "Disk",
+            "Lv",
+            "Network"
+        ],
+        "stores": [
+            "MyJsonStore",
+            "CpuLines",
+            "CpuList",
+            "Alarms",
+            "Processes",
+            "Mems",
+            "Disks",
+            "Lvs",
+            "Networks",
+            "Swaps"
+        ],
+        "views": [
+            "MyViewport",
+            "CpuPanel",
+            "BasicInfo",
+            "NewAlarmGrid",
+            "KeyProcessGrid",
+            "MemPanel",
+            "PowerPanel",
+            "MyViewport1"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp",
+        "controllers": [
+            "Main"
+        ]
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "if(!Ext.avmon){\r",
+                    "    Ext.avmon={};\r",
+                    "}\r",
+                    "\r",
+                    "Ext.avmon.application=this;\r",
+                    "\r",
+                    "this.init();\r",
+                    "\r",
+                    "this.refreshAll();\r",
+                    "\r",
+                    "setInterval(this.refresh_5s,25000);\r",
+                    "\r",
+                    "setInterval(this.refresh_1m,60000);\r",
+                    "\r",
+                    "setInterval(this.refresh_10m,600000);\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "abd112f4-f5c7-4eb2-a7dd-1cdc115cd724"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "96a8e26e-22c2-4198-8516-e90e267270d6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "test",
+                "implHandler": [
+                    "console.log(\"hello wolrd\");\r",
+                    ""
+                ]
+            },
+            "designerId": "3acf720a-ea82-4839-bf24-bc6289ee2cc2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refreshAll",
+                "implHandler": [
+                    "\r",
+                    "if(window.parent.isShow(\"performance.dashboardPanel\")){\r",
+                    "\r",
+                    "    this.refresh_5s();\r",
+                    "    this.refresh_1m();\r",
+                    "    this.refresh_10m();\r",
+                    "\r",
+                    "}\r",
+                    "else{\r",
+                    "    //console.log(\"not show dashboard\");\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "99328c54-178c-4973-94d9-65bdd91b1c71"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh_5s",
+                "implHandler": [
+                    "\r",
+                    "if(window.parent.isShow(\"performance.dashboardPanel\")){\r",
+                    "    Ext.avmon.application.reloadCpu();\r",
+                    "    Ext.avmon.application.reloadMem();\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "36c99546-de6b-4bcf-9af3-828b7d1a0cf0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh_1m",
+                "implHandler": [
+                    "\r",
+                    "if(window.parent.isShow(\"performance.dashboardPanel\")){\r",
+                    "\r",
+                    "    Ext.getCmp(\"keyProcessGrid\").getStore().load({params:{mo:Ext.avmon.moId}});\r",
+                    "\r",
+                    "    Ext.avmon.application.reloadBasicInfo();\r",
+                    "\r",
+                    "    Ext.avmon.application.reloadNewAlarm();\r",
+                    "\r",
+                    "}"
+                ]
+            },
+            "designerId": "67508ccc-badb-4cd6-8eff-595b372a33e4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refresh_10m",
+                "implHandler": [
+                    "\r",
+                    "if(window.parent.isShow(\"performance.dashboardPanel\")){\r",
+                    "\r",
+                    "    Ext.getCmp(\"diskIoGrid\").getStore().load({params:{mo:Ext.avmon.moId}});\r",
+                    "\r",
+                    "    Ext.getCmp(\"diskVolGrid\").getStore().load({params:{mo:Ext.avmon.moId}});\r",
+                    "\r",
+                    "    Ext.getCmp(\"networkGrid\").getStore().load({params:{mo:Ext.avmon.moId}});\r",
+                    "\r",
+                    "    Ext.avmon.application.reloadPowerPanel();\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "fd13fbac-c250-49c9-85cc-2fb689b6ce43"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reloadCpu",
+                "implHandler": [
+                    "\r",
+                    "var cpuChart=Ext.getCmp(\"cpuChart\");\r",
+                    "\r",
+                    "cpuChart.store.load({params:{mo:Ext.avmon.moId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "7d330d24-e534-4c20-9c3d-7c4a998e4fef"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reloadBasicInfo",
+                "implHandler": [
+                    "var moId=Ext.avmon.moId;\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'basicInfo',\r",
+                    "    params: {mo:moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj=Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"basicInfo\").getForm().setValues(obj);\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        // alert('error');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "637c819e-553f-4d7a-8f79-ab30aebbc546"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reloadNewAlarm",
+                "implHandler": [
+                    "Ext.getCmp(\"newAlarmGrid\").getStore().load({params:{mo:Ext.avmon.moId}});\r",
+                    ""
+                ]
+            },
+            "designerId": "9e5e6e07-627e-4632-9d0b-105d7ac112f6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reloadPowerPanel",
+                "implHandler": [
+                    "//this.getPowerPanel();\r",
+                    "//Ext.getCmp(\"powerPanel\");"
+                ]
+            },
+            "designerId": "b01c621d-2fe3-44cd-84cd-2b87061a97ed"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "reloadMem",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: 'mem',\r",
+                    "    params: {mo:Ext.avmon.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj=Ext.decode(response.responseText);\r",
+                    "        Ext.getCmp(\"memInfo\").getForm().setValues(obj);\r",
+                    "        Ext.getCmp(\"memChart1\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        //alert('error');\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'swap',\r",
+                    "    params: {mo:Ext.avmon.moId},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj=Ext.decode(response.responseText);\r",
+                    "        //Ext.getCmp(\"memInfo\").getForm().setValues(obj);\r",
+                    "        Ext.getCmp(\"memChart2\").store.loadData(obj.history,false);\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        //alert('error');\r",
+                    "        if(console && console.log){\r",
+                    "            console.log(\"load dashboard-mem error!\");\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "0aeabc93-4f27-4b3e-8c49-22fd5ee28823"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "name": "threshold",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 640,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "3128ad7a-3df5-4006-b985-21d34b9e92ae": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "97db1ed3-8baa-4a08-969e-5e4b708e6f33": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "f911d6ef-236b-46df-ba03-e9398619f3d6": {
+            "paths": [
+                "metadata/store/thresholdStore",
+                "app/store/override/thresholdStore.js",
+                "app/store/thresholdStore.js"
+            ],
+            "className": "thresholdStore"
+        },
+        "a45561c7-c36d-47f1-87d7-b514f24fb6ee": {
+            "paths": [
+                "metadata/model/thresholdModel",
+                "app/model/override/thresholdModel.js",
+                "app/model/thresholdModel.js"
+            ],
+            "className": "thresholdModel"
+        },
+        "458421de-4c2c-46af-9ac7-25866b5d4bbd": {
+            "paths": [
+                "metadata/view/thresholdWindow",
+                "app/view/override/thresholdWindow.js",
+                "app/view/thresholdWindow.js"
+            ],
+            "className": "thresholdWindow"
+        },
+        "f2daf747-0ae1-4622-b732-4aba5afece9f": {
+            "paths": [
+                "metadata/store/opertaorStore",
+                "app/store/override/opertaorStore.js",
+                "app/store/opertaorStore.js"
+            ],
+            "className": "opertaorStore"
+        },
+        "19848c68-dbb8-464a-bb5f-ec937c00e460": {
+            "paths": [
+                "metadata/store/alarmLevelStore",
+                "app/store/override/alarmLevelStore.js",
+                "app/store/alarmLevelStore.js"
+            ],
+            "className": "alarmLevelStore"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "3128ad7a-3df5-4006-b985-21d34b9e92ae",
+            "458421de-4c2c-46af-9ac7-25866b5d4bbd"
+        ],
+        "store": [
+            "f911d6ef-236b-46df-ba03-e9398619f3d6",
+            "f2daf747-0ae1-4622-b732-4aba5afece9f",
+            "19848c68-dbb8-464a-bb5f-ec937c00e460"
+        ],
+        "controller": [],
+        "model": [
+            "a45561c7-c36d-47f1-87d7-b514f24fb6ee"
+        ],
+        "resource": [
+            "97db1ed3-8baa-4a08-969e-5e4b708e6f33"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

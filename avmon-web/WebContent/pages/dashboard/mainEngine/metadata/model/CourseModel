@@ -1,0 +1,26 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CourseModel"
+    },
+    "designerId": "c3920c50-8398-462d-a367-d803a64c0deb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "COURSE_USR"
+            },
+            "designerId": "509f54a4-c4f9-4b79-81ae-7ef14d18693e"
+        }
+    ]
+}

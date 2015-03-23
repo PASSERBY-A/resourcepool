@@ -1,0 +1,218 @@
+#img-chooser-dlg .details {
+    text-align: center;
+}
+
+#img-chooser-dlg .details-info {
+    border-top: 1px solid #cccccc;
+    font: 11px Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    padding-top: 5px;
+
+}
+
+#img-chooser-dlg .details-info b {
+    color: #555555;
+    display: block;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+#img-chooser-dlg .details-info span {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#resourceListPanel {
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+
+#resourceListPanel .thumb {
+    padding: 3px;
+}
+
+#resourceListPanel .thumb-wrap  {
+    padding-top: 15px;
+    padding-left:50px;
+	width:497px;
+	height:250px;
+	background-image:url('image/back2.png');
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#resourceListPanel .resourceStatusBox{
+	width:160px;
+	height:100px;
+	padding-left:18px;
+	padding-right:10px;
+	padding-top:10px;
+	display:inline-block;
+}
+
+#resourceListPanel .kpiBox{
+	padding-left:45px;
+	padding-top:2px;
+}
+
+#resourceListPanel .kpiLine{
+	margin-left:0px;
+	margin-top:2px;
+	position: relative;  
+	padding: 1px;  
+	text-align: left;  
+}
+#resourceListPanel .resourceTitle{
+	padding-left:45px;
+	padding-top:5px;
+	font-weight:none;
+
+}
+
+#resourceListPanel .businessTitle{
+	width:490px;
+	padding-left:1px;
+	padding-top:2px;
+	font: 14px Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-align: center;
+}
+
+#resourceListPanel .resourceStatusBox1{
+
+}
+#resourceListPanel .resourceStatusBox2{
+
+}
+#resourceListPanel .resourceStatusBox3{
+
+}
+#resourceListPanel .resourceStatusBox4{
+
+}
+#resourceListPanel .resourceStatusBox5{
+
+}
+#resourceListPanel .resourceStatusBox6{
+
+}
+
+#resourceListPanel .boxMessage2{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#resourceListPanel .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+#resourceListPanel .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#resourceListPanel .thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+
+#resourceListPanel .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+#images img {
+    margin: 20px;
+}
+
+/* 锟斤拷锟芥级锟斤拷图锟斤拷 */ 
+.icon-level0 { 
+	width:16px; 
+	height:16px;
+}
+
+/* 锟斤拷锟斤拷锟斤拷锟酵凤拷锟斤拷锟�*/ 
+.BarText { 
+	font: 8px Arial, Helvetica, sans-serif;
+	/*font-size:8px;*/
+	width: 16px;
+	margin-left:4px;
+	text-align: right;  
+	float: left; 
+	color: black; 
+	font-weight:blod;
+}
+
+
+.ProgressBar1 {  
+	margin-left:0px;
+	margin-top:1px;
+	position: relative;  
+	border: 1px solid #B1D632;  
+	padding: 1px;  
+	text-align: center;  
+}
+
+/* 锟斤拷锟斤拷锟斤拷锟斤拷 */ 
+.ProgressBar2 {  
+	margin-left:29px;
+	margin-top:2px;
+	position: relative;  
+	width: 78px;    /* 锟斤拷锟�*/ 
+	border: 1px solid #B1D632;  
+	padding: 1px;  
+}
+
+/* 锟斤拷锟斤拷锟斤拷俜直锟�*/ 
+.ProgressBar1 div {  
+	display: block;  
+	position: relative;  
+	background: #B1D632;  
+	color: #333333;  
+	height: 13px; /* 锟竭讹拷 */ 
+	line-height: 13px;  /* 锟斤拷锟斤拷透叨锟揭伙拷拢锟斤拷谋锟斤拷锟斤拷艽锟街憋拷锟斤拷锟�*/ 
+}
+
+/* 锟斤拷锟斤拷锟斤拷俜直锟�*/ 
+.ProgressBar2 div {  
+	display: block;  
+	position: relative;  
+	background: red;  
+	color: #333333;  
+	height: 6px; /* 锟竭讹拷 */ 
+	line-height: 6px;  /* 锟斤拷锟斤拷透叨锟揭伙拷拢锟斤拷谋锟斤拷锟斤拷艽锟街憋拷锟斤拷锟�*/ 
+}
+
+/* 锟斤拷锟斤拷锟斤拷俜直锟斤拷锟斤拷锟� 锟斤拷色 */ 
+.ProgressBar1 div span {  
+	font-size:10px;
+	position: absolute;  
+	width: 78px; /* 锟斤拷锟�*/ 
+	height:14px;
+	text-align: center;  
+	font-weight: bold;  
+	color: black; 
+}
+
+/* 锟斤拷锟斤拷锟斤拷俜直锟斤拷锟斤拷锟� 锟斤拷色*/ 
+.ProgressBar2 div span {   
+	font-size:8px;
+	position: absolute;  
+	width: 78px; /* 锟斤拷锟�*/ 
+	text-align: center;  
+	font-weight: bold;  
+	color: black; 
+}

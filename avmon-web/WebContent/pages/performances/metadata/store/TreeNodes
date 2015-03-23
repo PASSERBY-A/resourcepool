@@ -1,0 +1,51 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "TreeNode",
+        "storeId": "MyTreeStore",
+        "designer|userClassName": "TreeNodes",
+        "nodeParam": "id",
+        "root": [
+            "{expanded: false,\r",
+            "                views: 'totalView',\r",
+            "                defaultView: 'totalView',\r",
+            "                text: '数据中心',\r",
+            "                id: 'root'\r",
+            "}"
+        ]
+    },
+    "designerId": "2d37e3b3-ef14-423e-95fb-cad60d4e10e4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "menuTree"
+            },
+            "designerId": "e132bf76-8923-4df2-bc92-2f5f6501b3ab",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "id"
+                    },
+                    "designerId": "8e31ad13-30a9-4fdc-823f-0da496164eeb"
+                }
+            ]
+        }
+    ]
+}

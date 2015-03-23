@@ -1,0 +1,40 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "MoType",
+        "storeId": "moTypeTrees",
+        "designer|userClassName": "MoTypeTrees",
+        "designer|userAlias": "moTypeTrees"
+    },
+    "designerId": "e10cbb30-9afb-45f3-8f1b-c9a0fe4ae038",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "moTypeTree"
+            },
+            "designerId": "0c5a1798-90c7-4eae-9116-7baee2cc6d4a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "8592a21c-22c0-4a0e-be12-c36828f85538"
+                }
+            ]
+        }
+    ]
+}

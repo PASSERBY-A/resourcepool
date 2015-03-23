@@ -1,0 +1,17 @@
+Changes from CHP-AvMON Agent 1.0.0 to CHP-AvMON Agent 1.0.1
+=======================================================
+
+Changes that could break older environments:
+--------------------------------------------
+
+Fixed bugs:
+-----------
+1. Gateway down, agent timer scheduler job don't work loop.
+
+Other changes: upgrade 
+--------------
+1. Stop Service
+2. Unistall Service
+3. Copy avmon_agent.exe to C:\Program Files\CHP-AvMON\bin
+4. Install Service
+5. Start Service

@@ -1,0 +1,348 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "inspectCommWindow",
+        "designer|userAlias": "inspectCommWindow",
+        "height": 258,
+        "id": "inspectCommWindow",
+        "width": 410,
+        "closeAction": "hide",
+        "title": "巡检命令"
+    },
+    "id": "ExtBox1-ext-gen72430",
+    "designerId": "10e2fca9-e14b-4873-a9ea-e7db507fc2e7",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 10,
+                "designer|userClassName": "MyForm1",
+                "height": 224,
+                "id": "commForm",
+                "layout": "absolute",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "bc1673e5-c8f0-4e05-ba9e-fbb8a3a3f20f",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 10,
+                        "layout|y": 10,
+                        "designer|userClassName": "MyFieldSet1",
+                        "height": 160,
+                        "title": null
+                    },
+                    "designerId": "6d83ea1d-bc55-4a90-a1a9-bc66a63b0d08",
+                    "cn": [
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox1",
+                                "id": "COMM_COMM_CODE",
+                                "name": "COMM_COMM_CODE",
+                                "fieldLabel": "巡检命令",
+                                "labelAlign": "right",
+                                "labelWidth": 60,
+                                "displayField": "COMM_VALUE",
+                                "multiSelect": true,
+                                "store": "inpectTypeStore",
+                                "valueField": "COMM_CODE"
+                            },
+                            "designerId": "473f6c39-b543-4301-a9ce-347741096e3f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onCOMM_COMM_CODESelect",
+                                        "fn": "onCOMM_COMM_CODESelect",
+                                        "implHandler": [
+                                            "Ext.commCode = combo.getValue(combo.getValue('COMM_CODE'));"
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "06d8d9bd-b962-4c92-a99f-21c76b9c5810"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField7",
+                                "id": "COMM_USR",
+                                "name": "COMM_USR",
+                                "fieldLabel": "用户名",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "f8735672-e9c8-48bf-ab35-71bebcf064c8"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField8",
+                                "id": "COMM_PWD",
+                                "inputType": "password",
+                                "name": "COMM_PWD",
+                                "fieldLabel": "密码",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "69a9a2fc-80d1-4687-804f-cbd93002f3a4"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField9",
+                                "id": "COMM_QUIT_MODE1",
+                                "name": "COMM_QUIT_MODE1",
+                                "fieldLabel": "退出命令1",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "c22691d3-c034-450c-950b-abac6bba8662"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField10",
+                                "id": "COMM_QUIT_MODE2",
+                                "name": "COMM_QUIT_MODE2",
+                                "fieldLabel": "退出命令2",
+                                "labelAlign": "right",
+                                "labelWidth": 60
+                            },
+                            "designerId": "28a8491a-621d-4325-a72c-0f4f48a70d3a"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 90,
+                        "layout|y": 190,
+                        "designer|userClassName": "MyButton6",
+                        "width": 80,
+                        "iconCls": "icon-save",
+                        "text": "确定"
+                    },
+                    "designerId": "79df7e1d-c2a8-487f-8eb9-1f6128eefc75",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick",
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var myform = Ext.getCmp('commForm').getForm();\r",
+                                    "if (myform.isValid()) {\r",
+                                    "\r",
+                                    "    var win = Ext.inspectCommWindow;\r",
+                                    "\r",
+                                    "    var DEVICE_IP = Ext.deviceIp;\r",
+                                    "    var COMM_COMM_CODE = Ext.commCode;\r",
+                                    "    var COMM_USR = Ext.getCmp('COMM_USR').getValue();\r",
+                                    "    var COMM_PWD = Ext.getCmp('COMM_PWD').getValue();\r",
+                                    "    var COMM_QUIT_MODE1 = Ext.getCmp('COMM_QUIT_MODE1').getValue();\r",
+                                    "    var COMM_QUIT_MODE2 = Ext.getCmp('COMM_QUIT_MODE2').getValue();\r",
+                                    "\r",
+                                    "    if (Ext.commWindowMode == 0) {\r",
+                                    "        // 添加记录到grid\r",
+                                    "        if (COMM_COMM_CODE != null) {\r",
+                                    "            for (var str in COMM_COMM_CODE) {\r",
+                                    "                var len = Ext.getCmp('riDeviceCommGrid').getStore().data.length;\r",
+                                    "\r",
+                                    "                var data = {\r",
+                                    "                    TEMP_ID:len + 1,\r",
+                                    "                    DEVICE_IP:DEVICE_IP,\r",
+                                    "                    USR: COMM_USR, \r",
+                                    "                    PWD: COMM_PWD, \r",
+                                    "                    COMM_CODE: COMM_COMM_CODE[str], \r",
+                                    "                    QUIT_MODE1: COMM_QUIT_MODE1,\r",
+                                    "                    QUIT_MODE2: COMM_QUIT_MODE2\r",
+                                    "                };\r",
+                                    "                if (len) {\r",
+                                    "                    Ext.getCmp('riDeviceCommGrid').getStore().insert(len, data);\r",
+                                    "                } else {\r",
+                                    "                    Ext.getCmp('riDeviceCommGrid').getStore().insert(0, data);\r",
+                                    "                }\r",
+                                    "            }\r",
+                                    "\r",
+                                    "            // 隐藏弹出窗口\r",
+                                    "            win.hide();\r",
+                                    "        } else {\r",
+                                    "            return;\r",
+                                    "        }\r",
+                                    "\r",
+                                    "    } else {\r",
+                                    "        if (Ext.commId != null && Ext.commId != '') {\r",
+                                    "            var commId = Ext.commId.toString();\r",
+                                    "            var commGridStore = Ext.getCmp('riDeviceCommGrid').getStore();\r",
+                                    "            for(var i = 0; i < commGridStore.data.length; i++){   \r",
+                                    "                var row = commGridStore.getAt(i);\r",
+                                    "                if (row.get('TEMP_ID') == commId) {\r",
+                                    "                    if (row) {\r",
+                                    "                        row.set(\"DEVICE_IP\", DEVICE_IP);\r",
+                                    "                        row.set(\"USR\", COMM_USR);\r",
+                                    "                        row.set(\"PWD\", COMM_PWD);\r",
+                                    "                        //row.set(\"COMM_CODE\", COMM_COMM_CODE);\r",
+                                    "                        row.set(\"QUIT_MODE1\", COMM_QUIT_MODE1);\r",
+                                    "                        row.set(\"QUIT_MODE2\", COMM_QUIT_MODE2);\r",
+                                    "                    }\r",
+                                    "                }\r",
+                                    "            }\r",
+                                    "\r",
+                                    "            /**\r",
+                                    "            var row = Ext.getCmp('riDeviceCommGrid').getStore().getById(commId);\r",
+                                    "\r",
+                                    "            alert(row);\r",
+                                    "            if (row) {\r",
+                                    "            row.set(\"DEVICE_IP\", DEVICE_IP);\r",
+                                    "            row.set(\"USR\", COMM_USR);\r",
+                                    "            row.set(\"PWD\", COMM_PWD);\r",
+                                    "            row.set(\"COMM_CODE\", COMM_COMM_CODE);\r",
+                                    "            row.set(\"QUIT_MODE1\", COMM_QUIT_MODE1);\r",
+                                    "            row.set(\"QUIT_MODE2\", COMM_QUIT_MODE2);\r",
+                                    "            }\r",
+                                    "            */\r",
+                                    "\r",
+                                    "            // 隐藏弹出窗口\r",
+                                    "            win.hide();\r",
+                                    "        }        \r",
+                                    "    }\r",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "69e75e82-af01-4e57-a3e3-bb23ba2684b5"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 240,
+                        "layout|y": 190,
+                        "designer|userClassName": "MyButton7",
+                        "width": 80,
+                        "iconCls": "icon-cancel",
+                        "text": "取消"
+                    },
+                    "designerId": "895f41d7-9584-474b-a611-c09d6e6f1bf7",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick1",
+                                "fn": "onButtonClick1",
+                                "implHandler": [
+                                    "var win = Ext.inspectCommWindow;\r",
+                                    "if (win) {\r",
+                                    "    win.hide();\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "85846119-307d-44a7-b81d-27aeeff1662a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onInspectCommWindowAfterLayout",
+                "fn": "onInspectCommWindowAfterLayout",
+                "implHandler": [
+                    "var commStoreProxy = Ext.getCmp('COMM_COMM_CODE').getStore().getProxy();\r",
+                    "commStoreProxy.extraParams.DEVICE_TYPE_CODE = Ext.inspectDeviceType;\r",
+                    ""
+                ],
+                "name": "afterlayout",
+                "scope": "me"
+            },
+            "designerId": "f096c9eb-b852-42f8-9d25-4b8b1fddfad7"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PhysicalMachineModel"
+    },
+    "designerId": "acf7a0e1-68ab-4fb3-ab80-755d90fed575",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "b2ff4da7-011f-44d1-99f5-0a5d3455dc52"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "connStatus"
+            },
+            "designerId": "8d677b4f-eefd-4f5e-94ef-3a50a8cee8be"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "designerId": "7459d6da-7e4d-42a8-a86d-d7f4a24c3b8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cpu"
+            },
+            "designerId": "fd85500c-edaf-4872-96af-a14b3f5495fd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mem"
+            },
+            "designerId": "52399d89-3a35-471c-8f87-d1cfa9be9fe7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "memPer"
+            },
+            "designerId": "07fd16db-6b36-47ee-bfc2-1b5a27b76327"
+        }
+    ]
+}

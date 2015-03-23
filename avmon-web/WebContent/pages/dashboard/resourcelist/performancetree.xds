@@ -1,0 +1,68 @@
+{
+    "name": "performancetree",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext40",
+    "topInstanceFileMap": {
+        "6c038545-65b5-4e73-856c-417d0b9fcc55": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "285720ec-8f90-4f90-8be4-6d94e87a1e93": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "90b34065-6c86-4b75-8f74-b0d31eb5611b": {
+            "paths": [
+                "metadata/store/Resources",
+                "app/store/override/Resources.js",
+                "app/store/Resources.js"
+            ],
+            "className": "Resources"
+        },
+        "6a28f6dd-f178-4af3-bd68-a06ef3ae4670": {
+            "paths": [
+                "metadata/model/Resource",
+                "app/model/override/Resource.js",
+                "app/model/Resource.js"
+            ],
+            "className": "Resource"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "6c038545-65b5-4e73-856c-417d0b9fcc55"
+        ],
+        "store": [
+            "90b34065-6c86-4b75-8f74-b0d31eb5611b"
+        ],
+        "controller": [],
+        "model": [
+            "6a28f6dd-f178-4af3-bd68-a06ef3ae4670"
+        ],
+        "resource": [
+            "285720ec-8f90-4f90-8be4-6d94e87a1e93"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

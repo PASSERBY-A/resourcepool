@@ -1,0 +1,85 @@
+{
+    "name": "netArp",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 640,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "2957dbd0-eac3-4215-a8e9-4277671c2852": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "29eeec8d-2a0b-4a0e-927a-af09f3bc8913": {
+            "paths": [
+                "metadata/store/ArpStore",
+                "app/store/override/ArpStore.js",
+                "app/store/ArpStore.js"
+            ],
+            "className": "ArpStore"
+        },
+        "6e5224ab-8090-4b8b-b55c-066f0ed9f510": {
+            "paths": [
+                "metadata/model/ArpModel",
+                "app/model/override/ArpModel.js",
+                "app/model/ArpModel.js"
+            ],
+            "className": "ArpModel"
+        },
+        "7fdaaf60-bf22-4dc6-9aad-bd2645bf2ae6": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "c99baff7-b79f-4075-94b4-6a5f02ee932a": {
+            "paths": [
+                "metadata/store/DeviceStore",
+                "app/store/override/DeviceStore.js",
+                "app/store/DeviceStore.js"
+            ],
+            "className": "DeviceStore"
+        },
+        "49a01886-08a5-4709-9195-1100fc3a85a5": {
+            "paths": [
+                "metadata/model/DeviceModel",
+                "app/model/override/DeviceModel.js",
+                "app/model/DeviceModel.js"
+            ],
+            "className": "DeviceModel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "2957dbd0-eac3-4215-a8e9-4277671c2852"
+        ],
+        "store": [
+            "29eeec8d-2a0b-4a0e-927a-af09f3bc8913",
+            "c99baff7-b79f-4075-94b4-6a5f02ee932a"
+        ],
+        "controller": [],
+        "model": [
+            "6e5224ab-8090-4b8b-b55c-066f0ed9f510",
+            "49a01886-08a5-4709-9195-1100fc3a85a5"
+        ],
+        "resource": [
+            "7fdaaf60-bf22-4dc6-9aad-bd2645bf2ae6"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

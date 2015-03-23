@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e367c8b-7e39-43b7-bac3-9e796597601b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     TF_AVMON_ALARM_HISTORY."ID" AS TF_AVMON_ALARM_HISTORY_ID,
+     TF_AVMON_ALARM_HISTORY."CASE_ID" AS TF_AVMON_ALARM_HISTORY_CASE_ID,
+     TF_AVMON_ALARM_HISTORY."MO_ID" AS TF_AVMON_ALARM_HISTORY_MO_ID,
+     TF_AVMON_ALARM_HISTORY."SOURCE" AS TF_AVMON_ALARM_HISTORY_SOURCE,
+     TF_AVMON_ALARM_HISTORY."SOURCE_TYPE" AS TF_AVMON_ALARM_HISTORY_SOURCE_,
+     TF_AVMON_ALARM_HISTORY."ADDITIONAL_INFO" AS TF_AVMON_ALARM_HISTORY_ADDITIO,
+     TF_AVMON_ALARM_HISTORY."CODE" AS TF_AVMON_ALARM_HISTORY_CODE,
+     TF_AVMON_ALARM_HISTORY."TITLE" AS TF_AVMON_ALARM_HISTORY_TITLE,
+     TF_AVMON_ALARM_HISTORY."CONTENT" AS TF_AVMON_ALARM_HISTORY_CONTENT,
+     TF_AVMON_ALARM_HISTORY."ORIGINAL_GRADE" AS TF_AVMON_ALARM_HISTORY_ORIGINA,
+     TF_AVMON_ALARM_HISTORY."CURRENT_GRADE" AS TF_AVMON_ALARM_HISTORY_CURRENT,
+     TF_AVMON_ALARM_HISTORY."OWNER_ID" AS TF_AVMON_ALARM_HISTORY_OWNER_I,
+     TF_AVMON_ALARM_HISTORY."FIRST_OCCUR_TIME" AS TF_AVMON_ALARM_HISTORY_FIRST_O,
+     TF_AVMON_ALARM_HISTORY."LAST_OCCUR_TIME" AS TF_AVMON_ALARM_HISTORY_LAST_OC,
+     TF_AVMON_ALARM_HISTORY."RECEIVE_TIME" AS TF_AVMON_ALARM_HISTORY_RECEIVE,
+     TF_AVMON_ALARM_HISTORY."COUNT" AS TF_AVMON_ALARM_HISTORY_COUNT,
+     TF_AVMON_ALARM_HISTORY."CONFIRM_TIME" AS TF_AVMON_ALARM_HISTORY_CONFIRM,
+     TF_AVMON_ALARM_HISTORY."CONFIRM_USER" AS TF_AVMON_ALARM_HISTORY_CONFIRM,
+     TF_AVMON_ALARM_HISTORY."TASK_ID" AS TF_AVMON_ALARM_HISTORY_TASK_ID,
+     TF_AVMON_ALARM_HISTORY."STATUS" AS TF_AVMON_ALARM_HISTORY_STATUS,
+     TF_AVMON_ALARM_HISTORY."TYPE" AS TF_AVMON_ALARM_HISTORY_TYPE,
+     TF_AVMON_ALARM_HISTORY."SOLUTION" AS TF_AVMON_ALARM_HISTORY_SOLUTIO,
+     TF_AVMON_ALARM_HISTORY."CLOSE_BY" AS TF_AVMON_ALARM_HISTORY_CLOSE_B,
+     TF_AVMON_ALARM_HISTORY."CLOSE_TIME" AS TF_AVMON_ALARM_HISTORY_CLOSE_T,
+     TF_AVMON_ALARM_HISTORY."SOLUTION_TYPE" AS TF_AVMON_ALARM_HISTORY_SOLUTIO,
+     TF_AVMON_ALARM_HISTORY."PROCESS_LOG" AS TF_AVMON_ALARM_HISTORY_PROCESS
+FROM
+     "AVMON"."TF_AVMON_ALARM_HISTORY" TF_AVMON_ALARM_HISTORY]]>
+	</queryString>
+	<field name="TF_AVMON_ALARM_HISTORY_ID" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CASE_ID" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_MO_ID" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_SOURCE" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_SOURCE_" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_ADDITIO" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CODE" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_TITLE" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CONTENT" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_ORIGINA" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CURRENT" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_OWNER_I" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_FIRST_O" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_LAST_OC" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_RECEIVE" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_COUNT" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CONFIRM" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_TASK_ID" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_STATUS" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_TYPE" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_SOLUTIO" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CLOSE_B" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CLOSE_T" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_PROCESS" class="java.lang.String"/>
+	<group name="TF_AVMON_ALARM_HISTORY_MO_ID">
+		<groupExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_MO_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement uuid="fe9543a9-f077-441e-8975-dd924f9f027d" style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#000000"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_MO_ID}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement uuid="8315dc7d-018d-450a-bad5-73a63c67f58d" mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="b39e2fa9-e362-4676-a7e7-f7c6b9b64513" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="879153d1-9e97-4a76-9d9f-9e288bb46441" style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Gray Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6d1debe4-02e1-4992-99d0-0397fd18087a" style="SubTitle" x="117" y="46" width="157" height="22"/>
+				<textElement/>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="0b614838-3231-40eb-9648-a4c0cae029c6" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="2a4cd06e-9f04-4148-81cb-36f3b116d581" style="Column header" x="0" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d3a47db-cf37-4653-9299-2634c691c6bd" style="Column header" x="24" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CASE_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8aeab839-fabf-44ad-9f02-908a6e036a21" style="Column header" x="48" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_SOURCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c772e735-bb7f-4766-a05d-e2f36d0ed549" style="Column header" x="72" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_SOURCE_]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9008566a-4ae4-4c6c-bc89-1e8cf3480e51" style="Column header" x="96" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_ADDITIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ef04317f-b79e-4c7a-8869-b6ef4f675b86" style="Column header" x="120" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a3f7df19-a185-433e-a94b-c37d60a28c27" style="Column header" x="144" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_TITLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="afcbb93a-1363-4054-8823-995aae5deae5" style="Column header" x="168" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CONTENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="95c0393f-799f-4ec4-9b10-0b25881ea825" style="Column header" x="192" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_ORIGINA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="954ef9b6-33c8-4336-bcc4-4074fa92c916" style="Column header" x="216" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CURRENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7f9d3dad-c428-4616-b443-a3f546184650" style="Column header" x="240" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_OWNER_I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d59fa8e-1dac-49d4-911d-e0ad035e837f" style="Column header" x="264" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_FIRST_O]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="26fb8c16-a338-4b0d-a7f9-bdc518b91428" style="Column header" x="288" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_LAST_OC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7278db6-6d1b-4e00-8771-7f2d6991df3d" style="Column header" x="312" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_RECEIVE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5368dc5-0624-4df7-91ad-380f08790551" style="Column header" x="336" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_COUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="48507fa3-f40e-4234-ab4c-0218303bcc21" style="Column header" x="360" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CONFIRM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="788b0f8c-f051-4d18-8480-3e8760d9e978" style="Column header" x="384" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_TASK_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b29e018c-221d-4a81-8c2a-36d8de3ceb26" style="Column header" x="408" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dfdb990e-81ca-4ddb-bc60-fffd352cc514" style="Column header" x="432" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="853265de-68af-4725-abfb-c2bcee3f066a" style="Column header" x="456" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_SOLUTIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e7b6835e-1260-4a53-aea7-af6aa6b5590b" style="Column header" x="480" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CLOSE_B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ab5887b-02e6-46c7-9acd-357c48444b5a" style="Column header" x="504" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CLOSE_T]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d635a540-050b-43d6-b308-3bee24bc142f" style="Column header" x="528" y="19" width="24" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_PROCESS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="d24438f3-53f9-47e9-b8a5-8f0f4f2cadc5" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="4ec5cd08-298b-4291-9373-7d431ff248c6" style="Detail" x="0" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2cb8327c-4666-4ed9-8f1d-651d62a25ea9" style="Detail" x="24" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CASE_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7b82b80c-256f-4e12-a1ba-91867762d0ed" style="Detail" x="48" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_SOURCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5f742238-0349-4ebd-bbb3-76ddb11daa18" style="Detail" x="72" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_SOURCE_}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="41f519c3-be75-44d1-bb01-a445258e0989" style="Detail" x="96" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_ADDITIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="915fb500-79cf-4026-92aa-bdfb39b01031" style="Detail" x="120" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="99add269-b2c8-4ae8-ba18-5da2ec90af50" style="Detail" x="144" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_TITLE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e959431c-89de-4f11-8100-f9a5db9529a2" style="Detail" x="168" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CONTENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e24c791-264c-49bd-9abe-bcf753519259" style="Detail" x="192" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_ORIGINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b0c19ecb-6c81-402f-956c-e7a6d724dedc" style="Detail" x="216" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CURRENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dd9eb774-925d-4f26-9e5e-2a3ef9c25032" style="Detail" x="240" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_OWNER_I}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b6d0bc5b-360f-47ed-a367-59c9e4f703e2" style="Detail" x="264" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_FIRST_O}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2a13aa07-e96f-4833-bc06-f00994646725" style="Detail" x="288" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_LAST_OC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0743f803-39e1-42e1-9ece-1e8c0a518571" style="Detail" x="312" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_RECEIVE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5440b98f-357d-4231-ae45-85a5d823246e" style="Detail" x="336" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9c1c3d91-f556-48d3-a214-88db5627d2f1" style="Detail" x="360" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CONFIRM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3f9da085-f2b9-4d10-9994-7bc6af79c8f2" style="Detail" x="384" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_TASK_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a98b5d11-9101-47fb-a52a-be10e8d9b38e" style="Detail" x="408" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="42cee2cf-e487-41ce-ae19-3d0ead8af6cb" style="Detail" x="432" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ea4e506-2e78-4d6c-9754-d013b7c0b25d" style="Detail" x="456" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_SOLUTIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e0befd85-151c-480c-9648-94f8576efecd" style="Detail" x="480" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CLOSE_B}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="36252a85-a332-4239-a00d-f074715ea021" style="Detail" x="504" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CLOSE_T}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ac69d18c-94bb-4e5b-ba45-60b869223e3b" style="Detail" x="528" y="0" width="24" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_PROCESS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="7aa2f904-1a2b-45ce-9923-255aa9ac3281" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="daf4cb8a-8c65-4e13-9dca-c78bc056c8c1" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="1e84ca78-d7c0-4253-9af9-c1cce435a4d3" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="3bd94c27-65af-4333-96de-c8643d450e35" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

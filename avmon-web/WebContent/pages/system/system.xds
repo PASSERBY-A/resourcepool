@@ -1,0 +1,60 @@
+{
+    "name": "system",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "c09b3f94-b656-46ff-9490-fedb708682ed": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "5dad4882-19e1-4cab-9f56-d75a2dedf0a1": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0a6bd77e-f4e7-4365-b879-fd93ba2fc713": {
+            "paths": [
+                "metadata/store/SystemMenus",
+                "app/store/override/SystemMenus.js",
+                "app/store/SystemMenus.js"
+            ],
+            "className": "SystemMenus"
+        },
+        "e739156c-8a88-42c3-a7e7-f30f5d200974": {
+            "paths": [
+                "metadata/model/Menu",
+                "app/model/override/Menu.js",
+                "app/model/Menu.js"
+            ],
+            "className": "Menu"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "c09b3f94-b656-46ff-9490-fedb708682ed"
+        ],
+        "store": [
+            "0a6bd77e-f4e7-4365-b879-fd93ba2fc713"
+        ],
+        "controller": [],
+        "model": [
+            "e739156c-8a88-42c3-a7e7-f30f5d200974"
+        ],
+        "resource": [
+            "5dad4882-19e1-4cab-9f56-d75a2dedf0a1"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

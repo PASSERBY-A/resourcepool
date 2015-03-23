@@ -1,0 +1,26 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "thresholdModel"
+        ],
+        "stores": [
+            "thresholdStore",
+            "opertaorStore",
+            "alarmLevelStore"
+        ],
+        "views": [
+            "MyViewport",
+            "thresholdWindow"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1746",
+    "designerId": "application"
+}

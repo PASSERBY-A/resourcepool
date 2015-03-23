@@ -1,0 +1,46 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Menu",
+        "storeId": "MyTreeStore",
+        "designer|userClassName": "ReportMenus",
+        "nodeParam": "id",
+        "root": [
+            "{expanded: true,\r",
+            "                text: 'HP',\r",
+            "id: 'root'}"
+        ]
+    },
+    "designerId": "d2e26bb5-9123-4537-a0f0-963d9aecea59",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../main/menuTree?type=report"
+            },
+            "designerId": "56bf5238-1bcb-4211-ab1a-9f7f61460617",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "257abb14-b879-4ea6-b1e7-a5d2f64a537f"
+                }
+            ]
+        }
+    ]
+}

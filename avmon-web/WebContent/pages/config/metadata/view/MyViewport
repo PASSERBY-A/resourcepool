@@ -1,0 +1,98 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "b2ac62c2-45f6-4144-a347-bdb3c6d164b6",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "id": "configMenuTree",
+                "itemId": "configMenuTree",
+                "width": 250,
+                "collapsible": true,
+                "title": "Menu",
+                "store": "ConfigMenus",
+                "rootVisible": false
+            },
+            "designerId": "a256f8aa-c3cd-4362-9538-c770d5486328",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "ca3d9fcb-139c-4210-9b64-ca7c2d050cbd"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onConfigMenuTreeSelect",
+                        "implHandler": [
+                            "Ext.getCmp('configContent').body.update('<iframe scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\" src=\"'+record.get(\"url\")+'\"></iframe>');"
+                        ],
+                        "name": "select",
+                        "scope": "me"
+                    },
+                    "designerId": "1831101e-71ed-45d1-80c9-d3ee95df024b"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onConfigMenuTreeAfterLayout",
+                        "implHandler": [
+                            "var tree=Ext.getCmp(\"configMenuTree\");\r",
+                            "var path=\"/root/310/303\";\r",
+                            "tree.getSelectionModel().select(tree.getStore().getNodeById(303),true);"
+                        ],
+                        "name": "afterlayout",
+                        "scope": "me"
+                    },
+                    "designerId": "3ffb9a4c-4d5f-4e14-b907-2c952497650b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "id": "configContent",
+                "itemId": "configContent",
+                "layout": "border",
+                "title": null
+            },
+            "designerId": "9c3b54be-fe38-4ee3-96ea-d3ded338bf66"
+        }
+    ]
+}

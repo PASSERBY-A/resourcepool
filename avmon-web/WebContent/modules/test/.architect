@@ -1,0 +1,58 @@
+{
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": true,
+        "ae45468a-6174-4f3b-8bf7-f2e961df9d83": {
+            "id": "ae45468a-6174-4f3b-8bf7-f2e961df9d83",
+            "cn": [
+                {
+                    "id": "3b94249a-7fa7-45ba-bb98-fcd9468e8c46"
+                },
+                {
+                    "id": "8a8f76c1-a359-48d1-a452-569a8631918c",
+                    "cn": [
+                        {
+                            "id": "25268f9d-07ae-4f54-a049-5feb6b2605af"
+                        },
+                        {
+                            "id": "7601d741-79ef-46a6-a946-2a96a0d44b24"
+                        },
+                        {
+                            "id": "a9159cb9-37d0-4e42-a72b-6886845bddb8"
+                        },
+                        {
+                            "id": "f74d8941-f863-4834-b2f9-b4b3f086b9f3",
+                            "cn": [
+                                {
+                                    "id": "92128ad8-ed85-4fa8-8172-79f5cbcea0e4"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0f23576b-36b1-4a4a-b1e0-ad5a6cf69f48"
+                        }
+                    ]
+                },
+                {
+                    "id": "2b9671c7-be5b-4b11-bf5c-a68338988fb8",
+                    "cn": [
+                        {
+                            "id": "2dbc821b-bc93-4432-a0e6-7d287dfe85d4",
+                            "cn": [
+                                {
+                                    "id": "9a2ce944-173b-43da-9072-252680c59db7"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "808289da-a758-4d8c-8ab4-edc4f227e22d": {
+            "id": "808289da-a758-4d8c-8ab4-edc4f227e22d"
+        }
+    }
+}

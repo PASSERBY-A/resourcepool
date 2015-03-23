@@ -1,0 +1,1550 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "autoScroll": null,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen9275",
+    "designerId": "c810bff6-92fb-42bc-8771-866759d36194",
+    "cn": [
+        {
+            "type": "tabpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTabPanel",
+                "activeTab": 0
+            },
+            "designerId": "bd459b97-2d8b-4cba-b196-4e98ae2f668f",
+            "cn": [
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyPanel1",
+                        "id": "boardTab",
+                        "width": 812,
+                        "autoScroll": true,
+                        "layout": "hbox",
+                        "title": "仪表板"
+                    },
+                    "designerId": "2fcbb2cf-0cf6-4112-8c38-a42111e5bed7",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig"
+                            },
+                            "designerId": "075eaa5e-05d1-447b-9a2a-b3630d4b4569",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onTabClick3",
+                                        "fn": "onTabClick3",
+                                        "implHandler": [
+                                            "Ext.store.currentTab = 1;\r",
+                                            "\r",
+                                            "Ext.store.application.loadBasicInfo();\r",
+                                            "Ext.store.application.loadCpu();\r",
+                                            "Ext.store.application.loadNewAlarm();\r",
+                                            "Ext.store.application.loadIops();\r",
+                                            "//Ext.store.application.loadDelay();\r",
+                                            "Ext.store.application.loadNetWork();\r",
+                                            "Ext.store.application.loadGroupInfo();\r",
+                                            "Ext.store.application.loadDiskInfo();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "3f961071-103a-4e6b-92d8-c1a76e3fa329"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyContainer",
+                                "layout": "vbox"
+                            },
+                            "designerId": "dabc90a1-dd79-41ba-b9bf-96a28cd1a8ea",
+                            "cn": [
+                                {
+                                    "type": "form",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyForm",
+                                        "height": 160,
+                                        "id": "basicInfo",
+                                        "width": 245,
+                                        "bodyPadding": 5,
+                                        "title": "常规信息"
+                                    },
+                                    "designerId": "055b5c0d-032c-4381-9440-f6e871b2eb6f",
+                                    "cn": [
+                                        {
+                                            "type": "displayfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyDisplayField",
+                                                "width": 230,
+                                                "name": "OS",
+                                                "value": [
+                                                    "loading..."
+                                                ],
+                                                "fieldLabel": "厂家",
+                                                "labelWidth": 70
+                                            },
+                                            "designerId": "f2d4364c-b74f-4ff3-a241-2e421511a69f"
+                                        },
+                                        {
+                                            "type": "displayfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyDisplayField1",
+                                                "width": 230,
+                                                "name": "BUSINESSSYSTEM",
+                                                "value": [
+                                                    "loading..."
+                                                ],
+                                                "fieldLabel": "设备名称",
+                                                "labelWidth": 70
+                                            },
+                                            "designerId": "db033bce-e1bb-45d9-a7da-021486953318"
+                                        },
+                                        {
+                                            "type": "displayfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyDisplayField2",
+                                                "width": 230,
+                                                "name": "USAGE",
+                                                "value": [
+                                                    "loading..."
+                                                ],
+                                                "fieldLabel": "用途",
+                                                "labelWidth": 70
+                                            },
+                                            "designerId": "a1439f19-a924-41b6-a0f3-62e5ef4c2c2e"
+                                        },
+                                        {
+                                            "type": "displayfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyDisplayField3",
+                                                "width": 230,
+                                                "name": "ALARMCOUNT",
+                                                "value": [
+                                                    "loading..."
+                                                ],
+                                                "fieldLabel": "当前告警数",
+                                                "labelWidth": 70
+                                            },
+                                            "designerId": "b98d553e-ae01-4f7e-867d-7f16084ec6e9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel5",
+                                        "height": null,
+                                        "width": 245,
+                                        "layout": "vbox",
+                                        "title": "最新告警"
+                                    },
+                                    "designerId": "29540375-ae85-4a8e-91dd-d387a8c861a2",
+                                    "cn": [
+                                        {
+                                            "type": "gridpanel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "MyGridPanel4",
+                                                "height": null,
+                                                "id": "newAlarmGrid",
+                                                "autoScroll": true,
+                                                "title": null,
+                                                "store": "alarmStore"
+                                            },
+                                            "designerId": "a13d3143-fc15-4630-bd63-f695dacedb56",
+                                            "cn": [
+                                                {
+                                                    "type": "gridview",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGridView4"
+                                                    },
+                                                    "designerId": "13f66cee-ea03-48fc-9a22-93db618de192"
+                                                },
+                                                {
+                                                    "type": "actioncolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyActionColumn",
+                                                        "designer|displayName": "级别",
+                                                        "width": 30,
+                                                        "align": "center",
+                                                        "dataIndex": "CURRENT_GRADE"
+                                                    },
+                                                    "designerId": "a372a7f4-e4de-457e-91c3-a611d491cc59",
+                                                    "cn": [
+                                                        {
+                                                            "type": "fixedfunction",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "designer|userClassName": "getClass",
+                                                                "fn": "getClass",
+                                                                "designer|params": [
+                                                                    "v",
+                                                                    "metadata",
+                                                                    "r",
+                                                                    "rowIndex",
+                                                                    "colIndex",
+                                                                    "store"
+                                                                ],
+                                                                "implHandler": [
+                                                                    "var s= \"icon-alarm-level0\";\r",
+                                                                    "var a=r.get(\"CURRENT_GRADE\");\r",
+                                                                    "if(a==1) s=\"icon-alarm-level1\";\r",
+                                                                    "if(a==2) s=\"icon-alarm-level2\";\r",
+                                                                    "if(a==3) s=\"icon-alarm-level3\";\r",
+                                                                    "if(a==4) s=\"icon-alarm-level4\";\r",
+                                                                    "return s;\r",
+                                                                    ""
+                                                                ]
+                                                            },
+                                                            "designerId": "f78e358a-5a01-4457-9748-da28500f3c98"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn5",
+                                                        "align": "center",
+                                                        "dataIndex": "FIRST_OCCUR_TIME",
+                                                        "text": "时间"
+                                                    },
+                                                    "designerId": "46657605-ef64-4c77-89f5-63fd3b70a493"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn6",
+                                                        "width": 150,
+                                                        "align": "center",
+                                                        "dataIndex": "TITLE",
+                                                        "text": "内容"
+                                                    },
+                                                    "designerId": "5a065ebf-2218-489c-95e9-d1a11ffd8dff"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyContainer1",
+                                "layout": "vbox"
+                            },
+                            "designerId": "926a74e7-041e-4af5-9ea2-da4a6b8b4ad9",
+                            "cn": [
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel6",
+                                        "height": 160,
+                                        "width": null,
+                                        "layout": "vbox",
+                                        "title": "CPU"
+                                    },
+                                    "designerId": "b1ee8774-662d-48a7-8077-4e44b511014c",
+                                    "cn": [
+                                        {
+                                            "type": "chart",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "LineChart1",
+                                                "height": 135,
+                                                "id": "cpuChart",
+                                                "width": 535,
+                                                "animate": [
+                                                    "true"
+                                                ],
+                                                "store": "cpuStore"
+                                            },
+                                            "designerId": "c126b734-218a-4030-b48e-b64429c389e2",
+                                            "cn": [
+                                                {
+                                                    "type": "categoryaxis",
+                                                    "reference": {
+                                                        "name": "axes",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyCategoryAxis",
+                                                        "dashSize": 1,
+                                                        "fields": [
+                                                            "time"
+                                                        ],
+                                                        "position": "bottom",
+                                                        "title": null
+                                                    },
+                                                    "designerId": "2f0f3e0b-5e49-4ccd-a5cc-34dbe5e9d055"
+                                                },
+                                                {
+                                                    "type": "numericaxis",
+                                                    "reference": {
+                                                        "name": "axes",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyNumericAxis",
+                                                        "position": "left",
+                                                        "title": null,
+                                                        "maximum": 100,
+                                                        "minimum": 0
+                                                    },
+                                                    "designerId": "1aed850d-5059-48b7-8be6-b957893655a6"
+                                                },
+                                                {
+                                                    "type": "chartlegend",
+                                                    "reference": {
+                                                        "name": "legend",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyLegend2",
+                                                        "boxStroke": "#FFF",
+                                                        "padding": 2,
+                                                        "position": "top"
+                                                    },
+                                                    "designerId": "48a4487e-69da-440e-9eff-d5d90d168a6e"
+                                                },
+                                                {
+                                                    "type": "areaseries",
+                                                    "reference": {
+                                                        "name": "series",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyAreaSeries2",
+                                                        "title": [
+                                                            "['CPU使用率', 'CPU闲置率']"
+                                                        ],
+                                                        "xField": "time",
+                                                        "yField": [
+                                                            "usage1",
+                                                            "usage2"
+                                                        ]
+                                                    },
+                                                    "designerId": "e5c804b8-854b-4d06-891d-8fa911835ab8"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel7",
+                                        "height": null,
+                                        "width": null,
+                                        "layout": "hbox",
+                                        "title": null
+                                    },
+                                    "designerId": "0524024c-e013-472c-9309-b4a2c704cb0a",
+                                    "cn": [
+                                        {
+                                            "type": "chart",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "GaugeChart1",
+                                                "height": 250,
+                                                "id": "iops_chart1",
+                                                "width": null,
+                                                "animate": [
+                                                    "true"
+                                                ],
+                                                "insetPadding": 22,
+                                                "store": "iopsStore"
+                                            },
+                                            "designerId": "699ef942-a2b2-4c7f-a7ef-4da66f658559",
+                                            "cn": [
+                                                {
+                                                    "type": "gaugeaxis",
+                                                    "reference": {
+                                                        "name": "axes",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeAxis",
+                                                        "margin": 8,
+                                                        "maximum": 100,
+                                                        "minimum": 0
+                                                    },
+                                                    "designerId": "3e1b21ab-e495-4f13-8613-cec1271d4b83"
+                                                },
+                                                {
+                                                    "type": "gaugeseries",
+                                                    "reference": {
+                                                        "name": "series",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeSeries",
+                                                        "angleField": "XP_CLP_MS",
+                                                        "donut": 50
+                                                    },
+                                                    "designerId": "1691d7aa-8770-45f2-8224-7d7b4b027e0a"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "chart",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "layout|margins": null,
+                                                "designer|userClassName": "GaugeChart1",
+                                                "height": null,
+                                                "id": "iops_chart2",
+                                                "width": null,
+                                                "shadow": null,
+                                                "animate": [
+                                                    "true"
+                                                ],
+                                                "insetPadding": 22,
+                                                "store": "iopsStore",
+                                                "theme": "Red"
+                                            },
+                                            "designerId": "deca5b5f-d91e-40ea-8710-aad0fcd3c82b",
+                                            "cn": [
+                                                {
+                                                    "type": "gaugeaxis",
+                                                    "reference": {
+                                                        "name": "axes",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeAxis1",
+                                                        "margin": 8,
+                                                        "maximum": 100,
+                                                        "minimum": 0
+                                                    },
+                                                    "designerId": "f0e6bebf-9022-4c6e-889a-a1bc851f74b0"
+                                                },
+                                                {
+                                                    "type": "gaugeseries",
+                                                    "reference": {
+                                                        "name": "series",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeSeries1",
+                                                        "angleField": "XP_CLP_CMUS",
+                                                        "donut": 50
+                                                    },
+                                                    "designerId": "f9f423ef-b687-4fe6-a7af-6ca7ace473de"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "chart",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "GaugeChart2",
+                                                "height": null,
+                                                "id": "iops_chart3",
+                                                "width": null,
+                                                "animate": [
+                                                    "true"
+                                                ],
+                                                "insetPadding": 22,
+                                                "store": "iopsStore",
+                                                "theme": "Green"
+                                            },
+                                            "designerId": "4731260a-1b35-42ff-a07d-b8d150d8e819",
+                                            "cn": [
+                                                {
+                                                    "type": "gaugeaxis",
+                                                    "reference": {
+                                                        "name": "axes",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeAxis2",
+                                                        "margin": 8,
+                                                        "maximum": 100,
+                                                        "minimum": 0
+                                                    },
+                                                    "designerId": "dcc82433-efc9-41f3-90af-011f41bff944"
+                                                },
+                                                {
+                                                    "type": "gaugeseries",
+                                                    "reference": {
+                                                        "name": "series",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGaugeSeries2",
+                                                        "label": null,
+                                                        "showInLegend": null,
+                                                        "title": null,
+                                                        "angleField": "XP_CLP_CMWR",
+                                                        "donut": 50
+                                                    },
+                                                    "designerId": "19c76380-5af5-4630-8028-96f008f3bf4f"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "panel",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "dock": "bottom",
+                                                "container|align": "stretch",
+                                                "designer|userClassName": "MyPanel4",
+                                                "height": 20,
+                                                "layout": "hbox",
+                                                "title": null
+                                            },
+                                            "designerId": "99894f3f-a328-4dcb-b252-6949b3ef75ec",
+                                            "cn": [
+                                                {
+                                                    "type": "label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1,
+                                                        "designer|userClassName": "MyLabel2",
+                                                        "style": [
+                                                            "text-align: center;"
+                                                        ],
+                                                        "text": "延迟率"
+                                                    },
+                                                    "designerId": "5b72f20e-1be0-4261-966b-c62db5db63f3"
+                                                },
+                                                {
+                                                    "type": "label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1,
+                                                        "designer|userClassName": "MyLabel3",
+                                                        "style": [
+                                                            "text-align: center;"
+                                                        ],
+                                                        "text": "Cache使用率"
+                                                    },
+                                                    "designerId": "766759e8-b0c1-4ad0-a9c8-0923246a1e65"
+                                                },
+                                                {
+                                                    "type": "label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1,
+                                                        "designer|userClassName": "MyLabel4",
+                                                        "style": [
+                                                            "text-align: center;"
+                                                        ],
+                                                        "text": "写延迟利用率"
+                                                    },
+                                                    "designerId": "0315c0fc-f75d-473f-ae40-b299f1efdb45"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel8",
+                                        "height": 170,
+                                        "width": null,
+                                        "autoScroll": null,
+                                        "layout": "vbox",
+                                        "title": "网口信息"
+                                    },
+                                    "designerId": "fa4e8417-6688-4254-b6ff-c91ee63c8c08",
+                                    "cn": [
+                                        {
+                                            "type": "gridpanel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "MyGridPanel3",
+                                                "height": null,
+                                                "id": "networkGrid",
+                                                "autoScroll": true,
+                                                "title": null,
+                                                "store": "networkStore"
+                                            },
+                                            "designerId": "ca26bff1-1346-4990-845f-104ebb449d10",
+                                            "cn": [
+                                                {
+                                                    "type": "gridview",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGridView3"
+                                                    },
+                                                    "designerId": "c0a9148b-ab03-4270-ab50-66bd07da2700"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn3",
+                                                        "width": 200,
+                                                        "align": "center",
+                                                        "dataIndex": "PATH",
+                                                        "text": "前端口"
+                                                    },
+                                                    "designerId": "90fdd0eb-ece1-4d2c-bfca-9dfd474221a4"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn4",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_CP_R_MS",
+                                                        "text": "读延迟"
+                                                    },
+                                                    "designerId": "63594e1b-e2a1-41c6-ae31-2cb5d9e7ddc5"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn8",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_CP_W_MS",
+                                                        "text": "写延迟"
+                                                    },
+                                                    "designerId": "7b08f032-05f0-486e-83b6-761aefd49dca"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn12",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_CP_IOPS",
+                                                        "text": "速率"
+                                                    },
+                                                    "designerId": "af0b524a-a3f8-49f0-a172-a708a8242f04"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyContainer2",
+                                "layout": "vbox"
+                            },
+                            "designerId": "f0ca5f16-d0dc-4948-8705-476ed41fd78e",
+                            "cn": [
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|snapToGrid": 10,
+                                        "designer|userClassName": "MyPanel11",
+                                        "height": 160,
+                                        "width": null,
+                                        "layout": "absolute",
+                                        "title": "系统状态"
+                                    },
+                                    "designerId": "7622b8e9-69d5-4fec-8167-4d1d6db23d2d",
+                                    "cn": [
+                                        {
+                                            "type": "image",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|x": 30,
+                                                "layout|y": 5,
+                                                "designer|userClassName": "MyImg",
+                                                "height": 60,
+                                                "width": 60,
+                                                "src": "./image/pw_good.png"
+                                            },
+                                            "designerId": "607ea0dc-2a88-46c3-abf2-c47a5ffdf484"
+                                        },
+                                        {
+                                            "type": "image",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|x": 30,
+                                                "layout|y": 70,
+                                                "designer|userClassName": "MyImg1",
+                                                "height": 60,
+                                                "width": 60,
+                                                "src": "./image/fan_good.png"
+                                            },
+                                            "designerId": "e0c1ff9a-bd64-4f25-a2d9-e3c45300f165"
+                                        },
+                                        {
+                                            "type": "label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|x": 110,
+                                                "layout|y": 20,
+                                                "designer|userClassName": "MyLabel",
+                                                "text": "电源状态：未知"
+                                            },
+                                            "designerId": "293af174-7353-4e6d-a483-4c468156c7e2"
+                                        },
+                                        {
+                                            "type": "label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|x": 110,
+                                                "layout|y": 85,
+                                                "designer|userClassName": "MyLabel1",
+                                                "text": "风扇状态：未知"
+                                            },
+                                            "designerId": "6c4e9cf3-ed16-4765-b8b1-c06f5c953747"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel12",
+                                        "height": null,
+                                        "width": null,
+                                        "layout": "vbox",
+                                        "title": "组信息"
+                                    },
+                                    "designerId": "7e87e00c-cac6-4c1f-a694-eee725020d0b",
+                                    "cn": [
+                                        {
+                                            "type": "gridpanel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "MyGridPanel2",
+                                                "height": null,
+                                                "id": "groupInfoGrid",
+                                                "title": null,
+                                                "store": "groupStore"
+                                            },
+                                            "designerId": "e2c06339-bcfb-4230-a23a-654ce417d0df",
+                                            "cn": [
+                                                {
+                                                    "type": "gridview",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGridView2"
+                                                    },
+                                                    "designerId": "5bc22804-257d-43d7-b24c-ad262e75550d"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn12",
+                                                        "align": "center",
+                                                        "dataIndex": "PATH",
+                                                        "text": "组名"
+                                                    },
+                                                    "designerId": "d9ded9b5-eb33-4ced-a015-8d2730ce8daf"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn13",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_RG_IOPS",
+                                                        "text": "组IOPS"
+                                                    },
+                                                    "designerId": "7d9fe6bb-c14f-49f7-8275-58eb5f41ef31"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn14",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_RG_MS",
+                                                        "text": "组延迟率"
+                                                    },
+                                                    "designerId": "b801ffd9-0898-4508-b6c7-a0f0d714e0e0"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyPanel13",
+                                        "height": null,
+                                        "width": null,
+                                        "layout": "vbox",
+                                        "title": "盘信息"
+                                    },
+                                    "designerId": "36964274-afc3-4391-8f74-1a43ca1060e9",
+                                    "cn": [
+                                        {
+                                            "type": "gridpanel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "MyGridPanel1",
+                                                "height": null,
+                                                "id": "diskInfoGrid",
+                                                "title": null,
+                                                "store": "diskStore"
+                                            },
+                                            "designerId": "c2217765-a78c-42a3-ae8d-3460768eb9d1",
+                                            "cn": [
+                                                {
+                                                    "type": "gridview",
+                                                    "reference": {
+                                                        "name": "viewConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyGridView1"
+                                                    },
+                                                    "designerId": "76c2f1d7-1653-42b6-887f-a871718d1cdb"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn",
+                                                        "align": "center",
+                                                        "dataIndex": "PATH",
+                                                        "text": "盘名"
+                                                    },
+                                                    "designerId": "7650a71a-2f33-47c8-89f7-c66281e77dfa"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn1",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_DEV_IOPS",
+                                                        "text": "盘IOPS"
+                                                    },
+                                                    "designerId": "82d67f8a-a867-4437-9d6f-69af0a3c3beb"
+                                                },
+                                                {
+                                                    "type": "gridcolumn",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|userClassName": "MyColumn10",
+                                                        "align": "center",
+                                                        "dataIndex": "XP_DEV_MS",
+                                                        "text": "盘延迟率"
+                                                    },
+                                                    "designerId": "59700b14-7839-41cb-86f3-270829e05267"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel2",
+                        "height": 260,
+                        "id": "groupTab",
+                        "autoScroll": null,
+                        "layout": "fit",
+                        "bodyCls": null,
+                        "title": "组信息"
+                    },
+                    "designerId": "177b750d-1160-4d94-9345-b9bf5934a0ce",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig1"
+                            },
+                            "designerId": "f731e586-6c6d-41de-a328-c8b50018c8c7",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onTabClick",
+                                        "fn": "onTabClick",
+                                        "implHandler": [
+                                            "Ext.store.currentTab = 2;\r",
+                                            "\r",
+                                            "var groupView = Ext.getCmp('groupView');\r",
+                                            "var groupViewStoreProxy = groupView.getStore().getProxy();\r",
+                                            "groupViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                                            "\r",
+                                            "groupView.getStore().load();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "ef75fe64-1a19-4e2c-97c3-1b00a2728096"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPanel11",
+                                "height": null,
+                                "id": "groupViewPanel",
+                                "width": null,
+                                "autoScroll": true,
+                                "layout": "fit",
+                                "title": null,
+                                "titleCollapse": null
+                            },
+                            "designerId": "09e4547a-ca6c-45e6-8572-946e65be3f20",
+                            "cn": [
+                                {
+                                    "type": "dataview",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyView",
+                                        "id": "groupView",
+                                        "style": null,
+                                        "autoScroll": true,
+                                        "itemSelector": "div.thumb-wrap",
+                                        "loadMask": [
+                                            "false"
+                                        ],
+                                        "multiSelect": null,
+                                        "overItemCls": "x-view-over",
+                                        "simpleSelect": null,
+                                        "singleSelect": true,
+                                        "store": "groupViewStore"
+                                    },
+                                    "designerId": "6034d30d-baa3-4251-9aae-ccbbdcdfae6b",
+                                    "cn": [
+                                        {
+                                            "type": "template",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"thumb-wrap \" >\r",
+                                                    "    <tpl for=\".\">\r",
+                                                    "        <div class=\"resourceStatusBox\" >\r",
+                                                    "            <span style=\"font-size:10px;color:blue;overflow:hidden;\">\r",
+                                                    "                 {PATH}\r",
+                                                    "            </span>\r",
+                                                    "    \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >读延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_RG_IOPS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "            \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >写延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_RG_MS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "        </div>\r",
+                                                    "    </tpl>\r",
+                                                    "</div>"
+                                                ],
+                                                "designer|displayName": "itemTpl"
+                                            },
+                                            "designerId": "692b72f1-a914-451e-a34d-c6d4b972ac5c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel3",
+                        "id": "portTab",
+                        "layout": "fit",
+                        "title": "前端口"
+                    },
+                    "designerId": "1f80a75d-176d-4428-b34f-7c1e52cf9028",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig2"
+                            },
+                            "designerId": "36cfffc3-7960-413d-add4-9a3e5da6593f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onTabClick1",
+                                        "fn": "onTabClick1",
+                                        "implHandler": [
+                                            "Ext.store.currentTab = 3;\r",
+                                            "\r",
+                                            "var portView = Ext.getCmp('portView');\r",
+                                            "var portViewStoreProxy = portView.getStore().getProxy();\r",
+                                            "portViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                                            "\r",
+                                            "portView.getStore().load();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "15fdd117-1e9d-4c77-a1d2-a8d808d23261"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPanel17",
+                                "height": null,
+                                "id": "portViewPanel",
+                                "width": null,
+                                "autoScroll": null,
+                                "layout": "fit",
+                                "title": null
+                            },
+                            "designerId": "b45ee66a-654c-408c-9fea-452c5e1c8802",
+                            "cn": [
+                                {
+                                    "type": "dataview",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyView4",
+                                        "id": "portView",
+                                        "style": null,
+                                        "autoScroll": true,
+                                        "itemSelector": "div.thumb-wrap",
+                                        "loadMask": [
+                                            "false"
+                                        ],
+                                        "overItemCls": "x-view-over",
+                                        "singleSelect": true,
+                                        "store": "portViewStore"
+                                    },
+                                    "designerId": "57ea26b0-3bd0-4415-ac44-2f2cee7faa13",
+                                    "cn": [
+                                        {
+                                            "type": "template",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"thumb-wrap \" >\r",
+                                                    "    <tpl for=\".\">\r",
+                                                    "        <div class=\"resourceStatusBox\" >\r",
+                                                    "            <span style=\"font-size:10px;color:blue;overflow:hidden;\">\r",
+                                                    "                 {PATH}\r",
+                                                    "            </span>\r",
+                                                    "    \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >速率:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_CP_IOPS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "            \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >读延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_CP_R_MS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "            \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >写延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_CP_W_MS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "        </div>\r",
+                                                    "    </tpl>\r",
+                                                    "</div>"
+                                                ],
+                                                "designer|displayName": "itemTpl"
+                                            },
+                                            "designerId": "e585f3ce-d5af-4172-90d6-2b69c542c772"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel15",
+                        "id": "diskTab",
+                        "layout": "fit",
+                        "title": "盘信息"
+                    },
+                    "designerId": "65c5a593-236e-40e3-a268-91ea48c9328b",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig3"
+                            },
+                            "designerId": "3f44c9be-f691-4bc5-85f9-a5f30c687273",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onTabClick2",
+                                        "fn": "onTabClick2",
+                                        "implHandler": [
+                                            "Ext.store.currentTab = 4;\r",
+                                            "\r",
+                                            "var diskView = Ext.getCmp('diskView');\r",
+                                            "var diskViewStoreProxy = diskView.getStore().getProxy();\r",
+                                            "diskViewStoreProxy.extraParams.mo = Ext.store.moId;\r",
+                                            "\r",
+                                            "diskView.getStore().load();\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "e1b21c36-98b6-400f-be0e-ec7c08ff1220"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPanel20",
+                                "height": null,
+                                "id": "diskViewPanel",
+                                "width": null,
+                                "layout": "fit",
+                                "title": null
+                            },
+                            "designerId": "a20ac35e-d431-4e35-a26a-f2ee78b485b3",
+                            "cn": [
+                                {
+                                    "type": "dataview",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyView8",
+                                        "id": "diskView",
+                                        "style": null,
+                                        "autoScroll": true,
+                                        "itemSelector": "div.thumb-wrap",
+                                        "loadMask": [
+                                            "false"
+                                        ],
+                                        "overItemCls": "x-view-over",
+                                        "singleSelect": true,
+                                        "store": "diskViewStore"
+                                    },
+                                    "designerId": "0608514c-6c91-46f0-9d5b-d6d61a9baef7",
+                                    "cn": [
+                                        {
+                                            "type": "template",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "itemTpl",
+                                                "implHandler": [
+                                                    "<div class=\"thumb-wrap \" >\r",
+                                                    "    <tpl for=\".\">\r",
+                                                    "        <div class=\"resourceStatusBox\" >\r",
+                                                    "            <span style=\"font-size:10px;color:blue;overflow:hidden;\">\r",
+                                                    "                 {PATH}\r",
+                                                    "            </span>\r",
+                                                    "    \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >读延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_DEV_IOPS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "            \r",
+                                                    "            <div >\r",
+                                                    "                <div class=\"BarText\" >写延迟:</div>\r",
+                                                    "                <div class=\"ProgressBar\">  \r",
+                                                    "                    <div style=\"width:100%;\"><span>{XP_DEV_MS}</span></div>  \r",
+                                                    "                </div>   \r",
+                                                    "            </div>\r",
+                                                    "        </div>\r",
+                                                    "    </tpl>\r",
+                                                    "</div>"
+                                                ],
+                                                "designer|displayName": "itemTpl"
+                                            },
+                                            "designerId": "ba811c21-8210-4e75-a75f-0eee1cf21e17"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

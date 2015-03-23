@@ -1,0 +1,870 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|initialView": true,
+        "designer|userClassName": "MyViewport",
+        "id": "iloHostViewport",
+        "layout": "vbox"
+    },
+    "designerId": "46758963-eb57-44df-a5cb-1ebbe0819f6d",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": 184,
+                "layout": "hbox",
+                "layout|flex": 1
+            },
+            "designerId": "58ed0579-653b-4f80-9362-544a91aefc11",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "container|align": "stretch",
+                        "layout": "hbox",
+                        "layout|flex": 1.1,
+                        "resizable": null,
+                        "title": "CPU"
+                    },
+                    "designerId": "deccc266-f0a0-4255-8b43-a3c524c45312",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "border": false,
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "layout|flex": 1,
+                                "title": null
+                            },
+                            "designerId": "ced87acf-e7cc-4372-95b0-ccee9c7ba339",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoShow": true,
+                                        "bodyBorder": true,
+                                        "border": null,
+                                        "forceFit": true,
+                                        "hideHeaders": true,
+                                        "itemId": "cpuCommList",
+                                        "layout|flex": 1.2,
+                                        "maxWidth": null,
+                                        "rowLines": false,
+                                        "store": "CpuCommJsonStore",
+                                        "title": null,
+                                        "width": 95
+                                    },
+                                    "designerId": "58575d11-ef40-4031-acb0-d4d399114018",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "autoScroll": false,
+                                                "border": null,
+                                                "width": null
+                                            },
+                                            "designerId": "bd94e5fa-7db4-497f-868f-3ea52d4950fa"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "key",
+                                                "defaultWidth": 50,
+                                                "text": null,
+                                                "width": 50
+                                            },
+                                            "designerId": "7ad64cd3-e3f9-46f0-9755-b368f1ba722f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "value",
+                                                "defaultWidth": 50,
+                                                "text": null,
+                                                "width": 50
+                                            },
+                                            "designerId": "0614a8a4-59cd-4629-9191-3f1491c915a8",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "value",
+                                                            "metaData",
+                                                            "record",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "store",
+                                                            "view"
+                                                        ],
+                                                        "fn": "renderer",
+                                                        "implHandler": [
+                                                            "var cpuStatus=record.data.value;\r",
+                                                            "if(cpuStatus=='ok')\r",
+                                                            "{\r",
+                                                            "    return \"<img src='./image/status.png'/>\";\r",
+                                                            "}\r",
+                                                            "else if(cpuStatus=='NA'){\r",
+                                                            "    return \"<img src='./image/status1.png'/>\";\r",
+                                                            "}else{\r",
+                                                            "    return cpuStatus;\r",
+                                                            "}\r",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "designerId": "9d9f4d73-c853-423d-a1f9-55d5ba1e1231"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.view.View",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoScroll": true,
+                                        "itemId": "cpuList",
+                                        "itemSelector": "div .mometer",
+                                        "layout|flex": 0.8,
+                                        "shrinkWrap": 3,
+                                        "store": "CpuUsageStore"
+                                    },
+                                    "designerId": "0455b4d8-9448-4583-a36f-5c980f89d7dd",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "itemTpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "itemTpl",
+                                                "implHandler": [
+                                                    "  <div class=\"mometer\">  \r",
+                                                    "  \r",
+                                                    "   <div style=\"text-align: center;\">\r",
+                                                    "\t\t{cpuTemp}<br>\r",
+                                                    "        <tpl if=\"alarm=='true'\">\r",
+                                                    "            <img src=\"./image/cpugreen.png\"><br>\r",
+                                                    "        </tpl>\r",
+                                                    "        <tpl if=\"alarm=='false'\">\r",
+                                                    "            <img src=\"./image/cpugray.png\"><br>\r",
+                                                    "        </tpl>\r",
+                                                    "       {cpu}\r",
+                                                    "   </div>\r",
+                                                    " </div>"
+                                                ]
+                                            },
+                                            "designerId": "c52d1eaa-1c45-4dab-8775-623dee5ac4a1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "height": 212,
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "title": "内存"
+                    },
+                    "designerId": "21734c6e-f138-42b7-a16d-0cc84bba4a18",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "itemId": "memList",
+                                "itemSelector": "div .mem",
+                                "store": "MemJsonStore"
+                            },
+                            "designerId": "a4af0224-4247-4fe2-b964-14d6b4fed1d6",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"mem\" style=\"float:left;width: 33%;text-align: center;overflow:hidden\">\r",
+                                            "<tpl if=\"alarm=='false'\">\r",
+                                            "    <span title=\"{label}\">{label}</span><br>           \r",
+                                            "    <img src=\"./image/redmem.png\"><br>\r",
+                                            "    <span>大小：{size}</span><br>\r",
+                                            "    <span>速度：{speed}</span>            \r",
+                                            "</tpl>\r",
+                                            "    \r",
+                                            "<tpl if=\"alarm=='true'\">\r",
+                                            "    <span title=\"{label}\">{label}</span><br>            \r",
+                                            "    <img src=\"./image/bluemem.png\"><br>            \r",
+                                            "    <span>大小：{size}</span><br>\r",
+                                            "    <span>速度：{speed}</span>       \r",
+                                            "</tpl>\r",
+                                            "<tpl if=\"alarm=='none'\">    \r",
+                                            "    <span title=\"{label}\">{label}</span><br>\r",
+                                            "    <img src=\"./image/redgrey.png\"><br>\r",
+                                            "    <span>大小：{size}</span><br>\r",
+                                            "    <span>速度：{speed}</span><br>\r",
+                                            "</tpl>\r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "c39a0563-fd67-4e13-a87f-a50a6080e669"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 212,
+                        "layout": "fit",
+                        "layout|flex": 0.9,
+                        "title": "磁盘"
+                    },
+                    "designerId": "fbcc6693-9f30-435c-b227-b6a80b4655d0",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "emptyText": "没有磁盘信息可以显示",
+                                "itemId": "diskList",
+                                "itemSelector": "div .mometer",
+                                "store": "DiskJsonStore"
+                            },
+                            "designerId": "203b5a69-5707-42a5-a568-d66271d681c5",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"mometer\">\r",
+                                            " <div style=\"float:left;text-align: center;\">     \r",
+                                            "\t<tpl if=\"alarm=='false'\">\r",
+                                            "        {diskTemp}<br/>\r",
+                                            "        <img src=\"./image/cputempred.png\"><br/>\r",
+                                            "        {disk}<br/>\r",
+                                            "        <img src=\"./image/diskgray.png\"><br>\r",
+                                            "\t</tpl>\r",
+                                            "    <tpl if=\"alarm=='true'\">\r",
+                                            "        {diskTemp}<br/>\r",
+                                            "        <img src=\"./image/cputempgreen.png\"><br/>\r",
+                                            "        {disk}<br/>\r",
+                                            "        <img src=\"./image/diskgreen.png\"><br>\r",
+                                            "    </tpl>\r",
+                                            "    </div>\r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "5c32e7ea-09fa-48e9-b002-eeb90f4b43e2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "",
+                        "height": 212,
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "title": "网卡"
+                    },
+                    "designerId": "239bd4d9-e83c-4798-8df3-c32a57a23537",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "itemId": "netcardList",
+                                "itemSelector": "div .netcard",
+                                "store": "NetcardJsonStore"
+                            },
+                            "designerId": "95482bd4-6c18-4d49-b76e-11a4e892d26a",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"netcard\" style=\"float:left;width:50%;overflow:hidden\">  \r",
+                                            "    <font>{nic}</font><br>\r",
+                                            "    <img src=\"./image/netcard.png\" width=\"58px\" heigth=\"58px\"><br>\r",
+                                            "    <span title='{type}'>类型：{type}</span><br/>\r",
+                                            "    <div style=\"width:100%;overflow:hidden\" title='{type}'>MAC：{mac}</div>    \r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "e1a138c2-8949-4d9c-ae70-421663eacad8"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "layout": "hbox",
+                "layout|flex": 1
+            },
+            "designerId": "37504dd5-6d30-41a8-b392-8a56cdaff680",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "container|align": "stretch",
+                        "height": 212,
+                        "layout": "hbox",
+                        "layout|flex": 1.1,
+                        "manageHeight": false,
+                        "title": "电源:",
+                        "width": null
+                    },
+                    "designerId": "7b60c16a-07f0-45e5-b6f1-98213f253667",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": "none",
+                                "emptyText": "没有相关数据可以显示",
+                                "forceFit": true,
+                                "frameHeader": false,
+                                "header": false,
+                                "hideHeaders": true,
+                                "layout|flex": 1,
+                                "store": "PowerCommJsonStore",
+                                "title": "powerCommon"
+                            },
+                            "designerId": "df074721-60b8-4c84-b2db-6452f35d1c0a",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "powerCommList"
+                                    },
+                                    "designerId": "f16c8b13-1b1c-4630-a44d-4896eec8a655"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "key",
+                                        "text": null
+                                    },
+                                    "designerId": "0ea7a9dd-4766-4b14-a1e2-87d9cdf4e384"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "value",
+                                        "text": null
+                                    },
+                                    "designerId": "a07b6c55-b550-4207-9783-2074600581df",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value",
+                                                    "metaData",
+                                                    "record",
+                                                    "rowIndex",
+                                                    "colIndex",
+                                                    "store",
+                                                    "view"
+                                                ],
+                                                "fn": "renderer",
+                                                "implHandler": [
+                                                    "var powerStatus=record.data.value;\r",
+                                                    "if(powerStatus=='on'||powerStatus=='not_redundant')\r",
+                                                    "{\r",
+                                                    "    return \"<img src='./image/status.png'/>\";\r",
+                                                    "}\r",
+                                                    "else{\r",
+                                                    "    return \"<img src='./image/status1.png'/>\";\r",
+                                                    "}\r",
+                                                    ""
+                                                ]
+                                            },
+                                            "designerId": "1e9488b6-a200-4bf5-bf3a-2f2ba0935f96"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "emptyText": "没有相关数据可以显示",
+                                "itemId": "powerList",
+                                "itemSelector": "div .power",
+                                "layout|flex": 1.6,
+                                "store": "PowerStore"
+                            },
+                            "designerId": "06b18d4a-9ab8-44a5-97d7-eec12c48b724",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"power\" style=\"float: left;width:49%;overflow:hidden;text-align: center;\">    \r",
+                                            "    <span style=\"text-align:center;\">{temp}</span>\r",
+                                            "    <tpl if=\"alarm=='on'\">\r",
+                                            "        <div>\r",
+                                            "            <img src=\"./image/cputempgreen.png\">\r",
+                                            "        </div>\r",
+                                            "    </tpl>\r",
+                                            "    <tpl if=\"alarm=='off'\">\r",
+                                            "        <div>\r",
+                                            "            <img src=\"./image/cputempgray.png\">\r",
+                                            "        </div>\r",
+                                            "    </tpl>\r",
+                                            "    <tpl if=\"status=='on'\">\r",
+                                            "        <div>\r",
+                                            "            <img src=\"./image/powergreen.png\">\r",
+                                            "        </div>\r",
+                                            "    </tpl>\r",
+                                            "    <tpl if=\"status=='off'\">\r",
+                                            "        <div>\r",
+                                            "            <img src=\"./image/powerred.png\">\r",
+                                            "        </div>\r",
+                                            "    </tpl>\r",
+                                            "    <div title=\"{power}\" style=\"overflow:hidden\">{power}</div>\r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "6caa9deb-e7b6-453e-9788-12e83839ec62"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "container|align": "stretch",
+                        "layout": "hbox",
+                        "layout|flex": 2.9,
+                        "title": "主板"
+                    },
+                    "designerId": "2b76d037-0327-4df6-8dfc-0871e08471c4",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "itemId": "boardList",
+                                "itemSelector": "div .board",
+                                "layout|flex": 3,
+                                "store": "BoardJsonStore"
+                            },
+                            "designerId": "b764a67c-833e-4422-90f1-d437aee3f4a0",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<tpl for=\".\">\r",
+                                            "    \r",
+                                            "        <div class=\"board\" style=\"float:left;width:16%;overflow:hidden\">\r",
+                                            "            {name}</br></br>\r",
+                                            "        \t\t<div><img src=\"./image/board.png\"></div>\r",
+                                            "        \t<div>\r",
+                                            "            \t<span>类型：{type}</span><br>\r",
+                                            "            \t<span>宽度：{width}</span>\r",
+                                            "        \t</div>\r",
+                                            "    \t</div>\r",
+                                            "\t\r",
+                                            "</tpl>"
+                                        ]
+                                    },
+                                    "designerId": "7c403f3a-5d5a-4581-ac6f-c6ac24cffaaa"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": 250,
+                "layout": "hbox",
+                "layout|flex": 1,
+                "width": 400
+            },
+            "designerId": "2f53f262-22f3-4ad7-92f3-792e514da43a",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1.1,
+                        "title": "BIOS"
+                    },
+                    "designerId": "63db562b-4639-4b90-97e0-bc527f849bdd",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hideHeaders": true,
+                                "itemId": "biosList",
+                                "margin": 5,
+                                "store": "BiosJsonStore",
+                                "title": null
+                            },
+                            "designerId": "59e8f0ec-7cce-4118-86ca-e5650545a241",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "535d43fe-751d-428c-8294-9951145f291e"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "key",
+                                        "text": null
+                                    },
+                                    "designerId": "81e9ab50-bfee-4948-879f-8769d27d8497"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "value",
+                                        "text": null
+                                    },
+                                    "designerId": "4df0aac9-9d1b-4244-bb7f-6557ae1bd2cb"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "layout": "fit",
+                        "layout|flex": 1.9,
+                        "title": "风扇"
+                    },
+                    "designerId": "24b08bfb-1f21-42f5-836d-fa7c6e59de42",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "emptyText": "没有相关数据可以显示",
+                                "itemId": "fanList",
+                                "itemSelector": "div .fan",
+                                "store": "FanJsonStore"
+                            },
+                            "designerId": "8030f485-2c78-45af-bded-9cc4f1c4630d",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"fan\" style=\"width:16.6%;overflow:hidden\">\r",
+                                            "    {name}<br>\r",
+                                            "    <tpl if=\"status=='ok'\">\r",
+                                            "        <img src=\"./image/fan2.png\"><br>\r",
+                                            "    </tpl>\r",
+                                            "    <tpl if=\"status!='ok'\">\r",
+                                            "        <img width=\"10%\" height=\"8%\" src=\"./image/fan1.png\"><br>\r",
+                                            "    </tpl>\r",
+                                            "    转速：{speed}<br>\r",
+                                            "    <div title=\"{location}\" style=\"width:100%;overflow:hidden\">位置：{location}</div>\r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "3a6d1a25-9d09-469f-ad3a-2f6ea0e26364"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "layout|flex": 1,
+                        "title": "机箱"
+                    },
+                    "designerId": "11b4d354-902a-48f1-b2a3-ab26475dadeb",
+                    "cn": [
+                        {
+                            "type": "Ext.view.View",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "caseList",
+                                "itemSelector": "div .mometer",
+                                "store": "CaseJsonStore"
+                            },
+                            "designerId": "890ae29c-ccc2-4797-8d21-ad2f779116ca",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"mometer\" style=\"width:100%;\">    \r",
+                                            "    <div style=\"width:40%;padding-left:3px;float:left;margin-top:10%\">\r",
+                                            "        <div>{caseTemp}</div>\r",
+                                            "        <div style=\"heigth：50%\"></div>\r",
+                                            "    </div>\r",
+                                            "    <div style=\"margin-top:10%\">\r",
+                                            "        <tpl if=\"alarm=='ok'\">\r",
+                                            "        \t<img src=\"./image/disktempgreen.png\">\r",
+                                            "        </tpl>    \r",
+                                            "        <tpl if=\"alarm=='no'\">\r",
+                                            "            <img src=\"./image/disktempred.png\">\r",
+                                            "        </tpl>    \r",
+                                            "    </div>\r",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "designerId": "77a0c2be-2746-4f8b-9477-6ae60bec0ae6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+$(function () {
+	    $('#tu1').highcharts({
+	        chart: {
+
+	        },
+	        credits: {
+            	text: ' ',
+            	href: '#'
+	        },
+	        title: {
+	            text: 'cpu使用率',
+	        },
+	        tooltip: {
+	    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: false,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: false,
+	                    color: '#000000',
+	                    connectorColor: '#000000',
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+	                }
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: 'cpu使用率',
+	            data: [
+	                {
+	                    name: '未使用',
+	                    y: Math.round(100.00-capacityObj[1].percentused),
+	                    sliced: false,
+	                    selected: true
+	                },
+	                ['已使用',   Math.round(capacityObj[1].percentused)]
+	            ]
+	        }]
+	    });
+	});
+	
+	
+	$(function () {
+	    $('#tu2').highcharts({
+	        chart: {
+
+	        },
+	        credits: {
+            	text: ' ',
+            	href: '#'
+	        },
+	        title: {
+	            text: '内存使用率',
+	        },
+	        tooltip: {
+	    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: false,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: false,
+	                    color: '#000000',
+	                    connectorColor: '#000000',
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+	                }
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: '内存使用率',
+	            data: [
+	                {
+	                    name: '未使用',
+	                    y: Math.round(100.00-capacityObj[0].percentused),
+	                    sliced: false,
+	                    selected: true
+	                },
+	                ['已使用',   Math.round(capacityObj[0].percentused)]
+	            ]
+	        }]
+	    });
+	});
+
+	
+	$(function () {
+	    $('#tu3').highcharts({
+	        chart: {
+
+	        },
+	        credits: {
+            	text: ' ',
+            	href: '#'
+	        },
+	        title: {
+	            text: '存储使用率',
+	        },
+	        tooltip: {
+	    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: false,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: false,
+	                    color: '#000000',
+	                    connectorColor: '#000000',
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+	                }
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: '存储使用率',
+	            data: [
+	                {
+	                    name: '未使用',
+	                    y: Math.round(100.00-capacityObj[2].percentused),
+	                    sliced: false,
+	                    selected: true
+	                },
+	                ['已使用',   Math.round(capacityObj[2].percentused)]
+	            ]
+	        }]
+	    });
+	});
+
+
+	
+	$(function () {
+	    $('#tu4').highcharts({
+	        chart: {
+
+	        },
+	        credits: {
+            	text: ' ',
+            	href: '#'
+	        },
+	        title: {
+	            text: '辅助存储使用率',
+	        },
+	        tooltip: {
+	    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                allowPointSelect: false,
+	                cursor: 'pointer',
+	                dataLabels: {
+	                    enabled: false,
+	                    color: '#BFF2FC',
+	                    connectorColor: '#BFF2FC',
+	                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+	                }
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: '辅助存储使用率',
+	            data: [
+	                {
+	                    name: '未使用',
+	                    y: Math.round(100.00-capacityObj[6].percentused),
+	                    sliced: false,
+	                    selected: true
+	                },
+	                ['已使用',   Math.round(capacityObj[6].percentused)]
+	            ]
+	        }]
+	    });
+	});
+	

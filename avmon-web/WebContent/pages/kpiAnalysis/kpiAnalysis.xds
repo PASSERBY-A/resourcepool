@@ -1,0 +1,60 @@
+{
+    "name": "kpiAnalysis",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "e9153ce3-0f62-4739-9b98-70001bd1b65a": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "77f35a74-c735-45c8-8969-935d8206c602": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "a4c2aa6a-e53a-4f0d-8012-4fcfb29bf7cf": {
+            "paths": [
+                "metadata/store/PerformanceMenus",
+                "app/store/override/PerformanceMenus.js",
+                "app/store/PerformanceMenus.js"
+            ],
+            "className": "PerformanceMenus"
+        },
+        "ab1faf39-8b21-4ca0-b78b-fc37657e962d": {
+            "paths": [
+                "metadata/model/Menu",
+                "app/model/override/Menu.js",
+                "app/model/Menu.js"
+            ],
+            "className": "Menu"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "e9153ce3-0f62-4739-9b98-70001bd1b65a"
+        ],
+        "store": [
+            "a4c2aa6a-e53a-4f0d-8012-4fcfb29bf7cf"
+        ],
+        "controller": [],
+        "model": [
+            "ab1faf39-8b21-4ca0-b78b-fc37657e962d"
+        ],
+        "resource": [
+            "77f35a74-c735-45c8-8969-935d8206c602"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,301 @@
+{
+    "name": "mainEngine",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "9a5066c2-dd28-4e9a-8f8b-0e7e47d00e44": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "157851b9-2989-4a6f-9433-72fa0745a63c": {
+            "paths": [
+                "metadata/store/ErrorLogStore",
+                "app/store/override/ErrorLogStore.js",
+                "app/store/ErrorLogStore.js"
+            ],
+            "className": "ErrorLogStore"
+        },
+        "ac99a5f3-a650-4cd5-96a2-350f31042be6": {
+            "paths": [
+                "metadata/store/CourseStore",
+                "app/store/override/CourseStore.js",
+                "app/store/CourseStore.js"
+            ],
+            "className": "CourseStore"
+        },
+        "fe4c8023-ffa1-45c9-9636-8d5128f035b5": {
+            "paths": [
+                "metadata/store/MemStore",
+                "app/store/override/MemStore.js",
+                "app/store/MemStore.js"
+            ],
+            "className": "MemStore"
+        },
+        "e13ab556-b35c-442b-8ed4-49bbea16da8c": {
+            "paths": [
+                "metadata/store/CpuStore",
+                "app/store/override/CpuStore.js",
+                "app/store/CpuStore.js"
+            ],
+            "className": "CpuStore"
+        },
+        "1e6c248b-d614-405c-83cb-63dc828615bf": {
+            "paths": [
+                "metadata/store/SkipFileStore",
+                "app/store/override/SkipFileStore.js",
+                "app/store/SkipFileStore.js"
+            ],
+            "className": "SkipFileStore"
+        },
+        "7041043f-cfde-4f45-9a70-09b24cbe5102": {
+            "paths": [
+                "metadata/store/DiskStore",
+                "app/store/override/DiskStore.js",
+                "app/store/DiskStore.js"
+            ],
+            "className": "DiskStore"
+        },
+        "2f73a3c7-b0e8-4248-9857-1044232f2a76": {
+            "paths": [
+                "metadata/store/FileSysStore",
+                "app/store/override/FileSysStore.js",
+                "app/store/FileSysStore.js"
+            ],
+            "className": "FileSysStore"
+        },
+        "685c75cf-3fe5-4018-9a60-93573f963594": {
+            "paths": [
+                "metadata/store/AlarmStore",
+                "app/store/override/AlarmStore.js",
+                "app/store/AlarmStore.js"
+            ],
+            "className": "AlarmStore"
+        },
+        "bc277c1a-2310-4971-a1a3-6aa3d0dc95de": {
+            "paths": [
+                "metadata/model/ErrorLogModel",
+                "app/model/override/ErrorLogModel.js",
+                "app/model/ErrorLogModel.js"
+            ],
+            "className": "ErrorLogModel"
+        },
+        "c3920c50-8398-462d-a367-d803a64c0deb": {
+            "paths": [
+                "metadata/model/CourseModel",
+                "app/model/override/CourseModel.js",
+                "app/model/CourseModel.js"
+            ],
+            "className": "CourseModel"
+        },
+        "62db8672-0290-4fd0-bf8e-bf789a5b0fbc": {
+            "paths": [
+                "metadata/model/MemModel",
+                "app/model/override/MemModel.js",
+                "app/model/MemModel.js"
+            ],
+            "className": "MemModel"
+        },
+        "f4f1e963-57d9-43fd-9369-62c525d31308": {
+            "paths": [
+                "metadata/model/CpuModel",
+                "app/model/override/CpuModel.js",
+                "app/model/CpuModel.js"
+            ],
+            "className": "CpuModel"
+        },
+        "2b97ffb7-abc2-451f-968c-c0c33b9fe68f": {
+            "paths": [
+                "metadata/model/SkipFileModel",
+                "app/model/override/SkipFileModel.js",
+                "app/model/SkipFileModel.js"
+            ],
+            "className": "SkipFileModel"
+        },
+        "e2060ee3-72a9-46b2-8b4b-c10f4450b6af": {
+            "paths": [
+                "metadata/model/DiskModel",
+                "app/model/override/DiskModel.js",
+                "app/model/DiskModel.js"
+            ],
+            "className": "DiskModel"
+        },
+        "f99bc519-2f5d-48fd-b1d8-a54440e5fe0a": {
+            "paths": [
+                "metadata/model/FileSysModel",
+                "app/model/override/FileSysModel.js",
+                "app/model/FileSysModel.js"
+            ],
+            "className": "FileSysModel"
+        },
+        "b727102c-a103-44a3-9c65-4e9761c68742": {
+            "paths": [
+                "metadata/model/AlarmModel",
+                "app/model/override/AlarmModel.js",
+                "app/model/AlarmModel.js"
+            ],
+            "className": "AlarmModel"
+        },
+        "1cefa954-a919-4a4d-9f06-654bb642ef08": {
+            "paths": [
+                "metadata/store/NetworkSendStore",
+                "app/store/override/NetworkSendStore.js",
+                "app/store/NetworkSendStore.js"
+            ],
+            "className": "NetworkSendStore"
+        },
+        "579baadd-0844-4454-ba64-6a2229d60976": {
+            "paths": [
+                "metadata/model/NetworkSendModel",
+                "app/model/override/NetworkSendModel.js",
+                "app/model/NetworkSendModel.js"
+            ],
+            "className": "NetworkSendModel"
+        },
+        "f8ce5a72-45b5-4e88-af8f-40dcc3dfa4d5": {
+            "paths": [
+                "metadata/model/NetworkReceiveModel",
+                "app/model/override/NetworkReceiveModel.js",
+                "app/model/NetworkReceiveModel.js"
+            ],
+            "className": "NetworkReceiveModel"
+        },
+        "1735c1a1-0875-4de1-a730-d379879909bb": {
+            "paths": [
+                "metadata/store/NetworkReceiveStore",
+                "app/store/override/NetworkReceiveStore.js",
+                "app/store/NetworkReceiveStore.js"
+            ],
+            "className": "NetworkReceiveStore"
+        },
+        "63958322-6f8b-4921-be00-5520406ea0f4": {
+            "paths": [
+                "metadata/store/CourseSendStore",
+                "app/store/override/CourseSendStore.js",
+                "app/store/CourseSendStore.js"
+            ],
+            "className": "CourseSendStore"
+        },
+        "7bfdab49-aeca-434d-bd1e-7d47bdb3bad0": {
+            "paths": [
+                "metadata/store/CourseReceiveStore",
+                "app/store/override/CourseReceiveStore.js",
+                "app/store/CourseReceiveStore.js"
+            ],
+            "className": "CourseReceiveStore"
+        },
+        "36dd3101-4fcd-4530-9343-3ffdc8395a82": {
+            "paths": [
+                "metadata/store/MemSendStore",
+                "app/store/override/MemSendStore.js",
+                "app/store/MemSendStore.js"
+            ],
+            "className": "MemSendStore"
+        },
+        "e30ecbc4-084b-40d1-b057-547ca95e086e": {
+            "paths": [
+                "metadata/store/MemReceiveStore",
+                "app/store/override/MemReceiveStore.js",
+                "app/store/MemReceiveStore.js"
+            ],
+            "className": "MemReceiveStore"
+        },
+        "249277cc-64f0-42a2-9da6-61edd38ba98c": {
+            "paths": [
+                "metadata/store/BasicInfoStore",
+                "app/store/override/BasicInfoStore.js",
+                "app/store/BasicInfoStore.js"
+            ],
+            "className": "BasicInfoStore"
+        },
+        "838b67ca-d405-4717-b9a5-457bef404355": {
+            "paths": [
+                "metadata/model/BasicInfoModel",
+                "app/model/override/BasicInfoModel.js",
+                "app/model/BasicInfoModel.js"
+            ],
+            "className": "BasicInfoModel"
+        },
+        "7346a5b1-bf3f-4f48-aafd-95aeb4c300b1": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "19506b18-c501-4837-8f51-2ea63687b64b": {
+            "paths": [
+                "metadata/store/NetworkStore",
+                "app/store/override/NetworkStore.js",
+                "app/store/NetworkStore.js"
+            ],
+            "className": "NetworkStore"
+        },
+        "77159e92-e8fa-4b64-ac05-1907800a42c4": {
+            "paths": [
+                "metadata/model/Network",
+                "app/model/override/Network.js",
+                "app/model/Network.js"
+            ],
+            "className": "Network"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "9a5066c2-dd28-4e9a-8f8b-0e7e47d00e44"
+        ],
+        "store": [
+            "157851b9-2989-4a6f-9433-72fa0745a63c",
+            "ac99a5f3-a650-4cd5-96a2-350f31042be6",
+            "fe4c8023-ffa1-45c9-9636-8d5128f035b5",
+            "e13ab556-b35c-442b-8ed4-49bbea16da8c",
+            "1e6c248b-d614-405c-83cb-63dc828615bf",
+            "7041043f-cfde-4f45-9a70-09b24cbe5102",
+            "2f73a3c7-b0e8-4248-9857-1044232f2a76",
+            "685c75cf-3fe5-4018-9a60-93573f963594",
+            "1cefa954-a919-4a4d-9f06-654bb642ef08",
+            "1735c1a1-0875-4de1-a730-d379879909bb",
+            "63958322-6f8b-4921-be00-5520406ea0f4",
+            "7bfdab49-aeca-434d-bd1e-7d47bdb3bad0",
+            "36dd3101-4fcd-4530-9343-3ffdc8395a82",
+            "e30ecbc4-084b-40d1-b057-547ca95e086e",
+            "249277cc-64f0-42a2-9da6-61edd38ba98c",
+            "19506b18-c501-4837-8f51-2ea63687b64b"
+        ],
+        "controller": [],
+        "model": [
+            "bc277c1a-2310-4971-a1a3-6aa3d0dc95de",
+            "c3920c50-8398-462d-a367-d803a64c0deb",
+            "62db8672-0290-4fd0-bf8e-bf789a5b0fbc",
+            "f4f1e963-57d9-43fd-9369-62c525d31308",
+            "2b97ffb7-abc2-451f-968c-c0c33b9fe68f",
+            "e2060ee3-72a9-46b2-8b4b-c10f4450b6af",
+            "f99bc519-2f5d-48fd-b1d8-a54440e5fe0a",
+            "b727102c-a103-44a3-9c65-4e9761c68742",
+            "579baadd-0844-4454-ba64-6a2229d60976",
+            "f8ce5a72-45b5-4e88-af8f-40dcc3dfa4d5",
+            "838b67ca-d405-4717-b9a5-457bef404355",
+            "77159e92-e8fa-4b64-ac05-1907800a42c4"
+        ],
+        "resource": [
+            "7346a5b1-bf3f-4f48-aafd-95aeb4c300b1"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

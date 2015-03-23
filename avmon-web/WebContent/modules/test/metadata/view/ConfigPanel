@@ -1,0 +1,235 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeItem": 1,
+        "designer|userClassName": "ConfigPanel",
+        "designer|initialView": true,
+        "height": 496,
+        "id": "mainpanel",
+        "width": 690,
+        "layout": "card",
+        "title": "My Panel"
+    },
+    "id": "ExtBox1-ext-gen17157",
+    "designerId": "ae45468a-6174-4f3b-8bf7-f2e961df9d83",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel2",
+                "itemId": "panel2",
+                "title": "panel2"
+            },
+            "designerId": "3b94249a-7fa7-45ba-bb98-fcd9468e8c46"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar"
+            },
+            "designerId": "8a8f76c1-a359-48d1-a452-569a8631918c",
+            "cn": [
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyLabel",
+                        "style": [
+                            "font-weight:bold;"
+                        ],
+                        "text": "My Labe    l         "
+                    },
+                    "designerId": "25268f9d-07ae-4f54-a049-5feb6b2605af"
+                },
+                {
+                    "type": "tbspacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySpacer",
+                        "width": 30
+                    },
+                    "designerId": "7601d741-79ef-46a6-a946-2a96a0d44b24"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "pressed": true,
+                        "text": "MyButton",
+                        "toggleGroup": "aaa"
+                    },
+                    "designerId": "a9159cb9-37d0-4e42-a72b-6886845bddb8"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton1",
+                        "baseCls": "x-btn x-btn-over",
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "text": "MyButton",
+                        "toggleGroup": "aaa"
+                    },
+                    "designerId": "f74d8941-f863-4834-b2f9-b4b3f086b9f3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick1",
+                                "fn": "onButtonClick1",
+                                "implHandler": [
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "92128ad8-ed85-4fa8-8172-79f5cbcea0e4"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton2",
+                        "allowDepress": false,
+                        "enableToggle": true,
+                        "text": "MyButton",
+                        "toggleGroup": "aaa"
+                    },
+                    "designerId": "0f23576b-36b1-4a4a-b1e0-ad5a6cf69f48"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel1",
+                "itemId": "panel1",
+                "title": "panel1"
+            },
+            "designerId": "2b9671c7-be5b-4b11-bf5c-a68338988fb8",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton3",
+                        "height": 101,
+                        "width": 243,
+                        "text": "add menu"
+                    },
+                    "designerId": "2dbc821b-bc93-4432-a0e6-7d287dfe85d4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick",
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var main=Ext.getCmp(\"mainpanel\");\r",
+                                    "var toolbar=main.down(\"toolbar\");\r",
+                                    "var button=Ext.create(\"Ext.Button\", {\r",
+                                    "    text: \"事件实现1\",\r",
+                                    "    allowDepress: false, \r",
+                                    "    toggleGroup: 'aaa',\r",
+                                    "    enableToggle: true, \r",
+                                    "\t\thandler: function () {\r",
+                                    "        Ext.Msg.alert(\"提示\", \"第一个事件\");\r",
+                                    "    }\r",
+                                    "});\r",
+                                    "\r",
+                                    "var button2=Ext.create(\"Ext.Button\", {\r",
+                                    "    text: \"事件实现2\",\r",
+                                    "    allowDepress: false, \r",
+                                    "    toggleGroup: 'aaa',\r",
+                                    "    enableToggle: true, \r",
+                                    "\t\thandler: function () {\r",
+                                    "        Ext.Msg.alert(\"提示\", \"第2个事件\");\r",
+                                    "    }\r",
+                                    "});\r",
+                                    "\r",
+                                    "toolbar.add(button);\r",
+                                    "\r",
+                                    "toolbar.add(button2);\r",
+                                    "alert(1);\r",
+                                    "button.hide();\r",
+                                    "alert(2);\r",
+                                    "button.show();\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "9a2ce944-173b-43da-9072-252680c59db7"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

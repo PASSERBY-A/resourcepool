@@ -1,0 +1,146 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "id": "ExtBox1-ext-gen12524",
+    "designerId": "59afdd8c-eef2-4a38-b9ca-3d4ce947b60d",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBtnDeployClick",
+                "fn": "onBtnDeployClick",
+                "implHandler": [
+                    "var g=this.getDiscoveryGrid();\r",
+                    "\r",
+                    "var store=g.getStore();\r",
+                    "\r",
+                    "var sm = g.getSelectionModel();\r",
+                    "\r",
+                    "var records=sm.getSelection();\r",
+                    "\r",
+                    "var moIds=\"\";\r",
+                    "\r",
+                    "Ext.each(records,function(record){\r",
+                    "    var moId=record.get(\"moId\");\r",
+                    "\r",
+                    "    moIds+=moId+\",\";\r",
+                    "\r",
+                    "    //record.set(\"status\",\"ok\");\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "Ext.Msg.wait(\"正在部署，请稍后...\");\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'deployDiscovery',\r",
+                    "    params:{moIds:moIds},\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "\r",
+                    "        console.dir(obj);\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        Ext.Msg.alert('error','server-side failure with status code ' + response.status);\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "setTimeout(function(){\r",
+                    "\r",
+                    "    g.getStore().load({params:{aa:1}});\r",
+                    "    Ext.getCmp(\"deployResultGrid\").getStore().load({params:{moId:\"aa\"}});\r",
+                    "    Ext.Msg.close();\r",
+                    "\r",
+                    "}, 5000);\r",
+                    "\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnDeploy"
+            },
+            "designerId": "87a9062e-366a-4e34-9f4e-4dc07edfdda4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "discoveryGrid",
+                "ref": "discoveryGrid",
+                "selector": "discoveryGrid"
+            },
+            "designerId": "43319ef1-4a9d-4bd1-a455-0a341b7b123d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBtnScanAgentClick",
+                "fn": "onBtnScanAgentClick",
+                "implHandler": [
+                    "\r",
+                    "button.hide();\r",
+                    "\r",
+                    "/*\r",
+                    "var p=Ext.ComponentQuery.query(\"#progressBar\")[0];\r",
+                    "\r",
+                    "p.show();\r",
+                    "\r",
+                    "p.wait({\r",
+                    "interval: 500, //bar will move fast!\r",
+                    "duration: 1000,\r",
+                    "increment: 20,\r",
+                    "text: 'Scaning...',\r",
+                    "scope: this,\r",
+                    "fn: function(){\r",
+                    "p.updateText('Done!');\r",
+                    "//show panel2\r",
+                    "Ext.ComponentQuery.query(\"#main\")[0].getLayout().setActiveItem(1);\r",
+                    "}\r",
+                    "});\r",
+                    "\r",
+                    "//*/\r",
+                    "\r",
+                    "var startIp=Ext.getCmp(\"startIp\");\r",
+                    "\r",
+                    "var endIp=Ext.getCmp(\"endIp\");\r",
+                    "\r",
+                    "//alert(endIp.getValue());\r",
+                    "\r",
+                    "var g=this.getDiscoveryGrid();\r",
+                    "\r",
+                    "g.getStore().load({params:{startIp:startIp.getValue(),endIp:endIp.getValue()}});\r",
+                    "\r",
+                    "Ext.getCmp(\"main\").getLayout().setActiveItem(1);\r",
+                    "\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnScanAgent"
+            },
+            "designerId": "6d494ac2-4b73-47f7-847c-592fac8722a3"
+        }
+    ]
+}

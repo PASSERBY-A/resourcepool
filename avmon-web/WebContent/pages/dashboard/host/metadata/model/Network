@@ -1,0 +1,98 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Network"
+    },
+    "designerId": "42225b9c-2cae-4272-9352-03ee91b33e17",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NAME"
+            },
+            "designerId": "44cb4890-7443-403a-8d28-29f3d6b4fdbb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "designerId": "d159f5b8-33e1-47f1-998c-1915dd5698cc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "send"
+            },
+            "designerId": "93701955-661b-43d7-9851-b7ec34dad274"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "recv"
+            },
+            "designerId": "165d7206-bc10-41ba-9f56-03393ee24cd9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usage"
+            },
+            "designerId": "de98716e-b716-43f9-a1e1-020ccd68de6c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LAN_OPKTS"
+            },
+            "designerId": "cb3b9951-d0c5-4b55-a892-5314bddc8f93"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LAN_IPKTS"
+            },
+            "designerId": "58b19111-89ad-4e5a-b4a7-f770c99e538d"
+        }
+    ]
+}

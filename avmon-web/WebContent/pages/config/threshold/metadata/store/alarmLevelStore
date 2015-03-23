@@ -1,0 +1,69 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "alarmLevelStore",
+        "storeId": "alarmLevelStore",
+        "data": "[\r\n    { \"LEVEL_ID\": \"0\", \"LEVEL_NM\": \"信息\" }, \r\n    { \"LEVEL_ID\": \"1\", \"LEVEL_NM\": \"一般告警\" },\r\n    { \"LEVEL_ID\": \"2\", \"LEVEL_NM\": \"轻微告警\" },\r\n    { \"LEVEL_ID\": \"3\", \"LEVEL_NM\": \"主要告警\" },\r\n    { \"LEVEL_ID\": \"4\", \"LEVEL_NM\": \"严重告警\" }\r\n]"
+    },
+    "id": "ExtBox1-ext-gen72782",
+    "designerId": "19848c68-dbb8-464a-bb5f-ec937c00e460",
+    "cn": [
+        {
+            "type": "memoryproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMemoryProxy1"
+            },
+            "designerId": "46314b2d-d4f1-4d70-a93c-8e82c93aae8c",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3"
+                    },
+                    "designerId": "38666229-f299-42c2-98b2-229d497512e6"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "LEVEL_ID"
+            },
+            "designerId": "0fa6b502-6756-41d9-a573-f84abc150b2e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "LEVEL_NM"
+            },
+            "designerId": "505d8f0b-8f95-4123-a919-a3ccc9468e77"
+        }
+    ]
+}

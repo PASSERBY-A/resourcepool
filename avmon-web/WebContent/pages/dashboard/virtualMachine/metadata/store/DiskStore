@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiskStore",
+        "storeId": "DiskStore",
+        "model": "DiskModel"
+    },
+    "id": "ExtBox1-ext-gen62450",
+    "designerId": "7041043f-cfde-4f45-9a70-09b24cbe5102",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy5"
+            },
+            "designerId": "26f1d84e-ae01-411c-8b04-51dde7651f57",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader5"
+                    },
+                    "designerId": "26838b95-b4c5-4139-a736-cec23e8e7067"
+                }
+            ]
+        }
+    ]
+}

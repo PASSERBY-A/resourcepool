@@ -1,0 +1,403 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen2581",
+    "designerId": "2957dbd0-eac3-4215-a8e9-4277671c2852",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel",
+                "layout": "fit",
+                "title": "网元arp查询"
+            },
+            "designerId": "b4e8a7bb-7bca-46b3-b3ca-64565e1591e9",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar"
+                    },
+                    "designerId": "1dbee444-82b9-4813-8f83-5c06726beb12",
+                    "cn": [
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox",
+                                "width": 300,
+                                "fieldLabel": "网元",
+                                "labelWidth": 35,
+                                "displayField": "device_name",
+                                "store": "DeviceStore",
+                                "valueField": "device_ip"
+                            },
+                            "designerId": "df69f6c9-424c-4317-9106-52b3c172ce40",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onComboboxBeforeQuery",
+                                        "fn": "onComboboxBeforeQuery",
+                                        "implHandler": [
+                                            "var e = queryEvent;\r",
+                                            "var combo = e.combo;    \r",
+                                            "if(!e.forceAll){    \r",
+                                            "    var input = e.query;  \r",
+                                            "    // 检索的正则   \r",
+                                            "    var regExp = new RegExp(\".*\" + Ext.util.Format.lowercase(input) + \".*\");  \r",
+                                            "    // 执行检索   \r",
+                                            "    combo.store.filterBy(function(record,id){    \r",
+                                            "        // 得到每个record的项目名称值   \r",
+                                            "        var text = record.get(combo.displayField);    \r",
+                                            "        return regExp.test(Ext.util.Format.lowercase(text));   \r",
+                                            "    });  \r",
+                                            "    combo.expand();    \r",
+                                            "    return false;  \r",
+                                            "} "
+                                        ],
+                                        "name": "beforequery",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "9b31fd8d-eec7-4a67-b4a4-96e97afbf675"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyDateField1",
+                                "fieldLabel": "日期",
+                                "labelWidth": 35,
+                                "format": "Y-m-d"
+                            },
+                            "designerId": "6bc61405-c6b6-44f0-9c8e-829b7a407bc1",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onDatefieldAfterRender",
+                                        "fn": "onDatefieldAfterRender",
+                                        "implHandler": [
+                                            "abstractcomponent.setValue(Ext.util.Format.date(new Date(), 'Y-m-d'));"
+                                        ],
+                                        "name": "afterrender",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "630bff52-cf8d-49be-9f68-211676743872"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tbseparator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySeparator2"
+                            },
+                            "designerId": "fcc290e7-ba6d-4748-b48d-11ca10583a56"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton",
+                                "icon": "../resources/images/button/search2.gif",
+                                "text": "网元查询"
+                            },
+                            "designerId": "fd4dcdce-4c16-42fb-b0cb-5dc6f02ded20",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick",
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var toolbar = button.up(\"toolbar\");\r",
+                                            "\r",
+                                            "var grid = toolbar.up(\"panel\").down(\"gridpanel\");\r",
+                                            "\r",
+                                            "var deviceIp = toolbar.down(\"combobox\").value;\r",
+                                            "\r",
+                                            "var date = toolbar.down(\"datefield\").rawValue;\r",
+                                            "if(deviceIp==\"\"||deviceIp==null){\r",
+                                            "    Ext.Msg.alert(\"提示\",\"请选择网元!\");\r",
+                                            "    return;\r",
+                                            "}\r",
+                                            "var gridStore = grid.getStore();\r",
+                                            "var storeProxy = gridStore.getProxy();\r",
+                                            "storeProxy.extraParams.deviceIp = deviceIp;\r",
+                                            "storeProxy.extraParams.date = date;\r",
+                                            "\r",
+                                            "gridStore.load();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "43415ac6-6799-41fe-a12f-29262a5a7cb6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tbseparator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySeparator"
+                            },
+                            "designerId": "df6f88f3-69ca-46b4-b161-bd5bd5cfcf5c"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton1",
+                                "icon": "../resources/images/button/ok.gif",
+                                "text": "设置为基限"
+                            },
+                            "designerId": "1369a476-19c7-479e-b701-97e159101a3b",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick1",
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var toolbar = button.up(\"toolbar\");\r",
+                                            "    \r",
+                                            "var grid = toolbar.up(\"panel\").down(\"gridpanel\");\r",
+                                            "\r",
+                                            "var deviceIp = toolbar.down(\"combobox\").value;\r",
+                                            "\r",
+                                            "var date = toolbar.down(\"datefield\").rawValue;\r",
+                                            "if(deviceIp==\"\"||deviceIp==null){\r",
+                                            "    Ext.Msg.alert(\"提示\",\"请选择网元!\");\r",
+                                            "    return;\r",
+                                            "}\r",
+                                            "if(grid.store.data.length==0){\r",
+                                            "    Ext.Msg.alert(\"提示\",\"选择网元未查询或查询结果为空!\");\r",
+                                            "    return;\r",
+                                            "}\r",
+                                            "Ext.MessageBox.confirm(\"提示\", \"是否设置为基限?\", function(btn){\r",
+                                            "    if(btn==\"yes\"){     \r",
+                                            "        Ext.Ajax.request({  \r",
+                                            "            url:'../config/setArpThredhold',  \r",
+                                            "            params:{  \r",
+                                            "                //传递参数  \r",
+                                            "                deviceIp:deviceIp,\r",
+                                            "                date:date\r",
+                                            "            },  \r",
+                                            "            async : false,\r",
+                                            "            success:function(response, options){  \r",
+                                            "                Ext.Msg.alert('提示信息','设置成功！');  \r",
+                                            "            },\r",
+                                            "            failure:function(){  \r",
+                                            "                Ext.Msg.alert('错误信息','系统错误');  \r",
+                                            "            }    \r",
+                                            "        });\r",
+                                            "    }\r",
+                                            "});\r",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "3dda72c6-46e3-498b-b6f0-8873c26c3ee2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "gridpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridPanel",
+                        "id": "arpGrid",
+                        "title": "",
+                        "store": "ArpStore"
+                    },
+                    "designerId": "312232f2-65f2-46b3-ae6b-0398dc49b555",
+                    "cn": [
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn",
+                                "width": 133,
+                                "dataIndex": "device_ip",
+                                "text": "网元IP"
+                            },
+                            "designerId": "64a3b3f0-9844-4daa-8a18-f98049e4a5b0"
+                        },
+                        {
+                            "type": "gridview",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyGridView"
+                            },
+                            "designerId": "3e2c0622-65f4-4dd5-95b2-3798cd876f64"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn1",
+                                "width": 124,
+                                "dataIndex": "ip",
+                                "text": "IP"
+                            },
+                            "designerId": "d0d45ee8-f69d-4a54-bcdf-6cd0a7c6fbc7"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn2",
+                                "width": 115,
+                                "dataIndex": "mac",
+                                "text": "MAC"
+                            },
+                            "designerId": "fdecd0fb-add4-4728-a23a-cf71de78a348"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn3",
+                                "dataIndex": "is_threshold",
+                                "text": "是否为基限"
+                            },
+                            "designerId": "dac59713-4ba3-4d10-b87b-c9074482a731",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "renderer",
+                                        "fn": "renderer",
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "implHandler": [
+                                            "var data = record.data ;\r",
+                                            "if(data.is_threshold==\"true\"){\r",
+                                            "    return \"是\";\r",
+                                            "}else{\r",
+                                            "    return \"否\";\r",
+                                            "}"
+                                        ]
+                                    },
+                                    "designerId": "f2cae513-b886-4859-b0ed-38d10b675e15"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,346 @@
+#img-chooser-dlg .details {
+    text-align: center;
+}
+
+#img-chooser-dlg .details-info {
+    border-top: 1px solid #cccccc;
+    font: 11px Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    padding-top: 5px;
+
+}
+
+#img-chooser-dlg .details-info b {
+    color: #555555;
+    display: block;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+#img-chooser-dlg .details-info span {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.thumb {
+    padding: 3px;
+}
+
+.thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+}
+
+.thumb-wrap span {
+    display: block;
+    overflow: hidden;
+	font-size:10px;
+}
+
+.thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+.x-view-over {
+    border:1px solid #dddddd;
+    background-color: #efefef;
+    padding: 4px;
+}
+
+.x-item-selected {
+    background: #DFEDFF;
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+
+.x-item-selected .thumb {
+    background:transparent;
+}
+
+.x-item-selected span {
+    color:#1A4D8F;
+}
+
+.loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+#images img {
+    margin: 20px;
+}
+
+/* 閿熸枻鎷烽敓鑺ョ骇閿熸枻鎷峰浘閿熸枻鎷�*/ 
+.icon-level0 { 
+	width:16px; 
+	height:16px;
+}
+
+
+#groupViewPanel .thumb-wrap .resourceStatusBox {
+    padding-top: 1px;
+    padding-left:35px;
+	width:135px;
+	height:60px;
+	background-image:url('image/GroupView.jpg');
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#groupViewPanel .boxMessage1{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#groupViewPanel .boxMessage2{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#groupViewPanel .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+#groupViewPanel .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+	font-size:10px;
+}
+
+#groupViewPanel .thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#groupViewPanel .x-view-over {
+    border:1px solid #dddddd;
+    
+    padding: 4px;
+}
+
+#groupViewPanel .x-item-selected {
+    
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+
+#groupViewPanel .x-item-selected .thumb {
+    background:transparent;
+}
+
+#groupViewPanel .x-item-selected span {
+    color:#1A4D8F;
+}
+
+#groupViewPanel .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+#portViewPanel .thumb-wrap .resourceStatusBox {
+    padding-top: 1px;
+    padding-left:35px;
+	width:135px;
+	height:60px;
+	background-image:url('image/PortView.jpg');
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#portViewPanel .boxMessage1{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#portViewPanel .boxMessage2{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#portViewPanel .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+#portViewPanel .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+	font-size:10px;
+}
+
+#portViewPanel .thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#portViewPanel .x-view-over {
+    border:1px solid #dddddd;
+    
+    padding: 4px;
+}
+
+#portViewPanel .x-item-selected {
+    
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+
+#portViewPanel .x-item-selected .thumb {
+    background:transparent;
+}
+
+#portViewPanel .x-item-selected span {
+    color:#1A4D8F;
+}
+
+#portViewPanel .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+
+#diskViewPanel .thumb-wrap .resourceStatusBox {
+    padding-top: 1px;
+    padding-left:35px;
+	width:135px;
+	height:60px;
+	background-image:url('image/DiskView.jpg');
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#diskViewPanel .boxMessage1{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#diskViewPanel .boxMessage2{
+	width:120px;
+	height:20px;
+	padding-left:20px;
+	padding-top:1px;
+}
+
+#diskViewPanel .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+#diskViewPanel .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+	font-size:10px;
+}
+
+#diskViewPanel .thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#diskViewPanel .x-view-over {
+    border:1px solid #dddddd;
+    
+    padding: 4px;
+}
+
+#diskViewPanel .x-item-selected {
+    
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+
+#diskViewPanel .x-item-selected .thumb {
+    background:transparent;
+}
+
+#diskViewPanel .x-item-selected span {
+    color:#1A4D8F;
+}
+
+#diskViewPanel .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+/*  */ 
+.BarText { 
+	font: 8px Arial, Helvetica, sans-serif;
+	width: 26px;
+	text-align: right;  
+	margin-left:2px;
+	/*font-size:8px;
+	font-weight:blod;*/
+	float: left; 
+	color: black; 
+}
+
+/* */ 
+.ProgressBar {  
+	margin-left:28px;
+	margin-top:2px;
+	position: relative;  
+	width: 60px; 
+	border: 1px solid #B1D632;  
+	padding: 1px;  
+}
+
+/*  */ 
+.ProgressBar div {  
+	display: block;  
+	position: relative;  
+	background: #B1D632;  
+	color: #333333;  
+	height: 7px; 
+	line-height: 7px; 
+}
+
+/*  */ 
+.ProgressBar div span {   
+	font-size:8px;
+	position: absolute;  
+	width: 60px; 
+	text-align: center;  
+	font-weight: bold;  
+	color: black; 
+}
+

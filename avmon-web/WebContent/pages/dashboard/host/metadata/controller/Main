@@ -1,0 +1,140 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "designerId": "bd57b9d9-2ff3-4589-a2c8-d5794c9fb9fa",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnRefreshClick",
+                "implHandler": [
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnRefresh"
+            },
+            "designerId": "e68087a3-8790-4f36-a107-77ac91c588ba"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtnTestClick",
+                "implHandler": [
+                    "var series=Ext.getCmp(\"cpuChart\").series;\r",
+                    "series.get(10).showInLegend=true;\r",
+                    "\r",
+                    "series.get(10).showAll();\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//chart.refresh();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#btnTest"
+            },
+            "designerId": "362003db-f219-4c5f-b097-e0359d248ab4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCpuListItemClick",
+                "implHandler": [
+                    "var se=Ext.getCmp(\"cpuChart\").series.get(index+1);\r",
+                    "if(dataview.getSelectionModel().isSelected(index)){\r",
+                    "    se.showAll();\r",
+                    "    se.showInLegend=true;\r",
+                    "}\r",
+                    "else{\r",
+                    "    se.hideAll();\r",
+                    "    se.showInLegend=false;\r",
+                    "}\r",
+                    "Ext.getCmp(\"cpuChart\").refresh();\r",
+                    ""
+                ],
+                "name": "itemclick",
+                "scope": "me",
+                "designer|targetType": "Ext.view.View",
+                "designer|controlQuery": "#cpuList"
+            },
+            "designerId": "b4974930-abf7-4471-990b-9a75260d911d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "basicInfo",
+                "selector": "basicInfo"
+            },
+            "designerId": "3b75d188-202c-4b47-8f7b-e72361c1717d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newAlarmGrid",
+                "selector": "newAlarmGrid"
+            },
+            "designerId": "7798cec6-3190-48e8-acd9-9d3a1dc3e117"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "keyProcessGrid",
+                "selector": "keyProcessGrid"
+            },
+            "designerId": "25df0bcc-6819-464e-814d-d557073c6885"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "powerPanel",
+                "selector": "powerPanel"
+            },
+            "designerId": "56c06377-65b9-4d83-841d-8a8b89e9ec07"
+        }
+    ]
+}

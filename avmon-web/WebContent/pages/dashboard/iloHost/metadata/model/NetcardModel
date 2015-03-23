@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NetcardModel"
+    },
+    "designerId": "5c9048ce-b0ef-4eee-a08a-3de655523e29",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mac"
+            },
+            "designerId": "3d1da77f-1302-43bd-8526-80dbd8f51ff2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "designerId": "f6f84fda-48dd-4e08-991e-2537769a851d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nic"
+            },
+            "designerId": "cbcc1432-c324-49d3-8e7a-a08f661d9939"
+        }
+    ]
+}

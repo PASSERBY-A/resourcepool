@@ -1,0 +1,89 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "CpuUsageModel",
+            "PowerModel",
+            "MemModel",
+            "DiskModel",
+            "NetcardModel",
+            "FanModel",
+            "BoardModel",
+            "CaseModel",
+            "BiosModel",
+            "CpuCommModel",
+            "PowerCommModel"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "CpuUsageStore",
+            "PowerStore",
+            "MemJsonStore",
+            "DiskJsonStore",
+            "NetcardJsonStore",
+            "FanJsonStore",
+            "BoardJsonStore",
+            "CaseJsonStore",
+            "BiosJsonStore",
+            "CpuCommJsonStore",
+            "PowerCommJsonStore"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "this.getPowerStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getPowerStoreStore().load();\r",
+                    "\r",
+                    "this.getCpuUsageStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getCpuUsageStoreStore().load();\r",
+                    "\r",
+                    "this.getMemJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getMemJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getDiskJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getDiskJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getNetcardJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getNetcardJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getFanJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getFanJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getBoardJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getBoardJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getCaseJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getCaseJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getBiosJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getBiosJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getCpuCommJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getCpuCommJsonStoreStore().load();\r",
+                    "\r",
+                    "this.getPowerCommJsonStoreStore().proxy.extraParams={mo:Ext.iloHost.mo};\r",
+                    "this.getPowerCommJsonStoreStore().load();"
+                ]
+            },
+            "designerId": "ddd1fdfa-11d9-4b63-ad76-fa61b9660c96"
+        }
+    ]
+}

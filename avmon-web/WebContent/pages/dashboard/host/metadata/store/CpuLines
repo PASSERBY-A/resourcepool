@@ -1,0 +1,43 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "CpuLine",
+        "storeId": "cpuLines",
+        "designer|userClassName": "CpuLines"
+    },
+    "designerId": "74f97606-2d33-4d2b-b539-febd81a1f5ea",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "cpu"
+            },
+            "designerId": "10874b9f-1f4f-41d6-967e-7998bc52b7c5",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "history"
+                    },
+                    "designerId": "e86a3b42-79f3-46ae-b42b-a8f8ead165b2"
+                }
+            ]
+        }
+    ]
+}

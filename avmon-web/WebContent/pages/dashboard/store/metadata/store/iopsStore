@@ -1,0 +1,44 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "iopsStore",
+        "storeId": "iopsStore",
+        "model": "iopsModel"
+    },
+    "id": "ExtBox1-ext-gen13128",
+    "designerId": "26ae2f13-e7fd-47e7-b05c-d611176285d8",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy2",
+                "url": "iops"
+            },
+            "designerId": "7efce0c3-509c-478c-a7a5-d60a85a2645e",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "designerId": "64ad1e7a-8205-4812-bb75-5fa72f2e5460"
+                }
+            ]
+        }
+    ]
+}

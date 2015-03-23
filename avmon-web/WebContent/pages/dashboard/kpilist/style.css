@@ -1,0 +1,169 @@
+#img-chooser-dlg .details {
+    text-align: center;
+}
+
+#img-chooser-dlg .details-info {
+    border-top: 1px solid #cccccc;
+    font: 11px Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    padding-top: 5px;
+
+}
+
+#img-chooser-dlg .details-info b {
+    color: #555555;
+    display: block;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+#img-chooser-dlg .details-info span {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+#resourceListPanel {
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+
+#resourceListPanel .thumb {
+    padding: 3px;
+}
+
+#resourceListPanel .thumb-wrap .resourceStatusBox {
+    padding: 15px;
+	width:120px;height:75px;background-image:url('image/main_engine01.png');
+}
+
+
+#resourceListPanel .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+#resourceListPanel .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#resourceListPanel .thumb span {
+    display: block;
+    overflow: hidden;
+
+}
+
+#resourceListPanel .x-view-over {
+    border:1px solid #dddddd;
+    
+    padding: 4px;
+}
+
+#resourceListPanel .x-item-selected {
+    
+    border: 1px solid #6593cf;
+    padding: 4px;
+}
+
+#resourceListPanel .x-item-selected .thumb {
+    background:transparent;
+}
+
+#resourceListPanel .x-item-selected span {
+    color:#1A4D8F;
+}
+
+#resourceListPanel .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/images/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+#images img {
+    margin: 20px;
+}
+
+/* ���漶��ͼ�� */ 
+.icon-level0 { 
+	width:16px; 
+	height:16px;
+}
+
+/* �������ͷ���� */ 
+.BarText { 
+	font: 8px Arial, Helvetica, sans-serif;
+	/*font-size:8px;*/
+	width: 16px;
+	margin-left:4px;
+	text-align: right;  
+	float: left; 
+	color: black; 
+	font-weight:blod;
+}
+
+/* �������� */ 
+.ProgressBar1 {  
+	margin-left:29px;
+	margin-top:2px;
+	position: relative;  
+	width: 78px;    /* ��� */ 
+	border: 1px solid #B1D632;  
+	padding: 1px;  
+}
+
+/* �������� */ 
+.ProgressBar2 {  
+	margin-left:29px;
+	margin-top:2px;
+	position: relative;  
+	width: 78px;    /* ��� */ 
+	border: 1px solid #B1D632;  
+	padding: 1px;  
+}
+
+/* ������ٷֱ� */ 
+.ProgressBar1 div {  
+	display: block;  
+	position: relative;  
+	background: #B1D632;  
+	color: #333333;  
+	height: 6px; /* �߶� */ 
+	line-height: 6px;  /* ����͸߶�һ�£��ı����ܴ�ֱ���� */ 
+}
+
+/* ������ٷֱ� */ 
+.ProgressBar2 div {  
+	display: block;  
+	position: relative;  
+	background: red;  
+	color: #333333;  
+	height: 6px; /* �߶� */ 
+	line-height: 6px;  /* ����͸߶�һ�£��ı����ܴ�ֱ���� */ 
+}
+
+/* ������ٷֱ�����  ��ɫ */ 
+.ProgressBar1 div span {  
+	font-size:8px;
+	position: absolute;  
+	width: 78px; /* ��� */ 
+	text-align: center;  
+	font-weight: bold;  
+	color: black; 
+}
+
+/* ������ٷֱ�����  ��ɫ*/ 
+.ProgressBar2 div span {   
+	font-size:8px;
+	position: absolute;  
+	width: 78px; /* ��� */ 
+	text-align: center;  
+	font-weight: bold;  
+	color: black; 
+}

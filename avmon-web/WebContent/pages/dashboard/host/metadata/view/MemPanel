@@ -1,0 +1,293 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 10,
+        "height": 214,
+        "id": "memPanel",
+        "width": 540,
+        "designer|userClassName": "MemPanel",
+        "designer|userAlias": "memPanel",
+        "layout": "absolute",
+        "title": "内存"
+    },
+    "designerId": "a87ed41d-6069-474e-9674-652068d38408",
+    "cn": [
+        {
+            "type": "Ext.chart.Chart",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": -1,
+                "layout|y": -2,
+                "height": 160,
+                "id": "memChart1",
+                "width": 270,
+                "animate": [
+                    "true"
+                ],
+                "insetPadding": 5,
+                "store": "Mems"
+            },
+            "designerId": "8f673ce3-c71a-418d-86c1-8cf96cb5ee12",
+            "cn": [
+                {
+                    "type": "Ext.chart.axis.Category",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": null,
+                        "fields": [
+                            "time"
+                        ]
+                    },
+                    "designerId": "6cc2e683-5f1e-4c28-8ea7-05e1ffdb19a2"
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dashSize": 1,
+                        "majorTickSteps": null,
+                        "position": "left",
+                        "title": null,
+                        "maximum": 100,
+                        "minimum": 0
+                    },
+                    "designerId": "93601ab9-2155-448f-99ab-c2671311a663"
+                },
+                {
+                    "type": "Ext.chart.series.Area",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "highlight": [
+                            "true"
+                        ],
+                        "title": [
+                            "['用户内存使用率','系统','可用']"
+                        ],
+                        "xField": "time",
+                        "yField": [
+                            "mem_user",
+                            "mem_sys",
+                            "mem_free"
+                        ]
+                    },
+                    "designerId": "19b6554c-08b3-4af3-82d9-7844acb6c235"
+                },
+                {
+                    "type": "Ext.chart.Legend",
+                    "reference": {
+                        "name": "legend",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxZIndex": null,
+                        "itemSpacing": 5,
+                        "position": "top"
+                    },
+                    "designerId": "818d4825-2b0e-4555-a3a0-65c3586a92d6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.Chart",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 270,
+                "layout|y": 0,
+                "height": 160,
+                "id": "memChart2",
+                "width": 260,
+                "animate": [
+                    "true"
+                ],
+                "insetPadding": 5,
+                "store": "Mems"
+            },
+            "designerId": "8b6027ae-f3db-4de7-9f9d-b11721fc4cd2",
+            "cn": [
+                {
+                    "type": "Ext.chart.axis.Category",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": null,
+                        "fields": [
+                            "time"
+                        ]
+                    },
+                    "designerId": "b9e7a153-39c1-4fd1-ba71-a065bf7f4269"
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dashSize": 1,
+                        "majorTickSteps": null,
+                        "position": "left",
+                        "title": null,
+                        "maximum": 100,
+                        "minimum": 0
+                    },
+                    "designerId": "f856a35e-cece-4384-b322-b76e3e8e7eed"
+                },
+                {
+                    "type": "Ext.chart.series.Area",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "highlight": [
+                            "true"
+                        ],
+                        "title": [
+                            "['SWAP使用率','空闲率']"
+                        ],
+                        "xField": "time",
+                        "yField": [
+                            "swap_usage",
+                            "swap_free"
+                        ]
+                    },
+                    "designerId": "76dbf637-6f0d-4c93-945a-91bed6fff6c1"
+                },
+                {
+                    "type": "Ext.chart.Legend",
+                    "reference": {
+                        "name": "legend",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemSpacing": 5,
+                        "position": "top"
+                    },
+                    "designerId": "bb3a5ba5-6fc9-4672-83c9-cec9f76fcd41"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": -2,
+                "layout|y": 150,
+                "dock": "bottom",
+                "height": 30,
+                "id": "memInfo",
+                "width": 540,
+                "layout": "column",
+                "bodyPadding": 5,
+                "title": ""
+            },
+            "designerId": "0b6f2a92-9501-4161-bcc5-c50eb43762b0",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Page-In",
+                        "labelWidth": 50,
+                        "name": "page_in",
+                        "value": [
+                            "loading..."
+                        ]
+                    },
+                    "designerId": "409b49ca-2bed-46c4-bd73-725173752da3"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Page-Out",
+                        "labelWidth": 60,
+                        "name": "page_out",
+                        "value": [
+                            "loading..."
+                        ]
+                    },
+                    "designerId": "4064443c-1ee8-4a14-9f3f-4f35216407cc"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Cache读命中率",
+                        "labelWidth": 85,
+                        "name": "cache_read",
+                        "value": [
+                            "loading..."
+                        ]
+                    },
+                    "designerId": "e484ef1d-1b1c-46f2-83f6-c00d0abb6bf9"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Cache写命中率",
+                        "labelWidth": 85,
+                        "name": "cache_write",
+                        "value": [
+                            "loading..."
+                        ]
+                    },
+                    "designerId": "6cb13d2e-cd54-419d-aec7-bde2f8b91af5"
+                }
+            ]
+        }
+    ]
+}

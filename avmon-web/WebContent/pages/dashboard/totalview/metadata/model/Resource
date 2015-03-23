@@ -1,0 +1,146 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Resource"
+    },
+    "designerId": "6a28f6dd-f178-4af3-bd68-a06ef3ae4670",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BIZ"
+            },
+            "designerId": "5957f5e3-5353-4a93-93b4-80d683665a25"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HOSTMAXALARMLEVEL"
+            },
+            "designerId": "94566e3a-89bc-4518-a5b6-a57dd59877f0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STOREMAXALARMLEVEL"
+            },
+            "designerId": "3f8123ad-32d6-4edb-8329-71dd001136c6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HOSTITEMCOUNT"
+            },
+            "designerId": "d2633ae7-f438-4f2c-9c90-5c9800affa81"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STOREITEMCOUNT"
+            },
+            "designerId": "86b082b5-5f0d-49dd-b4ea-b879949eed65"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HOSTKPI1"
+            },
+            "designerId": "ba5c7885-2192-406c-922d-c560085bba7f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HOSTKPI2"
+            },
+            "designerId": "99768bd8-dd74-4c49-8bfa-ba087c9c456d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "HOSTKPI3"
+            },
+            "designerId": "149e4574-2220-48dc-b6ac-fb2421792d28"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STOREKPI1"
+            },
+            "designerId": "f6921164-e035-4784-a3fc-95f69a195123"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STOREKPI2"
+            },
+            "designerId": "08946256-bf55-42ec-bc0d-2bb5da12e84c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "STOREKPI3"
+            },
+            "designerId": "be8c6fc3-e4cc-4084-843d-606988bc7930"
+        }
+    ]
+}

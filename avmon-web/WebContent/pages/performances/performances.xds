@@ -1,0 +1,70 @@
+{
+    "name": "performances",
+    "settings": {},
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "4fa11d1f-da7e-437c-b682-6baacc770b09": {
+            "paths": [
+                "metadata/controller/MenuTree",
+                "app/controller/override/MenuTree.js",
+                "app/controller/MenuTree.js"
+            ],
+            "className": "MenuTree"
+        },
+        "d789809f-daa9-443f-ad5f-a5b1e21e086b": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "917a7fd8-210c-4818-b1b2-731fbdc7e17e": {
+            "paths": [
+                "metadata/model/TreeNode",
+                "app/model/override/TreeNode.js",
+                "app/model/TreeNode.js"
+            ],
+            "className": "TreeNode"
+        },
+        "2d37e3b3-ef14-423e-95fb-cad60d4e10e4": {
+            "paths": [
+                "metadata/store/TreeNodes",
+                "app/store/override/TreeNodes.js",
+                "app/store/TreeNodes.js"
+            ],
+            "className": "TreeNodes"
+        },
+        "39e1967c-4eba-439f-bf56-545a094ff787": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "39e1967c-4eba-439f-bf56-545a094ff787"
+        ],
+        "store": [
+            "2d37e3b3-ef14-423e-95fb-cad60d4e10e4"
+        ],
+        "controller": [
+            "4fa11d1f-da7e-437c-b682-6baacc770b09"
+        ],
+        "model": [
+            "917a7fd8-210c-4818-b1b2-731fbdc7e17e"
+        ],
+        "resource": [
+            "d789809f-daa9-443f-ad5f-a5b1e21e086b"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

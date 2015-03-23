@@ -1,0 +1,498 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen2066",
+    "designerId": "3128ad7a-3df5-4006-b985-21d34b9e92ae",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel",
+                "layout": "fit",
+                "title": "KPI动态告警阀值"
+            },
+            "designerId": "1635fe4b-1a37-4c00-8a81-73ef38543ec2",
+            "cn": [
+                {
+                    "type": "gridpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridPanel",
+                        "id": "kpiThreshold",
+                        "title": null,
+                        "store": "thresholdStore"
+                    },
+                    "designerId": "b4ce81df-b4e5-4b41-80a8-aa30ff2dd7d3",
+                    "cn": [
+                        {
+                            "type": "gridview",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyGridView"
+                            },
+                            "designerId": "7fc7188e-e6ce-458e-8d27-ec88c42d2ff7",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onGridviewItemDblClick",
+                                        "fn": "onGridviewItemDblClick",
+                                        "implHandler": [
+                                            "Ext.selectId = record.data.ID;\r",
+                                            "\r",
+                                            "var win = Ext.thresholdWindow;\r",
+                                            "\r",
+                                            "if(!win){\r",
+                                            "    win=Ext.create('widget.thresholdWindow');\r",
+                                            "    Ext.thresholdWindow=win;\r",
+                                            "    win.needReload=true;\r",
+                                            "}\r",
+                                            "\r",
+                                            "Ext.thresholdWindowMode=1;\r",
+                                            "win.show();\r",
+                                            "\r",
+                                            "Ext.getCmp('MO').setValue(record.data.MO);\r",
+                                            "Ext.getCmp('MONITOR_INSTANCE').setValue(record.data.MONITOR_INSTANCE);\r",
+                                            "Ext.getCmp('KPI').setValue(record.data.KPI);\r",
+                                            "Ext.getCmp('MAX_THRESHOLD').setValue(record.data.MAX_THRESHOLD);\r",
+                                            "Ext.getCmp('MIN_THRESHOLD').setValue(record.data.MIN_THRESHOLD);\r",
+                                            "Ext.getCmp('THRESHOLD').setValue(record.data.THRESHOLD);\r",
+                                            "Ext.getCmp('CHECK_OPTR').setValue(record.data.CHECK_OPTR);\r",
+                                            "Ext.getCmp('ALARM_LEVEL').setValue(record.data.ALARM_LEVEL);\r",
+                                            "Ext.getCmp('ACCUMULATE_COUNT').setValue(record.data.ACCUMULATE_COUNT);\r",
+                                            "Ext.getCmp('START_DATE').setValue(record.data.START_DATE);\r",
+                                            "Ext.getCmp('END_DATE').setValue(record.data.END_DATE);\r",
+                                            "Ext.getCmp('CONTENT').setValue(record.data.CONTENT);"
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "38822a52-6507-48e4-a508-4c64845cf39a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "pagingtoolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "bottom",
+                                "designer|userClassName": "MyPagingToolbar",
+                                "width": 360,
+                                "displayInfo": true,
+                                "store": "thresholdStore"
+                            },
+                            "designerId": "4b1f9f3a-cb30-4bf1-88dd-eef3199ac95b"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn1",
+                                "dataIndex": "ID",
+                                "text": "ID"
+                            },
+                            "designerId": "603b9bca-58a1-4a61-b9b3-4c87f25658ad"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn",
+                                "dataIndex": "MO",
+                                "text": "监控对象"
+                            },
+                            "designerId": "90ba0ed3-770d-4e51-955e-2867b5810f3f"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn2",
+                                "dataIndex": "MONITOR_INSTANCE",
+                                "text": "Monitor实例"
+                            },
+                            "designerId": "c3adf177-50a6-4e17-997f-7c5e88dbcfd9"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn3",
+                                "dataIndex": "KPI",
+                                "text": "KPI"
+                            },
+                            "designerId": "fca0730b-c06b-442c-9ea1-490c0731d23d"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn4",
+                                "dataIndex": "MIN_THRESHOLD",
+                                "text": "告警最低阀值"
+                            },
+                            "designerId": "1fc41d4d-d292-4752-9a1d-baf37d69d8f2"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn5",
+                                "dataIndex": "THRESHOLD",
+                                "text": "告警阀值"
+                            },
+                            "designerId": "cc9356af-8441-49b2-a460-c6b125a3601c"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn6",
+                                "dataIndex": "MAX_THRESHOLD",
+                                "text": "告警最大阀值"
+                            },
+                            "designerId": "5ccb44ae-455c-4ae8-ab0d-99d402e55ae7"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn7",
+                                "dataIndex": "START_DATE",
+                                "text": "开始时间"
+                            },
+                            "designerId": "c3d8fe40-602b-4900-89ae-ccbc3c868ab5"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn8",
+                                "dataIndex": "END_DATE",
+                                "text": "结束时间"
+                            },
+                            "designerId": "28694dcb-059e-472f-afed-2109317f5b57"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn9",
+                                "dataIndex": "CHECK_OPTR",
+                                "text": "判断方法"
+                            },
+                            "designerId": "de5bec4a-2a35-4717-8ff6-bc224297241b"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn10",
+                                "dataIndex": "ALARM_LEVEL",
+                                "text": "告警级别"
+                            },
+                            "designerId": "15257e7c-5e88-4f37-b19f-c2c187e4fc68"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn11",
+                                "dataIndex": "ACCUMULATE_COUNT",
+                                "text": "闪动次数"
+                            },
+                            "designerId": "e86798cf-ffec-4669-9697-51f99a9f61d4"
+                        },
+                        {
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyColumn12",
+                                "dataIndex": "CONTENT",
+                                "text": "告警内容"
+                            },
+                            "designerId": "81c3e76c-b4db-49cc-9dc9-9fa4cd56beed"
+                        },
+                        {
+                            "type": "checkboxselectionmodel",
+                            "reference": {
+                                "name": "selModel",
+                                "type": "object"
+                            },
+                            "codeClass": "Ext.selection.CheckboxModel",
+                            "userConfig": {
+                                "designer|userClassName": "MyCheckboxSelectionModel"
+                            },
+                            "designerId": "d8aa700b-3cfe-46bc-8cf3-adc66b9ae5ce"
+                        }
+                    ]
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar"
+                    },
+                    "designerId": "7a2520fb-2aa1-43fa-9b8f-0e2ded1d45f2",
+                    "cn": [
+                        {
+                            "type": "buttongroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButtonGroup",
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "40f35ee8-dcb3-40eb-bfc8-f94fadd5c54d",
+                            "cn": [
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyButton",
+                                        "id": "addThreshold",
+                                        "icon": null,
+                                        "iconCls": "icon-add",
+                                        "text": "新增"
+                                    },
+                                    "designerId": "97b10ef3-064e-4059-a28c-54ef0a564e45",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onAddThresholdClick",
+                                                "fn": "onAddThresholdClick",
+                                                "implHandler": [
+                                                    "var win = Ext.thresholdWindow;\r",
+                                                    "\r",
+                                                    "if(!win){\r",
+                                                    "    win=Ext.create('widget.thresholdWindow');\r",
+                                                    "    Ext.thresholdWindow=win;\r",
+                                                    "    win.needReload=true;\r",
+                                                    "    win.show();\r",
+                                                    "\r",
+                                                    "} else {\r",
+                                                    "    win.show();\r",
+                                                    "    // 将历史记录清空\r",
+                                                    "    Ext.getCmp('MO').setValue('');\r",
+                                                    "    Ext.getCmp('MONITOR_INSTANCE').setValue('');\r",
+                                                    "    Ext.getCmp('KPI').setValue('');\r",
+                                                    "    Ext.getCmp('MAX_THRESHOLD').setValue('');\r",
+                                                    "    Ext.getCmp('MIN_THRESHOLD').setValue('');\r",
+                                                    "    Ext.getCmp('THRESHOLD').setValue('');\r",
+                                                    "    Ext.getCmp('CHECK_OPTR').setValue('');\r",
+                                                    "    Ext.getCmp('ALARM_LEVEL').setValue('');\r",
+                                                    "    Ext.getCmp('ACCUMULATE_COUNT').setValue('');\r",
+                                                    "    Ext.getCmp('START_DATE').setValue('');\r",
+                                                    "    Ext.getCmp('END_DATE').setValue('');\r",
+                                                    "    Ext.getCmp('CONTENT').setValue('');\r",
+                                                    "}\r",
+                                                    "\r",
+                                                    "Ext.selectId = '';\r",
+                                                    "Ext.thresholdWindowMode=0;\r",
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "a2296b8b-24ca-4d00-a37f-1c23f948098c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "buttongroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButtonGroup1",
+                                "title": null,
+                                "columns": 2
+                            },
+                            "designerId": "b87c6e2e-cea3-4fc7-a842-90298f11c8aa",
+                            "cn": [
+                                {
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyButton2",
+                                        "id": "delThreshold",
+                                        "icon": null,
+                                        "iconCls": "icon-delete",
+                                        "text": "删除"
+                                    },
+                                    "designerId": "339b0010-a7f3-4b88-ac21-e88eb8d3ec02",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onDelThresholdClick",
+                                                "fn": "onDelThresholdClick",
+                                                "implHandler": [
+                                                    "var kpiThresholdGird = Ext.getCmp('kpiThreshold');\r",
+                                                    "var selrecord = kpiThresholdGird.getSelectionModel().getSelection();\r",
+                                                    "if(selrecord.length == 0){\r",
+                                                    "    Ext.MessageBox.show({\r",
+                                                    "        title:\"提示\",\r",
+                                                    "        msg:\"请先选择您要操作的行!\"\r",
+                                                    "    })\r",
+                                                    "    return;\r",
+                                                    "} else {\r",
+                                                    "    var ids = \"\";\r",
+                                                    "    for(var i = 0; i < selrecord.length; i++){\r",
+                                                    "        ids += selrecord[i].get(\"ID\")\r",
+                                                    "        if(i < selrecord.length-1){\r",
+                                                    "            ids = ids + \"*\";\r",
+                                                    "        }\r",
+                                                    "    }\r",
+                                                    "\r",
+                                                    "    Ext.Ajax.request({  \r",
+                                                    "        url:'deleteThresholdById',  \r",
+                                                    "        params:{  \r",
+                                                    "            //传递参数  \r",
+                                                    "            ids: ids\r",
+                                                    "        }, \r",
+                                                    "        async : false,\r",
+                                                    "        success:function(response, options){        \r",
+                                                    "            var responseArray = Ext.JSON.decode(response.responseText);\r",
+                                                    "\r",
+                                                    "        },\r",
+                                                    "        failure:function(){  \r",
+                                                    "            //Ext.Msg.alert('错误信息','系统错误');  \r",
+                                                    "        }\r",
+                                                    "    });\r",
+                                                    "    \r",
+                                                    "    Ext.getCmp('kpiThreshold').getStore().load();\r",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "designerId": "f0e30b42-5146-4f10-a12b-9e93eda619e1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ArpStore",
+        "autoLoad": false,
+        "storeId": "MyJsonStore",
+        "model": "ArpModel",
+        "groupField": "device_ip"
+    },
+    "id": "ExtBox1-ext-gen7625",
+    "designerId": "29eeec8d-2a0b-4a0e-927a-af09f3bc8913",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "extraParams": [
+                    "{\r",
+                    "    deviceIp:'',\r",
+                    "    date:''\r",
+                    "}"
+                ],
+                "url": "../config/findAllArp"
+            },
+            "designerId": "d439d888-3cfb-49fa-8aa9-76a35c82eca9",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "root": "root"
+                    },
+                    "designerId": "cd62a3d8-e940-429f-8476-57866e15923a"
+                }
+            ]
+        }
+    ]
+}

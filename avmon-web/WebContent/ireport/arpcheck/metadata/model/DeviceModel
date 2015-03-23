@@ -1,0 +1,80 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DeviceModel"
+    },
+    "id": "ExtBox1-ext-gen11294",
+    "designerId": "076a77b0-a8ae-4347-b284-9afdaefcf8bf",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "device_name"
+            },
+            "designerId": "a73b0fa5-8b57-4f75-8044-ca26727e4cc2"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "device_type"
+            },
+            "designerId": "854d3183-3493-4b58-ae4f-34d15cc0c328"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "device_ip"
+            },
+            "designerId": "9ac80c97-b082-4c91-8620-eb30d9f8eace"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "device_desc"
+            },
+            "designerId": "6e646cd9-9ab3-4f61-a6be-064d9c040097"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "report_date"
+            },
+            "designerId": "10e1d561-584f-4421-8b2d-bd9706170fdd"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userClassName": "PowerStore",
+        "model": "PowerModel",
+        "storeId": "MyJsonStore1"
+    },
+    "designerId": "b9cad8f3-c2d8-414a-8a9d-42a7dc729a13",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mo:Ext.iloHost.mo}"
+                ],
+                "url": "getPowerList"
+            },
+            "designerId": "e8e98ff8-f40c-495d-89e9-6a0ff8480ab6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "2b29a30b-ebb9-4ef9-adfe-85f94e73f446"
+                }
+            ]
+        }
+    ]
+}

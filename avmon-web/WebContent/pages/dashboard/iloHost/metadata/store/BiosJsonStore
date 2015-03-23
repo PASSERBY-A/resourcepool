@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BiosJsonStore",
+        "model": "BiosModel",
+        "storeId": "BiosJsonStore"
+    },
+    "designerId": "42c52da8-a07e-4891-af2b-e036bf9fe16e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "getBiosList"
+            },
+            "designerId": "d3ccf840-bfa9-49c7-a1b2-8312adc5fc67",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "record"
+                    },
+                    "designerId": "d7b38a99-d982-4e1f-b425-1bae3a237cbb"
+                }
+            ]
+        }
+    ]
+}

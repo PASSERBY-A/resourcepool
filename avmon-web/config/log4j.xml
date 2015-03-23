@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd HH:mm:ss} [%-5p] (%F:%L) %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="RootAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="../logs/avmon-web.log"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p]-[%t]-[%c{1}] (%F:%L) %m%n"/>
+        </layout>
+    </appender>
+	
+	<!-- Application Loggers -->
+	<logger name="com.hp.avmon">
+		<level value="debug" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="warn" />
+	</logger>
+	
+	<logger name="org.springframework.beans">
+		<level value="warn" />
+	</logger>
+	
+	<logger name="org.springframework.context">
+		<level value="warn" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="warn" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+	<!-- <appender-ref ref="RootAppender" /> -->		
+	<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>

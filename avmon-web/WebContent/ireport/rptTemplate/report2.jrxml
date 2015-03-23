@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12ca5b64-d2bd-4b24-ae0b-827bfe69f5c8">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     TF_AVMON_ALARM_HISTORY."MO_ID" AS TF_AVMON_ALARM_HISTORY_MO_ID,
+     TF_AVMON_ALARM_HISTORY."CONTENT" AS TF_AVMON_ALARM_HISTORY_CONTENT,
+     TF_AVMON_ALARM_HISTORY."CURRENT_GRADE" AS TF_AVMON_ALARM_HISTORY_CURRENT,
+     TF_AVMON_ALARM_HISTORY."FIRST_OCCUR_TIME" AS TF_AVMON_ALARM_HISTORY_FIRST_O,
+     TF_AVMON_ALARM_HISTORY."STATUS" AS TF_AVMON_ALARM_HISTORY_STATUS,
+     TF_AVMON_ALARM_HISTORY."SOLUTION" AS TF_AVMON_ALARM_HISTORY_SOLUTIO,
+     TF_AVMON_ALARM_HISTORY."CLOSE_BY" AS TF_AVMON_ALARM_HISTORY_CLOSE_B,
+     TF_AVMON_ALARM_HISTORY."CLOSE_TIME" AS TF_AVMON_ALARM_HISTORY_CLOSE_T,
+     TF_AVMON_ALARM_HISTORY."COUNT" AS TF_AVMON_ALARM_HISTORY_COUNT
+FROM
+     "AVMON"."TF_AVMON_ALARM_HISTORY" TF_AVMON_ALARM_HISTORY]]>
+	</queryString>
+	<field name="TF_AVMON_ALARM_HISTORY_MO_ID" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CONTENT" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CURRENT" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_FIRST_O" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_STATUS" class="java.math.BigDecimal"/>
+	<field name="TF_AVMON_ALARM_HISTORY_SOLUTIO" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CLOSE_B" class="java.lang.String"/>
+	<field name="TF_AVMON_ALARM_HISTORY_CLOSE_T" class="java.sql.Timestamp"/>
+	<field name="TF_AVMON_ALARM_HISTORY_COUNT" class="java.math.BigDecimal"/>
+	<group name="TF_AVMON_ALARM_HISTORY_MO_ID">
+		<groupExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_MO_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement uuid="f330d09c-3b54-4b05-abd1-7e0037e3cb4e" style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#CC0000"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_MO_ID}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement uuid="469fa7e1-d675-4194-a01c-38c9f198c55f" mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="d1a9e00e-46eb-4bda-84d5-b9c3c9278f1f" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="07b304d5-28e0-45cb-ad78-a19447e3c7dd" style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Red Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6540c585-aabd-4ace-b2c3-5c387fefd776" style="SubTitle" x="117" y="46" width="157" height="22"/>
+				<textElement/>
+				<text><![CDATA[Leaf Red SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="9ef06122-4856-483d-9318-e608d2119916" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="cbad8902-fb05-4ec2-9182-97d926906465" style="Column header" x="0" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CONTENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6473e74c-45b6-46a7-94a2-9f599b4a13a3" style="Column header" x="69" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CURRENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="189cf84b-3238-4987-9370-51bb74c738af" style="Column header" x="138" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_FIRST_O]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96dad257-abcf-4ae2-8ed5-8699c874dc8b" style="Column header" x="207" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0be188c-339e-4852-8563-5942c9d3c94b" style="Column header" x="276" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_SOLUTIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5cd3f77-0a76-469d-ba7c-8bdf319cb725" style="Column header" x="345" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CLOSE_B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bbf43a01-a653-4b0a-8632-dfae72f816e0" style="Column header" x="414" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_CLOSE_T]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c8d90fec-96f2-4641-a8ea-5bceee0b5e6b" style="Column header" x="483" y="19" width="69" height="15"/>
+				<textElement/>
+				<text><![CDATA[TF_AVMON_ALARM_HISTORY_COUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="e41e4db2-a08a-443d-9d16-bffa9845ed21" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="f54af017-ca30-455c-a37d-2e3c1d120661" style="Detail" x="0" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CONTENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="937ec5db-a64a-470f-a002-8c3c3776127b" style="Detail" x="69" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CURRENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="24c32d0a-4359-4fb0-b713-bd651335f572" style="Detail" x="138" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_FIRST_O}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ea110583-17bb-49ba-89c1-a16afb5d0610" style="Detail" x="207" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d89cf5ea-019b-4682-898a-7a47efa45a49" style="Detail" x="276" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_SOLUTIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="64bd6f1d-0554-4c33-b307-16b6b4ef3f1c" style="Detail" x="345" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CLOSE_B}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="01e72f60-af9e-409e-abdc-e015b853442c" style="Detail" x="414" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_CLOSE_T}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3cc554ef-a8b5-4dae-961c-f0ada8f9ac4c" style="Detail" x="483" y="0" width="69" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{TF_AVMON_ALARM_HISTORY_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="5685d37e-6a67-4747-be27-3fa40e5c4764" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="75c22f28-ad3b-408b-8726-c9d8178e5311" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="948554b9-b1e0-4c9f-9a1d-89d4ff1005ab" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="899a1c51-521b-4f8a-8c0b-b3792da9f1bd" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

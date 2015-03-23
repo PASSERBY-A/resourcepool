@@ -1,0 +1,134 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StorageModel"
+    },
+    "designerId": "a8948529-f5dc-4b56-ba3a-e26b3b3f5b92",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "designerId": "786fc3ba-c144-4e1f-9a8a-e91c1784521b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "designerId": "8a85178b-1edc-45fb-a4cf-514789397932"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "device"
+            },
+            "designerId": "1cd02c98-752d-4b51-b3ca-b8033f0fc3b4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "diskType"
+            },
+            "designerId": "615bee57-327b-4bee-9e39-c6c6184649c4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "size"
+            },
+            "designerId": "8949a30e-a965-450d-be3b-bdbceb78fc59"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "freeSpace"
+            },
+            "designerId": "bbd76f07-fde9-43db-b732-2e522e2cb3bd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type"
+            },
+            "designerId": "7b752dac-49e3-433d-9963-4dc8a1aa477b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lastUpdateTime"
+            },
+            "designerId": "af14e393-298f-43cc-ad8c-a15661a965a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "alarmEnable"
+            },
+            "designerId": "411040e9-f684-4226-a921-79f35c5593a9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ioControl"
+            },
+            "designerId": "38bac1be-6756-47bf-a58c-215aaaf4460b"
+        }
+    ]
+}

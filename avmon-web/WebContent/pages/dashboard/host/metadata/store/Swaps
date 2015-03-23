@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Mem",
+        "storeId": "MyJsonStore8",
+        "designer|userClassName": "Swaps"
+    },
+    "designerId": "31a6cdb0-47a9-4c59-8480-6b5419c79fef",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "swap"
+            },
+            "designerId": "b26ae078-8a63-4b14-90d6-84b3adb5320b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "history"
+                    },
+                    "designerId": "93bd46c0-65ed-43f5-8804-dfb8ea786d83"
+                }
+            ]
+        }
+    ]
+}

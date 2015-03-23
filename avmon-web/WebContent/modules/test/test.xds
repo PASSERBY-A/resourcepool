@@ -1,0 +1,48 @@
+{
+    "name": "test",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "ae45468a-6174-4f3b-8bf7-f2e961df9d83": {
+            "paths": [
+                "metadata/view/ConfigPanel",
+                "app/../view/override/ConfigPanel.js",
+                "app/../view/ConfigPanel.js",
+                "app/../view/Viewport.js"
+            ],
+            "className": "ConfigPanel"
+        },
+        "808289da-a758-4d8c-8ab4-edc4f227e22d": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "ae45468a-6174-4f3b-8bf7-f2e961df9d83"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "808289da-a758-4d8c-8ab4-edc4f227e22d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

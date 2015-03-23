@@ -1,0 +1,44 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Monitor",
+            "Kpi",
+            "Property",
+            "MonitorProperty",
+            "MonitorType",
+            "AgentDownload",
+            "MoType"
+        ],
+        "stores": [
+            "Menus",
+            "Monitors",
+            "Kpis",
+            "Properties",
+            "MonitorProperties",
+            "MonitorTypes",
+            "HostTypeList",
+            "AgentDownloads",
+            "MoTypeTrees",
+            "UpgradeMonitors"
+        ],
+        "views": [
+            "ConfigPanel",
+            "PropertyGrid",
+            "AddMoWindow",
+            "SelectMoTypeWindow"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "MenuTree",
+            "ConfigPanel"
+        ],
+        "name": "app"
+    },
+    "designerId": "application"
+}

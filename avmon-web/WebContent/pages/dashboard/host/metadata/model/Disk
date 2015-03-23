@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Disk"
+    },
+    "designerId": "17d234fd-116f-49c9-9c1d-6b261b0f7cb6",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DEVICE"
+            },
+            "designerId": "cfb23d2e-6984-4e43-92a2-05c14ba131f5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BUSY"
+            },
+            "designerId": "cb80e103-7197-461d-9232-443982ff459a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AVQUE"
+            },
+            "designerId": "c38e5e5e-e3a1-4f4a-9b8a-9f6335bafa4c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RWPS"
+            },
+            "designerId": "efb66f8f-bcac-4309-b4b5-50377fdeb660"
+        }
+    ]
+}

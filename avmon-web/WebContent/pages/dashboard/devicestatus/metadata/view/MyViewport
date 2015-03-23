@@ -1,0 +1,428 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "border": 0,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen4250",
+    "designerId": "aa7e815f-34c0-4621-bb1e-240dd115a9ed",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MainEnginePanel",
+                "designer|userAlias": "mainEnginePanel",
+                "border": 0,
+                "frame": false,
+                "height": null,
+                "id": "mainEnginePanel",
+                "width": null,
+                "autoScroll": true,
+                "layout": "fit",
+                "title": ""
+            },
+            "designerId": "ea1ae3eb-da7e-4be0-9326-77eced1bf50e",
+            "cn": [
+                {
+                    "type": "dataview",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "designer|userClassName": "MyView",
+                        "frame": false,
+                        "height": null,
+                        "id": "deviceList",
+                        "autoScroll": null,
+                        "itemSelector": "div.thumb-wrap",
+                        "loadMask": [
+                            "false"
+                        ],
+                        "multiSelect": null,
+                        "overItemCls": "x-view-over",
+                        "simpleSelect": null,
+                        "singleSelect": true,
+                        "store": "MainEngineStore",
+                        "trackOver": null
+                    },
+                    "designerId": "e01f7d0a-4fbe-4f94-ab87-464e2bf4d410",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<tpl for=\".\">\r",
+                                    "    <div class=\"thumb-wrap \" >\r",
+                                    "        <tpl if=\"CURRENT_GRADE != '4'\">\r",
+                                    "            <div class=\"thumb\" style=\"width:120px;height:75px;background-image:url('image/host_status_good_back.png');background-repeat:no-repeat!important;\">\r",
+                                    "                <span style=\"width:95px;font-size:11px;color:red;margin-left: 23px;overflow:hidden;\">\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '0'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level0.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '1'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level1.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '2'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level2.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '3'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level3.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '4'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level4.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    {MO_NAME}\r",
+                                    "                </span>\r",
+                                    "\r",
+                                    "                <tpl if=\"SYSLOG == '0'\">\r",
+                                    "                    <span style=\"font-size:8px;color:green;padding-left:0px;padding-top:0px;margin-left: 40px;\">\r",
+                                    "                        SysLog OK\r",
+                                    "                    </span>\r",
+                                    "                </tpl>\r",
+                                    "                <tpl if=\"SYSLOG != '0'\">\r",
+                                    "                    <span style=\"font-size:8px;color:red;padding-left:0px;padding-top:0px;margin-left: 38px;\">\r",
+                                    "                        SysLog Error\r",
+                                    "                    </span>\r",
+                                    "                </tpl>\r",
+                                    "    \r",
+                                    "                <div >\r",
+                                    "                    <div class=\"BarText\" >CPU:</div>\r",
+                                    "                    <tpl if=\"CPU_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {CPU}%;\"><span>{CPU}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CPU_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {CPU}%;\"><span>{CPU}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "    \r",
+                                    "                <div >\r",
+                                    "                    <div class=\"BarText\" >MEM:</div>\r",
+                                    "                    <tpl if=\"MEM_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {MEM}%;\"><span>{MEM}%</span></div>  \r",
+                                    "                        </div> \r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"MEM_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {MEM}%;\"><span>{MEM}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "    \r",
+                                    "                <div>\r",
+                                    "                    <div class=\"BarText\" >SWAP:</div>\r",
+                                    "                    <tpl if=\"DISK_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {DISK}%;\"><span>{DISK}%</span></div>  \r",
+                                    "                        </div> \r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"DISK_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {DISK}%;\"><span>{DISK}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "            </div>\r",
+                                    "        </tpl>\r",
+                                    "    \r",
+                                    "        <tpl if=\"CURRENT_GRADE == '4'\">\r",
+                                    "            <div class=\"thumb\" style=\"width:120px;height:75px;background-image:url('image/host_status_bad_back.png');background-repeat:no-repeat!important;\">\r",
+                                    "                <span style=\"width:95px;font-size:11px;color:red;margin-left: 23px;overflow:hidden;\">\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '0'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level0.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '1'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level1.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '2'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level2.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '3'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level3.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CURRENT_GRADE == '4'\">\r",
+                                    "                        <img style='width:16px; height:16px;' src='image/level4.png'></img>\r",
+                                    "                    </tpl>\r",
+                                    "                    {MO_NAME}\r",
+                                    "                </span>\r",
+                                    "\r",
+                                    "                <tpl if=\"SYSLOG == '0'\">\r",
+                                    "                    <span style=\"font-size:8px;color:green;padding-left:0px;padding-top:0px;margin-left: 40px;\">\r",
+                                    "                        SysLog OK\r",
+                                    "                    </span>\r",
+                                    "                </tpl>\r",
+                                    "                <tpl if=\"SYSLOG != '0'\">\r",
+                                    "                    <span style=\"font-size:8px;color:red;padding-left:0px;padding-top:0px;margin-left: 38px;\">\r",
+                                    "                        SysLog Error\r",
+                                    "                    </span>\r",
+                                    "                </tpl>\r",
+                                    "                \r",
+                                    "    \r",
+                                    "                <div >\r",
+                                    "                    <div class=\"BarText\" >CPU:</div>\r",
+                                    "                    <tpl if=\"CPU_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {CPU}%;\"><span>{CPU}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"CPU_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {CPU}%;\"><span>{CPU}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "    \r",
+                                    "                <div >\r",
+                                    "                    <div class=\"BarText\" >MEM:</div>\r",
+                                    "                    <tpl if=\"MEM_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {MEM}%;\"><span>{MEM}%</span></div>  \r",
+                                    "                        </div> \r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"MEM_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {MEM}%;\"><span>{MEM}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "    \r",
+                                    "                <div>\r",
+                                    "                    <div class=\"BarText\" >SWAP:</div>\r",
+                                    "                    <tpl if=\"DISK_LEVEL == '4'\">\r",
+                                    "                        <div class=\"ProgressBar1\">  \r",
+                                    "                            <div style=\"width: {DISK}%;\"><span>{DISK}%</span></div>  \r",
+                                    "                        </div> \r",
+                                    "                    </tpl>\r",
+                                    "                    <tpl if=\"DISK_LEVEL != '4'\">\r",
+                                    "                        <div class=\"ProgressBar2\">  \r",
+                                    "                            <div style=\"width: {DISK}%;\"><span>{DISK}%</span></div>  \r",
+                                    "                        </div>\r",
+                                    "                    </tpl>    \r",
+                                    "                </div>\r",
+                                    "            </div>\r",
+                                    "        </tpl>\r",
+                                    "    </div>\r",
+                                    "</tpl>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "ddbc406e-8bdf-4833-9cde-a1701981a1c7"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onDeviceListItemDblClick",
+                                "fn": "onDeviceListItemDblClick",
+                                "implHandler": [
+                                    "\r",
+                                    "if(window.parent.selectPerformanceTreeNode){\r",
+                                    "    window.parent.selectPerformanceTreeNode(record.get(\"MO_ID\"));\r",
+                                    "}\r",
+                                    "else{\r",
+                                    "    if(window.parent.window.parent.selectPerformanceTreeNode){\r",
+                                    "        window.parent.window.parent.selectPerformanceTreeNode(record.get(\"MO_ID\"));\r",
+                                    "    }\r",
+                                    "}\r",
+                                    ""
+                                ],
+                                "name": "itemdblclick",
+                                "scope": "me"
+                            },
+                            "designerId": "aeffad7c-dee1-4a79-94c4-39f01e5712a8"
+                        }
+                    ]
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar",
+                        "height": 30
+                    },
+                    "designerId": "1a7342c4-a5aa-4989-bb80-76bb67de96d0",
+                    "cn": [
+                        {
+                            "type": "label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyLabel",
+                                "text": "设备状态"
+                            },
+                            "designerId": "6361057f-e0c4-4a58-b62c-cf2dd81cc3d0"
+                        },
+                        {
+                            "type": "tbspacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySpacer",
+                                "width": 30
+                            },
+                            "designerId": "e02c76b8-a1e7-4c0a-bc5a-aa9e00de398f"
+                        },
+                        {
+                            "type": "radiogroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyRadioGroup",
+                                "id": "condition",
+                                "width": 550,
+                                "defaults": null,
+                                "fieldLabel": "",
+                                "labelWidth": 70
+                            },
+                            "designerId": "7b24b349-95b3-4865-9f93-7fc7ec1bf4e8",
+                            "cn": [
+                                {
+                                    "type": "radiofield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyRadio",
+                                        "name": "condition",
+                                        "fieldLabel": null,
+                                        "boxLabel": "半小时内严重告警",
+                                        "checked": false,
+                                        "inputValue": "1"
+                                    },
+                                    "designerId": "c0cdbfa2-5c56-46b0-a65c-1c72c8c344d3"
+                                },
+                                {
+                                    "type": "radiofield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyRadio1",
+                                        "name": "condition",
+                                        "fieldLabel": null,
+                                        "boxLabel": "一小时内严重告警",
+                                        "inputValue": "2"
+                                    },
+                                    "designerId": "d699ae36-b2f5-4eb7-a798-e3c3ea48dd2d"
+                                },
+                                {
+                                    "type": "radiofield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyRadio2",
+                                        "name": "condition",
+                                        "fieldLabel": "",
+                                        "boxLabel": "所有严重告警",
+                                        "inputValue": "3"
+                                    },
+                                    "designerId": "6c1a4a6d-44e4-41f0-bc86-b3865236dea7"
+                                },
+                                {
+                                    "type": "radiofield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyRadio3",
+                                        "name": "condition",
+                                        "fieldLabel": "",
+                                        "labelWidth": null,
+                                        "boxLabel": "所有设备",
+                                        "boxLabelAlign": null,
+                                        "checked": true,
+                                        "inputValue": "4"
+                                    },
+                                    "designerId": "ee946a5f-d670-4a21-831c-f9d9bca6ffe1"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onFilterConditionChange",
+                                        "fn": "onFilterConditionChange",
+                                        "implHandler": [
+                                            "if (newValue.condition.length == 1) {\r",
+                                            "    Ext.devicestatus.condition = newValue.condition;\r",
+                                            "\r",
+                                            "    var deviceList = Ext.getCmp('deviceList');\r",
+                                            "    var deviceStoreProxy = deviceList.getStore().getProxy();\r",
+                                            "    deviceStoreProxy.extraParams.mo = Ext.devicestatus.mo;\r",
+                                            "    deviceStoreProxy.extraParams.condition = Ext.devicestatus.condition;\r",
+                                            "\r",
+                                            "    deviceList.getStore().load();\r",
+                                            "}\r",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "7c10dde8-75e3-4d3d-bcff-96db5f06f719"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
